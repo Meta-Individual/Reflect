@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
         _idleState = gameObject.AddComponent<PlayerIdleState>();
         _walkState = gameObject.AddComponent<PlayerWalkState>();
 
-        _characterController = GetComponent<CharacterController>();
         _rigidbody = GetComponent<Rigidbody2D>();
 
         CurrentState = _idleState;
@@ -56,10 +55,4 @@ public class PlayerController : MonoBehaviour
             CurrentState.OnStateUpdate();
         }
     }
-
-    public CharacterController GetCharacterController()
-    {
-        return _characterController;
-    }
-
 }
