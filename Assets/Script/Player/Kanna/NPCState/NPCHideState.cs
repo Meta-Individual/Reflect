@@ -15,7 +15,7 @@ public class NPCHideState : MonoBehaviour, INPCState
     }
     public void OnStateUpdate()
     {
-        Debug.Log("Kanna Hide");
+        //Debug.Log("Kanna Hide");
 
         _npcController.SetTransparency();
         

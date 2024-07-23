@@ -19,7 +19,7 @@ public class NPCOutOfDeskState : MonoBehaviour, INPCState
     }
     public void OnStateUpdate()
     {
-        Debug.Log("Kanna OutofDesk");
+        //Debug.Log("Kanna OutofDesk");
 
         startTimer += Time.deltaTime;
         if(startTimer > animationTimer) 

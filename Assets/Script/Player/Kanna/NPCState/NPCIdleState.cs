@@ -13,7 +13,7 @@ public class NPCIdleState : MonoBehaviour, INPCState
     }
     public void OnStateUpdate()
     {
-        Debug.Log("Kanna Idle");
+        //Debug.Log("Kanna Idle");
 
         if (_npcController.Hide())
         {

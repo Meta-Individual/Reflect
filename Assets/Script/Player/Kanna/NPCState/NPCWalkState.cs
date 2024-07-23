@@ -29,7 +29,7 @@ public class NPCWalkState : MonoBehaviour, INPCState
     {
         if (_npcController)
         {
-            Debug.Log("Kanna Walk");
+            //Debug.Log("Kanna Walk");
 
             Vector2 currentTarget = _npcController.targetPositions[currentTargetIndex]; // 현재 타겟 위치
             Vector2 currentPosition = transform.position; // 현재 플레이어 위치
