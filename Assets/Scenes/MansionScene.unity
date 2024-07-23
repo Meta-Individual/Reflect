@@ -12910,6 +12910,8 @@ GameObject:
   - component: {fileID: 776055007}
   - component: {fileID: 776055006}
   - component: {fileID: 776055008}
+  - component: {fileID: 776055010}
+  - component: {fileID: 776055009}
   m_Layer: 0
   m_Name: Kanna_kid
   m_TagString: Untagged
@@ -12978,7 +12980,7 @@ Transform:
   m_GameObject: {fileID: 776055005}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -295.7, y: -427.78, z: 0}
+  m_LocalPosition: {x: -282.67, y: -428.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13006,6 +13008,52 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &776055009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776055005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6970fedfe98b47b42ae5bdea31334b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 776055008}
+  _characterController: {fileID: 0}
+  _rigidbody: {fileID: 0}
+  isArrive: 0
+  targetPositions:
+  - {x: -262.05, y: -428.1}
+  walkSpeed: 15
+--- !u!50 &776055010
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776055005}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &781957160
 GameObject:
   m_ObjectHideFlags: 0
