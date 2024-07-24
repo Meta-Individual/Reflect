@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class MonologueManager : MonoBehaviour
@@ -12,7 +13,8 @@ public class MonologueManager : MonoBehaviour
     }
 
     [Header("Monologue")]
-    public string dialogueText; // 상호작용 시 표시할 텍스트
+    public List<string> dialogueText; // 상호작용 시 표시할 텍스트
+    public List<float> delay; // 각 글자 사이의 지연 시간
     public GameObject dialoguePanel; // 말풍선 패널
     public Transform player; // 플레이어 Transform
     public Direction direction;
@@ -20,7 +22,9 @@ public class MonologueManager : MonoBehaviour
     private PlayerController playerController;
     private Animator anim;
     private bool isPlayerInRange; // 플레이어가 오브젝트 범위 내에 있는지 여부
-    private bool isStart = false;
+    private bool isFinish = false;
+    private bool isTalking = false;
+    private int currentLineIndex = 0; // 현재 대사 인덱스
     private Vector3 offset = new Vector3(0, 18f, 0); // 말풍선의 위치 오프셋
 
     void Start()
@@ -40,34 +44,61 @@ public class MonologueManager : MonoBehaviour
         {
             if (CheckDirection())
             {
-                Debug.Log("독백 가능");
-                if (Input.GetKeyDown(KeyCode.E))
+                if(!isTalking)
                 {
-                    if (dialoguePanel != null && !isStart)
+                    Debug.Log("독백 가능");
+                    if (Input.GetKeyDown(KeyCode.E))
                     {
-                        dialoguePanel.SetActive(true);
-                        dialoguePanel.GetComponentInChildren<TMP_Text>().text = dialogueText;
-                        dialoguePanel.transform.position = player.position + offset;
-                        isStart = true;
-                        playerController.ChangeState(playerController._waitState);
-                    }
-                    else
-                    {
-                        dialoguePanel.SetActive(false);
-                        dialoguePanel.GetComponentInChildren<TMP_Text>().text = "";
-                        isStart = false;
-                        playerController.ChangeState(playerController._idleState);
+                        if (isFinish) 
+                        {
+                            dialoguePanel.SetActive(false);
+                            dialoguePanel.GetComponentInChildren<TMP_Text>().text = "";
+                            playerController.ChangeState(playerController._idleState);
+                            currentLineIndex = 0;
+                            isFinish = false;
+                        }
+                        else
+                        {
+                            if (dialoguePanel != null)
+                            {
+                                dialoguePanel.SetActive(true);
+                                StartCoroutine(ActiveMonologue());
+                                dialoguePanel.transform.position = player.position + offset;
+                                playerController.ChangeState(playerController._waitState);
+                            }
+                        }
                     }
                 }
             }
         }
 
-        
-
         // 말풍선 패널의 위치를 플레이어의 위로 업데이트
         if (dialoguePanel.activeSelf)
         {
             dialoguePanel.transform.position = player.position + offset;
+        }
+    }
+
+    private IEnumerator ActiveMonologue()
+    {
+        isTalking = true;
+        dialoguePanel.GetComponentInChildren<TMP_Text>().text = ""; // 텍스트 초기화
+        
+        foreach (char letter in dialogueText[currentLineIndex].ToCharArray())
+        {
+            dialoguePanel.GetComponentInChildren<TMP_Text>().text += letter;
+            yield return new WaitForSeconds(delay[currentLineIndex]); // 지연 시간 대기
+        }
+
+        // 다음 대사로 이동
+        isTalking = false;
+        if (currentLineIndex < dialogueText.Count - 1)
+        {
+            currentLineIndex++;
+        }
+        else
+        {
+            isFinish = true;
         }
     }
 
