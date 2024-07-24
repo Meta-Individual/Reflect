@@ -25,7 +25,7 @@ public class MonologueManager : MonoBehaviour
     private bool isFinish = false;
     private bool isTalking = false;
     private int currentLineIndex = 0; // 현재 대사 인덱스
-    private Vector3 offset = new Vector3(0, 18f, 0); // 말풍선의 위치 오프셋
+    private Vector3 offset = new Vector3(0, 15f, 0); // 말풍선의 위치 오프셋
 
     void Start()
     {
