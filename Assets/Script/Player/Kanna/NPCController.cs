@@ -15,6 +15,9 @@ public class NPCController : MonoBehaviour
     public bool isArrive = false;
     [HideInInspector]
     private SpriteRenderer _spriteRenderer;
+    [HideInInspector]
+    public ChairAndDeskMoving chair_desk_Move;
+
 
     [Header("Destination")]
     public List<Vector2> targetPositions;
@@ -40,6 +43,7 @@ public class NPCController : MonoBehaviour
 
         _rigidbody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        chair_desk_Move = GetComponent<ChairAndDeskMoving>();
 
         CurrentState = _idleState;
         ChangeState(CurrentState);
@@ -101,5 +105,11 @@ public class NPCController : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public void OnAnimationEnd()
+    {
+        // y축으로 -1만큼 이동
+        transform.position += new Vector3(0, -3, 0);
     }
 }
