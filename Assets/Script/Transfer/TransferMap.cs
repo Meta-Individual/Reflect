@@ -22,6 +22,7 @@ public class TransferMap : MonoBehaviour
     [Header("Target")]
     public Direction direction;
     public Transform targetLocation; // 이동할 목표 위치
+    public bool isLock = false;
 
     [Header("Sound")]
     public AudioClip openDoorSound; // 방문 여는 사운드
@@ -44,8 +45,15 @@ public class TransferMap : MonoBehaviour
                 ShowUI();
                 if (Input.GetKeyDown((KeyCode)CustomKey.Interact))
                 {
-                    player.transform.position = targetLocation.position;
-                    PlaySound(); // 방문 사운드 재생
+                    if (isLock)
+                    {
+                        Debug.Log("잠김");
+                    }
+                    else
+                    {
+                        player.transform.position = targetLocation.position;
+                        PlaySound(); // 방문 사운드 재생
+                    }
                 }
             }
             else
