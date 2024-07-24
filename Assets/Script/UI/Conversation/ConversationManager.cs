@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class ConversationManager : MonoBehaviour
 {
     [Header("Canvas")]
-    public Canvas UI;
+    public GameObject UI;
     public GameObject arrow_UI;
     public Image character;
 
@@ -18,10 +18,20 @@ public class ConversationManager : MonoBehaviour
     public List<Sprite> dialogImages;
     public List<float> delay; // 각 글자 사이의 지연 시간
 
+    private GameObject player;
+    private PlayerController playerController;
     private int currentLineIndex = 0; // 현재 대사 인덱스
     private bool inZone = false;
     private bool isTalking = false;
     private bool isFinish = false;
+    private bool isStart = false;
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerController = player.GetComponent<PlayerController>();
+        dialogueText.text = "";
+    }
 
 
     void Update()
@@ -37,6 +47,7 @@ public class ConversationManager : MonoBehaviour
                     {
                         if(UI != null)
                         {
+                            playerController.ChangeState(playerController._idleState);
                             InactiveCanvas();
                             this.gameObject.SetActive(false);
                         }
@@ -62,6 +73,12 @@ public class ConversationManager : MonoBehaviour
         dialogueText.text = ""; // 텍스트 초기화
         character.sprite = dialogImages[currentLineIndex];
         UI.gameObject.SetActive(true);
+        if (!isStart)
+        {
+            isStart = true;
+            playerController.ChangeState(playerController._waitState);
+            yield return new WaitForSeconds(1);
+        }
         foreach (char letter in dialogueLines[currentLineIndex].ToCharArray())
         {
             dialogueText.text += letter;

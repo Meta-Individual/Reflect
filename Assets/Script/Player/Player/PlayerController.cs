@@ -21,13 +21,14 @@ public class PlayerController : MonoBehaviour
         get; set;
     }
 
-    public IPlayerState _idleState, _walkState;
+    public IPlayerState _idleState, _walkState, _waitState;
 
 
     private void Start()
     {
         _idleState = gameObject.AddComponent<PlayerIdleState>();
         _walkState = gameObject.AddComponent<PlayerWalkState>();
+        _waitState = gameObject.AddComponent<PlayerWaitState>();
 
         _rigidbody = GetComponent<Rigidbody2D>();
 
