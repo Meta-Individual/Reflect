@@ -5,47 +5,65 @@ using UnityEngine.UI;
 
 public class TransferMap : MonoBehaviour
 {
-    public Text text;   
-
-    public Transform targetLocation; // 이동할 목표 위치
+    public enum Direction
+    {
+        RIGHT,
+        LEFT,
+        UP,
+        DOWN
+    }
+    private Animator anim;
+    private GameObject player;
     private bool playerInRange = false; // 플레이어가 포탈 위에 있는지 여부
-
     private AudioSource audioSource; // AudioSource 컴포넌트
+
+    public GameObject arrow_UI;
+
+    [Header("Target")]
+    public Direction direction;
+    public Transform targetLocation; // 이동할 목표 위치
+    public bool isLock = false;
+
+    [Header("Sound")]
     public AudioClip openDoorSound; // 방문 여는 사운드
     public AudioClip closeDoorSound; // 방문 닫는 사운드
 
     void Start()
     {
-        text = GameObject.Find("Tag").GetComponent<Text>();
-        if (text == null)
-        {
-            Debug.LogError("OpenText UI 텍스트를 찾을 수 없습니다.");
-            return;
-        }
-        text.enabled = false;
-
+        player = GameObject.FindGameObjectWithTag("Player");
+        anim = player.GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-        {
-            audioSource = gameObject.AddComponent<AudioSource>();
-        }
+        HideUI();
     }
 
     void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.Z))
+        if (playerInRange)
         {
-            // 플레이어를 목표 위치로 이동
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null)
+            if (CheckDirection())
             {
-                player.transform.position = targetLocation.position;
-                PlayOpenDoorSound(); // 방문 사운드 재생
+                ShowUI();
+                if (Input.GetKeyDown((KeyCode)CustomKey.Interact))
+                {
+                    if (isLock)
+                    {
+                        Debug.Log("잠김");
+                    }
+                    else
+                    {
+                        player.transform.position = targetLocation.position;
+                        PlaySound(); // 방문 사운드 재생
+                    }
+                }
+            }
+            else
+            {
+                HideUI();
             }
         }
     }
 
-    private void PlayOpenDoorSound()
+    private void PlaySound()
     {
         if (audioSource != null)
         {
@@ -65,31 +83,55 @@ public class TransferMap : MonoBehaviour
             }
         }
     }
-    
-    private void ShowText()
+
+    private bool CheckDirection()
     {
-        text.enabled = true;
-        text.transform.position = transform.position + new Vector3(0, 1, 0);
-        if (CompareTag("OpenDoor"))
+        if (direction == Direction.RIGHT)
         {
-            text.text = "열기";
+            if (anim.GetFloat("DirX") == 1)
+            {
+                return true;
+            }
         }
-        else if (CompareTag("CloseDoor"))
+        else if (direction == Direction.LEFT)
         {
-            text.text = "닫기";
+            if (anim.GetFloat("DirX") == -1)
+            {
+                return true;
+            }
         }
+        else if (direction == Direction.UP)
+        {
+            if (anim.GetFloat("DirY") == 1)
+            {
+                return true;
+            }
+        }
+        else if (direction == Direction.DOWN)
+        {
+            if (anim.GetFloat("DirY") == -1)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
-    private void HideText()
+
+    private void ShowUI()
     {
-        text.enabled = false;
+        arrow_UI.SetActive(true);
+    }
+
+    private void HideUI()
+    {
+        arrow_UI.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            ShowText();
             playerInRange = true;
         }
     }
@@ -98,7 +140,6 @@ public class TransferMap : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            HideText();
             playerInRange = false;
         }
     }

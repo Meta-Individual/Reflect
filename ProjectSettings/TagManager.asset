@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Wall
   - OpenDoor
   - CloseDoor
   - Camera
@@ -16,8 +15,8 @@ TagManager:
   - Wall
   - Water
   - UI
-  - Transfer
-  - Conversation
+  - 
+  - 
   - Interact
   - 
   - 
