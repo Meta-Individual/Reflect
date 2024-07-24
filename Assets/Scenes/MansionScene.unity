@@ -939,27 +939,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC9D1\uC548\uC744 \uB530\uB73B\uD558\uAC8C \uD574\uC8FC\uB294 \uD654\uB85C\uB2E4"
+  - "\uC7A5\uC791\uC774 \uBD80\uC871\uD560 \uB54C\uB294 \uC5EC\uAE30\uC788\uB294
+    \uCC45\uB4E4\uC744 \uB123\uB294\uB2E4"
+  delay:
+  - 0.05
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -1848,30 +1833,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC720\uB9AC\uB85C \uB41C \uB113\uC740 \uCC45\uC0C1\uC774\uB2E4"
+  - "\uC800\uBC88\uC5D0 \uB204\uC6CC\uC788\uB2E4\uAC00 \uC5C4\uB9C8\uD55C\uD14C \uD63C\uB0AC\uC5C8\uC9C0
+    .."
+  delay:
+  - 0.05
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -3269,30 +3236,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -5252,30 +5198,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uCC45\uB4E4\uC774 \uB193\uC5EC\uC838 \uC788\uB294 \uCC45\uC7A5\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -6902,27 +6827,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC190\uB2D8\uB4E4\uC774 \uC654\uC744 \uB54C \uBAA8\uC5EC \uC549\uB294 \uC758\uC790\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 1
@@ -7225,30 +7132,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC720\uB9AC\uB85C \uB41C \uB113\uC740 \uCC45\uC0C1\uC774\uB2E4"
+  - "\uC800\uBC88\uC5D0 \uB204\uC6CC\uC788\uB2E4\uAC00 \uC5C4\uB9C8\uD55C\uD14C \uD63C\uB0AC\uC5C8\uC9C0
+    .."
+  delay:
+  - 0.05
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -7579,30 +7468,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uACFC\uC790\uAC00 \uB4E4\uC5B4\uC788\uB294 \uC0C1\uC790\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -8197,30 +8065,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC720\uB9AC\uB85C \uB41C \uB113\uC740 \uCC45\uC0C1\uC774\uB2E4"
+  - "\uC800\uBC88\uC5D0 \uB204\uC6CC\uC788\uB2E4\uAC00 \uC5C4\uB9C8\uD55C\uD14C \uD63C\uB0AC\uC5C8\uC9C0
+    .."
+  delay:
+  - 0.05
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 1
@@ -8738,7 +8588,7 @@ Transform:
   m_GameObject: {fileID: 288599555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -281.66, y: -432.53, z: 0}
+  m_LocalPosition: {x: -29.4, y: -387.7, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8963,30 +8813,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC2E0\uBC1C\uC7A5\uC774\uB2E4"
+  - "\uC660\uC9C0 \uAD6C\uB9B0\uB0B4\uAC00 \uB098\uB294 \uAC83 \uAC19\uB2E4"
+  delay:
+  - 0.05
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -10150,27 +9981,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uBC24\uC5D0 \uC9D1\uC744 \uBC1D\uD600\uC8FC\uB294 \uC2A4\uD0E0\uB4DC\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 1
@@ -11278,30 +11091,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC2E0\uBC1C\uC7A5\uC774\uB2E4"
+  - "\uC660\uC9C0 \uAD6C\uB9B0\uB0B4\uAC00 \uB098\uB294 \uAC83 \uAC19\uB2E4"
+  delay:
+  - 0.05
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 1
@@ -11396,27 +11190,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC9F8\uAE4D\uC9F8\uAE4D\uB300\uB294 \uC2DC\uACC4\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -12465,27 +12241,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uBC24\uC5D0 \uC9D1\uC744 \uBC1D\uD600\uC8FC\uB294 \uC2A4\uD0E0\uB4DC\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -12825,30 +12583,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 1
@@ -13171,27 +12908,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC190\uB2D8\uB4E4\uC774 \uC654\uC744 \uB54C \uBAA8\uC5EC \uC549\uB294 \uC758\uC790\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -13482,30 +13201,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 1
@@ -14034,27 +13732,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC9D1\uC548\uC744 \uB530\uB73B\uD558\uAC8C \uD574\uC8FC\uB294 \uD654\uB85C\uB2E4"
+  - "\uC7A5\uC791\uC774 \uBD80\uC871\uD560 \uB54C\uB294 \uC5EC\uAE30\uC788\uB294
+    \uCC45\uB4E4\uC744 \uB123\uB294\uB2E4"
+  delay:
+  - 0.05
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 1
@@ -14996,27 +14679,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC190\uB2D8\uB4E4\uC774 \uC654\uC744 \uB54C \uBAA8\uC5EC \uC549\uB294 \uC758\uC790\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -15440,27 +15105,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uBD88\uD3B8\uD574\uBCF4\uC774\uB294 \uD754\uB4E4 \uC758\uC790\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -17101,30 +16748,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uACFC\uC790\uAC00 \uB4E4\uC5B4\uC788\uB294 \uC0C1\uC790\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -17505,30 +17131,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -18015,27 +17620,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC190\uB2D8\uB4E4\uC774 \uC654\uC744 \uB54C \uBAA8\uC5EC \uC549\uB294 \uC758\uC790\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 1
@@ -18628,30 +18215,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -19118,30 +18684,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -21622,30 +21167,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC637 \uC218\uB0A9\uC7A5\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -21780,30 +21304,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -22531,30 +22034,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uCC45\uB4E4\uC774 \uB193\uC5EC\uC838 \uC788\uB294 \uCC45\uC7A5\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 1
@@ -24190,30 +23672,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -25180,30 +24641,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC720\uB9AC\uB85C \uB41C \uB113\uC740 \uCC45\uC0C1\uC774\uB2E4"
+  - "\uC800\uBC88\uC5D0 \uB204\uC6CC\uC788\uB2E4\uAC00 \uC5C4\uB9C8\uD55C\uD14C \uD63C\uB0AC\uC5C8\uC9C0
+    .."
+  delay:
+  - 0.05
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -25620,30 +25063,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -25815,30 +25237,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 1
@@ -26211,30 +25612,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC2E0\uBC1C\uC7A5\uC774\uB2E4"
+  - "\uC660\uC9C0 \uAD6C\uB9B0\uB0B4\uAC00 \uB098\uB294 \uAC83 \uAC19\uB2E4"
+  delay:
+  - 0.05
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -26638,30 +26020,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uCC45\uB4E4\uC774 \uB193\uC5EC\uC838 \uC788\uB294 \uCC45\uC7A5\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -27946,30 +27307,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uC11C\uB78D\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -31285,27 +30625,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uBD88\uD3B8\uD574\uBCF4\uC774\uB294 \uD754\uB4E4 \uC758\uC790\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -34041,30 +33363,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC637 \uC218\uB0A9\uC7A5\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -34236,27 +33537,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC190\uB2D8\uB4E4\uC774 \uC654\uC744 \uB54C \uBAA8\uC5EC \uC549\uB294 \uC758\uC790\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -35135,30 +34418,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -35344,30 +34606,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC637 \uC218\uB0A9\uC7A5\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -35546,30 +34787,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC2E0\uBC1C\uC7A5\uC774\uB2E4"
+  - "\uC660\uC9C0 \uAD6C\uB9B0\uB0B4\uAC00 \uB098\uB294 \uAC83 \uAC19\uB2E4"
+  delay:
+  - 0.05
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -37655,30 +36877,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC637 \uC218\uB0A9\uC7A5\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -40016,30 +39217,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC637 \uC218\uB0A9\uC7A5\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 1
@@ -41418,30 +40598,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 1
@@ -41576,30 +40735,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -42591,27 +41729,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC190\uB2D8\uB4E4\uC774 \uC654\uC744 \uB54C \uBAA8\uC5EC \uC549\uB294 \uC758\uC790\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -42661,30 +41781,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -43269,27 +42368,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC190\uB2D8\uB4E4\uC774 \uC654\uC744 \uB54C \uBAA8\uC5EC \uC549\uB294 \uC758\uC790\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -43611,27 +42692,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uBD88\uD3B8\uD574\uBCF4\uC774\uB294 \uD754\uB4E4 \uC758\uC790\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -43805,30 +42868,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -46338,30 +45380,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -46456,30 +45477,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC2E0\uBC1C\uC7A5\uC774\uB2E4"
+  - "\uC660\uC9C0 \uAD6C\uB9B0\uB0B4\uAC00 \uB098\uB294 \uAC83 \uAC19\uB2E4"
+  delay:
+  - 0.05
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -47222,27 +46224,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC190\uB2D8\uB4E4\uC774 \uC654\uC744 \uB54C \uBAA8\uC5EC \uC549\uB294 \uC758\uC790\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -48015,27 +46999,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uBD88\uD3B8\uD574\uBCF4\uC774\uB294 \uD754\uB4E4 \uC758\uC790\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 1
@@ -49044,27 +48010,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC190\uB2D8\uB4E4\uC774 \uC654\uC744 \uB54C \uBAA8\uC5EC \uC549\uB294 \uC758\uC790\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 1
@@ -49644,30 +48592,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uCC45\uB4E4\uC774 \uB193\uC5EC\uC838 \uC788\uB294 \uCC45\uC7A5\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -49956,30 +48883,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC9D1\uC5D0 \uC11C\uB78D\uC774 \uB418\uAC8C \uB9CE\uC740 \uAC83 \uAC19\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -50158,27 +49064,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC190\uB2D8\uB4E4\uC774 \uC654\uC744 \uB54C \uBAA8\uC5EC \uC549\uB294 \uC758\uC790\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -50313,30 +49201,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uB9DB\uC788\uC5B4 \uBCF4\uC774\uB294 \uBE75\uB4E4\uC774 \uC788\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -50826,27 +49693,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uBC24\uC5D0 \uC9D1\uC744 \uBC1D\uD600\uC8FC\uB294 \uC2A4\uD0E0\uB4DC\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -51914,30 +50763,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -52717,27 +51545,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uBC24\uC5D0 \uC9D1\uC744 \uBC1D\uD600\uC8FC\uB294 \uC2A4\uD0E0\uB4DC\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -54850,30 +53660,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uB9DB\uC788\uC5B4 \uBCF4\uC774\uB294 \uBE75\uB4E4\uC774 \uC788\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 1
@@ -55136,30 +53925,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC637 \uC218\uB0A9\uC7A5\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -56328,30 +55096,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -57092,30 +55839,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC2E0\uBC1C\uC7A5\uC774\uB2E4"
+  - "\uC660\uC9C0 \uAD6C\uB9B0\uB0B4\uAC00 \uB098\uB294 \uAC83 \uAC19\uB2E4"
+  delay:
+  - 0.05
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -57655,30 +56383,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uCE78\uC774 9\uAC1C\uB098 \uC788\uB294 \uC11C\uB78D\uC774\uB2E4"
+  - "\uB418\uAC8C \uBB34\uAC70\uC6B8 \uAC83 \uAC19\uB2E4 .."
+  delay:
+  - 0.05
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -58504,27 +57213,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC190\uB2D8\uB4E4\uC774 \uC654\uC744 \uB54C \uBAA8\uC5EC \uC549\uB294 \uC758\uC790\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -58730,30 +57421,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uACFC\uC790\uAC00 \uB4E4\uC5B4\uC788\uB294 \uC0C1\uC790\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
@@ -59722,30 +58392,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uC11C\uB78D\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -59840,30 +58489,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -62052,27 +60680,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC190\uB2D8\uB4E4\uC774 \uC654\uC744 \uB54C \uBAA8\uC5EC \uC549\uB294 \uC758\uC790\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -64101,27 +62711,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uC9D1\uC548\uC744 \uB530\uB73B\uD558\uAC8C \uD574\uC8FC\uB294 \uD654\uB85C\uB2E4"
+  - "\uC7A5\uC791\uC774 \uBD80\uC871\uD560 \uB54C\uB294 \uC5EC\uAE30\uC788\uB294
+    \uCC45\uB4E4\uC744 \uB123\uB294\uB2E4"
+  delay:
+  - 0.05
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 0
@@ -64216,30 +62811,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 1
@@ -64411,30 +62985,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 2
@@ -65659,30 +64212,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  delay: []
+  - "\uD3C9\uBC94\uD55C \uD654\uBD84\uC774\uB2E4"
+  delay:
+  - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}
   direction: 3
