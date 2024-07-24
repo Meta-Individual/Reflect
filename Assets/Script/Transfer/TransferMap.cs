@@ -17,7 +17,7 @@ public class TransferMap : MonoBehaviour
     private bool playerInRange = false; // 플레이어가 포탈 위에 있는지 여부
     private AudioSource audioSource; // AudioSource 컴포넌트
 
-    public Text text;
+    public GameObject arrow_UI;
 
     [Header("Target")]
     public Direction direction;
@@ -32,8 +32,7 @@ public class TransferMap : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         anim = player.GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        text = GameObject.Find("Tag").GetComponent<Text>();
-        HideText();
+        HideUI();
     }
 
     void Update()
@@ -42,7 +41,7 @@ public class TransferMap : MonoBehaviour
         {
             if (CheckDirection())
             {
-                ShowText();
+                ShowUI();
                 if (Input.GetKeyDown((KeyCode)CustomKey.Interact))
                 {
                     player.transform.position = targetLocation.position;
@@ -51,7 +50,7 @@ public class TransferMap : MonoBehaviour
             }
             else
             {
-                HideText();
+                HideUI();
             }
         }
     }
@@ -111,35 +110,20 @@ public class TransferMap : MonoBehaviour
     }
 
 
-    private void ShowText()
+    private void ShowUI()
     {
-        Color color = text.color;
-        color.a = 1f;
-        text.color = color;
-
-        text.transform.position = transform.position + new Vector3(0, 1, 0);
-        if (CompareTag("OpenDoor"))
-        {
-            text.text = "열기";
-        }
-        else if (CompareTag("CloseDoor"))
-        {
-            text.text = "닫기";
-        }
+        arrow_UI.SetActive(true);
     }
 
-    private void HideText()
+    private void HideUI()
     {
-        Color color = text.color;
-        color.a = 0f;
-        text.color = color;
+        arrow_UI.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            ShowText();
             playerInRange = true;
         }
     }
@@ -148,7 +132,6 @@ public class TransferMap : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            HideText();
             playerInRange = false;
         }
     }

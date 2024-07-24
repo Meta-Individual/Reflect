@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,7 @@ using UnityEngine.UI;
 public class ConversationManager : MonoBehaviour
 {
     public Canvas UI;
-    public Text targetText;
+    public TMP_Text targetText;
     public string fullText = "아카네 아주머니는 잘 계세요 ?\n 아가는 어때요 ? 예뻐요 ?";
     public float delay = 0.1f; // 각 글자 사이의 지연 시간
 
@@ -18,7 +19,7 @@ public class ConversationManager : MonoBehaviour
     {
         if (conversationFlag)
         {
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown((KeyCode)CustomKey.Interact))
             {
                 StartCoroutine(ActivateCanvas());
             }
