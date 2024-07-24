@@ -6,7 +6,7 @@ public class NPCOutOfDeskState : MonoBehaviour, INPCState
 {
     private NPCController _npcController;
 
-    private float animationTimer = 1.5f;
+    private float animationTimer = 3.5f;
     private float startTimer;
 
     public void OnStateEnter(NPCController npcController)
@@ -14,7 +14,7 @@ public class NPCOutOfDeskState : MonoBehaviour, INPCState
         if (!_npcController)
             _npcController = npcController;
 
-        _npcController.anim.SetBool("Out", true);
+        StartCoroutine(StartAnimationSet());
         startTimer = 0;
     }
     public void OnStateUpdate()
@@ -31,5 +31,15 @@ public class NPCOutOfDeskState : MonoBehaviour, INPCState
     public void OnStateExit()
     {
         _npcController.anim.SetBool("Out", false);
+    }
+
+
+    IEnumerator StartAnimationSet()
+    {
+        _npcController.chair_desk_Move.MoveCoroutine();
+        yield return new WaitForSeconds(1f);
+        _npcController.RecoverTransparency();
+        _npcController.anim.SetBool("Out", true);
+
     }
 }

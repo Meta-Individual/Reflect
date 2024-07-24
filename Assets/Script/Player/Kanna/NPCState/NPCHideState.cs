@@ -21,7 +21,6 @@ public class NPCHideState : MonoBehaviour, INPCState
         
         if(_npcController.OutOfDesk())
         {
-            _npcController.RecoverTransparency();
             _npcController.ChangeState(_npcController._outState);
         }
     }
