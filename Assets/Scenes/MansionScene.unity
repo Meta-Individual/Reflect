@@ -12772,6 +12772,7 @@ GameObject:
   - component: {fileID: 346756673}
   - component: {fileID: 346756672}
   - component: {fileID: 346756671}
+  - component: {fileID: 346756674}
   m_Layer: 8
   m_Name: Hall_To_Library
   m_TagString: OpenDoor
@@ -12954,6 +12955,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.020073, y: 12.162598}
   m_EdgeRadius: 0
+--- !u!114 &346756674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346756669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a6c19874ff570d4faa1b585d2f4d03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorOpenText: 
+  doorClosedText: "\uBB38\uC774 \uC7A0\uACA8\uC788\uB124 ? \uB204\uAD70\uAC00 \uC788\uB294
+    \uAC83 \uAC19\uC544"
+  delay: 0.05
+  dialoguePanel: {fileID: 1075493626}
+  player: {fileID: 288599558}
+  direction: 1
 --- !u!1 &348880554
 GameObject:
   m_ObjectHideFlags: 0
@@ -24873,7 +24893,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ebecb4a595280d45b1e7740893fbc8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetDoor: {fileID: 346756669}
   player: {fileID: 288599555}
 --- !u!114 &661502828
 MonoBehaviour:
@@ -24888,8 +24907,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText:
-  - "\uBB34\uAC70\uC6B4 \uAC83\uB4E4\uC774 \uC794\uB729 \uB193\uC5EC\uC838 \uC788\uC5B4"
+  - "\uC5B4 .. \uC5F4\uC1E0 \uAC19\uC544 \uBCF4\uC774\uB294\uB370 ?"
+  - "\uC5F4\uC1E0\uB97C \uC5BB\uC5C8\uC5B4 !"
   delay:
+  - 0.05
   - 0.05
   dialoguePanel: {fileID: 1075493626}
   player: {fileID: 288599558}

@@ -11,26 +11,26 @@ public class DoorMonologue : MonoBehaviour
     }
 
     [Header("Monologue")]
-    public string doorOpendText;
+    public string doorOpenText;
     public string doorClosedText;
     public float delay; // 각 글자 사이의 지연 시간
     public GameObject dialoguePanel; // 말풍선 패널
     public Transform player; // 플레이어 Transform
     public Direction direction;
 
-    private TransferMap _transferMap;
+    private TransferMap transferMap;
     private PlayerController playerController;
-    private Animator anim;
+    private Animator animator;
     private bool isPlayerInRange; // 플레이어가 오브젝트 범위 내에 있는지 여부
-    private bool isFinish = false;
+    private bool isMonologueFinished = false;
     private bool isTalking = false;
     private Vector3 offset = new(0, 15f, 0); // 말풍선의 위치 오프셋
 
     void Start()
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-        anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
-        _transferMap = GetComponent<TransferMap>();
+        animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+        transferMap = GetComponent<TransferMap>();
         if (dialoguePanel != null)
         {
             dialoguePanel.SetActive(false); // 시작 시 말풍선 패널 비활성화
@@ -39,109 +39,87 @@ public class DoorMonologue : MonoBehaviour
 
     void Update()
     {
-        // 플레이어가 오브젝트 범위 내에 있고 E 키를 누르면 말풍선 표시
-        if (isPlayerInRange)
+        if (!transferMap.isLock)
         {
-            if (CheckDirection())
+            return; // transferMap이 잠겨있지 않으면 더 이상 업데이트하지 않음
+        }
+
+        if (isPlayerInRange && CheckDirection() && !isTalking)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                if (!isTalking)
+                if (isMonologueFinished)
                 {
-                    Debug.Log("독백 가능");
-                    if (Input.GetKeyDown(KeyCode.E))
-                    {
-                        if (isFinish)
-                        {
-                            dialoguePanel.SetActive(false);
-                            dialoguePanel.GetComponentInChildren<TMP_Text>().text = "";
-                            playerController.ChangeState(playerController._idleState);
-                            isFinish = false;
-                        }
-                        else
-                        {
-                            if (dialoguePanel != null)
-                            {
-                                dialoguePanel.SetActive(true);
-                                StartCoroutine(ActiveMonologue());
-                                dialoguePanel.transform.position = player.position + offset;
-                                playerController.ChangeState(playerController._waitState);
-                            }
-                        }
-                    }
+                    EndMonologue();
+                }
+                else
+                {
+                    StartMonologue();
                 }
             }
         }
 
-        // 말풍선 패널의 위치를 플레이어의 위로 업데이트
         if (dialoguePanel.activeSelf)
         {
-            dialoguePanel.transform.position = player.position + offset;
+            UpdateDialoguePanelPosition();
         }
     }
 
-    private IEnumerator ActiveMonologue()
+    private void StartMonologue()
+    {
+        if (dialoguePanel != null)
+        {
+            dialoguePanel.SetActive(true);
+            StartCoroutine(DisplayMonologue());
+            playerController.ChangeState(playerController._waitState);
+        }
+    }
+
+    private void EndMonologue()
+    {
+        dialoguePanel.SetActive(false);
+        dialoguePanel.GetComponentInChildren<TMP_Text>().text = "";
+        playerController.ChangeState(playerController._idleState);
+        isMonologueFinished = false;
+    }
+
+    private void UpdateDialoguePanelPosition()
+    {
+        dialoguePanel.transform.position = player.position + offset;
+    }
+
+    private IEnumerator DisplayMonologue()
     {
         isTalking = true;
-        dialoguePanel.GetComponentInChildren<TMP_Text>().text = ""; // 텍스트 초기화
+        var textComponent = dialoguePanel.GetComponentInChildren<TMP_Text>();
+        textComponent.text = ""; // 텍스트 초기화
 
+        string textToDisplay = transferMap.isLock && !playerController.libraryKey ? doorClosedText : doorOpenText;
 
-        if (_transferMap.isLock)
+        foreach (char letter in textToDisplay)
         {
-            if (!playerController.libraryKey)
-            {
-                foreach (char letter in doorClosedText)
-                {
-                    dialoguePanel.GetComponentInChildren<TMP_Text>().text += letter;
-                    yield return new WaitForSeconds(delay); // 지연 시간 대기
-                }
-            }
-            else
-            {
-                foreach (char letter in doorOpendText)
-                {
-                    dialoguePanel.GetComponentInChildren<TMP_Text>().text += letter;
-                    yield return new WaitForSeconds(delay); // 지연 시간 대기
-                }
-                _transferMap.isLock = false;
-            }
-            isFinish = true;
+            textComponent.text += letter;
+            yield return new WaitForSeconds(delay); // 지연 시간 대기
         }
 
-        // 다음 대사로 이동
+        if (transferMap.isLock && playerController.libraryKey)
+        {
+            transferMap.isLock = false;
+        }
+
+        isMonologueFinished = true;
         isTalking = false;
     }
 
-
     private bool CheckDirection()
     {
-        if (direction == Direction.RIGHT)
-        {
-            if (anim.GetFloat("DirX") == 1)
-            {
-                return true;
-            }
-        }
-        else if (direction == Direction.LEFT)
-        {
-            if (anim.GetFloat("DirX") == -1)
-            {
-                return true;
-            }
-        }
-        else if (direction == Direction.UP)
-        {
-            if (anim.GetFloat("DirY") == 1)
-            {
-                return true;
-            }
-        }
-        else if (direction == Direction.DOWN)
-        {
-            if (anim.GetFloat("DirY") == -1)
-            {
-                return true;
-            }
-        }
-        return false;
+        float dirX = animator.GetFloat("DirX");
+        float dirY = animator.GetFloat("DirY");
+
+        return (direction == Direction.RIGHT && dirX == 1) ||
+               (direction == Direction.LEFT && dirX == -1) ||
+               (direction == Direction.UP && dirY == 1) ||
+               (direction == Direction.DOWN && dirY == -1);
     }
 
     void OnTriggerEnter2D(Collider2D other)

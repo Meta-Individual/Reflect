@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class GetKey : MonoBehaviour
 {
-    public GameObject targetDoor;
     public GameObject player;
-    private TransferMap _transferMap;
     private PlayerController _playerController;
     private bool isTrigger;
 
     void Start()
     {
-        _transferMap = targetDoor.GetComponent<TransferMap>();
         _playerController = player.GetComponent<PlayerController>();
         isTrigger = false;
     }
