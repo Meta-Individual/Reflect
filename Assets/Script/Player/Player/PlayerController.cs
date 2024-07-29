@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public CharacterController _characterController;
     [HideInInspector]
     public Rigidbody2D _rigidbody;
+    [HideInInspector]
+    public bool libraryKey;
 
 
     [Header("Movement")]
@@ -31,6 +33,8 @@ public class PlayerController : MonoBehaviour
         _waitState = gameObject.AddComponent<PlayerWaitState>();
 
         _rigidbody = GetComponent<Rigidbody2D>();
+
+        libraryKey = false;
 
         CurrentState = _idleState;
         ChangeState(CurrentState);
