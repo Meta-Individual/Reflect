@@ -81,6 +81,11 @@ public class DoorMonologue : MonoBehaviour
         dialoguePanel.GetComponentInChildren<TMP_Text>().text = "";
         playerController.ChangeState(playerController._idleState);
         isMonologueFinished = false;
+
+        if (transferMap.isLock && playerController.libraryKey)
+        {
+            transferMap.isLock = false;
+        }
     }
 
     private void UpdateDialoguePanelPosition()
@@ -100,11 +105,6 @@ public class DoorMonologue : MonoBehaviour
         {
             textComponent.text += letter;
             yield return new WaitForSeconds(delay); // 지연 시간 대기
-        }
-
-        if (transferMap.isLock && playerController.libraryKey)
-        {
-            transferMap.isLock = false;
         }
 
         isMonologueFinished = true;
