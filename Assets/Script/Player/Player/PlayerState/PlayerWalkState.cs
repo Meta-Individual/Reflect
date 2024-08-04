@@ -21,6 +21,11 @@ public class PlayerWalkState : MonoBehaviour, IPlayerState
     {
         if (_playerController)
         {
+            if (Input.GetKeyDown(KeyCode.E)) // 'E' 키로 상호작용
+            {
+                _playerController.Interact();
+            }
+
             //Debug.Log("Player Walk");
             if (movement.x == 0)
             {
