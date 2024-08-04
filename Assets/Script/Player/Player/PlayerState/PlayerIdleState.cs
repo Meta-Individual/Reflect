@@ -20,6 +20,11 @@ public class PlayerIdleState : MonoBehaviour, IPlayerState
             _playerController.ChangeState(_playerController._walkState);
         }
 
+        if (Input.GetKeyDown(KeyCode.E)) // 'E' 키로 상호작용
+        {
+            _playerController.Interact();
+        }
+
     }
 
     public void OnStateExit()
