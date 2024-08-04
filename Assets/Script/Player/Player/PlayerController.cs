@@ -60,4 +60,17 @@ public class PlayerController : MonoBehaviour
             CurrentState.OnStateUpdate();
         }
     }
+
+    public void Interact()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, 1f);
+        if (hit.collider != null)
+        {
+            IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+            if (interactable != null)
+            {
+                interactable.Interact();
+            }
+        }
+    }
 }
