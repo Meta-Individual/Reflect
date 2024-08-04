@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +14,6 @@ public class SimpleInteractable : MonoBehaviour, IInteractable
 
     private void ShowDialogue(string message)
     {
-        Debug.Log(message); // ½ÇÁ¦ °ÔÀÓ¿¡¼­´Â UI·Î Ç¥½Ã
+        Debug.Log(message); // ì‹¤ì œ ê²Œì„ì—ì„œëŠ” UIë¡œ í‘œì‹œ
     }
 }
