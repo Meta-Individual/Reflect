@@ -14,17 +14,16 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public bool libraryKey;
 
-
     [Header("Movement")]
-    public float walkSpeed = 5f;    
+    public float walkSpeed = 5f;
 
-    public IPlayerState CurrentState
-    {
-        get; set;
-    }
+    public IPlayerState CurrentState { get; set; }
 
     public IPlayerState _idleState, _walkState, _waitState;
 
+    private AudioSource _audioSrc;
+    float moveX, moveY;
+    bool isMoving = false;
 
     private void Start()
     {
@@ -33,6 +32,7 @@ public class PlayerController : MonoBehaviour
         _waitState = gameObject.AddComponent<PlayerWaitState>();
 
         _rigidbody = GetComponent<Rigidbody2D>();
+        _audioSrc = GetComponent<AudioSource>();
 
         libraryKey = false;
 
@@ -43,6 +43,23 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         UpdateState();
+
+        moveX = Input.GetAxis("Horizontal") * walkSpeed;
+        moveY = Input.GetAxis("Vertical") * walkSpeed;
+
+        _rigidbody.velocity = new Vector2(moveX, moveY);
+
+        isMoving = _rigidbody.velocity.magnitude > 0;
+
+        if (isMoving)
+        {
+            if (!_audioSrc.isPlaying)
+                _audioSrc.Play();
+        }
+        else
+        {
+            _audioSrc.Stop();
+        }
     }
 
     public void ChangeState(IPlayerState playerState)
@@ -60,4 +77,17 @@ public class PlayerController : MonoBehaviour
             CurrentState.OnStateUpdate();
         }
     }
+
+    // public void Interact()
+    // {
+    //     RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, 1f);
+    //     if (hit.collider != null)
+    //     {
+    //         IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+    //         if (interactable != null)
+    //         {
+    //             interactable.Interact();
+    //         }
+    //     }
+    // }
 }

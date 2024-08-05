@@ -14,21 +14,20 @@ public class Zoom : MonoBehaviour
 
     private Camera _camera;
 
+    public float zoomInSize = 3f; // 줌인 크기
+    public float zoomOutSize = 5f; // 줌아웃 크기
+    public float zoomSpeed = 5f; // 줌 속도
+
     private void ControlCameraPosition()
     {
         var mouseWorldPosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+
         if (Input.GetMouseButtonDown(0))
-        {
             CameraPositionMoveStart(mouseWorldPosition);
-        }
         else if (Input.GetMouseButton(0))
-        {
             CameraPositionMoveProgress(mouseWorldPosition);
-        }
         else
-        {
             CameraPositionMoveEnd();
-        }
     }
 
     private void CameraPositionMoveStart(Vector3 startPosition) 
@@ -47,38 +46,48 @@ public class Zoom : MonoBehaviour
         }
 
         _directionForce = _startPosition - targetPosition;
+
+        // 줌인
+        _camera.orthographicSize = Mathf.Lerp(_camera.orthographicSize, zoomInSize, Time.deltaTime * zoomSpeed);
     }
 
     private void CameraPositionMoveEnd()
     {
         _userMoveInput = false;
+
+        // 줌아웃
+        StartCoroutine(ZoomOut());
+    }
+
+    private IEnumerator ZoomOut()
+    {
+        while (_camera.orthographicSize < zoomOutSize - 0.01f)
+        {
+            _camera.orthographicSize = Mathf.Lerp(_camera.orthographicSize, zoomOutSize, Time.deltaTime * zoomSpeed);
+            yield return null;
+        }
+        _camera.orthographicSize = zoomOutSize; // 정확히 줌아웃 크기로 설정
     }
 
     private void ReduceDirectionForce()
     {
         // 조작 중일때는 아무것도 안함
         if (_userMoveInput)
-        {
             return;
-        }
         
         // 감속 수치 적용
         _directionForce *= DirectionForceReduceRate;
         
         // 작은 수치가 되면 강제로 멈춤
         if (_directionForce.magnitude < DirectionForceMin)
-        {
             _directionForce = Vector3.zero;
-        }
     }
 
     private void UpdateCameraPosition()
     {
         // 이동 수치가 없으면 아무것도 안함
         if (_directionForce == Vector3.zero)
-        {
             return;
-        }
         
         var currentPosition = transform.position;
         var targetPosition = currentPosition + _directionForce;
@@ -93,10 +102,8 @@ public class Zoom : MonoBehaviour
     {
         // 카메라 포지션 이동
         ControlCameraPosition();
-
         // 조작을 멈췄을때 감속
         ReduceDirectionForce();
-
         // 카메라 위치 업데이트
         UpdateCameraPosition();
     }
