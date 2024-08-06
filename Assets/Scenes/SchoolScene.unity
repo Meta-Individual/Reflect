@@ -1286,7 +1286,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &140469048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11735,7 +11735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f40f4f8549973d4ab822a05a78337af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1372391559}
+  target: {fileID: 140469047}
   moveSpeed: 10
   currentBound: {fileID: 1944977981}
 --- !u!81 &1220698976
