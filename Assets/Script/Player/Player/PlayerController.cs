@@ -16,20 +16,20 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement")]
     public float walkSpeed = 5f;
+    public float runSpeed = 10f;
 
     public IPlayerState CurrentState { get; set; }
 
-    public IPlayerState _idleState, _walkState, _waitState;
+    public IPlayerState _idleState, _walkState, _waitState, _runState;
 
-    private AudioSource _audioSrc;
-    float moveX, moveY;
-    bool isMoving = false;
+    public AudioSource _audioSrc;
 
     private void Start()
     {
         _idleState = gameObject.AddComponent<PlayerIdleState>();
         _walkState = gameObject.AddComponent<PlayerWalkState>();
         _waitState = gameObject.AddComponent<PlayerWaitState>();
+        _runState = gameObject.AddComponent<PlayerRunState>();
 
         _rigidbody = GetComponent<Rigidbody2D>();
         _audioSrc = GetComponent<AudioSource>();
@@ -43,23 +43,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         UpdateState();
-
-        moveX = Input.GetAxis("Horizontal") * walkSpeed;
-        moveY = Input.GetAxis("Vertical") * walkSpeed;
-
-        _rigidbody.velocity = new Vector2(moveX, moveY);
-
-        isMoving = _rigidbody.velocity.magnitude > 0;
-
-        if (isMoving)
-        {
-            if (!_audioSrc.isPlaying)
-                _audioSrc.Play();
-        }
-        else
-        {
-            _audioSrc.Stop();
-        }
+        HandleRunInput();
     }
 
     public void ChangeState(IPlayerState playerState)
@@ -90,4 +74,18 @@ public class PlayerController : MonoBehaviour
     //         }
     //     }
     // }
+
+    private void HandleRunInput()
+    {
+        if (Input.GetKey(KeyCode.LeftShift) && (Input.GetAxisRaw("Horizontal")!=0 || Input.GetAxisRaw("Vertical")!=0))
+        {
+            if (CurrentState == _walkState)
+                ChangeState(_runState);
+        }
+        else
+        {
+            if (CurrentState == _runState)
+                ChangeState(_walkState);
+        }
+    }
 }

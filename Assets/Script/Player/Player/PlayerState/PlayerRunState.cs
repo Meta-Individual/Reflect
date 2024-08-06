@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PlayerWalkState : MonoBehaviour, IPlayerState
+public class PlayerRunState : MonoBehaviour, IPlayerState
 {
     private PlayerController _playerController;
     private Vector2 movement;
@@ -13,7 +13,7 @@ public class PlayerWalkState : MonoBehaviour, IPlayerState
         if(!_playerController)
             _playerController = playerController;
 
-        _playerController.anim.SetBool("Walk", true);
+        _playerController.anim.SetBool("Run", true);
     }
 
 
@@ -21,7 +21,7 @@ public class PlayerWalkState : MonoBehaviour, IPlayerState
     {
         if (_playerController)
         {
-            //Debug.Log("Player Walk");
+            // Debug.Log("Player Run");
             if (movement.x == 0)
             {
                 movement.y = Input.GetAxisRaw("Vertical");
@@ -33,11 +33,11 @@ public class PlayerWalkState : MonoBehaviour, IPlayerState
 
             if (movement.x != 0 || movement.y != 0)
             {
-                _playerController._rigidbody.MovePosition(_playerController._rigidbody.position + movement * _playerController.walkSpeed * Time.fixedDeltaTime);
+                _playerController._rigidbody.MovePosition(_playerController._rigidbody.position + movement * _playerController.runSpeed * Time.fixedDeltaTime);
                 _playerController.anim.SetFloat("DirX", movement.x);
                 _playerController.anim.SetFloat("DirY", movement.y);
 
-                // _playerController._rigidbody.velocity = new Vector2(movement.x*_playerController.walkSpeed, movement.y*_playerController.walkSpeed);
+                // _playerController._rigidbody.velocity = new Vector2(movement.x*_playerController.runSpeed, movement.y*_playerController.runSpeed);
                 // if (_playerController._rigidbody.velocity.magnitude > 0)
                 // {
                 //     if (!_playerController._audioSrc.isPlaying)
@@ -56,7 +56,7 @@ public class PlayerWalkState : MonoBehaviour, IPlayerState
     }
     public void OnStateExit()
     {
-        _playerController.anim.SetBool("Walk", false);
+        _playerController.anim.SetBool("Run", false);
     }
 
 }
