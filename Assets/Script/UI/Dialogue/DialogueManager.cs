@@ -25,7 +25,7 @@ public class DialogueManager : MonoBehaviour
 
     private void LoadDialogues()
     {
-        TextAsset csvFile = Resources.Load<TextAsset>("ObjectDialogues");
+        TextAsset csvFile = Resources.Load<TextAsset>("CSV/ObjectMonologue");
         string[] lines = csvFile.text.Split('\n');
 
         for (int i = 1; i < lines.Length; i++) // Skip header
@@ -33,9 +33,12 @@ public class DialogueManager : MonoBehaviour
             string[] values = lines[i].Split(',');
             if (values.Length >= 2)
             {
-                string objectID = values[0].Trim();
-                string dialogue = values[1].Trim().Trim('"'); // Remove quotes
-                dialogues[objectID] = dialogue;
+                string objectID = values[1].Trim();
+                string sceneName = values[2]; // Remove quotes
+                string objectName = values[4];
+                string monologue = values[5]; 
+                Debug.Log(objectID + sceneName + objectName + monologue);
+                dialogues[objectID] = monologue;
             }
         }
     }

@@ -21,19 +21,16 @@ public class PlayerWalkState : MonoBehaviour, IPlayerState
     {
         if (_playerController)
         {
-            if (Input.GetKeyDown(KeyCode.E)) // 'E' 키로 상호작용
-            {
-                _playerController.Interact();
-            }
-
             //Debug.Log("Player Walk");
             if (movement.x == 0)
             {
                 movement.y = Input.GetAxisRaw("Vertical");
+                _playerController.CurrentDirection = new (0.0f, movement.y);
             }
             if (movement.y == 0)
             {
                 movement.x = Input.GetAxisRaw("Horizontal");
+                _playerController.CurrentDirection = new(movement.x, 0.0f);
             }
 
             if (movement.x != 0 || movement.y != 0)
@@ -45,6 +42,11 @@ public class PlayerWalkState : MonoBehaviour, IPlayerState
             else
             {
                 _playerController.ChangeState(_playerController._idleState);
+            }
+
+            if (Input.GetKeyDown(KeyCode.E)) // 'E' 키로 상호작용
+            {
+                _playerController.Interact();
             }
         }
     }
