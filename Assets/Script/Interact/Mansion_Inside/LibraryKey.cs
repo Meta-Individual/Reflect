@@ -30,7 +30,7 @@ public class LibraryKey : MonoBehaviour, IInteractable
         }
         else
         {
-            string dialogue = DialogueManager.Instance.GetDialogue(objectID);
+            string dialogue = LoadMonologue.Instance.GetMonologue(objectID);
             _monologueManager.ShowMonologue(dialogue);
         }
     }

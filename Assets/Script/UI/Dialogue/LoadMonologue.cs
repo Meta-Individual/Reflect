@@ -1,13 +1,13 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueManager : MonoBehaviour
+public class LoadMonologue : MonoBehaviour
 {
-    private static DialogueManager _instance;
-    public static DialogueManager Instance { get { return _instance; } }
+    private static LoadMonologue _instance;
+    public static LoadMonologue Instance { get { return _instance; } }
 
-    private Dictionary<string, string> dialogues = new Dictionary<string, string>();
+    private Dictionary<string, string> monologues = new Dictionary<string, string>();
 
     private void Awake()
     {
@@ -19,11 +19,11 @@ public class DialogueManager : MonoBehaviour
         {
             _instance = this;
             DontDestroyOnLoad(this.gameObject);
-            LoadDialogues();
+            LoadMonologues();
         }
     }
 
-    private void LoadDialogues()
+    private void LoadMonologues()
     {
         TextAsset csvFile = Resources.Load<TextAsset>("CSV/ObjectMonologue");
         string[] lines = csvFile.text.Split('\n');
@@ -38,17 +38,17 @@ public class DialogueManager : MonoBehaviour
                 string objectName = values[4];
                 string monologue = values[5]; 
                 //Debug.Log(objectID + sceneName + objectName + monologue);
-                dialogues[objectID] = monologue;
+                monologues[objectID] = monologue;
             }
         }
     }
 
-    public string GetDialogue(string objectID)
+    public string GetMonologue(string objectID)
     {
-        if (dialogues.TryGetValue(objectID, out string dialogue))
+        if (monologues.TryGetValue(objectID, out string monologue))
         {
-            return dialogue;
+            return monologue;
         }
-        return "¿Ã π∞∞«ø° ¥Î«ÿ ∆Ø∫∞«— ∞Õ¿∫ æ¯æÓ ∫∏ø©.";
+        return "Ïù¥ Î¨ºÍ±¥Ïóê ÎåÄÌï¥ ÌäπÎ≥ÑÌïú Í≤ÉÏùÄ ÏóÜÏñ¥ Î≥¥Ïó¨.";
     }
 }

@@ -14,7 +14,7 @@ public class IllustInteractable : MonoBehaviour, IInteractable
     }
     public void Interact()
     {
-        string dialogue = DialogueManager.Instance.GetDialogue(objectID);
-        _illustManager.ShowIllust(image, dialogue);
+        string monologue = LoadMonologue.Instance.GetMonologue(objectID);
+        _illustManager.ShowIllust(image, monologue);
     }
 }
