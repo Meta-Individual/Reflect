@@ -46,7 +46,7 @@ public class PlayerWalkState : MonoBehaviour, IPlayerState
 
             if (Input.GetKeyDown(KeyCode.E)) // 'E' 키로 상호작용
             {
-                _playerController.Interact();
+                _playerController.ChangeState(_playerController._waitState);
             }
         }
     }
