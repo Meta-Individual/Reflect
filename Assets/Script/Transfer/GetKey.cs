@@ -19,7 +19,7 @@ public class GetKey : MonoBehaviour
     {
         if (isTrigger)
         {
-            _playerController.libraryKey = true;
+            //_playerController.libraryKey = true;
         }
     }
 

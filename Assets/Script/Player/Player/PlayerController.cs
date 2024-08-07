@@ -12,8 +12,6 @@ public class PlayerController : MonoBehaviour
     public CharacterController _characterController;
     [HideInInspector]
     public Rigidbody2D _rigidbody;
-    [HideInInspector]
-    public bool libraryKey;
 
     public float interactDistance = 2f; // 상호작용 가능한 거리
     public LayerMask interactableLayer; // 상호작용 가능한 레이어 설정
@@ -46,8 +44,6 @@ public class PlayerController : MonoBehaviour
         _monoState = gameObject.AddComponent<PlayerMonologueState>();
 
         _rigidbody = GetComponent<Rigidbody2D>();
-
-        libraryKey = false;
 
         CurrentState = _idleState;
         ChangeState(CurrentState);
@@ -99,7 +95,7 @@ public class PlayerController : MonoBehaviour
             if (interactable != null)
             {
                 interactable.Interact();
-                Debug.Log("상호작용 대상: " + hitCollider.gameObject.name);
+                //Debug.Log("상호작용 대상: " + hitCollider.gameObject.name);
                 break;
             }
         }

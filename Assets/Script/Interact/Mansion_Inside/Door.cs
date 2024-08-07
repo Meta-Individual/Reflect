@@ -5,7 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour, IInteractable
 {
     public bool isLocked = true;
-    public string keyItemName = "DoorKey";
+    public string keyItemName = "LibraryDoorKey";
     public string nextSceneName;
 
     private PlayerInventory playerInventory;
@@ -30,8 +30,7 @@ public class Door : MonoBehaviour, IInteractable
         }
         else
         {
-            // 문이 열려 있으면 다른 장소로 이동
-            LoadNextScene();
+            Debug.Log("이동");
         }
     }
 
