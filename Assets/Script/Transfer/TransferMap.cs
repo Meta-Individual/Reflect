@@ -18,6 +18,7 @@ public class TransferMap : MonoBehaviour
     private PlayerInventory playerInventory;
     private MonologueManager _monologueManager;
     private PlayerController _playerController;
+    private Camera _camera;
     private bool playerInRange = false; // 플레이어가 포탈 위에 있는지 여부
     private bool isMonologue = false;
 
@@ -37,6 +38,7 @@ public class TransferMap : MonoBehaviour
 
     void Start()
     {
+        _camera = FindObjectOfType<Camera>();
         _monologueManager = FindObjectOfType<MonologueManager>();
         playerInventory = FindObjectOfType<PlayerInventory>();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -115,6 +117,7 @@ public class TransferMap : MonoBehaviour
             }
         }
         player.transform.position = targetLocation.position;
+        _camera.transform.position = new (targetLocation.position.x, targetLocation.position.y, _camera.transform.position.z);
     }
 
     private bool CheckDirection()
