@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class PlayerController : MonoBehaviour
 {
     public Animator anim;
-
+    public GameObject monologuePanel;
     [HideInInspector]
     public CharacterController _characterController;
     [HideInInspector]
@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public bool libraryKey;
 
-    public float interactDistance = 5f; // 상호작용 가능한 거리
+    public float interactDistance = 2f; // 상호작용 가능한 거리
     public LayerMask interactableLayer; // 상호작용 가능한 레이어 설정
 
 
@@ -31,14 +31,17 @@ public class PlayerController : MonoBehaviour
         get;set;
     }
 
-    public IPlayerState _idleState, _walkState, _waitState;
+    public IPlayerState _idleState, _walkState, _waitState, _monoState;
 
 
     private void Start()
     {
+        monologuePanel.SetActive(false);
+
         _idleState = gameObject.AddComponent<PlayerIdleState>();
         _walkState = gameObject.AddComponent<PlayerWalkState>();
         _waitState = gameObject.AddComponent<PlayerWaitState>();
+        _monoState = gameObject.AddComponent<PlayerMonologueState>();
 
         _rigidbody = GetComponent<Rigidbody2D>();
 
