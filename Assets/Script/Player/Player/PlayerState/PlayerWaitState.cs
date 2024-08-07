@@ -15,7 +15,7 @@ public class PlayerWaitState : MonoBehaviour, IPlayerState
     }
     public void OnStateUpdate()
     {
-        _playerController.Interact();
+        
     }
 
     public void OnStateExit()

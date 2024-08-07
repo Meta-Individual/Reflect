@@ -22,8 +22,7 @@ public class PlayerIdleState : MonoBehaviour, IPlayerState
 
         if (Input.GetKeyDown(KeyCode.E)) // 'E' 키로 상호작용
         {
-            Debug.Log("Interact");      
-            _playerController.ChangeState(_playerController._waitState);
+            _playerController.Interact();
         }
 
     }
