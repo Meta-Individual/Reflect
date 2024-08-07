@@ -7399,7 +7399,7 @@ SpriteRenderer:
   m_SortingLayerID: 1323068177
   m_SortingLayer: 2
   m_SortingOrder: 2
-  m_Sprite: {fileID: 2038102642, guid: c7749884adedcef43a4edf8c7bf8017c, type: 3}
+  m_Sprite: {fileID: -319550610, guid: c7749884adedcef43a4edf8c7bf8017c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7519,6 +7519,7 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 8
+  interactionAreaSize: {x: 5.5, y: 1.5}
   walkSpeed: 20
 --- !u!1 &293375497
 GameObject:
@@ -9043,20 +9044,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a6c19874ff570d4faa1b585d2f4d03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorOpenText: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
-  doorClosedText: "\uBB38\uC774 \uC7A0\uACA8\uC788\uB124 ? \uB204\uAD70\uAC00 \uC788\uB294
-    \uAC83 \uAC19\uC544"
-  delay: 0.05
-  dialoguePanel: {fileID: 1075493626}
-  player: {fileID: 288599558}
-  direction: 1
-  transferMap: {fileID: 0}
-  playerController: {fileID: 0}
-  animator: {fileID: 0}
-  isPlayerInRange: 0
-  isMonologueFinished: 0
-  isTalking: 0
-  offset: {x: 0, y: 15, z: 0}
 --- !u!1 &348880554
 GameObject:
   m_ObjectHideFlags: 0

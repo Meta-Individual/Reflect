@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     public float interactDistance = 2f; // 상호작용 가능한 거리
     public LayerMask interactableLayer; // 상호작용 가능한 레이어 설정
+    public Vector2 interactionAreaSize = new Vector2(2f, 1f); // 상호작용 영역의 크기
 
 
     [Header("Movement")]
@@ -75,15 +77,40 @@ public class PlayerController : MonoBehaviour
 
     public void Interact()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, CurrentDirection, interactDistance, interactableLayer);
-        Debug.Log(hit.collider);
-        if (hit.collider != null)
+        Vector2 centerPosition = new(0.0f, 0.0f);
+        // X축으로 이동중일 때에 이동하는 방향에 따라 왼쪽, 오른쪽 영역 적용
+        if (CurrentDirection.x != 0)
         {
-            IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+            Vector2 location = new(anim.GetFloat("DirX"), 0.35f);
+            interactionAreaSize = new(2.5f, 2.0f);
+            centerPosition = (Vector2)transform.position + location * (interactionAreaSize);
+        }
+        //Y축으로 이동중일 때에 이동하는 방향에 따라 위, 아래 영역 적용
+        else if(CurrentDirection.y != 0)
+        {
+            Vector2 location = new(0.0f, anim.GetFloat("DirY"));
+            interactionAreaSize = new(5.5f, 1.5f);
+            centerPosition = (Vector2)transform.position + CurrentDirection * (interactionAreaSize);
+        }
+        Collider2D[] hitColliders = Physics2D.OverlapBoxAll(centerPosition, interactionAreaSize, 0f, interactableLayer);
+        foreach (Collider2D hitCollider in hitColliders)
+        {
+            IInteractable interactable = hitCollider.GetComponent<IInteractable>();
             if (interactable != null)
             {
                 interactable.Interact();
+                Debug.Log("상호작용 대상: " + hitCollider.gameObject.name);
+                break;
             }
         }
+    }
+
+    // 디버그를 위한 기즈모 그리기 (에디터에서만 표시됨)
+    private void OnDrawGizmosSelected()
+    {
+        Vector2 location = new(0.0f, 1f);
+        Gizmos.color = Color.yellow;
+        Vector2 centerPosition = (Vector2)transform.position + location * (interactionAreaSize);
+        Gizmos.DrawWireCube(centerPosition, interactionAreaSize);
     }
 }
