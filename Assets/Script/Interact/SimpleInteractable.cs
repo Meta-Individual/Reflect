@@ -15,8 +15,8 @@ public class SimpleInteractable : MonoBehaviour, IInteractable
     }
     public void Interact()
     {
-        string dialogue = DialogueManager.Instance.GetDialogue(objectID);
-        _monologueManager.ShowMonologue(dialogue);
+        string monologue = LoadMonologue.Instance.GetMonologue(objectID);
+        _monologueManager.ShowMonologue(monologue);
     }
 
 }
