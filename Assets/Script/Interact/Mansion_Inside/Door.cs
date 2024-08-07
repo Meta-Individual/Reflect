@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
-    public bool isLocked = true;
+    private bool isLocked = true;
     public string keyItemName = "LibraryDoorKey";
-    public string nextSceneName;
 
     private PlayerInventory playerInventory;
+    private MonologueManager _monologueManager;
+    private TransferMap _transferMap;
 
     void Start()
     {
+        _monologueManager = FindObjectOfType<MonologueManager>();
         playerInventory = FindObjectOfType<PlayerInventory>();
+        _transferMap = GetComponent<TransferMap>();
     }
 
     public void Interact()
@@ -25,29 +28,18 @@ public class Door : MonoBehaviour, IInteractable
             }
             else
             {
-                ShowDialogue("문이 잠겨있어.");
+                 _monologueManager.ShowMonologue("문이 잠겨있어. 여기 숨어있는 것 같아");
             }
         }
         else
         {
-            Debug.Log("이동");
+            _transferMap.TransformWithSound();
         }
     }
 
     public void UnlockDoor()
     {
         isLocked = false;
-        ShowDialogue("문이 열렸어.");
-    }
-
-    private void ShowDialogue(string message)
-    {
-        Debug.Log(message); // 실제 게임에서는 UI로 표시
-    }
-
-    private void LoadNextScene()
-    {
-        // 다음 장면으로 이동하는 로직
-        UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneName);
+        _monologueManager.ShowMonologue("문이 열렸어. 어서 들어가보자");
     }
 }

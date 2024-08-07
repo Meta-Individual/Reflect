@@ -942,9 +942,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 1469917786}
   direction: 0
   targetLocation: {fileID: 1935297810}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &61843780
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5700,9 +5703,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 1621495937}
   direction: 3
   targetLocation: {fileID: 1381495541}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &240114009
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5985,9 +5991,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 1149039067}
   direction: 2
   targetLocation: {fileID: 1697135891}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &245974719
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7034,9 +7043,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 755196884}
   direction: 0
   targetLocation: {fileID: 1658319193}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &268071429
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7629,7 +7641,7 @@ Transform:
   m_GameObject: {fileID: 288599555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 233.4, y: -134.9, z: 0}
+  m_LocalPosition: {x: -53.3, y: -357.6, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7724,7 +7736,6 @@ MonoBehaviour:
   monologuePanel: {fileID: 1075493626}
   _characterController: {fileID: 0}
   _rigidbody: {fileID: 0}
-  interactDistance: 4
   interactableLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -9070,7 +9081,6 @@ GameObject:
   - component: {fileID: 346756673}
   - component: {fileID: 346756672}
   - component: {fileID: 346756671}
-  - component: {fileID: 346756674}
   m_Layer: 8
   m_Name: Hall_To_Library
   m_TagString: OpenDoor
@@ -9205,9 +9215,13 @@ MonoBehaviour:
   arrow_UI: {fileID: 1312499606}
   direction: 1
   targetLocation: {fileID: 2128512991}
-  isLock: 1
+  isLocked: 1
+  keyItemName: LibraryDoorKey
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4. \uC5EC\uAE30 \uC228\uC5B4\uC788\uB294
+    \uAC83 \uAC19\uC544"
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4. \uC5B4\uC11C \uB4E4\uC5B4\uAC00\uBCF4\uC790"
 --- !u!61 &346756673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9253,18 +9267,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.020073, y: 12.162598}
   m_EdgeRadius: 0
---- !u!114 &346756674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 346756669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a6c19874ff570d4faa1b585d2f4d03f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &348880554
 GameObject:
   m_ObjectHideFlags: 0
@@ -10806,9 +10808,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 1938512650}
   direction: 1
   targetLocation: {fileID: 2089778295}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &391354359
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16687,9 +16692,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 1481811798}
   direction: 3
   targetLocation: {fileID: 1278588304}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &621053447
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21863,9 +21871,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 1630990014}
   direction: 1
   targetLocation: {fileID: 1928084102}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &795624197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22540,9 +22551,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 106816407}
   direction: 1
   targetLocation: {fileID: 2028449367}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &821477345
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23330,7 +23344,7 @@ GameObject:
   - component: {fileID: 878294179}
   - component: {fileID: 878294180}
   m_Layer: 3
-  m_Name: Bound (10)
+  m_Name: HallToLibrary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27855,9 +27869,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 958421383}
   direction: 3
   targetLocation: {fileID: 2097333922}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &1016323867
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35150,9 +35167,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 951473214}
   direction: 2
   targetLocation: {fileID: 621053444}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &1278588307
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37471,9 +37491,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 1924812139}
   direction: 2
   targetLocation: {fileID: 240114006}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &1381495544
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42301,9 +42324,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 457959914}
   direction: 0
   targetLocation: {fileID: 1787653822}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &1605857631
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44025,9 +44051,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 225620490}
   direction: 1
   targetLocation: {fileID: 268071426}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &1658319196
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44511,9 +44540,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 739035475}
   direction: 2
   targetLocation: {fileID: 245974716}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &1697135894
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47245,9 +47277,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 375501490}
   direction: 1
   targetLocation: {fileID: 1605857628}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &1787653825
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50497,9 +50532,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 2035081840}
   direction: 0
   targetLocation: {fileID: 795624194}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &1928084105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50845,9 +50883,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 133103678}
   direction: 1
   targetLocation: {fileID: 61843777}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &1935297813
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52117,9 +52158,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 1472344952}
   direction: 2
   targetLocation: {fileID: 1988528483}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &1975759351
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52395,9 +52439,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 319457080}
   direction: 3
   targetLocation: {fileID: 1975759348}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &1988528486
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52900,9 +52947,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 1888820130}
   direction: 2
   targetLocation: {fileID: 2026652739}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &2009388050
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53597,9 +53647,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 420129430}
   direction: 2
   targetLocation: {fileID: 2009388047}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &2026652742
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53775,9 +53828,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 2128249620}
   direction: 0
   targetLocation: {fileID: 821477342}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &2028449366
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55816,9 +55872,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 521531620}
   direction: 0
   targetLocation: {fileID: 391354356}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &2089778298
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56178,9 +56237,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 605880620}
   direction: 2
   targetLocation: {fileID: 1016323864}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &2097333925
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57316,9 +57378,12 @@ MonoBehaviour:
   arrow_UI: {fileID: 1936807406}
   direction: 0
   targetLocation: {fileID: 346756670}
-  isLock: 0
+  isLocked: 0
+  keyItemName: Key
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
+  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
+  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
 --- !u!61 &2128512994
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public Rigidbody2D _rigidbody;
 
-    public float interactDistance = 2f; // 상호작용 가능한 거리
     public LayerMask interactableLayer; // 상호작용 가능한 레이어 설정
     public Vector2 interactionAreaSize = new Vector2(2f, 1f); // 상호작용 영역의 크기
 
@@ -88,6 +87,9 @@ public class PlayerController : MonoBehaviour
             interactionAreaSize = new(5.5f, 1.5f);
             centerPosition = (Vector2)transform.position + CurrentDirection * (interactionAreaSize);
         }
+
+
+
         Collider2D[] hitColliders = Physics2D.OverlapBoxAll(centerPosition, interactionAreaSize, 0f, interactableLayer);
         foreach (Collider2D hitCollider in hitColliders)
         {
