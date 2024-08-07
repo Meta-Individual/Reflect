@@ -7641,7 +7641,7 @@ Transform:
   m_GameObject: {fileID: 288599555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -53.3, y: -357.6, z: 0}
+  m_LocalPosition: {x: -270.8, y: -429.7, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7736,6 +7736,8 @@ MonoBehaviour:
   monologuePanel: {fileID: 1075493626}
   _characterController: {fileID: 0}
   _rigidbody: {fileID: 0}
+  kannaAnim: 0
+  _npcController: {fileID: 0}
   interactableLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -21146,7 +21148,7 @@ GameObject:
   - component: {fileID: 776055011}
   m_Layer: 0
   m_Name: Kanna_kid
-  m_TagString: Untagged
+  m_TagString: Kanna
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21255,10 +21257,7 @@ MonoBehaviour:
   anim: {fileID: 776055008}
   _characterController: {fileID: 0}
   _rigidbody: {fileID: 0}
-  isArrive: 0
   chair_desk_Move: {fileID: 0}
-  targetPositions:
-  - {x: -295.35, y: -425.54}
   walkSpeed: 15
 --- !u!50 &776055010
 Rigidbody2D:
@@ -39106,7 +39105,7 @@ GameObject:
   - component: {fileID: 1475559416}
   - component: {fileID: 1475559417}
   m_Layer: 3
-  m_Name: Bound (12)
+  m_Name: Kanna_Anim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39181,9 +39180,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1475559414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e8cb7603ea7f164bb12b6ad907c77cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 7fdf1bf3e0dde7846868822c50b37e89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kannaMonologue: "\uCC45\uC0C1 \uBC11\uC5D0 \uBB54\uAC00 \uC788\uB294 \uAC83 \uAC19\uB2E4."
   objectID: 38
 --- !u!1 &1480456672
 GameObject:

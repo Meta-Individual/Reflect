@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,27 +14,27 @@ public class TransferMap : MonoBehaviour
     }
     private Animator anim;
     private GameObject player;
-    private AudioSource audioSource; // AudioSource ÄÄÆ÷³ÍÆ®
+    private AudioSource audioSource; // AudioSource ì»´í¬ë„ŒíŠ¸
     private PlayerInventory playerInventory;
     private MonologueManager _monologueManager;
     private PlayerController _playerController;
     private Camera _camera;
-    private bool playerInRange = false; // ÇÃ·¹ÀÌ¾î°¡ Æ÷Å» À§¿¡ ÀÖ´ÂÁö ¿©ºÎ
+    private bool playerInRange = false; // í”Œë ˆì´ì–´ê°€ í¬íƒˆ ìœ„ì— ìˆëŠ”ì§€ ì—¬ë¶€
     private bool isMonologue = false;
 
     public GameObject arrow_UI;
 
     [Header("Target")]
     public Direction direction;
-    public Transform targetLocation; // ÀÌµ¿ÇÒ ¸ñÇ¥ À§Ä¡
+    public Transform targetLocation; // ì´ë™í•  ëª©í‘œ ìœ„ì¹˜
     public bool isLocked = false;
     public string keyItemName = "Key";
     [Header("Sound")]
-    public AudioClip openDoorSound; // ¹æ¹® ¿©´Â »ç¿îµå
-    public AudioClip closeDoorSound; // ¹æ¹® ´İ´Â »ç¿îµå
+    public AudioClip openDoorSound; // ë°©ë¬¸ ì—¬ëŠ” ì‚¬ìš´ë“œ
+    public AudioClip closeDoorSound; // ë°©ë¬¸ ë‹«ëŠ” ì‚¬ìš´ë“œ
     [Header("Script")]
-    public string doorClosedScript = "¹®ÀÌ Àá°ÜÀÖ¾î.";
-    public string doorOpendScript = "¹®ÀÌ ¿­·È¾î";
+    public string doorClosedScript = "ë¬¸ì´ ì ê²¨ìˆì–´.";
+    public string doorOpendScript = "ë¬¸ì´ ì—´ë ¸ì–´";
 
     void Start()
     {
@@ -56,7 +56,7 @@ public class TransferMap : MonoBehaviour
             {
                 ShowUI();
 
-                if (Input.GetKeyDown((KeyCode)CustomKey.Interact))
+                if (Input.GetKeyDown((KeyCode)CustomKey.Interact) && _playerController.CurrentState != _playerController._waitState)
                 {
                     if(!isMonologue)
                     {
@@ -74,7 +74,7 @@ public class TransferMap : MonoBehaviour
                         }
                         else
                         {
-                            TransformWithSound(); // ¹æ¹® »ç¿îµå Àç»ı
+                            TransformWithSound(); // ë°©ë¬¸ ì‚¬ìš´ë“œ ì¬ìƒ
                         }
                     }
                     else
@@ -113,7 +113,7 @@ public class TransferMap : MonoBehaviour
             }
             else
             {
-                Debug.Log("À½¿ø ÆÄÀÏÀÌ Á¸ÀçÇÏÁö ¾Ê°Å³ª, Àß¸øµÈ ÅÂ±×·Î ¼³Á¤µÇ¾ú½À´Ï´Ù.");
+                Debug.Log("ìŒì› íŒŒì¼ì´ ì¡´ì¬í•˜ì§€ ì•Šê±°ë‚˜, ì˜ëª»ëœ íƒœê·¸ë¡œ ì„¤ì •ë˜ì—ˆìŠµë‹ˆë‹¤.");
             }
         }
         player.transform.position = targetLocation.position;

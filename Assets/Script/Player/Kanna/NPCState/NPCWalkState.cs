@@ -31,7 +31,7 @@ public class NPCWalkState : MonoBehaviour, INPCState
         {
             //Debug.Log("Kanna Walk");
 
-            Vector2 currentTarget = _npcController.targetPositions[currentTargetIndex]; // 현재 타겟 위치
+            /*Vector2 currentTarget = _npcController.targetPositions[currentTargetIndex]; // 현재 타겟 위치
             Vector2 currentPosition = transform.position; // 현재 플레이어 위치
             Vector2 direction = (currentTarget - currentPosition).normalized;
 
@@ -65,7 +65,7 @@ public class NPCWalkState : MonoBehaviour, INPCState
                     _npcController.isArrive = true;
                     _npcController.ChangeState(_npcController._idleState);
                 }
-            }
+            }*/
         }
     }
     public void OnStateExit()

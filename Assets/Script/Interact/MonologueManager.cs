@@ -1,13 +1,13 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class MonologueManager: MonoBehaviour
 {
-    public GameObject player; // ÇÃ·¹ÀÌ¾î
+    public GameObject player; // í”Œë ˆì´ì–´
     private Transform _playerTransform;
-    private Vector3 offset = new(0, 15f, 0); // ¸»Ç³¼±ÀÇ À§Ä¡ ¿ÀÇÁ¼Â
+    private Vector3 offset = new(0, 15f, 0); // ë§í’ì„ ì˜ ìœ„ì¹˜ ì˜¤í”„ì…‹
     public PlayerController _playerController;
     void Start()
     {
@@ -26,13 +26,13 @@ public class MonologueManager: MonoBehaviour
     {
         _playerController.ChangeState(_playerController._waitState);
         _playerController.monologuePanel.SetActive(true);
-        _playerController.monologuePanel.GetComponentInChildren<TMP_Text>().text = ""; // ÅØ½ºÆ® ÃÊ±âÈ­
+        _playerController.monologuePanel.GetComponentInChildren<TMP_Text>().text = ""; // í…ìŠ¤íŠ¸ ì´ˆê¸°í™”
         _playerController.monologuePanel.transform.position = _playerTransform.position + offset;
 
         foreach (char letter in message)
         {
             _playerController.monologuePanel.GetComponentInChildren<TMP_Text>().text += letter;
-            yield return new WaitForSeconds(0.05f); // Áö¿¬ ½Ã°£ ´ë±â
+            yield return new WaitForSeconds(0.05f); // ì§€ì—° ì‹œê°„ ëŒ€ê¸°
         }
         _playerController.ChangeState(_playerController._monoState);
     }

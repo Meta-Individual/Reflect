@@ -6,7 +6,7 @@ public class NPCOutOfDeskState : MonoBehaviour, INPCState
 {
     private NPCController _npcController;
 
-    private float animationTimer = 3.5f;
+    private float animationTimer = 3f;
     private float startTimer;
 
     public void OnStateEnter(NPCController npcController)
