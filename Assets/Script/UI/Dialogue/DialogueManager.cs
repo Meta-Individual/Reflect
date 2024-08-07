@@ -37,7 +37,7 @@ public class DialogueManager : MonoBehaviour
                 string sceneName = values[2]; // Remove quotes
                 string objectName = values[4];
                 string monologue = values[5]; 
-                Debug.Log(objectID + sceneName + objectName + monologue);
+                //Debug.Log(objectID + sceneName + objectName + monologue);
                 dialogues[objectID] = monologue;
             }
         }

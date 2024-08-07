@@ -14,25 +14,35 @@ public class TransferMap : MonoBehaviour
     }
     private Animator anim;
     private GameObject player;
-    private bool playerInRange = false; // 플레이어가 포탈 위에 있는지 여부
     private AudioSource audioSource; // AudioSource 컴포넌트
+    private PlayerInventory playerInventory;
+    private MonologueManager _monologueManager;
+    private PlayerController _playerController;
+    private bool playerInRange = false; // 플레이어가 포탈 위에 있는지 여부
+    private bool isMonologue = false;
 
     public GameObject arrow_UI;
 
     [Header("Target")]
     public Direction direction;
     public Transform targetLocation; // 이동할 목표 위치
-    public bool isLock = false;
-
+    public bool isLocked = false;
+    public string keyItemName = "Key";
     [Header("Sound")]
     public AudioClip openDoorSound; // 방문 여는 사운드
     public AudioClip closeDoorSound; // 방문 닫는 사운드
+    [Header("Script")]
+    public string doorClosedScript = "문이 잠겨있어.";
+    public string doorOpendScript = "문이 열렸어";
 
     void Start()
     {
+        _monologueManager = FindObjectOfType<MonologueManager>();
+        playerInventory = FindObjectOfType<PlayerInventory>();
         player = GameObject.FindGameObjectWithTag("Player");
         anim = player.GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        _playerController = player.GetComponent<PlayerController>();
         HideUI();
     }
 
@@ -43,16 +53,32 @@ public class TransferMap : MonoBehaviour
             if (CheckDirection())
             {
                 ShowUI();
+
                 if (Input.GetKeyDown((KeyCode)CustomKey.Interact))
                 {
-                    if (isLock)
+                    if(!isMonologue)
                     {
-                        Debug.Log("잠김");
+                        if (isLocked)
+                        {
+                            if (playerInventory.HasItem(keyItemName))
+                            {
+                                UnlockDoor();
+                            }
+                            else
+                            {
+                                _monologueManager.ShowMonologue(doorClosedScript);
+                                isMonologue = true;
+                            }
+                        }
+                        else
+                        {
+                            TransformWithSound(); // 방문 사운드 재생
+                        }
                     }
                     else
                     {
-                        player.transform.position = targetLocation.position;
-                        PlaySound(); // 방문 사운드 재생
+                        isMonologue = false;
+
                     }
                 }
             }
@@ -62,8 +88,14 @@ public class TransferMap : MonoBehaviour
             }
         }
     }
+    public void UnlockDoor()
+    {
+        isLocked = false;
+        isMonologue = true;
+        _monologueManager.ShowMonologue(doorOpendScript);
+    }
 
-    private void PlaySound()
+    public void TransformWithSound()
     {
         if (audioSource != null)
         {
@@ -82,6 +114,7 @@ public class TransferMap : MonoBehaviour
                 Debug.Log("음원 파일이 존재하지 않거나, 잘못된 태그로 설정되었습니다.");
             }
         }
+        player.transform.position = targetLocation.position;
     }
 
     private bool CheckDirection()

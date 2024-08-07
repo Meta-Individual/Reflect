@@ -17,13 +17,13 @@ public class PlayerMonologueState : MonoBehaviour, IPlayerState
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            _playerController.monologuePanel.SetActive(false);
             _playerController.ChangeState(_playerController._idleState);
         }
     }
 
     public void OnStateExit()
     {
+        _playerController.monologuePanel.SetActive(false);
         _playerController.anim.SetBool("Monologue", false);
     }
 }

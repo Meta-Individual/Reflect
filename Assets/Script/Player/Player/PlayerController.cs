@@ -12,10 +12,7 @@ public class PlayerController : MonoBehaviour
     public CharacterController _characterController;
     [HideInInspector]
     public Rigidbody2D _rigidbody;
-    [HideInInspector]
-    public bool libraryKey;
 
-    public float interactDistance = 2f; // 상호작용 가능한 거리
     public LayerMask interactableLayer; // 상호작용 가능한 레이어 설정
     public Vector2 interactionAreaSize = new Vector2(2f, 1f); // 상호작용 영역의 크기
 
@@ -46,8 +43,6 @@ public class PlayerController : MonoBehaviour
         _monoState = gameObject.AddComponent<PlayerMonologueState>();
 
         _rigidbody = GetComponent<Rigidbody2D>();
-
-        libraryKey = false;
 
         CurrentState = _idleState;
         ChangeState(CurrentState);
@@ -92,6 +87,9 @@ public class PlayerController : MonoBehaviour
             interactionAreaSize = new(5.5f, 1.5f);
             centerPosition = (Vector2)transform.position + CurrentDirection * (interactionAreaSize);
         }
+
+
+
         Collider2D[] hitColliders = Physics2D.OverlapBoxAll(centerPosition, interactionAreaSize, 0f, interactableLayer);
         foreach (Collider2D hitCollider in hitColliders)
         {
@@ -99,7 +97,7 @@ public class PlayerController : MonoBehaviour
             if (interactable != null)
             {
                 interactable.Interact();
-                Debug.Log("상호작용 대상: " + hitCollider.gameObject.name);
+                //Debug.Log("상호작용 대상: " + hitCollider.gameObject.name);
                 break;
             }
         }
