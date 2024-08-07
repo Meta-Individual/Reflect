@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +6,7 @@ public class LibraryKey : MonoBehaviour, IInteractable
 {
     public  string keyItemName = "LibraryDoorKey";
     private bool   isSearched = false;
-    public string getKeyMonologue = "¼­Àç ¿­¼è¸¦ ¾ò¾ú´Ù. Æ¯º°ÇÑ °ÍÀº ¾ø´Â °Í °°´Ù.";
+    public string getKeyMonologue = "ì„œì¬ ì—´ì‡ ë¥¼ ì–»ì—ˆë‹¤. íŠ¹ë³„í•œ ê²ƒì€ ì—†ëŠ” ê²ƒ ê°™ë‹¤.";
     public  string objectID;
     private PlayerInventory playerInventory;
     private MonologueManager _monologueManager;
