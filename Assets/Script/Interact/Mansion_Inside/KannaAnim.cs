@@ -1,11 +1,11 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class KannaAnim : MonoBehaviour, IInteractable
 {
     private bool isSearched = false;
-    public string kannaMonologue = "Ã¥»ó ¹Ø¿¡ ¹º°¡ ÀÖ´Â °Í °°´Ù..";
+    public string kannaMonologue = "ì±…ìƒ ë°‘ì— ë­”ê°€ ìˆëŠ” ê²ƒ ê°™ë‹¤..";
     public string objectID;
     private MonologueManager _monologueManager;
     private PlayerController _playerController;

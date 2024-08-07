@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -84,7 +84,7 @@ public class NPCController : MonoBehaviour
 
     public void OnAnimationEnd()
     {
-        // yÃàÀ¸·Î -1¸¸Å­ ÀÌµ¿
+        // yì¶•ìœ¼ë¡œ -1ë§Œí¼ ì´ë™
         transform.position += new Vector3(0, -3, 0);
     }
 }
