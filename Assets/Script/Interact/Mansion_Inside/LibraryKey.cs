@@ -8,6 +8,8 @@ public class LibraryKey : MonoBehaviour, IInteractable
     private bool   isSearched = false;
     public string getKeyMonologue = "서재 열쇠를 얻었다. 특별한 것은 없는 것 같다.";
     public  string objectID;
+    public Sprite image;
+    private IllustManager _illustManager;
     private PlayerInventory playerInventory;
     private MonologueManager _monologueManager;
 
@@ -15,6 +17,7 @@ public class LibraryKey : MonoBehaviour, IInteractable
     {
         _monologueManager = FindObjectOfType<MonologueManager>();
         playerInventory = FindObjectOfType<PlayerInventory>();
+        _illustManager = FindObjectOfType<IllustManager>();
     }
 
     public void Interact()
@@ -23,7 +26,7 @@ public class LibraryKey : MonoBehaviour, IInteractable
         {
             isSearched = true;
             playerInventory.AddItem(keyItemName);
-            _monologueManager.ShowMonologue(getKeyMonologue);
+            _illustManager.ShowIllust(image, getKeyMonologue);
         }
         else
         {

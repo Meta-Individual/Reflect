@@ -19,13 +19,13 @@ public class IllustManager : MonoBehaviour
         spriteRenderer = _playerController.illust.GetComponent<SpriteRenderer>();
     }
 
-    public void ShowIllust(Sprite image, string objectID)
+    public void ShowIllust(Sprite image, string dialogue)
     {
-        StartCoroutine(ActiveIllust(image, objectID));
+        StartCoroutine(ActiveIllust(image, dialogue));
     }
 
     //1초동안 일러스트 이미지를 투명도를 조절하여 띄운 후에 독백을 띄우는 상태로 전환
-    private IEnumerator ActiveIllust(Sprite image, string objectID)
+    private IEnumerator ActiveIllust(Sprite image, string dialogue)
     {
         _playerController.ChangeState(_playerController._waitState);
         spriteRenderer.sprite = image; // 텍스트 초기화
@@ -35,7 +35,6 @@ public class IllustManager : MonoBehaviour
         yield return StartCoroutine(Fade(1f, 0f, 1f));
         _playerController.illustPanel.SetActive(false);
         yield return new WaitForSeconds(0.5f);
-        string dialogue = DialogueManager.Instance.GetDialogue(objectID);
         _monologueManager.ShowMonologue(dialogue);
     }
 
