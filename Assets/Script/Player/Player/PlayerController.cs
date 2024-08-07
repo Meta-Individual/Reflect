@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public bool libraryKey;
 
+    public float interactDistance = 5f; // 상호작용 가능한 거리
+    public LayerMask interactableLayer; // 상호작용 가능한 레이어 설정
+
 
     [Header("Movement")]
     public float walkSpeed = 5f;    
@@ -21,6 +24,11 @@ public class PlayerController : MonoBehaviour
     public IPlayerState CurrentState
     {
         get; set;
+    }
+
+    public Vector2 CurrentDirection
+    {
+        get;set;
     }
 
     public IPlayerState _idleState, _walkState, _waitState;
@@ -59,11 +67,13 @@ public class PlayerController : MonoBehaviour
         {
             CurrentState.OnStateUpdate();
         }
+        CurrentDirection = new(anim.GetFloat("DirX"), anim.GetFloat("DirY"));
     }
 
     public void Interact()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, 1f);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, CurrentDirection, interactDistance, interactableLayer);
+        Debug.Log(hit.collider);
         if (hit.collider != null)
         {
             IInteractable interactable = hit.collider.GetComponent<IInteractable>();

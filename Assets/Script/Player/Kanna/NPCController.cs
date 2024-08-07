@@ -46,10 +46,10 @@ public class NPCController : MonoBehaviour
         chair_desk_Move = GetComponent<ChairAndDeskMoving>();
 
         CurrentState = _idleState;
-        if(gameObject.name == "Kanna_kid")
+        /*if(gameObject.name == "Kanna_kid")
         {
             CurrentState = _hideState;
-        }
+        }*/
         ChangeState(CurrentState);
     }
 

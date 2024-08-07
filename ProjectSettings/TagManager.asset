@@ -8,6 +8,7 @@ TagManager:
   - CloseDoor
   - Camera
   - Object
+  - Monologue
   layers:
   - Default
   - TransparentFX
