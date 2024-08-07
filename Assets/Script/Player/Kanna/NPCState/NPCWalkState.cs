@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -31,11 +31,11 @@ public class NPCWalkState : MonoBehaviour, INPCState
         {
             //Debug.Log("Kanna Walk");
 
-            /*Vector2 currentTarget = _npcController.targetPositions[currentTargetIndex]; // ÇöÀç Å¸°Ù À§Ä¡
-            Vector2 currentPosition = transform.position; // ÇöÀç ÇÃ·¹ÀÌ¾î À§Ä¡
+            /*Vector2 currentTarget = _npcController.targetPositions[currentTargetIndex]; // í˜„ì¬ íƒ€ê²Ÿ ìœ„ì¹˜
+            Vector2 currentPosition = transform.position; // í˜„ì¬ í”Œë ˆì´ì–´ ìœ„ì¹˜
             Vector2 direction = (currentTarget - currentPosition).normalized;
 
-            // xÃà ÀÌµ¿ ¹æÇâ ·Î±× Âï±â
+            // xì¶• ì´ë™ ë°©í–¥ ë¡œê·¸ ì°ê¸°
             if (direction.x > 0)
             {
                 _npcController.anim.SetFloat("DirX", 1.0f);
@@ -53,13 +53,13 @@ public class NPCWalkState : MonoBehaviour, INPCState
                 _npcController.anim.SetFloat("DirY", -1.0f);
             }
 
-            // ÀÌµ¿
+            // ì´ë™
             rb.MovePosition(currentPosition + direction * _npcController.walkSpeed * Time.fixedDeltaTime);
 
-            // Å¸°Ù À§Ä¡¿¡ µµ´ŞÇß´ÂÁö Ã¼Å©
+            // íƒ€ê²Ÿ ìœ„ì¹˜ì— ë„ë‹¬í–ˆëŠ”ì§€ ì²´í¬
             if (Vector2.Distance(currentPosition, currentTarget) < 0.1f)
             {
-                currentTargetIndex++; // ´ÙÀ½ Å¸°ÙÀ¸·Î ÀÌµ¿
+                currentTargetIndex++; // ë‹¤ìŒ íƒ€ê²Ÿìœ¼ë¡œ ì´ë™
                 if (currentTargetIndex >= _npcController.targetPositions.Count)
                 {
                     _npcController.isArrive = true;

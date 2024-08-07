@@ -7,13 +7,17 @@ using UnityEngine.AI;
 public class PlayerController : MonoBehaviour
 {
     public Animator anim;
-    public GameObject monologuePanel;
+    [Header("Dialogue")]
+    public GameObject monologuePanel; //독백 패널
+    public GameObject illustPanel; //일러스트 패널
+    public GameObject illust; //일러스트
+
     [HideInInspector]
     public CharacterController _characterController;
     [HideInInspector]
     public Rigidbody2D _rigidbody;
     [HideInInspector]
-    public bool kannaAnim = false;
+    public bool kannaAnim = false; //Mansion 1F에서 칸나 애니메이션을 위한 변수
     [HideInInspector]
     public NPCController _npcController;
 

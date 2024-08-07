@@ -1,11 +1,11 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ArrowMoving : MonoBehaviour
 {
-    private float moveSpeed = 1f;       // ¿ÀºêÁ§Æ®ÀÇ ÀÌµ¿ ¼Óµµ
-    private float moveDistance = 0.5f;    // ¿ÀºêÁ§Æ®°¡ ÀÌµ¿ÇÒ ÃÖ´ë °Å¸®
+    private float moveSpeed = 1f;       // ì˜¤ë¸Œì íŠ¸ì˜ ì´ë™ ì†ë„
+    private float moveDistance = 0.5f;    // ì˜¤ë¸Œì íŠ¸ê°€ ì´ë™í•  ìµœëŒ€ ê±°ë¦¬
 
     private Vector3 startPosition;
     private float moveDirection = 1f;
@@ -17,13 +17,13 @@ public class ArrowMoving : MonoBehaviour
 
     void Update()
     {
-        // YÃàÀ» Áß½ÉÀ¸·Î È¸Àü
+        // Yì¶•ì„ ì¤‘ì‹¬ìœ¼ë¡œ íšŒì „
         //transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
 
-        // YÃàÀ¸·Î ÀÌµ¿
+        // Yì¶•ìœ¼ë¡œ ì´ë™
         transform.position += new Vector3(0, moveDirection * moveSpeed * Time.deltaTime, 0);
 
-        // ÃÖ´ë ÀÌµ¿ °Å¸® ÃÊ°ú ½Ã ÀÌµ¿ ¹æÇâ ¹ÝÀü
+        // ìµœëŒ€ ì´ë™ ê±°ë¦¬ ì´ˆê³¼ ì‹œ ì´ë™ ë°©í–¥ ë°˜ì „
         if (Mathf.Abs(transform.position.y - startPosition.y) > moveDistance)
         {
             moveDirection *= -1;
