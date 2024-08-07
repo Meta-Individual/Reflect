@@ -12,16 +12,9 @@ public class NPCController : MonoBehaviour
     [HideInInspector]
     public Rigidbody2D _rigidbody;
     [HideInInspector]
-    public bool isArrive = false;
-    [HideInInspector]
     private SpriteRenderer _spriteRenderer;
     [HideInInspector]
     public ChairAndDeskMoving chair_desk_Move;
-
-
-    [Header("Destination")]
-    public List<Vector2> targetPositions;
-
 
     [Header("Movement")]
     public float walkSpeed = 5f;    
@@ -45,11 +38,7 @@ public class NPCController : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         chair_desk_Move = GetComponent<ChairAndDeskMoving>();
 
-        CurrentState = _idleState;
-        /*if(gameObject.name == "Kanna_kid")
-        {
-            CurrentState = _hideState;
-        }*/
+        CurrentState = _hideState;
         ChangeState(CurrentState);
     }
 
@@ -92,24 +81,6 @@ public class NPCController : MonoBehaviour
         _spriteRenderer.color = color;
     }
 
-
-    public bool Hide()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            return true;
-        }
-        return false;
-    }
-
-    public bool OutOfDesk()
-    {
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            return true;
-        }
-        return false;
-    }
 
     public void OnAnimationEnd()
     {

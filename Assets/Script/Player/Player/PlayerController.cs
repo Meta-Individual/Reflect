@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -12,10 +12,14 @@ public class PlayerController : MonoBehaviour
     public CharacterController _characterController;
     [HideInInspector]
     public Rigidbody2D _rigidbody;
+    [HideInInspector]
+    public bool kannaAnim = false;
+    [HideInInspector]
+    public NPCController _npcController;
 
-    public LayerMask interactableLayer; // »óÈ£ÀÛ¿ë °¡´ÉÇÑ ·¹ÀÌ¾î ¼³Á¤
-    public Vector2 interactionAreaSize = new Vector2(2f, 1f); // »óÈ£ÀÛ¿ë ¿µ¿ªÀÇ Å©±â
-
+    [Header("Interact")]
+    public LayerMask interactableLayer; // ìƒí˜¸ì‘ìš© ê°€ëŠ¥í•œ ë ˆì´ì–´ ì„¤ì •
+    public Vector2 interactionAreaSize = new Vector2(2f, 1f); // ìƒí˜¸ì‘ìš© ì˜ì—­ì˜ í¬ê¸°
 
     [Header("Movement")]
     public float walkSpeed = 5f;    
@@ -36,6 +40,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         monologuePanel.SetActive(false);
+
+        _npcController = GameObject.FindGameObjectWithTag("Kanna").GetComponent<NPCController>();
 
         _idleState = gameObject.AddComponent<PlayerIdleState>();
         _walkState = gameObject.AddComponent<PlayerWalkState>();
@@ -73,14 +79,14 @@ public class PlayerController : MonoBehaviour
     public void Interact()
     {
         Vector2 centerPosition = new(0.0f, 0.0f);
-        // XÃàÀ¸·Î ÀÌµ¿ÁßÀÏ ¶§¿¡ ÀÌµ¿ÇÏ´Â ¹æÇâ¿¡ µû¶ó ¿ŞÂÊ, ¿À¸¥ÂÊ ¿µ¿ª Àû¿ë
+        // Xì¶•ìœ¼ë¡œ ì´ë™ì¤‘ì¼ ë•Œì— ì´ë™í•˜ëŠ” ë°©í–¥ì— ë”°ë¼ ì™¼ìª½, ì˜¤ë¥¸ìª½ ì˜ì—­ ì ìš©
         if (CurrentDirection.x != 0)
         {
             Vector2 location = new(anim.GetFloat("DirX"), 0.35f);
             interactionAreaSize = new(2.5f, 2.0f);
             centerPosition = (Vector2)transform.position + location * (interactionAreaSize);
         }
-        //YÃàÀ¸·Î ÀÌµ¿ÁßÀÏ ¶§¿¡ ÀÌµ¿ÇÏ´Â ¹æÇâ¿¡ µû¶ó À§, ¾Æ·¡ ¿µ¿ª Àû¿ë
+        //Yì¶•ìœ¼ë¡œ ì´ë™ì¤‘ì¼ ë•Œì— ì´ë™í•˜ëŠ” ë°©í–¥ì— ë”°ë¼ ìœ„, ì•„ë˜ ì˜ì—­ ì ìš©
         else if(CurrentDirection.y != 0)
         {
             Vector2 location = new(0.0f, anim.GetFloat("DirY"));
@@ -97,13 +103,13 @@ public class PlayerController : MonoBehaviour
             if (interactable != null)
             {
                 interactable.Interact();
-                //Debug.Log("»óÈ£ÀÛ¿ë ´ë»ó: " + hitCollider.gameObject.name);
+                //Debug.Log("ìƒí˜¸ì‘ìš© ëŒ€ìƒ: " + hitCollider.gameObject.name);
                 break;
             }
         }
     }
 
-    // µğ¹ö±×¸¦ À§ÇÑ ±âÁî¸ğ ±×¸®±â (¿¡µğÅÍ¿¡¼­¸¸ Ç¥½ÃµÊ)
+    // ë””ë²„ê·¸ë¥¼ ìœ„í•œ ê¸°ì¦ˆëª¨ ê·¸ë¦¬ê¸° (ì—ë””í„°ì—ì„œë§Œ í‘œì‹œë¨)
     private void OnDrawGizmosSelected()
     {
         Vector2 location = new(0.0f, 1f);

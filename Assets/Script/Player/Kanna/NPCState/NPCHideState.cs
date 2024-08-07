@@ -11,22 +11,16 @@ public class NPCHideState : MonoBehaviour, INPCState
         if (!_npcController)
             _npcController = npcController;
 
-        _npcController.anim.SetBool("Hide", true);
     }
     public void OnStateUpdate()
     {
         //Debug.Log("Kanna Hide");
 
         _npcController.SetTransparency();
-        
-        if(_npcController.OutOfDesk())
-        {
-            _npcController.ChangeState(_npcController._outState);
-        }
     }
 
     public void OnStateExit()
     {
-        _npcController.anim.SetBool("Hide", false);
+
     }
 }

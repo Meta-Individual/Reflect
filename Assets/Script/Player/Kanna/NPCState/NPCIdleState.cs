@@ -14,17 +14,7 @@ public class NPCIdleState : MonoBehaviour, INPCState
     public void OnStateUpdate()
     {
         //Debug.Log("Kanna Idle");
-
-        if (_npcController.Hide())
-        {
-            _npcController.ChangeState(_npcController._hideState);
-        }
-
-        if (!_npcController.isArrive)
-        {
-            _npcController.ChangeState(_npcController._walkState);
-        }
-
+        _npcController.anim.SetFloat("DirY", -1.0f);
     }
 
     public void OnStateExit()
