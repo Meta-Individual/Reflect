@@ -1,49 +1,46 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    public GameObject dialoguePanel; // ´ëÈ­Ã¢
     public PlayerController _playerController;
 
     void Start()
     {
-        dialoguePanel = GameObject.FindGameObjectWithTag("Dialogue");
-        dialoguePanel.SetActive(false);
         _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-
     }
 
     public void ShowDialogue(string character, string sprite, string dialogue)
     {
-        _playerController.ChangeState(_playerController._waitState);
         StartCoroutine(ActiveDialogue(character, sprite, dialogue));
     }
 
     // Update is called once per frame
     private IEnumerator ActiveDialogue(string character, string spirte, string dialogue)
     {
-        _playerController.charcter.sprite = LoadSprite(character, spirte); //Ä³¸¯ÅÍ ÀÌ¹ÌÁö ºÒ·¯¿À±â
-        _playerController.characterName.text = character; //Ä³¸¯ÅÍ ÀÌ¸§ ºÒ·¯¿À±â
-        _playerController.dialogue.text = ""; // ÅØ½ºÆ® ÃÊ±âÈ­
+        _playerController.isDialogue = true;
+        _playerController.charcter.sprite = LoadSprite(character, spirte); //ìºë¦­í„° ì´ë¯¸ì§€ ë¶ˆëŸ¬ì˜¤ê¸°
+        _playerController.characterName.text = character; //ìºë¦­í„° ì´ë¦„ ë¶ˆëŸ¬ì˜¤ê¸°
+        _playerController.dialogue.text = ""; // í…ìŠ¤íŠ¸ ì´ˆê¸°í™”
         _playerController.dialoguePanel.SetActive(true);
+        _playerController.currentDialogueCounter++;
 
         foreach (char letter in dialogue)
         {
             _playerController.dialogue.text += letter;
-            yield return new WaitForSeconds(0.05f); // Áö¿¬ ½Ã°£ ´ë±â
+            yield return new WaitForSeconds(0.05f); // ì§€ì—° ì‹œê°„ ëŒ€ê¸°
         }
-        _playerController.ChangeState(_playerController._diaState);
-
+        _playerController.isDialogue = false;
     }
 
     public Sprite LoadSprite(string folderName, string spriteName)
     {
         string path = "Illustration/" + folderName + "/" + spriteName;
+        Debug.Log(path);
         Sprite sprite = Resources.Load<Sprite>(path);
-
+        Debug.Log(sprite);
         if (sprite != null)
         {
             Debug.Log("Sprite loaded successfully from " + path);

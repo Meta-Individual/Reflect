@@ -7,23 +7,31 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
-{
+{ 
     public Animator anim;
     [Header("Dialogue")]
     public GameObject monologuePanel; //독백 패널
-    public GameObject dialoguePanel;
-    public TMP_Text characterName;
-    public TMP_Text dialogue;
-    public Image charcter;
+    public GameObject dialoguePanel; //대화 패널
+    public TMP_Text   characterName; //대화 패널의 캐릭터 이름
+    public TMP_Text   dialogue; //대화 패널의 대사
+    public Image      charcter; //대화 패널의 일러스트
     public GameObject illustPanel; //일러스트 패널
     public GameObject illust; //일러스트
 
+    [HideInInspector]
+    public bool isDialogue = false; //플레이어가 대화중임을 나타내는 변수
+    [HideInInspector]
+    public DialogueManager _dialogueManager;
     [HideInInspector]
     public CharacterController _characterController;
     [HideInInspector]
     public Rigidbody2D _rigidbody;
     [HideInInspector]
     public bool kannaAnim = false; //Mansion 1F에서 칸나 애니메이션을 위한 변수
+    [HideInInspector]
+    public int maxDialogueCounter = 1; //플레이어가 진행할 대화의 수
+    [HideInInspector]
+    public int currentDialogueCounter = 1; //플레이어의 대화 진행상태
     [HideInInspector]
     public NPCController _npcController;
 
@@ -50,6 +58,9 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         monologuePanel.SetActive(false);
+        dialoguePanel.SetActive(false);
+
+        _dialogueManager = FindObjectOfType<DialogueManager>();
 
         _npcController = GameObject.FindGameObjectWithTag("Kanna").GetComponent<NPCController>();
 
@@ -127,5 +138,10 @@ public class PlayerController : MonoBehaviour
         Gizmos.color = Color.yellow;
         Vector2 centerPosition = (Vector2)transform.position + location * (interactionAreaSize);
         Gizmos.DrawWireCube(centerPosition, interactionAreaSize);
+    }
+
+    public void MovePlayer(float x, float y, float z) //플레이어를 이동시키는 함수
+    {
+        transform.position += new Vector3(x, y, z);
     }
 }

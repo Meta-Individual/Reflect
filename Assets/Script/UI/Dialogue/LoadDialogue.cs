@@ -45,7 +45,7 @@ public class LoadDialogue : MonoBehaviour
         }
     }
 
-    public (string, string, string) GetMonologue(string objectID) //캐릭터 이름, 스프라이트 종류, 대사 순으로 반환
+    public (string, string, string) GetDialogue(string objectID) //캐릭터 이름, 스프라이트 종류, 대사 순으로 반환
     {
         if (dialogues.TryGetValue(objectID, out var dialogue))
         {

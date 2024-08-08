@@ -1,8 +1,8 @@
-Ôªøusing System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartDialogue : MonoBehaviour
+public class TransferDialog : MonoBehaviour
 {
     public int startDialogueID;
     public int currentDialogueID;
@@ -17,7 +17,7 @@ public class StartDialogue : MonoBehaviour
         if (startDialogueID == _playerController.currentDialogueCounter)
         {
             (string characterName, string sprite, string dialogue) = LoadDialogue.Instance.GetDialogue(_playerController.currentDialogueCounter.ToString());
-            //Debug.Log("Ï∫êÎ¶≠ÌÑ∞Ïù¥Î¶Ñ : " + characterName + " Ïä§ÌîÑÎùºÏù¥Ìä∏ Ï¢ÖÎ•ò : " + sprite + " ÎåÄÏÇ¨ : " + dialogue);
+            //Debug.Log("ƒ≥∏Ø≈Õ¿Ã∏ß : " + characterName + " Ω∫«¡∂Û¿Ã∆Æ ¡æ∑˘ : " + sprite + " ¥ÎªÁ : " + dialogue);
             _playerController._dialogueManager.ShowDialogue(characterName, sprite, dialogue);
             _playerController.maxDialogueCounter = currentDialogueID;
             _playerController.ChangeState(_playerController._diaState);
