@@ -5,22 +5,22 @@ using UnityEngine.UI;
 
 public class TransferMap : MonoBehaviour
 {
-    public enum Direction
+    public enum Direction //플레이어가 바라보고 있는 방향을 얻기위한 변수
     {
         RIGHT,
         LEFT,
         UP,
         DOWN
     }
-    private Animator anim;
-    private GameObject player;
-    private AudioSource audioSource; // AudioSource 컴포넌트
-    private PlayerInventory playerInventory;
+    private Animator         anim;
+    private GameObject       player;
+    private AudioSource      audioSource; // AudioSource 컴포넌트
+    private PlayerInventory  playerInventory;
     private MonologueManager _monologueManager;
     private PlayerController _playerController;
-    private Camera _camera;
-    private bool playerInRange = false; // 플레이어가 포탈 위에 있는지 여부
-    private bool isMonologue = false;
+    private Camera           _camera;
+    private bool             playerInRange = false; // 플레이어가 포탈 위에 있는지 여부
+    private bool             isMonologue = false;
 
     public GameObject arrow_UI;
 
@@ -56,7 +56,7 @@ public class TransferMap : MonoBehaviour
             {
                 ShowUI();
 
-                if (Input.GetKeyDown((KeyCode)CustomKey.Interact) && _playerController.CurrentState != _playerController._waitState)
+                if (Input.GetKeyDown((KeyCode)CustomKey.Interact) && (_playerController.CurrentState == _playerController._idleState || _playerController.CurrentState == _playerController._walkState ))
                 {
                     if(!isMonologue)
                     {

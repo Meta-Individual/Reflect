@@ -7,21 +7,21 @@ ID	SceneName	Location	Character	Sprite Image	Dialogue	Situation	Interaction	비�
 5	Yuuji's Mansion1F	거실	유우지	ThrowOff	(칸나 누나는 이럴 때 보면 정말 귀신 같다니까) 알겠다고~	4번 이후		
 6	Yuuji's Mansion1F	거실	유우지	Default	서재 쪽에서 소리가 난 것 같은데 한 번 가볼까..	5번 이후		
 7	Yuuji's Mansion1F	서재 앞	유우지	ThrowOff	치사하게 문을 잠그는게 어딨어!!	서재 앞으로 이동해 서재에 들어가려 하면 서재 문이 잠겨있다는 메시지가 나오고 이 이후 		
-8	Yuuji's Mansion1F	서재 앞		칸나(미소)	여기는 유우지 집이니까 유우지가 유리하잖아~	7번 이후		
-9	Yuuji's Mansion1F	서재 앞		유우지(당황)	….. 애초에 우리 집이나 누나네 집이나 집 구조는 똑같거든?	8번 이후		
-10	Yuuji's Mansion1F	서재 앞		유우지(당황)	유리하고 불리한게 어딨어!!	9번 이후		
-11	Yuuji's Mansion1F	서재 앞		칸나(당황)	하하… 켄타부터 찾고 오던지~	10번 이후		
-12	Yuuji's Mansion1F	서재 앞		유우지(기본)	켄타는 딱 봐도 2층에 있겠지!	11번 이후		
-13	Yuuji's Mansion1F	서재 앞		칸나(당황)	…!!!	12번 이후		
-14	Yuuji's Mansion1F	서재 앞		유우지(미소)	딱 기다려! 열쇠 가져온다!!	13번 이후		
-15	Yuuji's Mansion1F	서재 안		유우지(기본)	분명히 여기에 있는데, 어디있는 거야	서재에 들어가자 마자		
-16	Yuuji's Mansion1F	서재 안		칸나(미소)	으아아악악!!	서재에 들어가서 플레이어가 아버지의 일기장을 상호작용 한 후		
-17	Yuuji's Mansion1F	서재 안		유우지(당황)	???	16번 이후		
-18	Yuuji's Mansion1F	서재 안		칸나(미소)	나를 찾아내다니 대단하군!! 역시 유우지야!	17번 이후		
-19	Yuuji's Mansion1F	서재 안		유우지(당황)	아니.. 누나가 스스로 나오ㄴ	18번 이후		
-20	Yuuji's Mansion1F	서재 안		칸나(미소)	나는 거실로 갈테니 켄타나 찾아서 오셔!!	19번 이후		
-21	Yuuji's Mansion1F	서재 안		유우지(당황)	참 자기 멋대로라니까..	20번 이후		
-22	Yuuji's Mansion1F	서재 안		유우지(기본)	에휴… 켄타나 찾아 볼까..?	21번 이후		
+8	Yuuji's Mansion1F	서재 앞	칸나	Smile	여기는 유우지 집이니까 유우지가 유리하잖아~	7번 이후		
+9	Yuuji's Mansion1F	서재 앞	유우지	ThrowOff	….. 애초에 우리 집이나 누나네 집이나 집 구조는 똑같거든?	8번 이후		
+10	Yuuji's Mansion1F	서재 앞	유우지	ThrowOff	유리하고 불리한게 어딨어!!	9번 이후		
+11	Yuuji's Mansion1F	서재 앞	칸나	ThrowOff	하하… 켄타부터 찾고 오던지~	10번 이후		
+12	Yuuji's Mansion1F	서재 앞	유우지	Default	켄타는 딱 봐도 2층에 있겠지!	11번 이후		
+13	Yuuji's Mansion1F	서재 앞	칸나	ThrowOff	…!!!	12번 이후		
+14	Yuuji's Mansion1F	서재 앞	유우지	Smile	딱 기다려! 열쇠 가져온다!!	13번 이후		
+15	Yuuji's Mansion1F	서재 안	유우지	Default	분명히 여기에 있는데, 어디있는 거야	서재에 들어가자 마자		
+16	Yuuji's Mansion1F	서재 안	칸나	Smile	으아아악악!!	서재에 들어가서 플레이어가 아버지의 일기장을 상호작용 한 후		
+17	Yuuji's Mansion1F	서재 안	유우지	ThrowOff	???	16번 이후		
+18	Yuuji's Mansion1F	서재 안	칸나	Smile	나를 찾아내다니 대단하군!! 역시 유우지야!	17번 이후		
+19	Yuuji's Mansion1F	서재 안	유우지	ThrowOff	아니.. 누나가 스스로 나오ㄴ	18번 이후		
+20	Yuuji's Mansion1F	서재 안	칸나	Smile	나는 거실로 갈테니 켄타나 찾아서 오셔!!	19번 이후		
+21	Yuuji's Mansion1F	서재 안	유우지	ThrowOff	참 자기 멋대로라니까..	20번 이후		
+22	Yuuji's Mansion1F	서재 안	유우지	Default	에휴… 켄타나 찾아 볼까..?	21번 이후		
 23	Yuuji's Mansion1F	거실		칸나(기본)	찾을 수 있겠어??	플레이어가 다시 거실로 나가면 거실에 서있는 칸나가 다시 말을 건다.		
 24	Yuuji's Mansion1F	거실		유우지(기본)	그 녀석 바보니까 못 찾는게 이상하지.	23번 이후		
 25	Yuuji's Mansion1F	거실		칸나(당황)	바보긴하지….	24번 이후		
