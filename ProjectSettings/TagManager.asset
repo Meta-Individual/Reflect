@@ -10,6 +10,7 @@ TagManager:
   - Object
   - Monologue
   - Kanna
+  - Dialogue
   layers:
   - Default
   - TransparentFX

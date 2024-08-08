@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMonologueState : MonoBehaviour, IPlayerState
 {
     private PlayerController _playerController;
-    private NPCController _npcController;
 
     public void OnStateEnter(PlayerController playerController)
     {
