@@ -1,14 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public Animator anim;
     [Header("Dialogue")]
     public GameObject monologuePanel; //독백 패널
+    public GameObject dialoguePanel;
+    public TMP_Text characterName;
+    public TMP_Text dialogue;
+    public Image charcter;
     public GameObject illustPanel; //일러스트 패널
     public GameObject illust; //일러스트
 
@@ -38,7 +44,7 @@ public class PlayerController : MonoBehaviour
         get;set;
     }
 
-    public IPlayerState _idleState, _walkState, _waitState, _monoState;
+    public IPlayerState _idleState, _walkState, _waitState, _monoState, _diaState;
 
 
     private void Start()
@@ -51,6 +57,7 @@ public class PlayerController : MonoBehaviour
         _walkState = gameObject.AddComponent<PlayerWalkState>();
         _waitState = gameObject.AddComponent<PlayerWaitState>();
         _monoState = gameObject.AddComponent<PlayerMonologueState>();
+        _diaState = gameObject.AddComponent<PlayerDialogueState>();
 
         _rigidbody = GetComponent<Rigidbody2D>();
 
