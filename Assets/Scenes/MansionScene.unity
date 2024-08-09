@@ -5102,6 +5102,7 @@ MonoBehaviour:
   keyItemName: LibraryDoorKey
   getKeyMonologue: "\uC11C\uC7AC \uC5F4\uC1E0\uB97C \uC5BB\uC5C8\uB2E4. \uD2B9\uBCC4\uD55C
     \uAC83\uC740 \uC5C6\uB294 \uAC83 \uAC19\uB2E4."
+  afterObjectID: 86
   objectID: 63
   image: {fileID: 21300000, guid: 0f259801565070a4e96abccbc2cede0c, type: 3}
 --- !u!1 &220331573
@@ -7570,7 +7571,7 @@ Transform:
   m_GameObject: {fileID: 288599555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -271.2, y: -440.7, z: 0}
+  m_LocalPosition: {x: 39.9, y: -355.3, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9160,9 +9161,8 @@ MonoBehaviour:
   keyItemName: LibraryDoorKey
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
-  doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4. \uCE78\uB098 \uB204\uB098\uB294
-    \uCC38 \uBE44\uAC81\uD574 .."
-  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4. \uC5B4\uC11C \uB4E4\uC5B4\uAC00\uBCF4\uC790"
+  doorClosedScript: 87
+  doorOpendScript: 88
 --- !u!61 &346756673
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -16,9 +16,7 @@ public class StartDialogue : MonoBehaviour
     {
         if (startDialogueID == _playerController.currentDialogueCounter)
         {
-            (string characterName, string sprite, string dialogue) = LoadDialogue.Instance.GetDialogue(_playerController.currentDialogueCounter.ToString());
-            //Debug.Log("캐릭터이름 : " + characterName + " 스프라이트 종류 : " + sprite + " 대사 : " + dialogue);
-            _playerController._dialogueManager.ShowDialogue(characterName, sprite, dialogue);
+            _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
             _playerController.maxDialogueCounter = currentDialogueID;
             _playerController.ChangeState(_playerController._diaState);
         }

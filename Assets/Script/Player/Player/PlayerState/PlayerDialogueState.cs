@@ -19,8 +19,7 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
         {   
             if(_playerController.currentDialogueCounter <= _playerController.maxDialogueCounter) //정해진 대화까지 Counter 증가하면서 대사 실행
             {
-                (string characterName, string sprite, string dialogue) = LoadDialogue.Instance.GetDialogue(_playerController.currentDialogueCounter.ToString());
-                _playerController._dialogueManager.ShowDialogue(characterName, sprite, dialogue);
+                _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
             }
             else
             {
