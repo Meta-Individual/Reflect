@@ -16,12 +16,12 @@ public class PlayerMonologueState : MonoBehaviour, IPlayerState
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            _playerController.ChangeState(_playerController._idleState);
             if (_playerController.kannaAnim)
             {
                 _playerController.kannaAnim = false;
                 _playerController._npcController.ChangeState(_playerController._npcController._outState);
             }
-            _playerController.ChangeState(_playerController._idleState);
         }
     }
 

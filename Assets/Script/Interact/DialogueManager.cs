@@ -22,6 +22,7 @@ public class DialogueManager : MonoBehaviour
     {
         (string characterName, string sprite, string dialogue) = LoadDialogue.Instance.GetDialogue(objectID);
 
+        _playerController.ChangeState(_playerController._diaState);
         _playerController.isDialogue = true;
         _playerController.charcter.sprite = LoadSprite(characterName, sprite); //캐릭터 이미지 불러오기
         _playerController.characterName.text = characterName; //캐릭터 이름 불러오기

@@ -28,9 +28,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D _rigidbody;
     [HideInInspector]
     public bool kannaAnim = false; //Mansion 1F에서 칸나 애니메이션을 위한 변수
-    [HideInInspector]
     public int maxDialogueCounter = 1; //플레이어가 진행할 대화의 수
-    [HideInInspector]
     public int currentDialogueCounter = 1; //플레이어의 대화 진행상태
     [HideInInspector]
     public NPCController _npcController;

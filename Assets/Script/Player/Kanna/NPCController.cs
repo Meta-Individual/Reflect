@@ -8,6 +8,10 @@ public class NPCController : MonoBehaviour
     public Animator anim;
 
     [HideInInspector]
+    public bool goToLivingRoom = false; // 칸나가 서재에서 거실로 이동하기 위한 변수
+    [HideInInspector]
+    public PlayerController _playerController;
+    [HideInInspector]
     public CharacterController _characterController;
     [HideInInspector]
     public Rigidbody2D _rigidbody;
@@ -29,6 +33,8 @@ public class NPCController : MonoBehaviour
 
     private void Start()
     {
+        _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
         _idleState = gameObject.AddComponent<NPCIdleState>();
         _walkState = gameObject.AddComponent<NPCWalkState>();
         _hideState = gameObject.AddComponent<NPCHideState>();

@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPCOutOfDeskState : MonoBehaviour, INPCState
 {
     private NPCController _npcController;
-
+    private PlayerController pc;
     private float animationTimer = 3f;
     private float startTimer;
 
@@ -14,17 +14,20 @@ public class NPCOutOfDeskState : MonoBehaviour, INPCState
         if (!_npcController)
             _npcController = npcController;
 
+        pc = _npcController._playerController;
+        pc.ChangeState(pc._waitState);
         StartCoroutine(StartAnimationSet());
         startTimer = 0;
     }
     public void OnStateUpdate()
     {
-        //Debug.Log("Kanna OutofDesk");
-
         startTimer += Time.deltaTime;
         if(startTimer > animationTimer) 
         {
             _npcController.ChangeState(_npcController._idleState);
+            pc.ChangeState(pc._diaState);
+            pc.maxDialogueCounter = 20;
+            pc._dialogueManager.ShowDialogue(pc.currentDialogueCounter.ToString());
         }
     }
 
