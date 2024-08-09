@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NPCController : MonoBehaviour
+public class KannaController : MonoBehaviour
 {
     public Animator anim;
 
+    public Transform[] waypoints;  // 이동할 경로 지점들
+    public float moveSpeed = 2f;   // 이동 속도
+    public float waitTime = 1f;    // 각 지점에서 대기 시간
     [HideInInspector]
     public bool goToLivingRoom = false; // 칸나가 서재에서 거실로 이동하기 위한 변수
     [HideInInspector]
@@ -23,22 +26,22 @@ public class NPCController : MonoBehaviour
     [Header("Movement")]
     public float walkSpeed = 5f;    
 
-    public INPCState CurrentState
+    public IKannaState CurrentState
     {
         get; set;
     }
 
-    public INPCState _idleState, _walkState, _hideState, _outState;
+    public IKannaState _idleState, _walkState, _hideState, _outState;
 
 
     private void Start()
     {
         _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 
-        _idleState = gameObject.AddComponent<NPCIdleState>();
-        _walkState = gameObject.AddComponent<NPCWalkState>();
-        _hideState = gameObject.AddComponent<NPCHideState>();
-        _outState = gameObject.AddComponent<NPCOutOfDeskState>();
+        _idleState = gameObject.AddComponent<KannaIdleState>();
+        _walkState = gameObject.AddComponent<KannaWalkState>();
+        _hideState = gameObject.AddComponent<KannaHideState>();
+        _outState = gameObject.AddComponent<KannaOutOfDeskState>();
 
         _rigidbody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -53,7 +56,7 @@ public class NPCController : MonoBehaviour
         UpdateState();
     }
 
-    public void ChangeState(INPCState npcState)
+    public void ChangeState(IKannaState npcState)
     {
         if (CurrentState != null)
             CurrentState.OnStateExit();

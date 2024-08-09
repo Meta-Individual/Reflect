@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCIdleState : MonoBehaviour, INPCState
+public class KannaIdleState : MonoBehaviour, IKannaState
 {
-    private NPCController _npcController;
+    private KannaController _npcController;
     private PlayerController pc;
 
-    public void OnStateEnter(NPCController npcController)
+    public void OnStateEnter(KannaController npcController)
     {
         if (!_npcController)
             _npcController = npcController;
@@ -15,6 +15,7 @@ public class NPCIdleState : MonoBehaviour, INPCState
     }
     public void OnStateUpdate()
     {
+        _npcController.anim.SetFloat("DirX", 0.0f);
         _npcController.anim.SetFloat("DirY", -1.0f);
 
         if (_npcController.goToLivingRoom)

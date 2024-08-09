@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCOutOfDeskState : MonoBehaviour, INPCState
+public class KannaOutOfDeskState : MonoBehaviour, IKannaState
 {
-    private NPCController _npcController;
+    private KannaController _npcController;
     private PlayerController pc;
     private float animationTimer = 3f;
     private float startTimer;
 
-    public void OnStateEnter(NPCController npcController)
+    public void OnStateEnter(KannaController npcController)
     {
         if (!_npcController)
             _npcController = npcController;
@@ -19,7 +19,7 @@ public class NPCOutOfDeskState : MonoBehaviour, INPCState
         StartCoroutine(StartAnimationSet());
         startTimer = 0;
     }
-    public void OnStateUpdate()
+    public void OnStateUpdate() // animation 시간에 도달한 경우 idleState로 전환하고 플레이어를 DialogueState로 전환
     {
         startTimer += Time.deltaTime;
         if(startTimer > animationTimer) 
@@ -43,6 +43,5 @@ public class NPCOutOfDeskState : MonoBehaviour, INPCState
         yield return new WaitForSeconds(1f);
         _npcController.RecoverTransparency();
         _npcController.anim.SetBool("Out", true);
-
     }
 }
