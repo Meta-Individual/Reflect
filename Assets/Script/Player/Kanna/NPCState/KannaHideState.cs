@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCHideState : MonoBehaviour, INPCState
+public class KannaHideState : MonoBehaviour, IKannaState
 {
-    private NPCController _npcController;
+    private KannaController _npcController;
 
-    public void OnStateEnter(NPCController npcController)
+    public void OnStateEnter(KannaController npcController)
     {
         if (!_npcController)
             _npcController = npcController;

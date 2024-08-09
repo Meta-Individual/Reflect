@@ -21,9 +21,13 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
             {
                 _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
             }
+            else if(_playerController.currentDialogueCounter == 21) //칸나가 걸어서 거실로 나가는 부분
+            {
+                _playerController._npcController.goToLivingRoom = true;
+                _playerController.ChangeState(_playerController._waitState);
+            }
             else
             {
-                _playerController.dialoguePanel.SetActive(false); //정해진 대사만큼 대화가 끝났다면 대화창 비활성화
                 _playerController.ChangeState(_playerController._idleState);
             }
         }

@@ -18,7 +18,6 @@ public class StartDialogue : MonoBehaviour
         {
             _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
             _playerController.maxDialogueCounter = currentDialogueID;
-            _playerController.ChangeState(_playerController._diaState);
         }
     }
 
