@@ -12,17 +12,19 @@ public class DialogueManager : MonoBehaviour
         _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
-    public void ShowDialogue(string character, string sprite, string dialogue)
+    public void ShowDialogue(string objectID)
     {
-        StartCoroutine(ActiveDialogue(character, sprite, dialogue));
+        StartCoroutine(ActiveDialogue(objectID));
     }
 
     // Update is called once per frame
-    private IEnumerator ActiveDialogue(string character, string spirte, string dialogue)
+    private IEnumerator ActiveDialogue(string objectID)
     {
+        (string characterName, string sprite, string dialogue) = LoadDialogue.Instance.GetDialogue(objectID);
+
         _playerController.isDialogue = true;
-        _playerController.charcter.sprite = LoadSprite(character, spirte); //캐릭터 이미지 불러오기
-        _playerController.characterName.text = character; //캐릭터 이름 불러오기
+        _playerController.charcter.sprite = LoadSprite(characterName, sprite); //캐릭터 이미지 불러오기
+        _playerController.characterName.text = characterName; //캐릭터 이름 불러오기
         _playerController.dialogue.text = ""; // 텍스트 초기화
         _playerController.dialoguePanel.SetActive(true);
         _playerController.currentDialogueCounter++;

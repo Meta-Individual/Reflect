@@ -16,20 +16,22 @@ public class MonologueManager: MonoBehaviour
         _playerController = player.GetComponent<PlayerController>();
     }
 
-    public void ShowMonologue(string monologue)
+    public void ShowMonologue(string objectID)
     {
-        StartCoroutine(ActiveMonologue(monologue));
+        StartCoroutine(ActiveMonologue(objectID));
     }
 
     // Update is called once per frame
-    private IEnumerator ActiveMonologue(string message)
+    private IEnumerator ActiveMonologue(string objectID)
     {
+        string dialogue = LoadMonologue.Instance.GetMonologue(objectID);
+
         _playerController.ChangeState(_playerController._waitState);
         _playerController.monologuePanel.SetActive(true);
         _playerController.monologuePanel.GetComponentInChildren<TMP_Text>().text = ""; // 텍스트 초기화
         _playerController.monologuePanel.transform.position = _playerTransform.position + offset;
 
-        foreach (char letter in message)
+        foreach (char letter in dialogue)
         {
             _playerController.monologuePanel.GetComponentInChildren<TMP_Text>().text += letter;
             yield return new WaitForSeconds(0.05f); // 지연 시간 대기

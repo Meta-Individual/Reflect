@@ -20,14 +20,12 @@ public class KannaAnimation : MonoBehaviour, IInteractable
         if (!isSearched)
         {
             isSearched = true;
-            string monologue = LoadMonologue.Instance.GetMonologue(objectID);
-            _illustManager.ShowIllust(image, monologue);
+            _illustManager.ShowIllust(image, objectID);
             _playerController.kannaAnim = true;
         }
         else
         {
-            string monologue = LoadMonologue.Instance.GetMonologue(objectID);
-            _illustManager.ShowIllust(image, monologue);
+            _illustManager.ShowIllust(image, objectID);
         }
     }
 

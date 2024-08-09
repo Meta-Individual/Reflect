@@ -7,6 +7,7 @@ public class LibraryKey : MonoBehaviour, IInteractable
     public  string keyItemName = "LibraryDoorKey";
     private bool   isSearched = false;
     public string getKeyMonologue = "서재 열쇠를 얻었다. 특별한 것은 없는 것 같다.";
+    public string afterObjectID;
     public  string objectID;
     public Sprite image;
     private IllustManager _illustManager;
@@ -26,12 +27,11 @@ public class LibraryKey : MonoBehaviour, IInteractable
         {
             isSearched = true;
             playerInventory.AddItem(keyItemName);
-            _illustManager.ShowIllust(image, getKeyMonologue);
+            _illustManager.ShowIllust(image, afterObjectID);
         }
         else
         {
-            string dialogue = LoadMonologue.Instance.GetMonologue(objectID);
-            _monologueManager.ShowMonologue(dialogue);
+            _monologueManager.ShowMonologue(objectID);
         }
     }
 }
