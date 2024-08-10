@@ -3,50 +3,50 @@ ID	SceneName	Location	Character	Sprite Image	Dialogue	Situation	Interaction	비�
 1	Yuuji's Mansion1F	거실	유우지	Default	다섯, 넷, 셋, 둘, 하나	게임 시작 후		
 2	Yuuji's Mansion1F	거실	유우지	Default	다 숨었지? 찾는다~!!	1번 이후		
 3	Yuuji's Mansion1F	거실	유우지	Default	하… 켄타랑 칸나 누나는 숨바꼭질을 너무 좋아한다니까..	2번 이후		
-4	Yuuji's Mansion1F	거실	칸나	Smile	유우지!! 꾀부리지 말고 얼렁 찾아라!!!!	3번 이후		
+4	Yuuji's Mansion1F	거실	코즈키 칸나	Smile	유우지!! 꾀부리지 말고 얼렁 찾아라!!!!	3번 이후		
 5	Yuuji's Mansion1F	거실	유우지	ThrowOff	(칸나 누나는 이럴 때 보면 정말 귀신 같다니까) 알겠다고~	4번 이후		
 6	Yuuji's Mansion1F	거실	유우지	Default	서재 쪽에서 소리가 난 것 같은데 한 번 가볼까..	5번 이후		
 7	Yuuji's Mansion1F	서재 앞	유우지	ThrowOff	치사하게 문을 잠그는게 어딨어!!	서재 앞으로 이동해 서재에 들어가려 하면 서재 문이 잠겨있다는 메시지가 나오고 이 이후 		
-8	Yuuji's Mansion1F	서재 앞	칸나	Smile	여기는 유우지 집이니까 유우지가 유리하잖아~	7번 이후		
+8	Yuuji's Mansion1F	서재 앞	코즈키 칸나	Smile	여기는 유우지 집이니까 유우지가 유리하잖아~	7번 이후		
 9	Yuuji's Mansion1F	서재 앞	유우지	ThrowOff	….. 애초에 우리 집이나 누나네 집이나 집 구조는 똑같거든?	8번 이후		
 10	Yuuji's Mansion1F	서재 앞	유우지	ThrowOff	유리하고 불리한게 어딨어!!	9번 이후		
-11	Yuuji's Mansion1F	서재 앞	칸나	ThrowOff	하하… 켄타부터 찾고 오던지~	10번 이후		
+11	Yuuji's Mansion1F	서재 앞	코즈키 칸나	ThrowOff	하하… 켄타부터 찾고 오던지~	10번 이후		
 12	Yuuji's Mansion1F	서재 앞	유우지	Default	켄타는 딱 봐도 2층에 있겠지!	11번 이후		
-13	Yuuji's Mansion1F	서재 앞	칸나	ThrowOff	…!!!	12번 이후		
+13	Yuuji's Mansion1F	서재 앞	코즈키 칸나	ThrowOff	…!!!	12번 이후		
 14	Yuuji's Mansion1F	서재 앞	유우지	Smile	딱 기다려! 열쇠 가져온다!!	13번 이후		
 15	Yuuji's Mansion1F	서재 안	유우지	Default	분명히 여기에 있는데, 어디있는 거야	서재에 들어가자 마자		
-16	Yuuji's Mansion1F	서재 안	칸나	Smile	으아아악악!!	서재에 들어가서 플레이어가 아버지의 일기장을 상호작용 한 후		
+16	Yuuji's Mansion1F	서재 안	코즈키 칸나	ThrowOff	으아아악악!!	서재에 들어가서 플레이어가 아버지의 일기장을 상호작용 한 후		
 17	Yuuji's Mansion1F	서재 안	유우지	ThrowOff	???	16번 이후		
-18	Yuuji's Mansion1F	서재 안	칸나	Smile	나를 찾아내다니 대단하군!! 역시 유우지야!	17번 이후		
+18	Yuuji's Mansion1F	서재 안	코즈키 칸나	Smile	나를 찾아내다니 대단하군!! 역시 유우지야!	17번 이후		
 19	Yuuji's Mansion1F	서재 안	유우지	ThrowOff	아니.. 누나가 스스로 나오ㄴ	18번 이후		
-20	Yuuji's Mansion1F	서재 안	칸나	Smile	나는 거실로 갈테니 켄타나 찾아서 오셔!!	19번 이후		
+20	Yuuji's Mansion1F	서재 안	코즈키 칸나	Smile	나는 거실로 갈테니 켄타나 찾아서 오셔!!	19번 이후		
 21	Yuuji's Mansion1F	서재 안	유우지	ThrowOff	참 자기 멋대로라니까..	20번 이후		
 22	Yuuji's Mansion1F	서재 안	유우지	Default	에휴… 켄타나 찾아 볼까..?	21번 이후		
-23	Yuuji's Mansion1F	거실		칸나(기본)	찾을 수 있겠어??	플레이어가 다시 거실로 나가면 거실에 서있는 칸나가 다시 말을 건다.		
-24	Yuuji's Mansion1F	거실		유우지(기본)	그 녀석 바보니까 못 찾는게 이상하지.	23번 이후		
-25	Yuuji's Mansion1F	거실		칸나(당황)	바보긴하지….	24번 이후		
-26	Yuuji's Mansion1F	거실		칸나(미소)	그래도 켄타랑 노는 것은 재밌지??	25번 이후		
-27	Yuuji's Mansion1F	거실		유우지(당황)	뭐… 그럭저럭	26번 이후		
-28	Yuuji's Mansion1F	거실		칸나(미소)	유우지는 솔직하지 못하다니까~	27번 이후		
-29	Yuuji's Mansion1F	거실		칸나(미소)	유우지. 아주머니는 괜찮으실꺼야…	28번 이후		
-30	Yuuji's Mansion1F	거실		유우지(기본)	… 알고 있어. 고마ㅇ	29번 이후		
-31	Yuuji's Mansion1F	거실		켄타(짓궂음)	유우지!!!!! 못 찾겠으면, 못 찾겠다 꾀꼬리를 부르라고 하하하!!	30번 이후		
-32	Yuuji's Mansion1F	거실		유우지(당황)	에효.. 찾고 올께	31번 이후		
-33	Yuuji's Mansion1F	거실		칸나(당황)	… 참 목소리도 크다니까	32번 이후		
-34	Yuuji's Mansion1F	거실		칸나(기본)	요새 켄타가 엄청 잘 숨어. 우리 집에서 할 때는 아무도 켄타를 못 찾았다니까??	33번 이후		
-35	Yuuji's Mansion1F	거실		유우지(미소)	나는 찾을 수 있어.	34번 이후		
-36	Yuuji's Mansion1F	거실		칸나(기본)	그래.. 앞으로도 켄타를 꼭 찾아줘!	35번 이후		
-37	Yuuji's Mansion1F	거실		유우지(당황)	…?? 누나도 같이 찾을껀데?	36번 이후		
-38	Yuuji's Mansion1F	거실		칸나(미소)	좋다.. 기대하고 있을께!	37번 이후		
-39	Yuuji's Mansion2F	2층 방		유우지(기본)	찾았다고, 켄타!!	켄타가 숨어 있는 방에 들어가서 장롱과 상호작용 한 후		
-40	Yuuji's Mansion2F	2층 방		켄타(기본)	… 역시 군인의 아들은 다른가??! 	39번 이후		
-41	Yuuji's Mansion2F	2층 방		켄타(기본)	나를 찾아내다니 대단하군!! 역시 유우지야!	40번 이후		
-42	Yuuji's Mansion2F	2층 방		유우지(당황)	남매 아니랄까봐 똑같이 말하네.	41번 이후		
-43	Yuuji's Mansion2F	2층 방		유우지(당황)	고작 방 안 장롱에 숨어놓 내가 못 찾을 줄 알았어??	42번 이후		
-44	Yuuji's Mansion2F	2층 방		켄타(미소)	우리 집에서는 절대 못 찾던걸?	43번 이후		
-45	Yuuji's Mansion2F	2층 방		유우지(당황)	그니까 너네 집이랑 우리 집이 같은 구조인데..	44번 이후		
-46	Yuuji's Mansion2F	2층 방		켄타(기본)	구조가 뭔데?!! 어려움 말 하지마!	45번 이후		
-47	Yuuji's Mansion2F	2층 방		유우지(기본)	… 내려가자	46번 이후		
+23	Yuuji's Mansion1F	거실	코즈키 칸나	Default	찾을 수 있겠어??	플레이어가 다시 거실로 나가면 거실에 서있는 칸나가 다시 말을 건다.		
+24	Yuuji's Mansion1F	거실	유우지	Default	그 녀석 바보니까 못 찾는게 이상하지.	23번 이후		
+25	Yuuji's Mansion1F	거실	코즈키 칸나	ThrowOff	바보긴하지….	24번 이후		
+26	Yuuji's Mansion1F	거실	코즈키 칸나	Smile	그래도 켄타랑 노는 것은 재밌지??	25번 이후		
+27	Yuuji's Mansion1F	거실	유우지	ThrowOff	뭐… 그럭저럭	26번 이후		
+28	Yuuji's Mansion1F	거실	코즈키 칸나	Smile	유우지는 솔직하지 못하다니까~	27번 이후		
+29	Yuuji's Mansion1F	거실	코즈키 칸나	Default	유우지. 아주머니는 괜찮으실꺼야…	28번 이후		
+30	Yuuji's Mansion1F	거실	유우지	Default	… 알고 있어. 고마ㅇ	29번 이후		
+31	Yuuji's Mansion1F	거실	코즈키 켄타	Resent	유우지!!!!! 못 찾겠으면, 못 찾겠다 꾀꼬리를 부르라고 하하하!!	30번 이후		
+32	Yuuji's Mansion1F	거실	유우지	ThrowOff	에효.. 찾고 올께	31번 이후		
+33	Yuuji's Mansion1F	거실	코즈키 칸나	ThrowOff	… 참 목소리도 크다니까	32번 이후		
+34	Yuuji's Mansion1F	거실	코즈키 칸나	Default	요새 켄타가 엄청 잘 숨어. 우리 집에서 할 때는 아무도 켄타를 못 찾았다니까??	33번 이후		
+35	Yuuji's Mansion1F	거실	유우지	Smile	나는 찾을 수 있어.	34번 이후		
+36	Yuuji's Mansion1F	거실	코즈키 칸나	Default	그래.. 앞으로도 켄타를 꼭 찾아줘!	35번 이후		
+37	Yuuji's Mansion1F	거실	유우지	ThrowOff	…?? 누나도 같이 찾을껀데?	36번 이후		
+38	Yuuji's Mansion1F	거실	코즈키 칸나	Smile	좋다.. 기대하고 있을께!	37번 이후		
+39	Yuuji's Mansion2F	2층 방	유우지	Default	찾았다고, 켄타!!	켄타가 숨어 있는 방에 들어가서 장롱과 상호작용 한 후		
+40	Yuuji's Mansion2F	2층 방	코즈키 켄타	Default	… 역시 군인의 아들은 다른가??! 	39번 이후		
+41	Yuuji's Mansion2F	2층 방	코즈키 켄타	Default	나를 찾아내다니 대단하군!! 역시 유우지야!	40번 이후		
+42	Yuuji's Mansion2F	2층 방	유우지	ThrowOff	남매 아니랄까봐 똑같이 말하네.	41번 이후		
+43	Yuuji's Mansion2F	2층 방	유우지	ThrowOff	고작 방 안 장롱에 숨어놓 내가 못 찾을 줄 알았어??	42번 이후		
+44	Yuuji's Mansion2F	2층 방	코즈키	켄타	Smile	우리 집에서는 절대 못 찾던걸?	43번 이후		
+45	Yuuji's Mansion2F	2층 방	유우지	ThrowOff	그니까 너네 집이랑 우리 집이 같은 구조인데..	44번 이후		
+46	Yuuji's Mansion2F	2층 방	코즈키 켄타	Default	구조가 뭔데?!! 어려움 말 하지마!	45번 이후		
+47	Yuuji's Mansion2F	2층 방	유우지	Default… 내려가자	46번 이후		
 48	Yuuji's Mansion1F	거실		칸나(당황)	흠… 진짜 잘 찾네	신이 전환되고 다시 거실에 3명의 아이가 모인 후		
 49	Yuuji's Mansion1F	거실		켄타(짓궂음)	다시 하자! 이제 우리 집에서 하는거야!!	48번 이후		
 50	Yuuji's Mansion1F	거실		유우지(당황)	 ..... 아니 또?	49번 이후		
