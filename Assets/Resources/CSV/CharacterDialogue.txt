@@ -43,10 +43,10 @@ ID	SceneName	Location	Character	Sprite Image	Dialogue	Situation	Interaction	비�
 41	Yuuji's Mansion2F	2층 방	코즈키 켄타	Default	나를 찾아내다니 대단하군!! 역시 유우지야!	40번 이후		
 42	Yuuji's Mansion2F	2층 방	유우지	ThrowOff	남매 아니랄까봐 똑같이 말하네.	41번 이후		
 43	Yuuji's Mansion2F	2층 방	유우지	ThrowOff	고작 방 안 장롱에 숨어놓 내가 못 찾을 줄 알았어??	42번 이후		
-44	Yuuji's Mansion2F	2층 방	코즈키	켄타	Smile	우리 집에서는 절대 못 찾던걸?	43번 이후		
+44	Yuuji's Mansion2F	2층 방	코즈키 켄타	Smile	우리 집에서는 절대 못 찾던걸?	43번 이후		
 45	Yuuji's Mansion2F	2층 방	유우지	ThrowOff	그니까 너네 집이랑 우리 집이 같은 구조인데..	44번 이후		
 46	Yuuji's Mansion2F	2층 방	코즈키 켄타	Default	구조가 뭔데?!! 어려움 말 하지마!	45번 이후		
-47	Yuuji's Mansion2F	2층 방	유우지	Default… 내려가자	46번 이후		
+47	Yuuji's Mansion2F	2층 방	유우지	Default	... 내려가자	46번 이후		
 48	Yuuji's Mansion1F	거실		칸나(당황)	흠… 진짜 잘 찾네	신이 전환되고 다시 거실에 3명의 아이가 모인 후		
 49	Yuuji's Mansion1F	거실		켄타(짓궂음)	다시 하자! 이제 우리 집에서 하는거야!!	48번 이후		
 50	Yuuji's Mansion1F	거실		유우지(당황)	 ..... 아니 또?	49번 이후		

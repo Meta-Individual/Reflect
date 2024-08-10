@@ -7,14 +7,14 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
-{ 
+{
     public Animator anim;
     [Header("Dialogue")]
     public GameObject monologuePanel; //독백 패널
     public GameObject dialoguePanel; //대화 패널
-    public TMP_Text   characterName; //대화 패널의 캐릭터 이름
-    public TMP_Text   dialogue; //대화 패널의 대사
-    public Image      charcter; //대화 패널의 일러스트
+    public TMP_Text characterName; //대화 패널의 캐릭터 이름
+    public TMP_Text dialogue; //대화 패널의 대사
+    public Image charcter; //대화 패널의 일러스트
     public GameObject illustPanel; //일러스트 패널
     public GameObject illust; //일러스트
 
@@ -38,7 +38,10 @@ public class PlayerController : MonoBehaviour
     public Vector2 interactionAreaSize = new Vector2(2f, 1f); // 상호작용 영역의 크기
 
     [Header("Movement")]
-    public float walkSpeed = 5f;    
+    public float walkSpeed = 5f;
+
+    public IInteractable interactable; //상호작용이 가능한 스크립트를 적용하기 위한 변수
+    public bool interactRange = false;
 
     public IPlayerState CurrentState
     {
@@ -47,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
     public Vector2 CurrentDirection
     {
-        get;set;
+        get; set;
     }
 
     public IPlayerState _idleState, _walkState, _waitState, _monoState, _diaState;
@@ -57,6 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         monologuePanel.SetActive(false);
         dialoguePanel.SetActive(false);
+        DirectionUtils.Initialize(this); // 플레이어 Direction 체크하는 함수 초기화
 
         _dialogueManager = FindObjectOfType<DialogueManager>();
 
@@ -107,25 +111,29 @@ public class PlayerController : MonoBehaviour
             centerPosition = (Vector2)transform.position + location * (interactionAreaSize);
         }
         //Y축으로 이동중일 때에 이동하는 방향에 따라 위, 아래 영역 적용
-        else if(CurrentDirection.y != 0)
+        else if (CurrentDirection.y != 0)
         {
             Vector2 location = new(0.0f, anim.GetFloat("DirY"));
             interactionAreaSize = new(5.5f, 1.5f);
             centerPosition = (Vector2)transform.position + CurrentDirection * (interactionAreaSize);
         }
 
-
-
-        Collider2D[] hitColliders = Physics2D.OverlapBoxAll(centerPosition, interactionAreaSize, 0f, interactableLayer);
-        foreach (Collider2D hitCollider in hitColliders)
+        if (interactable == null)
         {
-            IInteractable interactable = hitCollider.GetComponent<IInteractable>();
-            if (interactable != null)
+            Collider2D[] hitColliders = Physics2D.OverlapBoxAll(centerPosition, interactionAreaSize, 0f, interactableLayer);
+            foreach (Collider2D hitCollider in hitColliders)
             {
+                interactable = hitCollider.GetComponent<IInteractable>();
                 interactable.Interact();
                 //Debug.Log("상호작용 대상: " + hitCollider.gameObject.name);
                 break;
+
             }
+        }
+        else
+        {
+            interactable.Interact();
+
         }
     }
 

@@ -14,7 +14,7 @@ public class KentaHideState : MonoBehaviour, IKentaState
     }
     public void OnStateUpdate()
     {
-        //Debug.Log("Kanna Hide");
+        //Debug.Log("Kenta Hide");
 
         _npcController.SetTransparency();
     }
