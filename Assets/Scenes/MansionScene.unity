@@ -7605,7 +7605,7 @@ Transform:
   m_GameObject: {fileID: 288599555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -270, y: 443, z: 0}
+  m_LocalPosition: {x: -268, y: 442, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -41906,8 +41906,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1549201227}
-  - component: {fileID: 1549201229}
   - component: {fileID: 1549201228}
+  - component: {fileID: 1549201229}
+  - component: {fileID: 1549201230}
   m_Layer: 8
   m_Name: 39~47
   m_TagString: Untagged
@@ -41984,11 +41985,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1549201226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c116bbb7dbd285248a9f76195a46e9fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 2516d06343f6d63438e0138672201123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDialogueID: 39
+  itemName: KentaInteract
+  currentDirection: 2
   currentDialogueID: 47
+  anim: {fileID: 1172276597}
+  kenta: {fileID: 2065122712}
+--- !u!114 &1549201230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549201226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c8b4a6463a21e428fd4a96c4cdf574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1555330668
 GameObject:
   m_ObjectHideFlags: 0
@@ -56151,7 +56167,7 @@ Transform:
   m_GameObject: {fileID: 2065122712}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: -367.5, z: 0}
+  m_LocalPosition: {x: -9.2, y: -380.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

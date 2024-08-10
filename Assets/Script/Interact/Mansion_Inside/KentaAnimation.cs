@@ -8,6 +8,7 @@ public class KentaAnimation : MonoBehaviour, IInteractable
     public Direction currentDirection = Direction.UP;
     public int currentDialogueID = 47;
     public Animator anim;
+    public GameObject kenta;
 
     private bool isSearched = false;
     private PlayerController _playerController;
@@ -16,6 +17,7 @@ public class KentaAnimation : MonoBehaviour, IInteractable
 
     void Start()
     {
+        kenta.SetActive(false);
         _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         playerInventory = FindObjectOfType<PlayerInventory>();
     }
@@ -43,5 +45,6 @@ public class KentaAnimation : MonoBehaviour, IInteractable
         _playerController.ChangeState(_playerController._diaState);
         _playerController.maxDialogueCounter = currentDialogueID;
         _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
+        kenta.SetActive(true);
     }
 }
