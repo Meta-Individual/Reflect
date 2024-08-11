@@ -23,8 +23,6 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public DialogueManager _dialogueManager;
     [HideInInspector]
-    public CharacterController _characterController;
-    [HideInInspector]
     public Rigidbody2D _rigidbody;
     [HideInInspector]
     public bool kannaAnim = false; //Mansion 1F에서 칸나 애니메이션을 위한 변수
@@ -33,6 +31,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public KannaController _kannaController;
     public KimsinController _kimsinController;
+    public KentaController _kentaController;
 
     [Header("Interact")]
     public LayerMask interactableLayer; // 상호작용 가능한 레이어 설정
@@ -119,24 +118,26 @@ public class PlayerController : MonoBehaviour
             centerPosition = (Vector2)transform.position + CurrentDirection * (interactionAreaSize);
         }
 
-        if (interactable == null)
-        {
-            Collider2D[] hitColliders = Physics2D.OverlapBoxAll(centerPosition, interactionAreaSize, 0f, interactableLayer);
-            foreach (Collider2D hitCollider in hitColliders)
-            {
-                interactable = hitCollider.GetComponent<IInteractable>();
-                interactable.Interact();
-                //Debug.Log("상호작용 대상: " + hitCollider.gameObject.name);
-                break;
 
+        Collider2D[] hitColliders = Physics2D.OverlapBoxAll(centerPosition, interactionAreaSize, 0f, interactableLayer);
+        foreach (Collider2D hitCollider in hitColliders)
+        {
+            interactable = hitCollider.GetComponent<IInteractable>();
+            if (interactable != null)
+            {
+                StartInteract();
+                Debug.Log("상호작용 대상: " + hitCollider.gameObject.name);
+                // 가장 가까운 하나의 오브젝트와만 상호작용하려면 여기서 break;
+                break;
             }
         }
-        else
-        {
-            interactable.Interact();
-
-        }
     }
+
+    public void StartInteract()
+    {
+        interactable.Interact();
+    }
+
 
     // 디버그를 위한 기즈모 그리기 (에디터에서만 표시됨)
     private void OnDrawGizmosSelected()

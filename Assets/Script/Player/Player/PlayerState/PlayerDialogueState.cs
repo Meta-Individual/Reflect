@@ -19,6 +19,16 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
         {   
             if(_playerController.currentDialogueCounter <= _playerController.maxDialogueCounter) //정해진 대화까지 Counter 증가하면서 대사 실행
             {
+                if (_playerController.currentDialogueCounter == 78) //켄타가 현관으로 나가는 대사
+                {
+                    Debug.Log("켄타 나가자");
+                    _playerController._kentaController.MoveKenta();
+                }
+                else if (_playerController.currentDialogueCounter == 82) //칸나가 켄타를 따라서 현관으로 나가는 대사
+                {
+                    Debug.Log("칸나 나가자");
+                    _playerController._kannaController.MoveKanna();
+                }
                 _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
             }
             else if(_playerController.currentDialogueCounter == 21) //칸나가 걸어서 거실로 나가는 부분

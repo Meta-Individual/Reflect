@@ -6,91 +6,36 @@ using UnityEngine.AI;
 public class KentaController : MonoBehaviour
 {
     public Animator anim;
-
-    public Transform[] waypoints;  // 이동할 경로 지점들
-    public float moveSpeed = 2f;   // 이동 속도
-    public float waitTime = 1f;    // 각 지점에서 대기 시간
+    public Transform moveOut;
 
     [HideInInspector]
     public PlayerController _playerController;
-    [HideInInspector]
-    public CharacterController _characterController;
-    [HideInInspector]
-    public Rigidbody2D _rigidbody;
-    [HideInInspector]
-    private SpriteRenderer _spriteRenderer;
-
 
     [Header("Movement")]
-    public float walkSpeed = 5f;    
+    public float walkSpeed = 15f;    
 
-    public IKentaState CurrentState
-    {
-        get; set;
-    }
-
-    public IKentaState _idleState, _walkState, _hideState, _outState;
 
 
     private void Start()
     {
         _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-
-        _idleState = gameObject.AddComponent<KentaIdleState>();
-        _walkState = gameObject.AddComponent<KentaWalkState>();
-        _hideState = gameObject.AddComponent<KentaHideState>();
-        _outState = gameObject.AddComponent<KentaOutState>();
-
-        _rigidbody = GetComponent<Rigidbody2D>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-
-        CurrentState = _hideState;
-        ChangeState(CurrentState);
     }
 
-    private void Update()
+    public void MoveKenta()
     {
-        UpdateState();
+        StartCoroutine(MoveOutKenta());
     }
 
-    public void ChangeState(IKentaState npcState)
-    {
-        if (CurrentState != null)
-            CurrentState.OnStateExit();
-        CurrentState = npcState;
-        CurrentState.OnStateEnter(this);
-    }
 
-    public void UpdateState()
+    IEnumerator MoveOutKenta() // 김신을 거실까지 이동시키고 플레이어의 방향을 아래로 변환 후 대사 출력
     {
-        if (CurrentState != null)
+        anim.SetBool("Walk", true);
+        anim.SetFloat("DirY", -1.0f);
+        while (transform.position != moveOut.position)
         {
-            CurrentState.OnStateUpdate();
+            transform.position = Vector3.MoveTowards(transform.position, moveOut.position, walkSpeed * Time.deltaTime);
+            yield return null; // 다음 프레임까지 대기
         }
-    }
-
-    public void SetTransparency()
-    {
-        Color color = _spriteRenderer.color;
-
-        color.a = 0f;
-
-        _spriteRenderer.color = color;
-    }
-
-    public void RecoverTransparency()
-    {
-        Color color = _spriteRenderer.color;
-
-        color.a = 1f;
-
-        _spriteRenderer.color = color;
-    }
-
-
-    public void OnAnimationEnd()
-    {
-        // y축으로 -1만큼 이동
-        transform.position += new Vector3(0, -3, 0);
+        this.gameObject.SetActive(false);
     }
 }

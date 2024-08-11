@@ -27,7 +27,10 @@ public class KannaWalkState : MonoBehaviour, IKannaState
         moveSpeed = _npcController.moveSpeed;
         waitTime = _npcController.waitTime;
 
-        StartCoroutine(Move());
+        if(pc.currentDialogueCounter < 25)
+        {
+            StartCoroutine(Move());
+        }
     }
 
 
@@ -41,7 +44,7 @@ public class KannaWalkState : MonoBehaviour, IKannaState
             }
             else if (currentWaypointIndex == 1)
             {
-                _npcController.anim.SetFloat("DiY", 0.0f);
+                _npcController.anim.SetFloat("DirY", 0.0f);
                 _npcController.anim.SetFloat("DirX", 1.0f);
             }
             else if (currentWaypointIndex == 2)
@@ -53,6 +56,10 @@ public class KannaWalkState : MonoBehaviour, IKannaState
             {
                 _npcController.anim.SetFloat("DirY", 0.0f);
                 _npcController.anim.SetFloat("DirX", 1.0f);
+            }
+            else
+            {
+                //Debug.Log("칸나 일반 이동");
             }
         }
     }
@@ -78,7 +85,7 @@ public class KannaWalkState : MonoBehaviour, IKannaState
             else
             {
                 // 모든 지점을 순회했으면 처음으로 돌아감
-                this.transform.position = new (0.0f, -375f, 0.0f);
+                this.transform.position = new (10.0f, -380.3f, 0.0f);
                 _npcController.goToLivingRoom = false;
                 _npcController.ChangeState(_npcController._idleState);
 

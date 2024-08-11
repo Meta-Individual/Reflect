@@ -5887,7 +5887,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -13.068878, y: -69.69025}
+  m_Offset: {x: -13.068878, y: -69.486496}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5898,7 +5898,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.9709473, y: 6.031372}
+  m_Size: {x: 6.9709473, y: 6.4388733}
   m_EdgeRadius: 0
 --- !u!114 &245706914
 MonoBehaviour:
@@ -7636,7 +7636,7 @@ Transform:
   m_GameObject: {fileID: 288599555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -268, y: 442, z: 0}
+  m_LocalPosition: {x: -3.7, y: -386.6, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7737,13 +7737,13 @@ MonoBehaviour:
   illust: {fileID: 389122464}
   isDialogue: 0
   _dialogueManager: {fileID: 0}
-  _characterController: {fileID: 0}
   _rigidbody: {fileID: 0}
   kannaAnim: 0
   maxDialogueCounter: 1
-  currentDialogueCounter: 39
+  currentDialogueCounter: 1
   _kannaController: {fileID: 0}
   _kimsinController: {fileID: 1081813563}
+  _kentaController: {fileID: 2065122716}
   interactableLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -17164,7 +17164,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.89191484, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -17175,7 +17175,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 13, y: 8}
+  m_Size: {x: 14.78383, y: 8}
   m_EdgeRadius: 0
 --- !u!114 &629193297
 MonoBehaviour:
@@ -21537,6 +21537,7 @@ MonoBehaviour:
   - {fileID: 153191374}
   - {fileID: 1153098518}
   - {fileID: 2054776207}
+  moveOut: {fileID: 777676404}
   moveSpeed: 20
   waitTime: 0
   goToLivingRoom: 0
@@ -21586,6 +21587,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chair: {fileID: 233563659}
   desk: {fileID: 1585223017}
+--- !u!1 &777676403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 777676404}
+  m_Layer: 0
+  m_Name: Kanna_MoveOutTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &777676404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777676403}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: -430, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &777887841
 GameObject:
   m_ObjectHideFlags: 0
@@ -29553,7 +29585,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.28566742, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -29564,7 +29596,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 18, y: 10}
+  m_Size: {x: 10.572647, y: 10}
   m_EdgeRadius: 0
 --- !u!114 &1054758429
 MonoBehaviour:
@@ -48972,7 +49004,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.8613868, y: -0.22483826}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -48983,7 +49015,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.5, y: 6}
+  m_Size: {x: 4.7772264, y: 6.4496765}
   m_EdgeRadius: 0
 --- !u!114 &1793312812
 MonoBehaviour:
@@ -56654,6 +56686,8 @@ GameObject:
   - component: {fileID: 2065122714}
   - component: {fileID: 2065122713}
   - component: {fileID: 2065122715}
+  - component: {fileID: 2065122716}
+  - component: {fileID: 2065122717}
   m_Layer: 0
   m_Name: Kenta
   m_TagString: Untagged
@@ -56750,6 +56784,49 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2065122716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065122712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e80ec133ec0f4ac488553e24f80b3ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 2065122715}
+  moveOut: {fileID: 470032565}
+  _playerController: {fileID: 0}
+  walkSpeed: 15
+--- !u!50 &2065122717
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065122712}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2067916509
 GameObject:
   m_ObjectHideFlags: 0
@@ -59803,6 +59880,7 @@ SceneRoots:
   - {fileID: 153191374}
   - {fileID: 1153098518}
   - {fileID: 2054776207}
+  - {fileID: 777676404}
   - {fileID: 776055007}
   - {fileID: 2065122714}
   - {fileID: 470032565}

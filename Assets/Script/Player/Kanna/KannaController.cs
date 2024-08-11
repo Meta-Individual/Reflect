@@ -8,6 +8,7 @@ public class KannaController : MonoBehaviour
     public Animator anim;
 
     public Transform[] waypoints;  // 이동할 경로 지점들
+    public Transform moveOut; //칸나가 나갈 현관 위치
     public float moveSpeed = 15f;   // 이동 속도
     public float waitTime = 1f;    // 각 지점에서 대기 시간
     [HideInInspector]
@@ -95,5 +96,22 @@ public class KannaController : MonoBehaviour
     {
         // y축으로 -1만큼 이동
         transform.position += new Vector3(0, -3, 0);
+    }
+
+    public void MoveKanna()
+    {
+        StartCoroutine(MoveOutKanna());
+    }
+
+    IEnumerator MoveOutKanna() // 김신을 거실까지 이동시키고 플레이어의 방향을 아래로 변환 후 대사 출력
+    {
+        anim.SetBool("Walk", true);
+        anim.SetFloat("DirY", -1.0f);
+        while (transform.position != moveOut.position)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, moveOut.position, walkSpeed * Time.deltaTime);
+            yield return null; // 다음 프레임까지 대기
+        }
+        this.gameObject.SetActive(false);
     }
 }

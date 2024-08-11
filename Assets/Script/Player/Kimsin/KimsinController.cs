@@ -39,7 +39,7 @@ public class KimsinController : MonoBehaviour
         _playerController.anim.SetFloat("DirX", 0.0f);
         _playerController.anim.SetFloat("DirY", -1.0f);
         yield return new WaitForSeconds(1.0f);
-        _playerController.maxDialogueCounter = 79;
+        _playerController.maxDialogueCounter = 92;
         _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
     }
 
