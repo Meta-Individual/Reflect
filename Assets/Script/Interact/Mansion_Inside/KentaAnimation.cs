@@ -38,6 +38,8 @@ public class KentaAnimation : MonoBehaviour, IInteractable
     IEnumerator ActiveKentaAnimation() //옷장의 흔들림을 멈추고, 켄타가 옷장에서 나오는 애니메이션 재생 이후 대사 출력
     {
         _playerController.ChangeState(_playerController._waitState);
+        yield return new WaitForSeconds(1.0f);
+        _playerController.MoveDownPlayer();
         anim.SetBool("Idle", true);
         yield return new WaitForSeconds(2.0f);
         anim.SetBool("Out", true);
