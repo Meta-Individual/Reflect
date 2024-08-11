@@ -23,6 +23,7 @@ public class StartDialogueWithDelay : MonoBehaviour
 
     IEnumerator ShowDialogueWithDelay()
     {
+        _playerController.ChangeState(_playerController._waitState);
         yield return new WaitForSeconds(delay);
         _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
         _playerController.maxDialogueCounter = currentDialogueID;

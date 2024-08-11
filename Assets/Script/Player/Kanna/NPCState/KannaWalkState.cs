@@ -85,7 +85,7 @@ public class KannaWalkState : MonoBehaviour, IKannaState
             else
             {
                 // 모든 지점을 순회했으면 처음으로 돌아감
-                this.transform.position = new (10.0f, -380.3f, 0.0f);
+                this.transform.position = new(10.0f, -380.3f, 0.0f);
                 _npcController.goToLivingRoom = false;
                 _npcController.ChangeState(_npcController._idleState);
 
