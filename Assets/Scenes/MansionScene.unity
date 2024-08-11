@@ -22585,8 +22585,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 812659260}
-  - component: {fileID: 812659262}
   - component: {fileID: 812659261}
+  - component: {fileID: 812659262}
   m_Layer: 8
   m_Name: 7~14
   m_TagString: Untagged
@@ -22663,11 +22663,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 812659259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c116bbb7dbd285248a9f76195a46e9fe, type: 3}
+  m_Script: {fileID: 11500000, guid: acbe7fe973ee72c4eb92370328d69157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startDialogueID: 7
   currentDialogueID: 14
+  delay: 1
+  lockDoorSound: {fileID: 8300000, guid: df52e6fa14e29a2459b42e6f28edb1b7, type: 3}
 --- !u!1 &815360411
 GameObject:
   m_ObjectHideFlags: 0
