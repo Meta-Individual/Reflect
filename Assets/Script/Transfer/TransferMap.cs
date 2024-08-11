@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TransferMap : MonoBehaviour
+public class TransferMap : MonoBehaviour, IInteractable
 {
     public enum Direction //플레이어가 바라보고 있는 방향을 얻기위한 변수
     {
@@ -55,38 +55,41 @@ public class TransferMap : MonoBehaviour
             if (CheckDirection())
             {
                 ShowUI();
-
-                if (Input.GetKeyDown((KeyCode)CustomKey.Interact) && (_playerController.CurrentState == _playerController._idleState || _playerController.CurrentState == _playerController._walkState ))
-                {
-                    if(!isMonologue)
-                    {
-                        if (isLocked)
-                        {
-                            if (playerInventory.HasItem(keyItemName))
-                            {
-                                UnlockDoor();
-                            }
-                            else
-                            {
-                                _monologueManager.ShowMonologue(doorClosedScript);
-                                isMonologue = true;
-                            }
-                        }
-                        else
-                        {
-                            TransformWithSound(); // 방문 사운드 재생
-                        }
-                    }
-                    else
-                    {
-                        isMonologue = false;
-
-                    }
-                }
             }
             else
             {
                 HideUI();
+            }
+        }
+    }
+
+    public void Interact()
+    {
+        if (Input.GetKeyDown((KeyCode)CustomKey.Interact) && (_playerController.CurrentState == _playerController._idleState || _playerController.CurrentState == _playerController._walkState))
+        {
+            if (!isMonologue)
+            {
+                if (isLocked)
+                {
+                    if (playerInventory.HasItem(keyItemName))
+                    {
+                        UnlockDoor();
+                    }
+                    else
+                    {
+                        _monologueManager.ShowMonologue(doorClosedScript);
+                        isMonologue = true;
+                    }
+                }
+                else
+                {
+                    TransformWithSound(); // 방문 사운드 재생
+                }
+            }
+            else
+            {
+                isMonologue = false;
+
             }
         }
     }
@@ -169,6 +172,7 @@ public class TransferMap : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
+            GetInteractScript();
         }
     }
 
@@ -177,6 +181,22 @@ public class TransferMap : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
+            RemoveInteractScript();
+        }
+    }
+
+    private void GetInteractScript()
+    {
+        _playerController.interactable = this.GetComponent<IInteractable>();
+        _playerController.interactRange = true;
+    }
+
+    private void RemoveInteractScript()
+    {
+        _playerController.interactRange = false;
+        if (_playerController.interactable != null)
+        {
+            _playerController.interactable = null;
         }
     }
 }

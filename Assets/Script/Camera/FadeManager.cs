@@ -12,8 +12,6 @@ public class FadeManager : MonoBehaviour
     public float delayBeforeFadeOut = 1f; // 페이드 인 후 페이드 아웃까지의 대기 시간
     private WaitForSeconds oneSecondWait = new WaitForSeconds(1.0f);
 
-    private bool isFading = false;
-
     private void Awake()
     {
         if (Instance == null)
@@ -56,7 +54,6 @@ public class FadeManager : MonoBehaviour
      */
     private IEnumerator Fade(float startAlpha, float endAlpha, bool deactivateOnEnd)
     {
-        isFading = true;
         fadeImage.gameObject.SetActive(true);
 
         Color color = fadeImage.color;
@@ -78,7 +75,6 @@ public class FadeManager : MonoBehaviour
             fadeImage.gameObject.SetActive(false); // 투명해지면 비활성화
         }
 
-        isFading = false;
     }
 
     private IEnumerator FadeInAndOut()

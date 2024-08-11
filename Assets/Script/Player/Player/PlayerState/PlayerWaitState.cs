@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +12,7 @@ public class PlayerWaitState : MonoBehaviour, IPlayerState
             _playerController = npcController;
 
         _playerController.anim.SetBool("Wait", true);
-        if (_playerController.currentDialogueCounter == 48) //ÄËÅ¸¸¦ Ã£¾Æ¼­ ¿ÊÀå¿¡¼­ ³ª¿À´Â ºÎºĞ
+        if (_playerController.currentDialogueCounter == 48) //ì¼„íƒ€ë¥¼ ì°¾ì•„ì„œ ì˜·ì¥ì—ì„œ ë‚˜ì˜¤ëŠ” ë¶€ë¶„
         {
             StartCoroutine(GotoLivingRoom());
         }
@@ -27,17 +27,15 @@ public class PlayerWaitState : MonoBehaviour, IPlayerState
         _playerController.anim.SetBool("Wait", false);
     }
 
-    public IEnumerator GotoLivingRoom() //ÄËÅ¸¸¦ Ã£°í³­ ÈÄ ÆäÀÌµåÀÎ ÆäÀÌµå¾Æ¿ô È¿°ú·Î °Å½Ç·Î ½ÃÁ¡ º¯È¯
+    public IEnumerator GotoLivingRoom() //ì¼„íƒ€ë¥¼ ì°¾ê³ ë‚œ í›„ í˜ì´ë“œì¸ í˜ì´ë“œì•„ì›ƒ íš¨ê³¼ë¡œ ê±°ì‹¤ë¡œ ì‹œì  ë³€í™˜
     {
-        FadeManager.Instance.StartFade(); // ÆäÀÌµå ÀÎ ÈÄ 1ÃÊ ´ë±â ÈÄ ÆäÀÌµå ¾Æ¿ô
+        FadeManager.Instance.StartFade(); // í˜ì´ë“œ ì¸ í›„ 1ì´ˆ ëŒ€ê¸° í›„ í˜ì´ë“œ ì•„ì›ƒ
         yield return new WaitForSeconds(2.5f);
         _playerController.anim.SetFloat("DirX", 0.0f);
         _playerController.anim.SetFloat("DirY", 1.0f);
-        _playerController.transform.position = new(0.0f, -388f, 0.0f);
+        _playerController.transform.position = new(-3.7f, -386.6f, 0.0f);
         yield return new WaitForSeconds(2.0f);
-        _playerController.ChangeState(_playerController._diaState);
-        _playerController.maxDialogueCounter = 50; //Ã÷³×¸ğ¸® ½Å¾ß°¡ °Å½Ç·Î µé¾î¿À´Â ºÎºĞ
+        _playerController.maxDialogueCounter = 50; //ì¸ ë„¤ëª¨ë¦¬ ì‹ ì•¼ê°€ ê±°ì‹¤ë¡œ ë“¤ì–´ì˜¤ëŠ” ë¶€ë¶„ì „ê¹Œì§€
         _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
-        yield return null;
     }
 }

@@ -54,7 +54,7 @@ ID	SceneName	Location	Character	Sprite Image	Dialogue	Situation	Interaction	비�
 52	Yuuji's Mansion1F	거실	유우지	Smile	아빠..!!!	51번 이후		
 53	Yuuji's Mansion1F	거실	코즈키 칸나	Default	안녕하세요. 아저씨	52번 이후		
 54	Yuuji's Mansion1F	거실	코즈키 켄타	Smile	충성!!	53번 이후		
-55	Yuuji's Mansion1F	거실	츠네모리 신야	ThrowOff	하하.. 칸나랑 켄타 잘 지냈니?	54번 이후		
+55	Yuuji's Mansion1F	거실	츠네모리 신야	Smile	하하.. 칸나랑 켄타 잘 지냈니?	54번 이후		
 56	Yuuji's Mansion1F	거실	코즈키 칸나	Smile	저희는 늘 잘 지내고 있죠.	55번 이후		
 57	Yuuji's Mansion1F	거실	코즈키 칸나	Default	.. 아주머니는 괜찮죠??	56번 이후		
 58	Yuuji's Mansion1F	거실	유우지	Default	….........	57번 이후		
@@ -68,7 +68,7 @@ ID	SceneName	Location	Character	Sprite Image	Dialogue	Situation	Interaction	비�
 66	Yuuji's Mansion1F	거실	코즈키 칸나	Smile	잘됐다!! 유우지!!	65번 이후		
 67	Yuuji's Mansion1F	거실	유우지	Smile	응!!	66번 이후		
 68	Yuuji's Mansion1F	거실	코즈키 켄타	Smile	아저씨 그럼 이제 아가도 태어나는거에요??	67번 이후		
-69	Yuuji's Mansion1F	거실	츠네모리 신야	Default	음.. 다음 달에는 태어날 것 같단다.	68번 이후		
+69	Yuuji's Mansion1F	거실	츠네모리 신야	Smile	음.. 다음 달에는 태어날 것 같단다.	68번 이후		
 70	Yuuji's Mansion1F	거실	코즈키 켄타	Resent	헤… 부럽다 유우지 귀여운 동생도 생기고!	69번 이후		
 71	Yuuji's Mansion1F	거실	코즈키 칸나	Default	여자 아기라고 했었죠??	70번 이후		
 72	Yuuji's Mansion1F	거실	츠네모리 신야	Smile	그래. 칸나처럼 이쁜 아이면 좋겠네.	71번 이후		
