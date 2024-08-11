@@ -67,16 +67,15 @@ public class PlayerController : MonoBehaviour
 
         _kannaController = GameObject.FindGameObjectWithTag("Kanna").GetComponent<KannaController>();
 
+        _waitState = gameObject.AddComponent<PlayerWaitState>();
         _idleState = gameObject.AddComponent<PlayerIdleState>();
         _walkState = gameObject.AddComponent<PlayerWalkState>();
-        _waitState = gameObject.AddComponent<PlayerWaitState>();
         _monoState = gameObject.AddComponent<PlayerMonologueState>();
         _diaState = gameObject.AddComponent<PlayerDialogueState>();
 
         _rigidbody = GetComponent<Rigidbody2D>();
 
-        CurrentState = _idleState;
-        ChangeState(CurrentState);
+        ChangeState(_waitState);
     }
 
     private void Update()
@@ -149,8 +148,22 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireCube(centerPosition, interactionAreaSize);
     }
 
-    public void MovePlayer(float x, float y, float z) //플레이어를 이동시키는 함수
+    public void MoveDownPlayer()
     {
-        transform.position += new Vector3(x, y, z);
+        StartCoroutine(MovePlayer());
+    }
+    IEnumerator MovePlayer() //플레이어를 이동시키는 함수
+    {
+        Vector3 moveDown = new(transform.position.x, transform.position.y - 8, transform.position.z);
+        anim.SetBool("Walk", true);
+        anim.SetFloat("DirY", -1.0f);
+        while (transform.position != moveDown)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, moveDown, walkSpeed * Time.deltaTime);
+            yield return null; // 다음 프레임까지 대기
+        }
+        anim.SetBool("Walk", false);
+        anim.SetFloat("DirX", 0.0f);
+        anim.SetFloat("DirY", 1.0f);
     }
 }
