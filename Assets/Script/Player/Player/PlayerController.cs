@@ -31,7 +31,8 @@ public class PlayerController : MonoBehaviour
     public int maxDialogueCounter = 1; //플레이어가 진행할 대화의 수
     public int currentDialogueCounter = 1; //플레이어의 대화 진행상태
     [HideInInspector]
-    public KannaController _npcController;
+    public KannaController _kannaController;
+    public KimsinController _kimsinController;
 
     [Header("Interact")]
     public LayerMask interactableLayer; // 상호작용 가능한 레이어 설정
@@ -64,7 +65,7 @@ public class PlayerController : MonoBehaviour
 
         _dialogueManager = FindObjectOfType<DialogueManager>();
 
-        _npcController = GameObject.FindGameObjectWithTag("Kanna").GetComponent<KannaController>();
+        _kannaController = GameObject.FindGameObjectWithTag("Kanna").GetComponent<KannaController>();
 
         _idleState = gameObject.AddComponent<PlayerIdleState>();
         _walkState = gameObject.AddComponent<PlayerWalkState>();

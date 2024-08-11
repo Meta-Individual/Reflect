@@ -20,7 +20,7 @@ public class PlayerMonologueState : MonoBehaviour, IPlayerState
             if (_playerController.kannaAnim)
             {
                 _playerController.kannaAnim = false;
-                _playerController._npcController.ChangeState(_playerController._npcController._outState);
+                _playerController._kannaController.ChangeState(_playerController._kannaController._outState);
             }
         }
     }

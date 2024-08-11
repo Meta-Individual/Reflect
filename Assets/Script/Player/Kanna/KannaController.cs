@@ -8,7 +8,7 @@ public class KannaController : MonoBehaviour
     public Animator anim;
 
     public Transform[] waypoints;  // 이동할 경로 지점들
-    public float moveSpeed = 2f;   // 이동 속도
+    public float moveSpeed = 15f;   // 이동 속도
     public float waitTime = 1f;    // 각 지점에서 대기 시간
     [HideInInspector]
     public bool goToLivingRoom = false; // 칸나가 서재에서 거실로 이동하기 위한 변수

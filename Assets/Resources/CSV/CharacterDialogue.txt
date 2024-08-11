@@ -54,7 +54,7 @@ ID	SceneName	Location	Character	Sprite Image	Dialogue	Situation	Interaction	비�
 52	Yuuji's Mansion1F	거실	유우지	Smile	아빠..!!!	51번 이후		
 53	Yuuji's Mansion1F	거실	코즈키 칸나	Default	안녕하세요. 아저씨	52번 이후		
 54	Yuuji's Mansion1F	거실	코즈키 켄타	Smile	충성!!	53번 이후		
-55	Yuuji's Mansion1F	거실	츠네모리 신야	ThrowOff	하하.. 칸나랑 켄타 잘 지냈니?	54번 이후		
+55	Yuuji's Mansion1F	거실	츠네모리 신야	Smile	하하.. 칸나랑 켄타 잘 지냈니?	54번 이후		
 56	Yuuji's Mansion1F	거실	코즈키 칸나	Smile	저희는 늘 잘 지내고 있죠.	55번 이후		
 57	Yuuji's Mansion1F	거실	코즈키 칸나	Default	.. 아주머니는 괜찮죠??	56번 이후		
 58	Yuuji's Mansion1F	거실	유우지	Default	….........	57번 이후		
