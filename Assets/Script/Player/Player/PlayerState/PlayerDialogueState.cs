@@ -29,6 +29,10 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
                     Debug.Log("칸나 나가자");
                     _playerController._kannaController.MoveKanna();
                 }
+                else if(_playerController.currentDialogueCounter == 92)
+                {
+                    _playerController._kimsinController.RunMoveOutCoroutine();
+                }
                 _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
             }
             else if(_playerController.currentDialogueCounter == 21) //칸나가 걸어서 거실로 나가는 부분
