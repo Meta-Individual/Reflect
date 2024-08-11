@@ -975,6 +975,7 @@ MonoBehaviour:
   targetLocation: {fileID: 1935297810}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -5773,6 +5774,7 @@ MonoBehaviour:
   targetLocation: {fileID: 1381495541}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -6063,6 +6065,7 @@ MonoBehaviour:
   targetLocation: {fileID: 1697135891}
   isLocked: 1
   keyItemName: KannaInteract
+  stair: 1
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: 89
@@ -7040,6 +7043,7 @@ MonoBehaviour:
   targetLocation: {fileID: 1658319193}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -7636,7 +7640,7 @@ Transform:
   m_GameObject: {fileID: 288599555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -269.3, y: -436.6, z: 0}
+  m_LocalPosition: {x: 16.6, y: -387.4, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7740,7 +7744,7 @@ MonoBehaviour:
   _rigidbody: {fileID: 0}
   kannaAnim: 0
   maxDialogueCounter: 1
-  currentDialogueCounter: 16
+  currentDialogueCounter: 1
   _kannaController: {fileID: 0}
   _kimsinController: {fileID: 1081813563}
   _kentaController: {fileID: 2065122716}
@@ -9227,6 +9231,7 @@ MonoBehaviour:
   targetLocation: {fileID: 2128512991}
   isLocked: 1
   keyItemName: LibraryDoorKey
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: 87
@@ -10819,6 +10824,7 @@ MonoBehaviour:
   targetLocation: {fileID: 2089778295}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -17071,6 +17077,7 @@ MonoBehaviour:
   targetLocation: {fileID: 1278588304}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -22289,6 +22296,7 @@ MonoBehaviour:
   targetLocation: {fileID: 1928084102}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -23064,6 +23072,7 @@ MonoBehaviour:
   targetLocation: {fileID: 2028449367}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -28559,6 +28568,7 @@ MonoBehaviour:
   targetLocation: {fileID: 2097333922}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -36220,6 +36230,7 @@ MonoBehaviour:
   targetLocation: {fileID: 621053444}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -38560,6 +38571,7 @@ MonoBehaviour:
   targetLocation: {fileID: 240114006}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -43639,6 +43651,7 @@ MonoBehaviour:
   targetLocation: {fileID: 1787653822}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -45397,6 +45410,7 @@ MonoBehaviour:
   targetLocation: {fileID: 268071426}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -45979,6 +45993,7 @@ MonoBehaviour:
   targetLocation: {fileID: 245974716}
   isLocked: 0
   keyItemName: Key
+  stair: 1
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -48911,6 +48926,7 @@ MonoBehaviour:
   targetLocation: {fileID: 1605857628}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -52316,6 +52332,7 @@ MonoBehaviour:
   targetLocation: {fileID: 795624194}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -52667,6 +52684,7 @@ MonoBehaviour:
   targetLocation: {fileID: 61843777}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -53942,6 +53960,7 @@ MonoBehaviour:
   targetLocation: {fileID: 1988528483}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -54300,6 +54319,7 @@ MonoBehaviour:
   targetLocation: {fileID: 1975759348}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -54808,6 +54828,7 @@ MonoBehaviour:
   targetLocation: {fileID: 2026652739}
   isLocked: 0
   keyItemName: Key
+  stair: 1
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -55508,6 +55529,7 @@ MonoBehaviour:
   targetLocation: {fileID: 2009388047}
   isLocked: 1
   keyItemName: KannaInteract
+  stair: 1
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: 89
@@ -55689,6 +55711,7 @@ MonoBehaviour:
   targetLocation: {fileID: 821477342}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -57917,6 +57940,7 @@ MonoBehaviour:
   targetLocation: {fileID: 391354356}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -58375,6 +58399,7 @@ MonoBehaviour:
   targetLocation: {fileID: 1016323864}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -59516,6 +59541,7 @@ MonoBehaviour:
   targetLocation: {fileID: 346756670}
   isLocked: 0
   keyItemName: Key
+  stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
