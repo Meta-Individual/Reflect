@@ -47,51 +47,51 @@ ID	SceneName	Location	Character	Sprite Image	Dialogue	Situation	Interaction	비�
 45	Yuuji's Mansion2F	2층 방	유우지	ThrowOff	그니까 너네 집이랑 우리 집이 같은 구조인데..	44번 이후		
 46	Yuuji's Mansion2F	2층 방	코즈키 켄타	Default	구조가 뭔데?!! 어려움 말 하지마!	45번 이후		
 47	Yuuji's Mansion2F	2층 방	유우지	Default	... 내려가자	46번 이후		
-48	Yuuji's Mansion1F	거실		칸나(당황)	흠… 진짜 잘 찾네	신이 전환되고 다시 거실에 3명의 아이가 모인 후		
-49	Yuuji's Mansion1F	거실		켄타(짓궂음)	다시 하자! 이제 우리 집에서 하는거야!!	48번 이후		
-50	Yuuji's Mansion1F	거실		유우지(당황)	 ..... 아니 또?	49번 이후		
-51	Yuuji's Mansion1F	거실		츠네모리 신야	미안하지만, 오늘은 그만해야 할 것 같네?	50번 이후 현관에서 신야가 들어온 후		
-52	Yuuji's Mansion1F	거실		유우지(미소)	아빠..!!!	51번 이후		
-53	Yuuji's Mansion1F	거실		칸나(기본)	안녕하세요. 아저씨	52번 이후		
-54	Yuuji's Mansion1F	거실		켄타(미소)	충성!!	53번 이후		
-55	Yuuji's Mansion1F	거실		츠네모리 신야(당황)	하하.. 칸나랑 켄타 잘 지냈니?	54번 이후		
-56	Yuuji's Mansion1F	거실		칸나(미소)	저희는 늘 잘 지내고 있죠.	55번 이후		
-57	Yuuji's Mansion1F	거실		칸나(기본)	.. 아주머니는 괜찮죠??	56번 이후		
-58	Yuuji's Mansion1F	거실		유우지(기본)	….........	57번 이후		
-59	Yuuji's Mansion1F	거실		츠네모리 신야(미소)	아카네는 많이 좋아졌단다. 곧 볼 수 있을껄?	58번 이후		
-60	Yuuji's Mansion1F	거실		켄타(미소)	그럼! 아카네 아줌마가 건강해진 기념으로 우리 집에서 다 같이 숨바꼭질 하자!!	59번 이후		
-61	Yuuji's Mansion1F	거실		유우지(당황)	그게 그렇게 되는거냐고…	60번 이후		
-62	Yuuji's Mansion1F	거실		칸나(당황)	켄타.. 오늘은 여기까지하고 그만 돌아가자	61번 이후		
-63	Yuuji's Mansion1F	거실		츠네모리 신야(기본)	미안하구나 켄타. 유우지랑 이따 병원애 갈 예정이라.	62번 이후		
-64	Yuuji's Mansion1F	거실		유우지(기본)	진짜요? 엄마 볼 수 있는거에요??	63번 이후		
-65	Yuuji's Mansion1F	거실		츠네모리 신야(미소)	그래 많이 좋아져서 유우지도 와도 된다고 의사 선생님이 그랬어.	64번 이후		
-66	Yuuji's Mansion1F	거실		칸나(미소)	잘됐다!! 유우지!!	65번 이후		
-67	Yuuji's Mansion1F	거실		유우지(기본)	응!!	66번 이후		
-68	Yuuji's Mansion1F	거실		켄타(미소)	아저씨 그럼 이제 아가도 태어나는거에요??	67번 이후		
-69	Yuuji's Mansion1F	거실		츠네모리 신야(기본)	음.. 다음 달에는 태어날 것 같단다.	68번 이후		
-70	Yuuji's Mansion1F	거실		켄타(짓궂음)	헤… 부럽다 유우지 귀여운 동생도 생기고!	69번 이후		
-71	Yuuji's Mansion1F	거실		칸나(기본)	여자 아기라고 했었죠??	70번 이후		
-72	Yuuji's Mansion1F	거실		츠네모리 신야(미소)	그래. 칸나처럼 이쁜 아이면 좋겠네.	71번 이후		
-73	Yuuji's Mansion1F	거실		칸나(미소)	아카네 아주머니는 엄청 이쁘시니 아기도 엄청 귀여울꺼에요!	72번 이후		
-74	Yuuji's Mansion1F	거실		칸나(미소)	그리고 유우지 같은 오빠가 있어서 참 좋을 것 같아요.	73번 이후		
-75	Yuuji's Mansion1F	거실		켄타(짓궂음)	나도 좋은 오빠할 수 있어!!! 매일 매일 같이 숨바꼭질 하고 놀 거야!	74번 이후		
-76	Yuuji's Mansion1F	거실		칸나(당황)	하하 그럼 오늘은 일단, 누나랑 둘이 집에가서 숨바꼭질할까?	75번 이후		
-77	Yuuji's Mansion1F	거실		켄타(미소)	진짜지??? 누나가 술래야! 	76번 이후		
-78	Yuuji's Mansion1F	거실		켄타(미소)	유우지!! 병원 다녀와서 내일 우리 집으로 와라!!!!	77번 이후		
-79	Yuuji's Mansion1F	거실		켄타(미소)	내일은 날 절대 못찾을껄???	78번 이후 켄타가 거실에서 현관으로 나간다.		
-80	Yuuji's Mansion1F	거실		유우지(기본)	또 내가 술래인거냐..	79번 이후		
-81	Yuuji's Mansion1F	거실		칸나(미소)	내일 보자 유우지. 안녕히계세요 아저씨!	80번 이후		
-82	Yuuji's Mansion1F	거실		칸나(기본)	켄타!! 인사하고 가야지!	81번 이후 칸나가 거실에서 현관으로 나간다.		
-83	Yuuji's Mansion1F	거실		켄타(미소)	안녕히계세요! 아저씨!!!, 유우지 내일 봐!	82번 이후		
-84	Yuuji's Mansion1F	거실		츠네모리 신야(당황)	여전히 활기찬 남매구나..	83번 이후		
-85	Yuuji's Mansion1F	거실		유우지(기본)	바보라서 그래요…	84번 이후		
-86	Yuuji's Mansion1F	거실		츠네모리 신야(미소)	그래도 사이좋게 지내는 것 같아 보기 좋구나.	85번 이후		
-87	Yuuji's Mansion1F	거실		츠네모리 신야(미소)	켄타랑 칸나랑 노는 것은 재밌지??	86번 이후		
-88	Yuuji's Mansion1F	거실		유우지(미소)	.. 뭐 나쁘지는 않아요.	87번 이후		
-89	Yuuji's Mansion1F	거실		츠네모리 신야(미소)	자 그럼 슬슬 병원에 갈 준비 해볼까??	88번 이후		
-90	Yuuji's Mansion1F	거실		유우지(당황)	(또 이소리다.  켄타네 집에서 들리는 정체를 알 수 없는 소리)아빠?	89번 이후 옆집 켄타네 집에서 큰 소음이 들린 후		
-91	Yuuji's Mansion1F	거실		츠네모리 신야(기본)	하.. 대체 이게 무슨 소리인지…	90번 이후		
-92	Yuuji's Mansion1F	거실		츠네모리 신야(기본)	아빠가 켄타네에 다녀오마. 기다리고 있으렴.	91번 이후 신야가 거실에서 현관으로 나간다.		
+48	Yuuji's Mansion1F	거실	코즈키 칸나	ThrowOff	흠… 진짜 잘 찾네	신이 전환되고 다시 거실에 3명의 아이가 모인 후		
+49	Yuuji's Mansion1F	거실	코즈키 켄타	Resent	다시 하자! 이제 우리 집에서 하는거야!!	48번 이후		
+50	Yuuji's Mansion1F	거실	유우지	ThrowOff	 ..... 아니 또?	49번 이후		
+51	Yuuji's Mansion1F	거실	츠네모리 신야	Default	미안하지만, 오늘은 그만해야 할 것 같네?	50번 이후 현관에서 신야가 들어온 후		
+52	Yuuji's Mansion1F	거실	유우지	Smile	아빠..!!!	51번 이후		
+53	Yuuji's Mansion1F	거실	코즈키 칸나	Default	안녕하세요. 아저씨	52번 이후		
+54	Yuuji's Mansion1F	거실	코즈키 켄타	Smile	충성!!	53번 이후		
+55	Yuuji's Mansion1F	거실	츠네모리 신야	ThrowOff	하하.. 칸나랑 켄타 잘 지냈니?	54번 이후		
+56	Yuuji's Mansion1F	거실	코즈키 칸나	Smile	저희는 늘 잘 지내고 있죠.	55번 이후		
+57	Yuuji's Mansion1F	거실	코즈키 칸나	Default	.. 아주머니는 괜찮죠??	56번 이후		
+58	Yuuji's Mansion1F	거실	유우지	Default	….........	57번 이후		
+59	Yuuji's Mansion1F	거실	츠네모리 신야	Smile	아카네는 많이 좋아졌단다. 곧 볼 수 있을껄?	58번 이후		
+60	Yuuji's Mansion1F	거실	코즈키 켄타	Smile	그럼! 아카네 아줌마가 건강해진 기념으로 우리 집에서 다 같이 숨바꼭질 하자!!	59번 이후		
+61	Yuuji's Mansion1F	거실	유우지	ThrowOff	그게 그렇게 되는거냐고…	60번 이후		
+62	Yuuji's Mansion1F	거실	코즈키 칸나	ThrowOff	켄타.. 오늘은 여기까지하고 그만 돌아가자	61번 이후		
+63	Yuuji's Mansion1F	거실	츠네모리 신야	Default	미안하구나 켄타. 유우지랑 이따 병원애 갈 예정이라.	62번 이후		
+64	Yuuji's Mansion1F	거실	유우지	Default	진짜요? 엄마 볼 수 있는거에요??	63번 이후		
+65	Yuuji's Mansion1F	거실	츠네모리 신야	Smile	그래 많이 좋아져서 유우지도 와도 된다고 의사 선생님이 그랬어.	64번 이후		
+66	Yuuji's Mansion1F	거실	코즈키 칸나	Smile	잘됐다!! 유우지!!	65번 이후		
+67	Yuuji's Mansion1F	거실	유우지	Smile	응!!	66번 이후		
+68	Yuuji's Mansion1F	거실	코즈키 켄타	Smile	아저씨 그럼 이제 아가도 태어나는거에요??	67번 이후		
+69	Yuuji's Mansion1F	거실	츠네모리 신야	Default	음.. 다음 달에는 태어날 것 같단다.	68번 이후		
+70	Yuuji's Mansion1F	거실	코즈키 켄타	Resent	헤… 부럽다 유우지 귀여운 동생도 생기고!	69번 이후		
+71	Yuuji's Mansion1F	거실	코즈키 칸나	Default	여자 아기라고 했었죠??	70번 이후		
+72	Yuuji's Mansion1F	거실	츠네모리 신야	Smile	그래. 칸나처럼 이쁜 아이면 좋겠네.	71번 이후		
+73	Yuuji's Mansion1F	거실	코즈키 칸나	Smile	아카네 아주머니는 엄청 이쁘시니 아기도 엄청 귀여울꺼에요!	72번 이후		
+74	Yuuji's Mansion1F	거실	코즈키 칸나	Smile	그리고 유우지 같은 오빠가 있어서 참 좋을 것 같아요.	73번 이후		
+75	Yuuji's Mansion1F	거실	코즈키 켄타	Resent	나도 좋은 오빠할 수 있어!!! 매일 매일 같이 숨바꼭질 하고 놀 거야!	74번 이후		
+76	Yuuji's Mansion1F	거실	코즈키 칸나	ThrowOff	하하 그럼 오늘은 일단, 누나랑 둘이 집에가서 숨바꼭질할까?	75번 이후		
+77	Yuuji's Mansion1F	거실	코즈키 켄타	Smile	진짜지??? 누나가 술래야! 	76번 이후		
+78	Yuuji's Mansion1F	거실	코즈키 켄타	Smile	유우지!! 병원 다녀와서 내일 우리 집으로 와라!!!!	77번 이후		
+79	Yuuji's Mansion1F	거실	코즈키 켄타	Smile	내일은 날 절대 못찾을껄???	78번 이후 켄타가 거실에서 현관으로 나간다.		
+80	Yuuji's Mansion1F	거실	유우지	Default	또 내가 술래인거냐..	79번 이후		
+81	Yuuji's Mansion1F	거실	코즈키 칸나	Smile	내일 보자 유우지. 안녕히계세요 아저씨!	80번 이후		
+82	Yuuji's Mansion1F	거실	코즈키 칸나	Default	켄타!! 인사하고 가야지!	81번 이후 칸나가 거실에서 현관으로 나간다.		
+83	Yuuji's Mansion1F	거실	코즈키 켄타	Smile	안녕히계세요! 아저씨!!!, 유우지 내일 봐!	82번 이후		
+84	Yuuji's Mansion1F	거실	츠네모리 신야	ThrowOff	여전히 활기찬 남매구나..	83번 이후		
+85	Yuuji's Mansion1F	거실	유우지	Default	바보라서 그래요…	84번 이후		
+86	Yuuji's Mansion1F	거실	츠네모리 신야	Smile	그래도 사이좋게 지내는 것 같아 보기 좋구나.	85번 이후		
+87	Yuuji's Mansion1F	거실	츠네모리 신야	Smile	켄타랑 칸나랑 노는 것은 재밌지??	86번 이후		
+88	Yuuji's Mansion1F	거실	유우지	Smile	.. 뭐 나쁘지는 않아요.	87번 이후		
+89	Yuuji's Mansion1F	거실	츠네모리 신야	Smile	자 그럼 슬슬 병원에 갈 준비 해볼까??	88번 이후		
+90	Yuuji's Mansion1F	거실	유우지	ThrowOff	(또 이소리다.  켄타네 집에서 들리는 정체를 알 수 없는 소리)아빠?	89번 이후 옆집 켄타네 집에서 큰 소음이 들린 후		
+91	Yuuji's Mansion1F	거실	츠네모리 신야	Default	하.. 대체 이게 무슨 소리인지…	90번 이후		
+92	Yuuji's Mansion1F	거실	츠네모리 신야	Default	아빠가 켄타네에 다녀오마. 기다리고 있으렴.	91번 이후 신야가 거실에서 현관으로 나간다.		
 93								
 94								
 95								
