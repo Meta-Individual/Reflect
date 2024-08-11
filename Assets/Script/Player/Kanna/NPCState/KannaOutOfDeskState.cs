@@ -39,6 +39,8 @@ public class KannaOutOfDeskState : MonoBehaviour, IKannaState
 
     IEnumerator StartAnimationSet()
     {
+        pc._audioSource.clip = _npcController.hideAndSeek;
+        pc._audioSource.Play();
         _npcController.chair_desk_Move.MoveCoroutine();
         yield return new WaitForSeconds(1f);
         _npcController.RecoverTransparency();
