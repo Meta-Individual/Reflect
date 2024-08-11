@@ -45,6 +45,7 @@ public class KimsinController : MonoBehaviour
 
     IEnumerator MoveOutKimsin() // 김신을 현관까지 이동시킨 후 비활성화
     {
+        anim.SetBool("Walk", true);
         anim.SetFloat("DirY", -1.0f);
         while (transform.position != moveOut.position)
         {
