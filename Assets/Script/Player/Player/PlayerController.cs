@@ -67,16 +67,15 @@ public class PlayerController : MonoBehaviour
 
         _kannaController = GameObject.FindGameObjectWithTag("Kanna").GetComponent<KannaController>();
 
+        _waitState = gameObject.AddComponent<PlayerWaitState>();
         _idleState = gameObject.AddComponent<PlayerIdleState>();
         _walkState = gameObject.AddComponent<PlayerWalkState>();
-        _waitState = gameObject.AddComponent<PlayerWaitState>();
         _monoState = gameObject.AddComponent<PlayerMonologueState>();
         _diaState = gameObject.AddComponent<PlayerDialogueState>();
 
         _rigidbody = GetComponent<Rigidbody2D>();
 
-        CurrentState = _idleState;
-        ChangeState(CurrentState);
+        ChangeState(_waitState);
     }
 
     private void Update()

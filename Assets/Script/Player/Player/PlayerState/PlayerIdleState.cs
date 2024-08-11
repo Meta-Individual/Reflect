@@ -15,6 +15,7 @@ public class PlayerIdleState : MonoBehaviour, IPlayerState
     {
         //Debug.Log("Player Idle");
         // 방향키 입력시 Walking으로 상태 전이
+
         if (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0)
         {
             _playerController.ChangeState(_playerController._walkState);
