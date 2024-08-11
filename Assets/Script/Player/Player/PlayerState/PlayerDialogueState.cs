@@ -26,6 +26,12 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
                 _playerController._npcController.goToLivingRoom = true;
                 _playerController.ChangeState(_playerController._waitState);
             }
+            else if(_playerController.currentDialogueCounter == 48) //켄타를 찾아서 옷장에서 나오는 부분
+            {
+                _playerController.ChangeState(_playerController._waitState);
+                //대사가 다 끝난 경우, wait 상태에서 2초 정도 대기한 후, Fade in Fade out 연출로 거실에서 시작.
+                //fade out 후에도 2초 정도 대기 시간이 있도록 ! 이후에는 바로 다음 대사 진행
+            }
             else
             {
                 _playerController.ChangeState(_playerController._idleState);
