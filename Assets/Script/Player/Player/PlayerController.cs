@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     [Header("Interact")]
     public LayerMask interactableLayer; // 상호작용 가능한 레이어 설정
     public Vector2 interactionAreaSize = new Vector2(2f, 1f); // 상호작용 영역의 크기
+    public AudioSource _audioSource;
 
     [Header("Movement")]
     public float walkSpeed = 5f;

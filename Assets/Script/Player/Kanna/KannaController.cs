@@ -25,7 +25,10 @@ public class KannaController : MonoBehaviour
     public ChairAndDeskMoving chair_desk_Move;
 
     [Header("Movement")]
-    public float walkSpeed = 5f;    
+    public float walkSpeed = 5f;
+
+    [Header("Sound")]
+    public AudioClip hideAndSeek; // 방문 여는 사운드
 
     public IKannaState CurrentState
     {
