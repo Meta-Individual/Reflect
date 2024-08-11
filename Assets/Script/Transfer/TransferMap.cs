@@ -29,6 +29,7 @@ public class TransferMap : MonoBehaviour, IInteractable
     public Transform targetLocation; // 이동할 목표 위치
     public bool isLocked = false;
     public string keyItemName = "Key";
+    public bool stair = false;
     [Header("Sound")]
     public AudioClip openDoorSound; // 방문 여는 사운드
     public AudioClip closeDoorSound; // 방문 닫는 사운드
@@ -117,6 +118,28 @@ public class TransferMap : MonoBehaviour, IInteractable
             else
             {
                 Debug.Log("음원 파일이 존재하지 않거나, 잘못된 태그로 설정되었습니다.");
+            }
+        }
+        if (stair)
+        {
+            if (direction == Direction.RIGHT)
+            {
+                anim.SetFloat("DirX", -1.0f);
+            }
+            else if (direction == Direction.LEFT)
+            {
+                anim.SetFloat("DirX", 1.0f);
+
+            }
+            else if (direction == Direction.UP)
+            {
+                anim.SetFloat("DirY", -1.0f);
+
+            }
+            else if (direction == Direction.DOWN)
+            {
+                anim.SetFloat("DirY", 1.0f);
+
             }
         }
         player.transform.position = targetLocation.position;
