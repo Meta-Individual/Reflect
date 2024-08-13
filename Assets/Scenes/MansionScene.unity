@@ -2761,7 +2761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &142885200
 Transform:
   m_ObjectHideFlags: 0
@@ -3354,7 +3354,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1323068177
   m_SortingLayer: 2
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 8d1645c0651d329408c08efa3975bfb3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -17865,7 +17865,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1323068177
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 23048764546423446b60b7d6576d63b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -28803,7 +28803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1024312254}
   - component: {fileID: 1024312256}
-  - component: {fileID: 1024312255}
+  - component: {fileID: 1024312257}
   m_Layer: 5
   m_Name: FadeImage
   m_TagString: Untagged
@@ -28830,7 +28830,15 @@ RectTransform:
   m_AnchoredPosition: {x: -6, y: 0.0088731}
   m_SizeDelta: {x: 2000, y: 1100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1024312255
+--- !u!222 &1024312256
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024312253}
+  m_CullTransparentMesh: 1
+--- !u!114 &1024312257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28860,14 +28868,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &1024312256
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1024312253}
-  m_CullTransparentMesh: 1
 --- !u!1 &1024543590
 GameObject:
   m_ObjectHideFlags: 0
@@ -31321,10 +31321,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1739106945}
   - {fileID: 1075493627}
   - {fileID: 1753896902}
   - {fileID: 2138503963}
-  - {fileID: 1739106945}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -42376,6 +42376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1548582718}
   - component: {fileID: 1548582719}
+  - component: {fileID: 1548582720}
   m_Layer: 0
   m_Name: FadeManager
   m_TagString: Untagged
@@ -42410,9 +42411,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7318b0fea3be36d45b60db851d2fbd85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 1024312255}
+  fadeImage: {fileID: 1024312257}
   fadeDuration: 1
   delayBeforeFadeOut: 1
+--- !u!114 &1548582720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548582717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3e1b6940893e4e4a9b5ad6df9cf24cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackImage: {fileID: 1024312257}
+  fadeDuration: 2
 --- !u!1 &1549201226
 GameObject:
   m_ObjectHideFlags: 0
@@ -47911,7 +47926,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!114 &1739106947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48164,7 +48179,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -363.918}
+  m_AnchoredPosition: {x: 0, y: -363.91797}
   m_SizeDelta: {x: 0, y: -727.837}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1753896903
@@ -54612,7 +54627,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1323068177
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: ac7850dc620515b4b949211d330964a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -57387,7 +57402,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1323068177
   m_SortingLayer: 2
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 9aff581105e2b4540961ff66680bdd9c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

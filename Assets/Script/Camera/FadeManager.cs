@@ -27,7 +27,14 @@ public class FadeManager : MonoBehaviour
 
     void Start()
     {
-        fadeImage.gameObject.SetActive(false); // 시작 시 비활성화
+        JustFade();
+    }
+
+    public void JustFade() //바로 Fade in 되는 효과
+    {
+        Color color = fadeImage.color;
+        color.a = 1;
+        fadeImage.color = color;
     }
 
     public void StartFade()

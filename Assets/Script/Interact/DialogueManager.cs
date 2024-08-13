@@ -30,11 +30,18 @@ public class DialogueManager : MonoBehaviour
         _playerController.dialoguePanel.SetActive(true);
         _playerController.currentDialogueCounter++;
 
-        foreach (char letter in dialogue)
+        for (int i = 0; i < dialogue.Length; i++) //대사 나오는 도중 Space바를 누르면 대사 스킵
         {
-            _playerController.dialogue.text += letter;
-            yield return new WaitForSeconds(0.05f); // 지연 시간 대기
+            if (Input.GetKey(KeyCode.Space))
+            {
+                _playerController.dialogue.text = dialogue;
+                break;
+            }
+            _playerController.dialogue.text += dialogue[i];
+            yield return new WaitForSeconds(0.05f);
+
         }
+
         _playerController.isDialogue = false;
     }
 
