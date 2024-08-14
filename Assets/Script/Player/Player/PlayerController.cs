@@ -59,6 +59,8 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        FadeManager.Instance.JustFade(); //화면 fade In
+
         monologuePanel.SetActive(false);
         dialoguePanel.SetActive(false);
         DirectionUtils.Initialize(this); // 플레이어 Direction 체크하는 함수 초기화

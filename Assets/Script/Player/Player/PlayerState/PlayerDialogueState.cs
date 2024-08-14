@@ -19,7 +19,11 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
         {   
             if(_playerController.currentDialogueCounter <= _playerController.maxDialogueCounter) //정해진 대화까지 Counter 증가하면서 대사 실행
             {
-                if (_playerController.currentDialogueCounter == 78) //켄타가 현관으로 나가는 대사
+                if (_playerController.currentDialogueCounter == 3) // 숨바꼭질 시작할 때 눈 뜨는 연출
+                {
+                    FadeManager.Instance.StartFadeOut();
+                }
+                else if (_playerController.currentDialogueCounter == 78) //켄타가 현관으로 나가는 대사
                 {
                     Debug.Log("켄타 나가자");
                     _playerController._kentaController.MoveKenta();
