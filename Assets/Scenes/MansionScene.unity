@@ -7674,7 +7674,7 @@ Transform:
   m_GameObject: {fileID: 288599555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -379.9, z: 0}
+  m_LocalPosition: {x: -289.6, y: 907.8, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7778,7 +7778,7 @@ MonoBehaviour:
   _rigidbody: {fileID: 0}
   kannaAnim: 0
   maxDialogueCounter: 1
-  currentDialogueCounter: 1
+  currentDialogueCounter: 38
   _kannaController: {fileID: 0}
   _kimsinController: {fileID: 1081813563}
   _kentaController: {fileID: 2065122716}
@@ -7787,8 +7787,13 @@ MonoBehaviour:
     m_Bits: 8
   interactionAreaSize: {x: 5.5, y: 1.5}
   _audioSource: {fileID: 519420035}
-  walkSpeed: 20
   interactRange: 0
+  walkSpeed: 20
+  gameObject1: {fileID: 603943874}
+  gameObject2: {fileID: 266865742}
+  gameObject3: {fileID: 1061410435}
+  gameObject4: {fileID: 880689015}
+  gameObject5: {fileID: 1630856369}
 --- !u!114 &288599564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42821,6 +42826,7 @@ MonoBehaviour:
   currentDialogueID: 47
   anim: {fileID: 1172276597}
   kenta: {fileID: 2065122712}
+  kannaController: {fileID: 776055009}
 --- !u!114 &1549201230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48186,7 +48192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1739106945
 RectTransform:
   m_ObjectHideFlags: 0
@@ -57312,7 +57318,7 @@ Transform:
   m_GameObject: {fileID: 2065122712}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.2, y: -356.1, z: 0}
+  m_LocalPosition: {x: -10.2, y: -359.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
