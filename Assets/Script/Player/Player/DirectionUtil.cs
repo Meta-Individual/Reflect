@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,12 +6,12 @@ public static class DirectionUtils
 {
     private static PlayerController _playerController;
 
-    // PlayerController �ν��Ͻ��� �����ϴ� �޼���
+    // PlayerController 인스턴스를 설정하는 메서드
     public static void Initialize(PlayerController playerController)
     {
         _playerController = playerController;
     }
-
+    // 플레이어의 현재 방향을 체크해주는 함수
     public static bool CheckDirection(Direction direction)
     {
         switch (direction)
