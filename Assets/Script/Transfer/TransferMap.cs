@@ -195,7 +195,10 @@ public class TransferMap : MonoBehaviour, IInteractable
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-            GetInteractScript();
+            if (CheckDirection())
+            {
+                GetInteractScript();
+            }
         }
     }
 
