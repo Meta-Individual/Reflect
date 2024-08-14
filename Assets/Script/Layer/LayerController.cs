@@ -1,51 +1,49 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LayerController : MonoBehaviour
 {
-    private SpriteRenderer targetRenderer; // Å¸°Ù ¿ÀºêÁ§Æ®ÀÇ SpriteRenderer
-    private SpriteRenderer playerRenderer; // ÇÃ·¹ÀÌ¾î ¿ÀºêÁ§Æ®ÀÇ SpriteRenderer
-    private Animator playerAnim; // ÇÃ·¹ÀÌ¾î ¿ÀºêÁ§Æ®ÀÇ Rigidbody2D
+    private SpriteRenderer targetRenderer; // íƒ€ê²Ÿ ì˜¤ë¸Œì íŠ¸ì˜ SpriteRenderer
+    private SpriteRenderer playerRenderer; // í”Œë ˆì´ì–´ ì˜¤ë¸Œì íŠ¸ì˜ SpriteRenderer
     private GameObject player;
 
     void Start()
     {
-        // Å¸°Ù ¿ÀºêÁ§Æ®ÀÇ SpriteRenderer ÄÄÆ÷³ÍÆ®¸¦ °¡Á®¿É´Ï´Ù.
+        // íƒ€ê²Ÿ ì˜¤ë¸Œì íŠ¸ì˜ SpriteRenderer ì»´í¬ë„ŒíŠ¸ë¥¼ ê°€ì ¸ì˜µë‹ˆë‹¤.
         targetRenderer = GetComponent<SpriteRenderer>();
 
-        // "Player" ÅÂ±×¸¦ °¡Áø ¿ÀºêÁ§Æ®ÀÇ SpriteRenderer¿Í Rigidbody2D ÄÄÆ÷³ÍÆ®¸¦ °¡Á®¿É´Ï´Ù.
+        // "Player" íƒœê·¸ë¥¼ ê°€ì§„ ì˜¤ë¸Œì íŠ¸ì˜ SpriteRendererì™€ Rigidbody2D ì»´í¬ë„ŒíŠ¸ë¥¼ ê°€ì ¸ì˜µë‹ˆë‹¤.
         player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
             playerRenderer = player.GetComponent<SpriteRenderer>();
-            playerAnim = player.GetComponent<Animator>();
         }
         else
         {
-            Debug.LogError("Player ¿ÀºêÁ§Æ®¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù. 'Player' ÅÂ±×¸¦ È®ÀÎÇÏ¼¼¿ä.");
+            Debug.LogError("Player ì˜¤ë¸Œì íŠ¸ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤. 'Player' íƒœê·¸ë¥¼ í™•ì¸í•˜ì„¸ìš”.");
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (playerRenderer == null || playerAnim == null) return;
+        if (playerRenderer == null) return;
 
         if (other.CompareTag("Player"))
         {
-            //Debug.Log("¹Ù¿îµå ÁøÀÔ");
+            //Debug.Log("ë°”ìš´ë“œ ì§„ì…");
             //Debug.Log(playerAnim.GetFloat("DirY"));
-            // ÇÃ·¹ÀÌ¾îÀÇ ÀÌµ¿ ¹æÇâÀÌ ¾Æ·¡ÂÊÀÎÁö À§ÂÊÀÎÁö È®ÀÎÇÕ´Ï´Ù.
-            if (playerAnim.GetFloat("DirY") < 0)
+            // í”Œë ˆì´ì–´ì˜ ì´ë™ ë°©í–¥ì´ ì•„ë˜ìª½ì¸ì§€ ìœ„ìª½ì¸ì§€ í™•ì¸í•©ë‹ˆë‹¤.
+            if (DirectionUtils.CheckDirection(Direction.DOWN))
             {
-                //ÇÃ·¹ÀÌ¾î°¡ ¾Æ·¡ ¹æÇâÀ¸·Î ÀÌµ¿ ÁßÀÌ¸é
-                //Debug.Log("¾Æ·¡ ¹æÇâ");
+                //í”Œë ˆì´ì–´ê°€ ì•„ë˜ ë°©í–¥ìœ¼ë¡œ ì´ë™ ì¤‘ì´ë©´
+                //Debug.Log("ì•„ë˜ ë°©í–¥");
                 targetRenderer.sortingOrder = playerRenderer.sortingOrder - 1;
             }
-            else if (playerAnim.GetFloat("DirY") > 0)
+            else if (DirectionUtils.CheckDirection(Direction.UP))
             {
-                //ÇÃ·¹ÀÌ¾î°¡ À§ ¹æÇâÀ¸·Î ÀÌµ¿ ÁßÀÌ¸é
-                //Debug.Log("À§ ¹æÇâ");
+                //í”Œë ˆì´ì–´ê°€ ìœ„ ë°©í–¥ìœ¼ë¡œ ì´ë™ ì¤‘ì´ë©´
+                //Debug.Log("ìœ„ ë°©í–¥");
                 targetRenderer.sortingOrder = playerRenderer.sortingOrder + 1;
             }
         }
@@ -53,23 +51,23 @@ public class LayerController : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (playerRenderer == null || playerAnim == null) return;
+        if (playerRenderer == null) return;
 
         if (other.CompareTag("Player"))
         {
-            //Debug.Log("¹Ù¿îµå ¾Æ¿ô");
+            //Debug.Log("ë°”ìš´ë“œ ì•„ì›ƒ");
             //Debug.Log(playerAnim.GetFloat("DirY"));
-            // ÇÃ·¹ÀÌ¾îÀÇ ÀÌµ¿ ¹æÇâÀÌ ¾Æ·¡ÂÊÀÎÁö À§ÂÊÀÎÁö È®ÀÎÇÕ´Ï´Ù.
-            if (playerAnim.GetFloat("DirY") < 0)
+            // í”Œë ˆì´ì–´ì˜ ì´ë™ ë°©í–¥ì´ ì•„ë˜ìª½ì¸ì§€ ìœ„ìª½ì¸ì§€ í™•ì¸í•©ë‹ˆë‹¤.
+            if (DirectionUtils.CheckDirection(Direction.DOWN))
             {
-                //ÇÃ·¹ÀÌ¾î°¡ ¾Æ·¡ ¹æÇâÀ¸·Î ÀÌµ¿ ÁßÀÌ¸é
-                //Debug.Log("¾Æ·¡ ¹æÇâ");
+                //í”Œë ˆì´ì–´ê°€ ì•„ë˜ ë°©í–¥ìœ¼ë¡œ ì´ë™ ì¤‘ì´ë©´
+                //Debug.Log("ì•„ë˜ ë°©í–¥");
                 targetRenderer.sortingOrder = playerRenderer.sortingOrder - 1;
             }
-            else if (playerAnim.GetFloat("DirY") > 0)
+            else if (DirectionUtils.CheckDirection(Direction.UP))
             {
-                //ÇÃ·¹ÀÌ¾î°¡ À§ ¹æÇâÀ¸·Î ÀÌµ¿ ÁßÀÌ¸é
-                //Debug.Log("À§ ¹æÇâ");
+                //í”Œë ˆì´ì–´ê°€ ìœ„ ë°©í–¥ìœ¼ë¡œ ì´ë™ ì¤‘ì´ë©´
+                //Debug.Log("ìœ„ ë°©í–¥");
                 targetRenderer.sortingOrder = playerRenderer.sortingOrder + 1;
             }
         }
