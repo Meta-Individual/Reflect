@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement")]
     public float walkSpeed = 5f;
+    public float runSpeed = 8f;
 
     [Header("BoxCollider")]
     public GameObject gameObject1;
@@ -62,7 +63,7 @@ public class PlayerController : MonoBehaviour
         get; set;
     }
 
-    public IPlayerState _idleState, _walkState, _waitState, _monoState, _diaState;
+    public IPlayerState _idleState, _walkState, _waitState, _monoState, _diaState, _runState;
 
 
     private void Start()
@@ -82,6 +83,7 @@ public class PlayerController : MonoBehaviour
         _walkState = gameObject.AddComponent<PlayerWalkState>();
         _monoState = gameObject.AddComponent<PlayerMonologueState>();
         _diaState = gameObject.AddComponent<PlayerDialogueState>();
+        _runState = gameObject.AddComponent<PlayerRunningState>();
 
         _rigidbody = GetComponent<Rigidbody2D>();
 

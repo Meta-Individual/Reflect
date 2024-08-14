@@ -35,6 +35,10 @@ public class PlayerWalkState : MonoBehaviour, IPlayerState
 
             if (movement.x != 0 || movement.y != 0)
             {
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    _playerController.ChangeState(_playerController._runState);
+                }
                 _playerController._rigidbody.MovePosition(_playerController._rigidbody.position + movement * _playerController.walkSpeed * Time.fixedDeltaTime);
                 _playerController.anim.SetFloat("DirX", movement.x);
                 _playerController. anim.SetFloat("DirY", movement.y);
