@@ -37,12 +37,20 @@ public class PlayerController : MonoBehaviour
     public LayerMask interactableLayer; // 상호작용 가능한 레이어 설정
     public Vector2 interactionAreaSize = new Vector2(2f, 1f); // 상호작용 영역의 크기
     public AudioSource _audioSource;
+    public IInteractable interactable; //상호작용이 가능한 스크립트를 적용하기 위한 변수
+    public bool interactRange = false;
 
     [Header("Movement")]
     public float walkSpeed = 5f;
 
-    public IInteractable interactable; //상호작용이 가능한 스크립트를 적용하기 위한 변수
-    public bool interactRange = false;
+    [Header("BoxCollider")]
+    public GameObject gameObject1;
+    public GameObject gameObject2;
+    public GameObject gameObject3;
+    public GameObject gameObject4;
+    public GameObject gameObject5;
+
+
 
     public IPlayerState CurrentState
     {

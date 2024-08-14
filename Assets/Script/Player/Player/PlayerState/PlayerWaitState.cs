@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerWaitState : MonoBehaviour, IPlayerState
@@ -32,8 +33,16 @@ public class PlayerWaitState : MonoBehaviour, IPlayerState
         FadeManager.Instance.StartFade(); // 페이드 인 후 1초 대기 후 페이드 아웃
         yield return new WaitForSeconds(2.5f);
         _playerController.anim.SetFloat("DirX", 0.0f);
-        _playerController.anim.SetFloat("DirY", 1.0f);
-        _playerController.transform.position = new(-3.7f, -386.6f, 0.0f);
+        _playerController.anim.SetFloat("DirY", -1.0f);
+
+        _playerController.gameObject1.GetComponent<Renderer>().sortingOrder = 1;
+        _playerController.gameObject2.GetComponent<Renderer>().sortingOrder = 1;
+        _playerController.gameObject3.GetComponent<Renderer>().sortingOrder = 1;
+        _playerController.gameObject4.GetComponent<Renderer>().sortingOrder = 1;
+        _playerController.gameObject5.GetComponent<Renderer>().sortingOrder = 1;
+
+        _playerController.transform.position = new(-6.2f, -348.8f, 0.0f);
+
         yield return new WaitForSeconds(2.0f);
         _playerController.maxDialogueCounter = 50; //츠네모리 신야가 거실로 들어오는 부분전까지
         _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
