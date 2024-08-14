@@ -166,12 +166,16 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 moveDown = new(transform.position.x, transform.position.y - 8, transform.position.z);
         anim.SetBool("Walk", true);
+        anim.SetBool("Wait", false);
+        anim.SetFloat("DirX", 0.0f);
         anim.SetFloat("DirY", -1.0f);
+
         while (transform.position != moveDown)
         {
             transform.position = Vector3.MoveTowards(transform.position, moveDown, walkSpeed * Time.deltaTime);
             yield return null; // 다음 프레임까지 대기
         }
+        anim.SetBool("Wait", true);
         anim.SetBool("Walk", false);
         anim.SetFloat("DirX", 0.0f);
         anim.SetFloat("DirY", 1.0f);
