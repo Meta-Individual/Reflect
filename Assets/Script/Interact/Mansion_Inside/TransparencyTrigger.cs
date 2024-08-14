@@ -9,7 +9,6 @@ public class TransparencyTrigger : MonoBehaviour
     public float fadeDuration = 1.0f; // 투명도 변화에 걸리는 시간
     private Renderer targetRenderer;
     private Renderer targetRenderer2;
-    private Animator playerAnim; // 플레이어 오브젝트의 Animator
 
     private void Start()
     {
@@ -18,22 +17,41 @@ public class TransparencyTrigger : MonoBehaviour
             targetRenderer = targetObject.GetComponent<Renderer>();
             targetRenderer2 = targetObject2.GetComponent<Renderer>();
         }
-        playerAnim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && targetRenderer != null) // 플레이어가 트리거에 진입했을 때
         {
-            if (playerAnim.GetFloat("DirY") < 0)
+            if (DirectionUtils.CheckDirection(Direction.DOWN))
             {
                 //플레이어가 아래 방향으로 이동 중이면
                 StopAllCoroutines();
                 StartCoroutine(FadeTo(targetRenderer, 1f, fadeDuration));
                 StartCoroutine(FadeTo(targetRenderer2, 1f, fadeDuration));
             }
-            else if (playerAnim.GetFloat("DirY") > 0)
+            else if (DirectionUtils.CheckDirection(Direction.UP))
+            {
+                //플레이어가 위 방향으로 이동 중이면
+                StopAllCoroutines();
+                StartCoroutine(FadeTo(targetRenderer, 0.7f, fadeDuration));
+                StartCoroutine(FadeTo(targetRenderer2, 0.7f, fadeDuration));
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && targetRenderer != null) // 플레이어가 트리거에 진입했을 때
+        {
+            if (DirectionUtils.CheckDirection(Direction.DOWN))
+            {
+                //플레이어가 아래 방향으로 이동 중이면
+                StopAllCoroutines();
+                StartCoroutine(FadeTo(targetRenderer, 1f, fadeDuration));
+                StartCoroutine(FadeTo(targetRenderer2, 1f, fadeDuration));
+            }
+            else if (DirectionUtils.CheckDirection(Direction.UP))
             {
                 //플레이어가 위 방향으로 이동 중이면
                 StopAllCoroutines();

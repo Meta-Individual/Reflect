@@ -15,9 +15,6 @@ public class KannaIdleState : MonoBehaviour, IKannaState
     }
     public void OnStateUpdate()
     {
-        _npcController.anim.SetFloat("DirX", 0.0f);
-        _npcController.anim.SetFloat("DirY", -1.0f);
-
         if (_npcController.goToLivingRoom)
         {
             _npcController.ChangeState(_npcController._walkState);

@@ -85,9 +85,17 @@ public class KannaWalkState : MonoBehaviour, IKannaState
             else
             {
                 // 모든 지점을 순회했으면 처음으로 돌아감
-                this.transform.position = new(10.0f, -380.3f, 0.0f);
+                this.transform.position = new(10.0f, -355f, 0.0f);
                 _npcController.goToLivingRoom = false;
+
+                _npcController.anim.SetFloat("DirX", -1.0f);
+                _npcController.anim.SetFloat("DirY", 0.0f);
+
                 _npcController.ChangeState(_npcController._idleState);
+                _npcController.gameObject.GetComponent<Renderer>().sortingLayerName = "Object";
+                _npcController.gameObject.GetComponent<Renderer>().sortingOrder = 3;
+                _npcController.boxCollider.SetActive(true);
+                _npcController._layerController.enabled = true; //layer Controller 작동하도록 함
 
                 pc.maxDialogueCounter = 22;
                 pc._dialogueManager.ShowDialogue(pc.currentDialogueCounter.ToString());

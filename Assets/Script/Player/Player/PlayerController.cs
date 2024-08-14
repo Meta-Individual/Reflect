@@ -37,12 +37,20 @@ public class PlayerController : MonoBehaviour
     public LayerMask interactableLayer; // 상호작용 가능한 레이어 설정
     public Vector2 interactionAreaSize = new Vector2(2f, 1f); // 상호작용 영역의 크기
     public AudioSource _audioSource;
+    public IInteractable interactable; //상호작용이 가능한 스크립트를 적용하기 위한 변수
+    public bool interactRange = false;
 
     [Header("Movement")]
     public float walkSpeed = 5f;
 
-    public IInteractable interactable; //상호작용이 가능한 스크립트를 적용하기 위한 변수
-    public bool interactRange = false;
+    [Header("BoxCollider")]
+    public GameObject gameObject1;
+    public GameObject gameObject2;
+    public GameObject gameObject3;
+    public GameObject gameObject4;
+    public GameObject gameObject5;
+
+
 
     public IPlayerState CurrentState
     {
@@ -59,6 +67,8 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        FadeManager.Instance.JustFade(); //화면 fade In
+
         monologuePanel.SetActive(false);
         dialoguePanel.SetActive(false);
         DirectionUtils.Initialize(this); // 플레이어 Direction 체크하는 함수 초기화
@@ -156,12 +166,16 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 moveDown = new(transform.position.x, transform.position.y - 8, transform.position.z);
         anim.SetBool("Walk", true);
+        anim.SetBool("Wait", false);
+        anim.SetFloat("DirX", 0.0f);
         anim.SetFloat("DirY", -1.0f);
+
         while (transform.position != moveDown)
         {
             transform.position = Vector3.MoveTowards(transform.position, moveDown, walkSpeed * Time.deltaTime);
             yield return null; // 다음 프레임까지 대기
         }
+        anim.SetBool("Wait", true);
         anim.SetBool("Walk", false);
         anim.SetFloat("DirX", 0.0f);
         anim.SetFloat("DirY", 1.0f);

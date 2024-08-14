@@ -23,6 +23,9 @@ public class KannaController : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     [HideInInspector]
     public ChairAndDeskMoving chair_desk_Move;
+    [HideInInspector]
+    public LayerController _layerController;
+    public GameObject boxCollider;
 
     [Header("Movement")]
     public float walkSpeed = 5f;
@@ -50,6 +53,10 @@ public class KannaController : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         chair_desk_Move = GetComponent<ChairAndDeskMoving>();
+        _layerController = GetComponent<LayerController>();
+
+        _layerController.enabled = false;
+        boxCollider.SetActive(false);
 
         CurrentState = _hideState;
         ChangeState(CurrentState);
@@ -109,6 +116,7 @@ public class KannaController : MonoBehaviour
     IEnumerator MoveOutKanna() // 김신을 거실까지 이동시키고 플레이어의 방향을 아래로 변환 후 대사 출력
     {
         anim.SetBool("Walk", true);
+        anim.SetFloat("DirX", 0.0f);
         anim.SetFloat("DirY", -1.0f);
         while (transform.position != moveOut.position)
         {

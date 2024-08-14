@@ -6,9 +6,8 @@ public class LibraryKey : MonoBehaviour, IInteractable
 {
     public  string keyItemName = "LibraryDoorKey";
     private bool   isSearched = false;
-    public string getKeyMonologue = "서재 열쇠를 얻었다. 특별한 것은 없는 것 같다.";
     public string afterObjectID;
-    public  string objectID;
+    public string objectID;
     public Sprite image;
     private IllustManager _illustManager;
     private PlayerInventory playerInventory;

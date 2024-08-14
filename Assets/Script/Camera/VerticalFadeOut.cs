@@ -33,12 +33,13 @@ public class VerticalFadeOut : MonoBehaviour
 
     private IEnumerator FadeOutRoutine()
     {
+        yield return new WaitForSeconds(fadeDuration);
         float currentTime = 0f;
         Color color = blackImage.color;
 
         while (currentTime < fadeDuration)
         {
-            currentTime += Time.deltaTime;
+            currentTime += 0.1f;
             float alpha = Mathf.Lerp(1f, 0f, currentTime / fadeDuration);
 
             // 이미지의 중앙에서 위아래로 알파값을 조절합니다.
