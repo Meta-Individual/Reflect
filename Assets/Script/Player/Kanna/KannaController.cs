@@ -116,6 +116,7 @@ public class KannaController : MonoBehaviour
     IEnumerator MoveOutKanna() // 김신을 거실까지 이동시키고 플레이어의 방향을 아래로 변환 후 대사 출력
     {
         anim.SetBool("Walk", true);
+        anim.SetFloat("DirX", 0.0f);
         anim.SetFloat("DirY", -1.0f);
         while (transform.position != moveOut.position)
         {
