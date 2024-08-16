@@ -12,12 +12,14 @@ public class LibraryKey : MonoBehaviour, IInteractable
     private IllustManager _illustManager;
     private PlayerInventory playerInventory;
     private MonologueManager _monologueManager;
+    private PlayerController _playerController;
 
     void Start()
     {
         _monologueManager = FindObjectOfType<MonologueManager>();
         playerInventory = FindObjectOfType<PlayerInventory>();
         _illustManager = FindObjectOfType<IllustManager>();
+        _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     public void Interact()
@@ -26,6 +28,7 @@ public class LibraryKey : MonoBehaviour, IInteractable
         {
             isSearched = true;
             playerInventory.AddItem(keyItemName);
+            _playerController.GetKeySound();
             _illustManager.ShowIllust(image, afterObjectID);
         }
         else

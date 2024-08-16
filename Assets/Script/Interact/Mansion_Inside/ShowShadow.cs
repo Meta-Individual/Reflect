@@ -48,7 +48,7 @@ public class ShowShadow : MonoBehaviour
     {
         shadow.SetActive(true);
         _playerController.ChangeState(_playerController._waitState);
-
+        _playerController.OnExclamation(); //플레이어 느낌표 이모티콘 ON
         while (shadow.transform.position != shadowTransform.position) //그림자가 해당 위치로 이동할 때까지 대기
         {
             shadow.transform.position = Vector3.MoveTowards(shadow.transform.position, shadowTransform.position, walkSpeed * Time.deltaTime);

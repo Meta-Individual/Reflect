@@ -36,9 +36,15 @@ public class PlayerController : MonoBehaviour
     [Header("Interact")]
     public LayerMask interactableLayer; // 상호작용 가능한 레이어 설정
     public Vector2 interactionAreaSize = new Vector2(2f, 1f); // 상호작용 영역의 크기
-    public AudioSource _audioSource;
     public IInteractable interactable; //상호작용이 가능한 스크립트를 적용하기 위한 변수
     public bool interactRange = false;
+
+    [Header("Sound")]
+    public AudioSource _audioSource;
+    public AudioClip exclamationSound;
+    public AudioClip getKeySound;
+    public AudioClip paperSound;
+
 
     [Header("Movement")]
     public float walkSpeed = 5f;
@@ -181,5 +187,34 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Walk", false);
         anim.SetFloat("DirX", 0.0f);
         anim.SetFloat("DirY", 1.0f);
+    }
+
+    public  void OnExclamation()
+    {
+        anim.SetBool("Exclamation", true);
+    }
+
+
+    public void OffExclamation() //플레이어 느낌표 이모티콘 OFF
+    {
+        anim.SetBool("Exclamation", false);
+    }
+
+    public void PlayExclamationSound() //느낌표 소리 재생
+    {
+        _audioSource.clip = exclamationSound;
+        _audioSource.Play();
+    }
+
+    public void GetKeySound()
+    {
+        _audioSource.clip = getKeySound;
+        _audioSource.Play();
+    }
+
+    public void PaperSound()
+    {
+        _audioSource.clip = paperSound;
+        _audioSource.Play();
     }
 }

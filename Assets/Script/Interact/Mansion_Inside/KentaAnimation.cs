@@ -9,6 +9,8 @@ public class KentaAnimation : MonoBehaviour, IInteractable
     public int currentDialogueID = 47;
     public Animator anim;
     public GameObject kenta;
+    public AudioSource _audioSource;
+    public AudioClip kentaSound;
 
     private bool isSearched = false;
     private PlayerController _playerController;
@@ -49,10 +51,17 @@ public class KentaAnimation : MonoBehaviour, IInteractable
         anim.SetBool("Idle", true);
         yield return new WaitForSeconds(2.0f);
         anim.SetBool("Out", true);
+        PlayKentaSound();
         yield return new WaitForSeconds(2.0f);
         _playerController.ChangeState(_playerController._diaState);
         _playerController.maxDialogueCounter = currentDialogueID;
         _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
         kenta.SetActive(true);
+    }
+
+    public void PlayKentaSound() //켄타 옷장 흔들리는 소리 재생
+    {
+        _audioSource.clip = kentaSound;
+        _audioSource.Play();
     }
 }
