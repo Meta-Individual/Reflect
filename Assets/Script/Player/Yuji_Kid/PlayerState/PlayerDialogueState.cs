@@ -27,6 +27,10 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
                 {
                     _playerController.OnExclamation();
                 }
+                else if (_playerController.currentDialogueCounter == 5) // 칸나가 꾀부리지말라고 할 때 느낌표 액션 출력 다음 대사
+                {
+                    _playerController.OffExclamation();
+                }
                 else if (_playerController.currentDialogueCounter == 78) //켄타가 현관으로 나가는 대사
                 {
                     Debug.Log("켄타 나가자");
