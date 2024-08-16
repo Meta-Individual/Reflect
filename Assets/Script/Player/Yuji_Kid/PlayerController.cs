@@ -183,6 +183,11 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("DirY", 1.0f);
     }
 
+    public  void OnExclamation()
+    {
+        anim.SetBool("Exclamation", true);
+    }
+
 
     public void OffExclamation() //플레이어 느낌표 이모티콘 OFF
     {
