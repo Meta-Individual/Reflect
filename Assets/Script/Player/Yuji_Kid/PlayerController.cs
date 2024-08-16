@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask interactableLayer; // 상호작용 가능한 레이어 설정
     public Vector2 interactionAreaSize = new Vector2(2f, 1f); // 상호작용 영역의 크기
     public AudioSource _audioSource;
+    public AudioClip exclamationSound;
     public IInteractable interactable; //상호작용이 가능한 스크립트를 적용하기 위한 변수
     public bool interactRange = false;
 
@@ -192,5 +193,11 @@ public class PlayerController : MonoBehaviour
     public void OffExclamation() //플레이어 느낌표 이모티콘 OFF
     {
         anim.SetBool("Exclamation", false);
+    }
+
+    public void PlayExclamationSound() //느낌표 소리 재생
+    {
+        _audioSource.clip = exclamationSound;
+        _audioSource.Play();
     }
 }

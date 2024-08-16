@@ -7787,6 +7787,7 @@ MonoBehaviour:
     m_Bits: 8
   interactionAreaSize: {x: 5.5, y: 1.5}
   _audioSource: {fileID: 519420035}
+  exclamationSound: {fileID: 8300000, guid: 3a955759f090f71438510e937c4d1094, type: 3}
   interactRange: 0
   walkSpeed: 20
   runSpeed: 25
