@@ -25,12 +25,14 @@ public class KannaAnimation : MonoBehaviour, IInteractable
         if (!isSearched)
         {
             isSearched = true;
+            _playerController.PaperSound();
             _illustManager.ShowIllust(image, objectID);
             _playerController.kannaAnim = true;
             playerInventory.AddItem(itemName);
         }
         else
         {
+            _playerController.PaperSound();
             _illustManager.ShowIllust(image, objectID);
         }
     }
