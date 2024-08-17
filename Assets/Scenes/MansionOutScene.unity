@@ -2884,6 +2884,8 @@ MonoBehaviour:
   kimsin_Transform: {fileID: 507509953}
   yuji_Transform: {fileID: 1428279913}
   moveSpeed: 100
+  kimsinController: {fileID: 507509954}
+  yujiKidController: {fileID: 1428279914}
 --- !u!114 &1506449883
 MonoBehaviour:
   m_ObjectHideFlags: 0

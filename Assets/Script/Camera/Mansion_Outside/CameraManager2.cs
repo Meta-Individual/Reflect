@@ -15,6 +15,10 @@ public class CameraManager2 : MonoBehaviour
     [Header("Move")]
     public float moveSpeed = 20f;
 
+    [Header("Controller")]
+    public KimsinController2 kimsinController;
+    public YujiKidController yujiKidController;
+
     private void Start() //처음 씬이 시작되면 유우지 위치로 포커스
     {
         transform.position = yuji_Transform.position;
