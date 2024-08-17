@@ -23,10 +23,28 @@ public class KimsinController2 : MonoBehaviour
     public AudioSource _audioSource;
     public AudioClip doorSound;
 
+    [Header("Camera")]
+    [SerializeField]
+    private CameraManager2 _cameraManager;
+
+    private void Start()
+    {
+        PlayDoorSound();
+    }
+
     public void PlayDoorSound() //잠긴 문 소리 출력
     {
+        StartCoroutine(StartDoorSound());
+    }
+
+    IEnumerator StartDoorSound() // 시작 후 1초 대기 한뒤 문 쾅쾅 소리 출력 후 카메라 시점 변환
+    {
+        yield return new WaitForSeconds(1.0f);
         _audioSource.clip = doorSound;
         _audioSource.Play();
+        yield return new WaitForSeconds(1.0f);
+
+        _cameraManager.TransferToKimsin();
     }
 
     public void WalkingBack() //뒷걸음질 시작
@@ -37,7 +55,7 @@ public class KimsinController2 : MonoBehaviour
     IEnumerator StartMoveBack()
     {
         _animator.SetBool("Walk", true);
-        while (transform.position != moveBack.position) //그림자가 해당 위치로 이동할 때까지 대기
+        while (transform.position != moveBack.position) //김신이 뒷걸음질 시작
         {
             transform.position = Vector3.MoveTowards(transform.position, moveBack.position, walkSpeed * Time.deltaTime);
             yield return null; // 다음 프레임까지 대기

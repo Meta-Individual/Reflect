@@ -19,6 +19,7 @@ public class CameraManager : MonoBehaviour
     private float halfHeight;
 
     private Camera theCamera;
+    
 
     private void Awake()
     {

@@ -9,6 +9,8 @@ public class KimsinController : MonoBehaviour
     public float moveSpeed = 15f;   // 이동 속도
     public Animator anim;
     private PlayerController _playerController;
+    [SerializeField]
+    private PlayerInventory _playerInventory;
 
     private void Start()
     {
@@ -53,6 +55,7 @@ public class KimsinController : MonoBehaviour
             yield return null; // 다음 프레임까지 대기
         }
         this.gameObject.SetActive(false);
+        _playerInventory.AddItem("Outside");
         yield return new WaitForSeconds(1.0f);
     }
 }

@@ -7675,7 +7675,7 @@ Transform:
   m_GameObject: {fileID: 288599555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 236.8, y: -128.3, z: 0}
+  m_LocalPosition: {x: 1, y: -407, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14101,6 +14101,7 @@ GameObject:
   - component: {fileID: 519420034}
   - component: {fileID: 519420033}
   - component: {fileID: 519420035}
+  - component: {fileID: 519420036}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -14337,6 +14338,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &519420036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ebdc4ecbc94d5a4bb1073c229de46dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 5
+  shakeMagnitude: 0.1
+  dampingSpeed: 1
 --- !u!1 &521531620
 GameObject:
   m_ObjectHideFlags: 0
@@ -48779,7 +48795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -363.91803}
+  m_AnchoredPosition: {x: 0, y: -363.918}
   m_SizeDelta: {x: 0, y: -727.837}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1753896903
@@ -60803,8 +60819,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2142160400}
   - component: {fileID: 2142160403}
-  - component: {fileID: 2142160402}
   - component: {fileID: 2142160401}
+  - component: {fileID: 2142160404}
   m_Layer: 8
   m_Name: 1F_To_Outside
   m_TagString: OpenDoor
@@ -60924,28 +60940,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2142160402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142160399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a704d1fcdcab5549bf205754631342c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrow_UI: {fileID: 1061630426}
-  direction: 3
-  targetLocation: {fileID: 1697135891}
-  isLocked: 1
-  keyItemName: KannaInteract
-  stair: 0
-  openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
-  closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
-  doorClosedScript: 91
-  doorOpendScript: 91
 --- !u!61 &2142160403
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60991,6 +60985,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 18.703651, y: 2.2877502}
   m_EdgeRadius: 0
+--- !u!114 &2142160404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142160399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce04c31f1d91a65489b309474d7b1b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  arrow_UI: {fileID: 1061630426}
+  direction: 3
+  isLocked: 1
+  keyItemName: Outside
+  stair: 0
+  openDoorSound: {fileID: 8300000, guid: 3d6a7b920c000d84297840512889df23, type: 3}
+  closeDoorSound: {fileID: 8300000, guid: 58e368d55b918fe4798005cb2e8d14c1, type: 3}
+  doorClosedScript: 91
+  doorOpendScript: 91
 --- !u!1 &2143937266
 GameObject:
   m_ObjectHideFlags: 0
