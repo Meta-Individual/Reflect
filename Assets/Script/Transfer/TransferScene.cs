@@ -1,11 +1,11 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class TransferScene : MonoBehaviour, IInteractable
 {
-    public enum Direction //ÇÃ·¹ÀÌ¾î°¡ ¹Ù¶óº¸°í ÀÖ´Â ¹æÇâÀ» ¾ò±âÀ§ÇÑ º¯¼ö
+    public enum Direction //í”Œë ˆì´ì–´ê°€ ë°”ë¼ë³´ê³  ìˆëŠ” ë°©í–¥ì„ ì–»ê¸°ìœ„í•œ ë³€ìˆ˜
     {
         RIGHT,
         LEFT,
@@ -14,12 +14,11 @@ public class TransferScene : MonoBehaviour, IInteractable
     }
     private Animator anim;
     private GameObject player;
-    public AudioSource audioSource; // AudioSource ÄÄÆ÷³ÍÆ®
+    public AudioSource audioSource; // AudioSource ì»´í¬ë„ŒíŠ¸
     private PlayerInventory playerInventory;
     private MonologueManager _monologueManager;
     private PlayerController _playerController;
-    private Camera _camera;
-    private bool playerInRange = false; // ÇÃ·¹ÀÌ¾î°¡ Æ÷Å» À§¿¡ ÀÖ´ÂÁö ¿©ºÎ
+    private bool playerInRange = false; // í”Œë ˆì´ì–´ê°€ í¬íƒˆ ìœ„ì— ìˆëŠ”ì§€ ì—¬ë¶€
     private bool isMonologue = false;
 
     public GameObject arrow_UI;
@@ -29,16 +28,13 @@ public class TransferScene : MonoBehaviour, IInteractable
     public bool isLocked = false;
     public string keyItemName = "Key";
     public bool stair = false;
-    [Header("Sound")]
-    public AudioClip openDoorSound; // ¹æ¹® ¿©´Â »ç¿îµå
-    public AudioClip closeDoorSound; // ¹æ¹® ´İ´Â »ç¿îµå
+
     [Header("Script")]
-    public string doorClosedScript = "¹®ÀÌ Àá°ÜÀÖ¾î.";
-    public string doorOpendScript = "¹®ÀÌ ¿­·È¾î";
+    public string doorClosedScript = "ë¬¸ì´ ì ê²¨ìˆì–´.";
+    public string doorOpendScript = "ë¬¸ì´ ì—´ë ¸ì–´";
 
     void Start()
     {
-        _camera = FindObjectOfType<Camera>();
         _monologueManager = FindObjectOfType<MonologueManager>();
         playerInventory = FindObjectOfType<PlayerInventory>();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -75,7 +71,7 @@ public class TransferScene : MonoBehaviour, IInteractable
                 {
                     if (playerInventory.HasItem(keyItemName))
                     {
-                        TransformWithSound(); // ¹æ¹® »ç¿îµå Àç»ı
+                        TransformWithSound(); // ë°©ë¬¸ ì‚¬ìš´ë“œ ì¬ìƒ
                     }
                     else
                     {
@@ -99,45 +95,13 @@ public class TransferScene : MonoBehaviour, IInteractable
 
     public void TransformWithSound()
     {
-        if (audioSource != null)
-        {
-            if (CompareTag("OpenDoor") && openDoorSound != null)
-            {
-                audioSource.clip = openDoorSound;
-                audioSource.Play();
-            }
-            else if (CompareTag("CloseDoor") && closeDoorSound != null)
-            {
-                audioSource.clip = closeDoorSound;
-                audioSource.Play();
-            }
-            else
-            {
-                Debug.Log("À½¿ø ÆÄÀÏÀÌ Á¸ÀçÇÏÁö ¾Ê°Å³ª, Àß¸øµÈ ÅÂ±×·Î ¼³Á¤µÇ¾ú½À´Ï´Ù.");
-            }
-        }
-        if (stair)
-        {
-            if (direction == Direction.RIGHT)
-            {
-                anim.SetFloat("DirX", -1.0f);
-            }
-            else if (direction == Direction.LEFT)
-            {
-                anim.SetFloat("DirX", 1.0f);
+        StartCoroutine(StartLoadScene());
+    }
 
-            }
-            else if (direction == Direction.UP)
-            {
-                anim.SetFloat("DirY", -1.0f);
-
-            }
-            else if (direction == Direction.DOWN)
-            {
-                anim.SetFloat("DirY", 1.0f);
-
-            }
-        }
+    IEnumerator StartLoadScene()
+    {
+        FadeManager.Instance.StartFadeIn();
+        yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene("MansionOutScene");
     }
 
