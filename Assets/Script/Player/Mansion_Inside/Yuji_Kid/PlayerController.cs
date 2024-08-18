@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Camera")]
     public Camera _camera;
+    public CameraShake _cameraShake;
 
 
     public IPlayerState CurrentState
@@ -218,6 +219,21 @@ public class PlayerController : MonoBehaviour
         _camera.transform.position = new Vector3(mansion2F_1.position.x, mansion2F_1.position.y, _camera.transform.position.z);
         yield return new WaitForSeconds(2.0f);
         ChangeState(_idleState);
+    }
+
+    public void StartCameraShake() //카메라가 흔들리는 동안 플레이어가 대기 상태로 유지
+    {
+        StartCoroutine(WaitForDuration(_cameraShake.mOriginShakeDuration));
+    }
+
+    IEnumerator WaitForDuration(float duration) //1초 후 카메라 흔들림 연출
+    {
+        ChangeState(_waitState);
+        yield return new WaitForSeconds(1.0f);
+        _cameraShake.ShakeCamera();
+        yield return new WaitForSeconds(duration);
+        maxDialogueCounter = 93;
+        _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
     }
 
     public  void OnExclamation()

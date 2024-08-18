@@ -1,20 +1,23 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class KimsinController : MonoBehaviour
 {
-    public Transform moveIntoLivingRoom;  // ÀÌµ¿ÇÒ °æ·Î ÁöÁ¡µé
+    public Transform moveIntoLivingRoom;  // ì´ë™í•  ê²½ë¡œ ì§€ì ë“¤
     public Transform moveOut;
-    public float moveSpeed = 15f;   // ÀÌµ¿ ¼Óµµ
+    public float moveSpeed = 15f;   // ì´ë™ ì†ë„
     public Animator anim;
-    private PlayerController _playerController;
+
+    [Header("Controller")]
+    public PlayerController _playerController;
+    public KentaController _kentaController;
+
     [SerializeField]
     private PlayerInventory _playerInventory;
 
     private void Start()
     {
-        _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         this.gameObject.SetActive(false);
     }
     public void RunShowKimsinCoroutine()
@@ -28,31 +31,33 @@ public class KimsinController : MonoBehaviour
         StartCoroutine(MoveOutKimsin());
     }
 
-    IEnumerator ShowKimsin() // ±è½ÅÀ» °Å½Ç±îÁö ÀÌµ¿½ÃÅ°°í ÇÃ·¹ÀÌ¾îÀÇ ¹æÇâÀ» ¾Æ·¡·Î º¯È¯ ÈÄ ´ë»ç Ãâ·Â
+    IEnumerator ShowKimsin() // ê¹€ì‹ ì„ ê±°ì‹¤ê¹Œì§€ ì´ë™ì‹œí‚¤ê³  í”Œë ˆì´ì–´ì˜ ë°©í–¥ì„ ì•„ë˜ë¡œ ë³€í™˜ í›„ ëŒ€ì‚¬ ì¶œë ¥
     {
         anim.SetBool("Walk", true);
         anim.SetFloat("DirY", 1.0f);
         while (transform.position != moveIntoLivingRoom.position)
         {
             transform.position = Vector3.MoveTowards(transform.position, moveIntoLivingRoom.position, moveSpeed * Time.deltaTime);
-            yield return null; // ´ÙÀ½ ÇÁ·¹ÀÓ±îÁö ´ë±â
+            yield return null; // ë‹¤ìŒ í”„ë ˆì„ê¹Œì§€ ëŒ€ê¸°
         }
+        _kentaController.anim.SetFloat("DirY", -1.0f);
+
         anim.SetBool("Walk", false);
         _playerController.anim.SetFloat("DirX", 0.0f);
         _playerController.anim.SetFloat("DirY", -1.0f);
         yield return new WaitForSeconds(1.0f);
-        _playerController.maxDialogueCounter = 93;
+        _playerController.maxDialogueCounter = 88; //ìœ ìš°ì¹´í•œí…Œ ê°€ë³¼ê¹Œ? ë¼ëŠ” ëŒ€ì‚¬ê¹Œì§€
         _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
     }
 
-    IEnumerator MoveOutKimsin() // ±è½ÅÀ» Çö°ü±îÁö ÀÌµ¿½ÃÅ² ÈÄ ºñÈ°¼ºÈ­
+    IEnumerator MoveOutKimsin() // ê¹€ì‹ ì„ í˜„ê´€ê¹Œì§€ ì´ë™ì‹œí‚¨ í›„ ë¹„í™œì„±í™”
     {
         anim.SetBool("Walk", true);
         anim.SetFloat("DirY", -1.0f);
         while (transform.position != moveOut.position)
         {
             transform.position = Vector3.MoveTowards(transform.position, moveOut.position, moveSpeed * Time.deltaTime);
-            yield return null; // ´ÙÀ½ ÇÁ·¹ÀÓ±îÁö ´ë±â
+            yield return null; // ë‹¤ìŒ í”„ë ˆì„ê¹Œì§€ ëŒ€ê¸°
         }
         this.gameObject.SetActive(false);
         _playerInventory.AddItem("Outside");

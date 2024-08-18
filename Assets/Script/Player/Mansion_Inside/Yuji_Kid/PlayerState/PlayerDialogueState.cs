@@ -73,6 +73,10 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
                 // 켄타가 정해진 위치까지 이동한 경우 80번 대사부터 출력 82번 대사가 출력되는 타이밍에 칸나도 거실 밖으로 이동시킴
                 // 이후 89번까지 대사 출력
             }
+            else if(_playerController.currentDialogueCounter == 89)
+            {
+                _playerController.StartCameraShake();
+            }
             else
             {
                 _playerController.ChangeState(_playerController._idleState);

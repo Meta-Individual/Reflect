@@ -13,10 +13,14 @@ public class KentaAnimation : MonoBehaviour, IInteractable
     public AudioClip kentaSound;
 
     private bool isSearched = false;
-    private PlayerController _playerController;
     private PlayerInventory playerInventory;
+    [Header("Controller")]
     [SerializeField]
     private KannaController kannaController;
+    [SerializeField]
+    private KentaController kentaController;
+    [SerializeField]
+    private PlayerController _playerController;
     private MonologueManager _monologueManager;
     public string objectID;
 
@@ -26,7 +30,6 @@ public class KentaAnimation : MonoBehaviour, IInteractable
     void Start()
     {
         kenta.SetActive(false);
-        _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         playerInventory = FindObjectOfType<PlayerInventory>();
         _monologueManager = FindObjectOfType<MonologueManager>();
 
@@ -59,8 +62,7 @@ public class KentaAnimation : MonoBehaviour, IInteractable
         _playerController.MoveDownPlayer();
         kannaController.anim.SetFloat("DirX", 1.0f);
         kannaController.anim.SetFloat("DirY", 0.0f);
-        anim.SetFloat("DirX", 1.0f);
-        anim.SetFloat("DirY", 0.0f);
+
         anim.SetBool("Idle", true);
         yield return new WaitForSeconds(2.0f);
         anim.SetBool("Out", true);
@@ -70,6 +72,8 @@ public class KentaAnimation : MonoBehaviour, IInteractable
         _playerController.maxDialogueCounter = currentDialogueID;
         _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
         kenta.SetActive(true);
+        kentaController.anim.SetFloat("DirY", 1.0f);
+        kentaController.anim.SetFloat("DirX", 0.0f);
     }
 
     public void PlayKentaSound() //켄타 옷장 흔들리는 소리 재생

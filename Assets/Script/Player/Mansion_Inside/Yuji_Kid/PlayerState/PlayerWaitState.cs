@@ -41,6 +41,7 @@ public class PlayerWaitState : MonoBehaviour, IPlayerState
         _playerController.gameObject4.GetComponent<Renderer>().sortingOrder = 1;
         _playerController.gameObject5.GetComponent<Renderer>().sortingOrder = 1;
 
+        _playerController._camera.transform.position = new Vector3(-6.2f, -348.8f, -10.0f);
         _playerController.transform.position = new(-6.2f, -348.8f, 0.0f);
 
         yield return new WaitForSeconds(2.0f);

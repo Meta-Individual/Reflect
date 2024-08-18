@@ -8178,6 +8178,7 @@ MonoBehaviour:
   mansion2F_2: {fileID: 1697135891}
   targetNum: 0
   _camera: {fileID: 519420031}
+  _cameraShake: {fileID: 519420036}
 --- !u!114 &288599564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15152,7 +15153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ebdc4ecbc94d5a4bb1073c229de46dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mOriginShakeRange: 0.3
+  mOriginShakeRange: 0.2
   mOriginShakeDuration: 2
   mOriginShakeInitSpacing: 5
 --- !u!1 &521531620
@@ -32902,7 +32903,9 @@ MonoBehaviour:
   moveOut: {fileID: 577319802}
   moveSpeed: 20
   anim: {fileID: 1081813560}
-  _playerInventory: {fileID: 0}
+  _playerController: {fileID: 288599563}
+  _kentaController: {fileID: 2065122716}
+  _playerInventory: {fileID: 288599564}
 --- !u!50 &1081813564
 Rigidbody2D:
   serializedVersion: 4
@@ -45574,6 +45577,8 @@ MonoBehaviour:
   _audioSource: {fileID: 1172276598}
   kentaSound: {fileID: 8300000, guid: 370901855952c4c448a98aec9d4350b3, type: 3}
   kannaController: {fileID: 776055009}
+  kentaController: {fileID: 2065122716}
+  _playerController: {fileID: 288599563}
   objectID: 153
 --- !u!114 &1549201230
 MonoBehaviour:

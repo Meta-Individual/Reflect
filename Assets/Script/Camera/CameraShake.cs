@@ -11,7 +11,7 @@ public class CameraShake : MonoBehaviour
     //카메라 흔들기의 흔들림 세기를 지정하는 변수. 기본값으로 지정하여 사용할 수 있도록 한다
     [SerializeField][Range(0.01f, 1f)] private float mOriginShakeRange = .05f;
     //카메라 흔들기 시간을 지정하는 변수. 기본값으로 지정하여 사용할 수 있도록 한다
-    [SerializeField][Range(0.1f, 3.0f)] private float mOriginShakeDuration = .5f;
+    [SerializeField][Range(0.1f, 3.0f)] public float mOriginShakeDuration = .5f;
     //카메라를 흔드는 도중 해당 변수의 간격마다 초기 위치로 돌아가게 하는 변수. 사용하지 않으면 초기 위치로부터 크게 벗어날 수 있기에 사용해야 자연스러워짐.
     [SerializeField] private int mOriginShakeInitSpacing = 5;
     //카메라 흔들기에 사용되는 코루틴을 담는 변수
@@ -26,10 +26,6 @@ public class CameraShake : MonoBehaviour
     private void Update()
     {
         mCameraOriginPos = mCamera.transform.localPosition;
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            ShakeCamera();
-        }
     }
 
     //카메라를 흔들기를 시작하는함수. 기본 매개변수로 호출하면 인스펙터에서 초기화 된 값으로 호출된다.
