@@ -52,6 +52,12 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
                 _playerController._kannaController.goToLivingRoom = true;
                 _playerController.ChangeState(_playerController._waitState);
             }
+            else if (_playerController.currentDialogueCounter == 50) //칸나가 유우지에게 사과하는 부분
+            {
+                //칸나의 대사가 끝난 후
+                //유우지를 2층으로 이동시켜야함
+                StartCoroutine(_playerController.TransferTo2F());
+            }
             else if(_playerController.currentDialogueCounter == 58) //켄타를 찾아서 옷장에서 나오는 부분
             {
                 _playerController.ChangeState(_playerController._waitState);

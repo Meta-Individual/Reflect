@@ -57,6 +57,13 @@ public class PlayerController : MonoBehaviour
     public GameObject gameObject4;
     public GameObject gameObject5;
 
+    [Header("2F")]
+    public Transform mansion2F_1;
+    public Transform mansion2F_2;
+    public int targetNum = 0;
+
+    [Header("Camera")]
+    public Camera _camera;
 
 
     public IPlayerState CurrentState
@@ -92,6 +99,8 @@ public class PlayerController : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
 
         ChangeState(_waitState);
+
+        
     }
 
     private void Update()
@@ -187,6 +196,28 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("DirY", 1.0f);
     }
 
+    public IEnumerator TransferTo2F() // 1초 정지후 Fade 시작동안 유우지, 카메라 위치 이동
+    {
+        ChangeState(_waitState);
+        yield return new WaitForSeconds(1.0f);
+        FadeManager.Instance.StartFade();
+        yield return new WaitForSeconds(3.0f);
+        anim.SetFloat("DirX", 0.0f);
+        anim.SetFloat("DirY", -1.0f);
+        RecoverTransparency();
+        if(targetNum == 1)
+        {
+            transform.position = mansion2F_1.position;
+        }
+        else if(targetNum == 2)
+        {
+            transform.position = mansion2F_2.position;
+        }
+        _camera.transform.position = new Vector3(mansion2F_1.position.x, mansion2F_1.position.y, _camera.transform.position.z);
+        yield return new WaitForSeconds(2.0f);
+        ChangeState(_idleState);
+    }
+
     public  void OnExclamation()
     {
         anim.SetBool("Exclamation", true);
@@ -214,5 +245,14 @@ public class PlayerController : MonoBehaviour
     {
         _audioSource.clip = paperSound;
         _audioSource.Play();
+    }
+
+    public void RecoverTransparency()
+    {
+        Color color = GetComponent<SpriteRenderer>().color;
+
+        color.a = 1f;
+
+        GetComponent<SpriteRenderer>().color = color;
     }
 }
