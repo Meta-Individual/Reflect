@@ -57,7 +57,7 @@ public class KentaAnimation : MonoBehaviour, IInteractable
         _playerController.ChangeState(_playerController._waitState);
         yield return new WaitForSeconds(1.0f);
         _playerController.MoveDownPlayer();
-        kannaController.anim.SetFloat("DirX", -1.0f);
+        kannaController.anim.SetFloat("DirX", 1.0f);
         kannaController.anim.SetFloat("DirY", 0.0f);
         anim.SetFloat("DirX", 1.0f);
         anim.SetFloat("DirY", 0.0f);

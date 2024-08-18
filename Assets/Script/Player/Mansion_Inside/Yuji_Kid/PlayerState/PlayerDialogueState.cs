@@ -58,7 +58,7 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
                 //유우지를 2층으로 이동시켜야함
                 StartCoroutine(_playerController.TransferTo2F());
             }
-            else if(_playerController.currentDialogueCounter == 58) //켄타를 찾아서 옷장에서 나오는 부분
+            else if(_playerController.currentDialogueCounter == 59) //켄타를 찾아서 옷장에서 나오는 부분
             {
                 _playerController.ChangeState(_playerController._waitState);
                 //대사가 다 끝난 경우, wait 상태에서 2초 정도 대기한 후, Fade in Fade out 연출로 거실에서 시작.

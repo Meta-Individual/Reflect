@@ -8050,7 +8050,7 @@ Transform:
   m_GameObject: {fileID: 288599555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -327, y: 664.8, z: 0}
+  m_LocalPosition: {x: -288.5, y: 904.2, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -45568,7 +45568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: KentaInteract
   currentDirection: 2
-  currentDialogueID: 50
+  currentDialogueID: 58
   anim: {fileID: 1172276597}
   kenta: {fileID: 2065122712}
   _audioSource: {fileID: 1172276598}

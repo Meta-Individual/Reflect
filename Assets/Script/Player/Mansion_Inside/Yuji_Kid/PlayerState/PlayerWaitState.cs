@@ -13,7 +13,7 @@ public class PlayerWaitState : MonoBehaviour, IPlayerState
             _playerController = npcController;
 
         _playerController.anim.SetBool("Wait", true);
-        if (_playerController.currentDialogueCounter == 58) //켄타를 찾아서 옷장에서 나오는 부분
+        if (_playerController.currentDialogueCounter == 59) //켄타를 찾아서 옷장에서 나오는 부분
         {
             StartCoroutine(GotoLivingRoom());
         }
@@ -44,7 +44,7 @@ public class PlayerWaitState : MonoBehaviour, IPlayerState
         _playerController.transform.position = new(-6.2f, -348.8f, 0.0f);
 
         yield return new WaitForSeconds(2.0f);
-        _playerController.maxDialogueCounter = 61; //츠네모리 신야가 거실로 들어오는 부분전까지
+        _playerController.maxDialogueCounter = 60; //츠네모리 신야가 거실로 들어오는 부분전까지
         _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
     }
 }
