@@ -39,7 +39,7 @@ public class KimsinController2 : MonoBehaviour
 
     IEnumerator StartDoorSound() // 시작 후 1초 대기 한뒤 문 쾅쾅 소리 출력 후 카메라 시점 변환
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.0f);
         _audioSource.clip = doorSound;
         _audioSource.Play();
         yield return new WaitForSeconds(1.0f);

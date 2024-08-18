@@ -4,47 +4,96 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-    // 흔들림 지속 시간
-    public float shakeDuration = 0.5f;
+    //메인 카메라
+    private Camera mCamera;
+    //씬이 로드될 때 카메라 암에 붙어있는 카메라의 위치를 저장하는 변수
+    private Vector3 mCameraOriginPos;
+    //카메라 흔들기의 흔들림 세기를 지정하는 변수. 기본값으로 지정하여 사용할 수 있도록 한다
+    [SerializeField][Range(0.01f, 1f)] private float mOriginShakeRange = .05f;
+    //카메라 흔들기 시간을 지정하는 변수. 기본값으로 지정하여 사용할 수 있도록 한다
+    [SerializeField][Range(0.1f, 3.0f)] public float mOriginShakeDuration = .5f;
+    //카메라를 흔드는 도중 해당 변수의 간격마다 초기 위치로 돌아가게 하는 변수. 사용하지 않으면 초기 위치로부터 크게 벗어날 수 있기에 사용해야 자연스러워짐.
+    [SerializeField] private int mOriginShakeInitSpacing = 5;
+    //카메라 흔들기에 사용되는 코루틴을 담는 변수
+    Coroutine mStartCameraShakeCoroutine, mEndCameraShakeCoroutine;
 
-    // 흔들림 강도
-    public float shakeMagnitude = 0.1f;
-
-    // 감쇠 속도
-    public float dampingSpeed = 1.0f;
-
-    // 초기 카메라 위치
-    Vector3 initialPosition;
-
-    void OnEnable()
+    //씬이 로드되면 카메라를 등록하고 카메라의 초기 위치를 저장한다.
+    private void Start()
     {
-        initialPosition = transform.localPosition;
+        mCamera = Camera.main;
     }
 
-    public void TriggerShake()
+    private void Update()
     {
-        // 흔들림을 시작
-        StartCoroutine(Shake());
+        mCameraOriginPos = mCamera.transform.localPosition;
     }
 
-    IEnumerator Shake()
+    //카메라를 흔들기를 시작하는함수. 기본 매개변수로 호출하면 인스펙터에서 초기화 된 값으로 호출된다.
+    public void ShakeCamera(float shakeRange = 0, float duration = 0)
     {
-        float elapsed = 0.0f;
+        Debug.Log("카메라 흔들기 호출");
 
-        while (elapsed < shakeDuration)
+        StopPrevCameraShakeCoroutines();
+
+        shakeRange = shakeRange == 0 ? mOriginShakeRange : shakeRange;
+        duration = duration == 0 ? mOriginShakeDuration : duration;
+
+        mStartCameraShakeCoroutine = StartCoroutine("StartShake", shakeRange);
+        mEndCameraShakeCoroutine = StartCoroutine("StopShake", duration);
+    }
+
+    //일정 시간동안 흔들기를 진행하는 코루틴
+    private IEnumerator StartShake(float shakeRange)
+    {
+        float cameraPosX, cameraPosY;
+        Vector3 cameraPos;
+        int shakeInitSpacing = mOriginShakeInitSpacing;
+
+        while (true)
         {
-            float x = Random.Range(-1f, 1f) * shakeMagnitude;
-            float y = Random.Range(-1f, 1f) * shakeMagnitude;
+            --shakeInitSpacing;
 
-            transform.localPosition = new Vector3(x, y, initialPosition.z);
+            //최대 0 ~ shakeRange * 2까지 나오는 값에서 shakeRange를 빼면 -shakeRange ~ +shakeRange 까지의 범위를 가진다.
+            cameraPosX = Random.value * shakeRange * 2 - shakeRange;
+            cameraPosY = Random.value * shakeRange * 2 - shakeRange;
 
-            elapsed += Time.deltaTime;
+            cameraPos = mCamera.transform.position;
+            cameraPos.x += cameraPosX;
+            cameraPos.y += cameraPosY;
+            mCamera.transform.position = cameraPos;
 
-            shakeMagnitude = Mathf.Lerp(shakeMagnitude, 0, elapsed / shakeDuration);
+            if (shakeInitSpacing < 0)
+            {
+                shakeInitSpacing = mOriginShakeInitSpacing;
+
+                mCamera.transform.position = mCameraOriginPos;
+            }
+
             yield return null;
         }
+    }
 
-        // 카메라 위치를 원래대로 되돌림
-        transform.localPosition = initialPosition;
+    //단순히 일정 시간 후에 
+    private IEnumerator StopShake(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+
+        mCamera.transform.position = mCameraOriginPos;
+
+        StopPrevCameraShakeCoroutines();
+    }
+
+    //비 정상적으로 짧은 시간에 여러 번 호출될경우 의도하지 않은 방향으로 진행되는것을 방지하기 위해 코루틴을 검사하여 제거한다.
+    private void StopPrevCameraShakeCoroutines()
+    {
+        if (mStartCameraShakeCoroutine != null)
+        {
+            StopCoroutine(mStartCameraShakeCoroutine);
+        }
+
+        if (mEndCameraShakeCoroutine != null)
+        {
+            StopCoroutine(mEndCameraShakeCoroutine);
+        }
     }
 }

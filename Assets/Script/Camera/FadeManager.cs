@@ -27,7 +27,8 @@ public class FadeManager : MonoBehaviour
 
     void Start()
     {
-        fadeImage.gameObject.SetActive(false);
+        JustFadeOut();
+        //fadeImage.gameObject.SetActive(false);
     }
 
     public void JustFade() //바로 Fade in 되는 효과
@@ -35,6 +36,14 @@ public class FadeManager : MonoBehaviour
         fadeImage.gameObject.SetActive(true);
         Color color = fadeImage.color;
         color.a = 1;
+        fadeImage.color = color;
+    }
+
+    public void JustFadeOut() //바로 Fade in 되는 효과
+    {
+        fadeImage.gameObject.SetActive(true);
+        Color color = fadeImage.color;
+        color.a = 0;
         fadeImage.color = color;
     }
 

@@ -50,6 +50,9 @@ public class CameraManager2 : MonoBehaviour
 
         yield return new WaitForSeconds(3.0f);
         PlayMonsterBGM(); //카메라가 김신 위치로 이동한 후 몬스터 브금 재생
+
+        yield return new WaitForSeconds(1.0f);
+        kimsinController.WalkingBack();
     }
     
     IEnumerator StartTransferYuji()

@@ -26,7 +26,7 @@ public class KannaOutOfDeskState : MonoBehaviour, IKannaState
         {
             _npcController.ChangeState(_npcController._idleState);
             pc.ChangeState(pc._diaState);
-            pc.maxDialogueCounter = 20;
+            pc.maxDialogueCounter = 30;
             pc._dialogueManager.ShowDialogue(pc.currentDialogueCounter.ToString());
         }
     }
