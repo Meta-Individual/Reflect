@@ -21,6 +21,9 @@ public class CameraManager2 : MonoBehaviour
 
     private void Start() //처음 씬이 시작되면 유우지 위치로 포커스
     {
+        _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        _playerController._cameraManager = this;
+
         FadeManager.Instance.JustFade();
         transform.position = yuji_Transform.position;
         FadeManager.Instance.StartFadeOut();
@@ -63,10 +66,10 @@ public class CameraManager2 : MonoBehaviour
     IEnumerator StartMonsterBGM() //몬스터 브금 재생 후 김신 뒷걸음질
     {
         _playerController.maxDialogueCounter = 97;
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.0f);
         PlayMonsterBGM(); 
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3f);
         kimsinController.WalkingBack();
     }
     
@@ -77,5 +80,8 @@ public class CameraManager2 : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, yuji_Transform.position, moveSpeed * Time.deltaTime);
             yield return null; // 다음 프레임까지 대기
         }
+
+        yield return new WaitForSeconds(1.0f);
+        _playerController.SetTurnBack();
     }
 }

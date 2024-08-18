@@ -23,6 +23,9 @@ public class CameraManager : MonoBehaviour
 
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player");
+
+
         theCamera = GetComponent<Camera>();
         minBound = currentBound.bounds.min;
         maxBound = currentBound.bounds.max;

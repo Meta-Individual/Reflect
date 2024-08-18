@@ -4,10 +4,15 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("SceneLoad")]
+    public int mansionInside = 0;
+
+    [Header("Animator")]
     public Animator anim;
     [Header("Dialogue")]
     public GameObject monologuePanel; //독백 패널
@@ -69,6 +74,21 @@ public class PlayerController : MonoBehaviour
     public CameraShake _cameraShake;
     public CameraManager2 _cameraManager;
 
+    public static PlayerController Instance { get; private set; } // Singleton 인스턴스
+
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // 씬이 전환되어도 파괴되지 않음
+        }
+        else
+        {
+            Destroy(gameObject); // 이미 인스턴스가 있다면 새로 생성된 것을 파괴
+        }
+    }
 
     public IPlayerState CurrentState
     {
@@ -277,9 +297,18 @@ public class PlayerController : MonoBehaviour
 
     /* ------------------------------------------------------ 저택 외부 전용------------------------------------------------------ */
 
-    public void SetTurnBack()
+    public void SetTurnBack() //유우지가 뒤돌고 1초후에 FadeIn 구현
+    {
+        StartCoroutine(StartTurnBack());
+    }
+
+    IEnumerator StartTurnBack()
     {
         anim.SetFloat("DirX", 0.0f);
         anim.SetFloat("DirY", 1.0f);
+        yield return new WaitForSeconds(1.0f);
+        FadeManager.Instance.StartFadeIn();
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadScene("MansionScene");
     }
 }

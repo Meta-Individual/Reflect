@@ -9,6 +9,23 @@ public class MonologueManager: MonoBehaviour
     private Transform _playerTransform; //말풍선의 상대적인 위치를 위한 플레이어의 위치
     private Vector3 offset = new(0, 15f, 0); // 말풍선의 위치 오프셋
     public PlayerController _playerController;
+
+    public static MonologueManager Instance { get; private set; } // Singleton 인스턴스
+
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // 씬이 전환되어도 파괴되지 않음
+        }
+        else
+        {
+            Destroy(gameObject); // 이미 인스턴스가 있다면 새로 생성된 것을 파괴
+        }
+    }
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
