@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
     public int maxDialogueCounter = 1; //플레이어가 진행할 대화의 수
     public int currentDialogueCounter = 1; //플레이어의 대화 진행상태
 
+
+    [Header("Controller")]
     public KannaController _kannaController;
     public KimsinController _kimsinController;
     public KentaController _kentaController;

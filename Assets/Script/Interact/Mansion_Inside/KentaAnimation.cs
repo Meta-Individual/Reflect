@@ -6,7 +6,7 @@ public class KentaAnimation : MonoBehaviour, IInteractable
 {
     public string itemName = "KentaInteract";
     public Direction currentDirection = Direction.UP;
-    public int currentDialogueID = 47;
+    public int currentDialogueID = 50;
     public Animator anim;
     public GameObject kenta;
     public AudioSource _audioSource;
@@ -17,6 +17,10 @@ public class KentaAnimation : MonoBehaviour, IInteractable
     private PlayerInventory playerInventory;
     [SerializeField]
     private KannaController kannaController;
+    private MonologueManager _monologueManager;
+    public string objectID;
+
+
 
 
     void Start()
@@ -24,19 +28,28 @@ public class KentaAnimation : MonoBehaviour, IInteractable
         kenta.SetActive(false);
         _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         playerInventory = FindObjectOfType<PlayerInventory>();
+        _monologueManager = FindObjectOfType<MonologueManager>();
+
     }
     public void Interact()
     {
         Debug.Log("Kenta 애니메이션 상호작용");
-        if (!isSearched)
+
+        if (DirectionUtils.CheckDirection(currentDirection))
         {
-            if (DirectionUtils.CheckDirection(currentDirection))
+            if (!isSearched)
             {
+                _monologueManager.ShowMonologue(objectID);
                 isSearched = true;
+            }
+            else
+            {
                 playerInventory.AddItem(itemName);
                 StartCoroutine(ActiveKentaAnimation());
             }
         }
+
+
     }
 
     IEnumerator ActiveKentaAnimation() //옷장의 흔들림을 멈추고, 켄타가 옷장에서 나오는 애니메이션 재생 이후 대사 출력
