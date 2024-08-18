@@ -19,20 +19,7 @@ public class CameraManager : MonoBehaviour
     private float halfHeight;
 
     private Camera theCamera;
-    
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            DontDestroyOnLoad(this.gameObject);
-            instance = this;
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-    }
+   
 
     void Start()
     {

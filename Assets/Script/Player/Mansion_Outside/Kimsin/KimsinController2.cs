@@ -27,9 +27,16 @@ public class KimsinController2 : MonoBehaviour
     [SerializeField]
     private CameraManager2 _cameraManager;
 
+    [Header("Monster")]
+    public GameObject monster;
+
+    [Header("Controller")]
+    public PlayerController _playerController;
+
     private void Start()
     {
         PlayDoorSound();
+        monster.SetActive(false);
     }
 
     public void PlayDoorSound() //잠긴 문 소리 출력
@@ -61,5 +68,11 @@ public class KimsinController2 : MonoBehaviour
             yield return null; // 다음 프레임까지 대기
         }
         _animator.SetBool("Walk", false);
+
+        yield return new WaitForSeconds(1.0f);
+        monster.SetActive(true);
+
+        yield return new WaitForSeconds(0.5f);
+        _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
     }
 }

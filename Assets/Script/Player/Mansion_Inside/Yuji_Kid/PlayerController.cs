@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour
     [Header("Camera")]
     public Camera _camera;
     public CameraShake _cameraShake;
+    public CameraManager2 _cameraManager;
 
 
     public IPlayerState CurrentState
@@ -102,8 +103,6 @@ public class PlayerController : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
 
         ChangeState(_waitState);
-
-        
     }
 
     private void Update()
@@ -229,10 +228,10 @@ public class PlayerController : MonoBehaviour
     IEnumerator WaitForDuration(float duration) //1초 후 카메라 흔들림 연출
     {
         ChangeState(_waitState);
+        maxDialogueCounter = 93;
         yield return new WaitForSeconds(1.0f);
         _cameraShake.ShakeCamera();
         yield return new WaitForSeconds(duration);
-        maxDialogueCounter = 93;
         _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
     }
 
@@ -272,5 +271,15 @@ public class PlayerController : MonoBehaviour
         color.a = 1f;
 
         GetComponent<SpriteRenderer>().color = color;
+    }
+
+
+
+    /* ------------------------------------------------------ 저택 외부 전용------------------------------------------------------ */
+
+    public void SetTurnBack()
+    {
+        anim.SetFloat("DirX", 0.0f);
+        anim.SetFloat("DirY", 1.0f);
     }
 }
