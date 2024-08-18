@@ -21,27 +21,43 @@ public class KimsinController2 : MonoBehaviour
     public Transform moveBack;
     [Header("Sound")]
     public AudioSource _audioSource;
+    public AudioSource _doorAudioSource;
     public AudioClip doorSound;
+    public AudioClip doorOpendSound;
 
     [Header("Camera")]
     [SerializeField]
     private CameraManager2 _cameraManager;
 
+    [Header("Monster")]
+    public GameObject monster;
+
+    [Header("Controller")]
+    public PlayerController _playerController;
+
     private void Start()
     {
-        PlayDoorSound();
+        _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
+        PlayDoorCoroutine();
+        monster.SetActive(false);
     }
 
-    public void PlayDoorSound() //잠긴 문 소리 출력
+    public void PlayDoorCoroutine() //잠긴 문 소리 출력
     {
         StartCoroutine(StartDoorSound());
+    }
+
+    public void PlayDoorSound()
+    {
+        _audioSource.clip = doorSound;
+        _audioSource.Play();
     }
 
     IEnumerator StartDoorSound() // 시작 후 1초 대기 한뒤 문 쾅쾅 소리 출력 후 카메라 시점 변환
     {
         yield return new WaitForSeconds(2.0f);
-        _audioSource.clip = doorSound;
-        _audioSource.Play();
+        PlayDoorSound();
         yield return new WaitForSeconds(1.0f);
 
         _cameraManager.TransferToKimsin();
@@ -61,5 +77,12 @@ public class KimsinController2 : MonoBehaviour
             yield return null; // 다음 프레임까지 대기
         }
         _animator.SetBool("Walk", false);
+
+        yield return new WaitForSeconds(1.0f);
+        monster.SetActive(true);
+        _doorAudioSource.clip = doorOpendSound;
+        _doorAudioSource.Play();
+        yield return new WaitForSeconds(0.5f);
+        _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
     }
 }

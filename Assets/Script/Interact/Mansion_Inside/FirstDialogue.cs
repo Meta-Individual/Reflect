@@ -10,7 +10,12 @@ public class FirstDialogue : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(ShowDialogue());
+        _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
+        if (_playerController.mansionInside == 0)
+        {
+            StartCoroutine(ShowDialogue());
+        }
     }
 
     IEnumerator ShowDialogue()

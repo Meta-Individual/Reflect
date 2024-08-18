@@ -10,6 +10,12 @@ public class PlayDoorSound : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(StartSound());
+    }
+
+    IEnumerator StartSound()
+    {
+        yield return new WaitForSeconds(0.5f);
         _audioSource.clip = doorOpenSound;
         _audioSource.Play();
     }

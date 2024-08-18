@@ -77,6 +77,16 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
             {
                 _playerController.StartCameraShake();
             }
+            else if (_playerController.currentDialogueCounter == 95) //신야가 문을 두드리고 나서 대사 출력후 몬스터 등장
+            {
+                _playerController._cameraManager.ShowMonster();
+                _playerController.ChangeState(_playerController._waitState);
+            }
+            else if (_playerController.currentDialogueCounter == 98) //신야가 유우지에게 들어가라고 소리치는 부분
+            {
+                _playerController._cameraManager.TransferToYuji();
+                _playerController.ChangeState(_playerController._waitState);
+            }
             else
             {
                 _playerController.ChangeState(_playerController._idleState);

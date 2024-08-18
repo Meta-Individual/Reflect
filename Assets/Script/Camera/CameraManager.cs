@@ -19,23 +19,13 @@ public class CameraManager : MonoBehaviour
     private float halfHeight;
 
     private Camera theCamera;
-    
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            DontDestroyOnLoad(this.gameObject);
-            instance = this;
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-    }
+   
 
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player");
+
+
         theCamera = GetComponent<Camera>();
         minBound = currentBound.bounds.min;
         maxBound = currentBound.bounds.max;

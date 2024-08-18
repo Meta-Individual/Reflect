@@ -27,6 +27,7 @@ public class FadeManager : MonoBehaviour
 
     void Start()
     {
+        fadeImage = GameObject.Find("FadeImage").GetComponent<Image>();
         JustFadeOut();
         //fadeImage.gameObject.SetActive(false);
     }
@@ -39,7 +40,7 @@ public class FadeManager : MonoBehaviour
         fadeImage.color = color;
     }
 
-    public void JustFadeOut() //바로 Fade in 되는 효과
+    public void JustFadeOut() //바로 Fade out 되는 효과
     {
         fadeImage.gameObject.SetActive(true);
         Color color = fadeImage.color;
@@ -65,12 +66,14 @@ public class FadeManager : MonoBehaviour
     private IEnumerator FadeIn()
     {
         // 페이드 인 로직
+        fadeImage.gameObject.SetActive(true);
         yield return StartCoroutine(Fade(0, 1, false)); // 페이드 인 완료 대기
     }
 
     private IEnumerator FadeOut()
     {
         // 페이드 아웃 로직
+        fadeImage.gameObject.SetActive(true);
         yield return StartCoroutine(Fade(1, 0, true)); // 페이드 아웃 완료 대기
         fadeImage.gameObject.SetActive(false);
     }

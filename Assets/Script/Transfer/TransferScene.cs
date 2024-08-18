@@ -41,7 +41,7 @@ public class TransferScene : MonoBehaviour, IInteractable
         _playerController = player.GetComponent<PlayerController>();
         HideUI();
 
-        //playerInventory.AddItem("Outside");
+        playerInventory.AddItem("Outside");
         playerInventory.AddItem("KannaInteract");
     }
 
@@ -100,6 +100,7 @@ public class TransferScene : MonoBehaviour, IInteractable
     IEnumerator StartLoadScene()
     {
         FadeManager.Instance.StartFadeIn();
+        _playerController.mansionInside++;
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene("MansionOutScene");
     }
