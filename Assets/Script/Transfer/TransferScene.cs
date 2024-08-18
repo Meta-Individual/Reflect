@@ -43,7 +43,7 @@ public class TransferScene : MonoBehaviour, IInteractable
         _playerController = player.GetComponent<PlayerController>();
         HideUI();
 
-        playerInventory.AddItem("Outside");
+        //playerInventory.AddItem("Outside");
     }
 
     void Update()

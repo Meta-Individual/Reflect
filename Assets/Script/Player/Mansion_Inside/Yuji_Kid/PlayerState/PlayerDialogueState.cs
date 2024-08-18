@@ -36,7 +36,7 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
                     Debug.Log("켄타 나가자");
                     _playerController._kentaController.MoveKenta();
                 }
-                else if (_playerController.currentDialogueCounter == 82) //칸나가 켄타를 따라서 현관으로 나가는 대사
+                else if (_playerController.currentDialogueCounter == 79) //칸나가 켄타를 따라서 현관으로 나가는 대사
                 {
                     Debug.Log("칸나 나가자");
                     _playerController._kannaController.MoveKanna();
@@ -47,18 +47,18 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
                 }
                 _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
             }
-            else if(_playerController.currentDialogueCounter == 21) //칸나가 걸어서 거실로 나가는 부분
+            else if(_playerController.currentDialogueCounter == 31) //칸나가 걸어서 거실로 나가는 부분
             {
                 _playerController._kannaController.goToLivingRoom = true;
                 _playerController.ChangeState(_playerController._waitState);
             }
-            else if(_playerController.currentDialogueCounter == 48) //켄타를 찾아서 옷장에서 나오는 부분
+            else if(_playerController.currentDialogueCounter == 58) //켄타를 찾아서 옷장에서 나오는 부분
             {
                 _playerController.ChangeState(_playerController._waitState);
                 //대사가 다 끝난 경우, wait 상태에서 2초 정도 대기한 후, Fade in Fade out 연출로 거실에서 시작.
                 //fade out 후에도 2초 정도 대기 시간이 있도록 ! 이후에는 바로 다음 대사 진행
             }
-            else if(_playerController.currentDialogueCounter == 51)
+            else if(_playerController.currentDialogueCounter == 61)
             {
                 _playerController.ChangeState(_playerController._waitState);
                 _playerController._kimsinController.RunShowKimsinCoroutine();

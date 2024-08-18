@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     public bool kannaAnim = false; //Mansion 1F에서 칸나 애니메이션을 위한 변수
     public int maxDialogueCounter = 1; //플레이어가 진행할 대화의 수
     public int currentDialogueCounter = 1; //플레이어의 대화 진행상태
-    [HideInInspector]
+
     public KannaController _kannaController;
     public KimsinController _kimsinController;
     public KentaController _kentaController;
@@ -81,8 +81,6 @@ public class PlayerController : MonoBehaviour
         DirectionUtils.Initialize(this); // 플레이어 Direction 체크하는 함수 초기화
 
         _dialogueManager = FindObjectOfType<DialogueManager>();
-
-        _kannaController = GameObject.FindGameObjectWithTag("Kanna").GetComponent<KannaController>();
 
         _waitState = gameObject.AddComponent<PlayerWaitState>();
         _idleState = gameObject.AddComponent<PlayerIdleState>();

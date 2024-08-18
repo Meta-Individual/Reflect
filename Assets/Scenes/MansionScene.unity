@@ -7675,7 +7675,7 @@ Transform:
   m_GameObject: {fileID: 288599555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9, y: -421.5, z: 0}
+  m_LocalPosition: {x: -267.6, y: -435.7, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7779,8 +7779,8 @@ MonoBehaviour:
   _rigidbody: {fileID: 0}
   kannaAnim: 0
   maxDialogueCounter: 1
-  currentDialogueCounter: 1
-  _kannaController: {fileID: 0}
+  currentDialogueCounter: 25
+  _kannaController: {fileID: 776055009}
   _kimsinController: {fileID: 1081813563}
   _kentaController: {fileID: 2065122716}
   interactableLayer:
@@ -13544,7 +13544,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -14.524094, y: -62.888077}
+  m_Offset: {x: -14.524094, y: -65.45679}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -13555,7 +13555,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.463776, y: 9.356293}
+  m_Size: {x: 14.463776, y: 14.493713}
   m_EdgeRadius: 0
 --- !u!1 &501122529
 GameObject:
@@ -22934,7 +22934,7 @@ GameObject:
   - component: {fileID: 812659261}
   - component: {fileID: 812659262}
   m_Layer: 8
-  m_Name: 7~14
+  m_Name: 7~24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23013,7 +23013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDialogueID: 7
-  currentDialogueID: 14
+  currentDialogueID: 24
   firstDelay: 1
   secondDelay: 3
   lockDoorSound: {fileID: 8300000, guid: df52e6fa14e29a2459b42e6f28edb1b7, type: 3}
@@ -25483,7 +25483,7 @@ GameObject:
   - component: {fileID: 909308880}
   - component: {fileID: 909308881}
   m_Layer: 8
-  m_Name: 23~38
+  m_Name: 33~48
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25561,8 +25561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2084b8d0f5792da418b68ef8063773b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDialogueID: 23
-  currentDialogueID: 38
+  startDialogueID: 33
+  currentDialogueID: 48
   delay: 1
 --- !u!1 &909622317
 GameObject:
@@ -43055,7 +43055,7 @@ GameObject:
   - component: {fileID: 1549201229}
   - component: {fileID: 1549201230}
   m_Layer: 8
-  m_Name: 39~47
+  m_Name: 50~58
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43135,7 +43135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: KentaInteract
   currentDirection: 2
-  currentDialogueID: 47
+  currentDialogueID: 50
   anim: {fileID: 1172276597}
   kenta: {fileID: 2065122712}
   _audioSource: {fileID: 1172276598}
@@ -46104,7 +46104,7 @@ GameObject:
   - component: {fileID: 1663759006}
   - component: {fileID: 1663759007}
   m_Layer: 8
-  m_Name: 15
+  m_Name: 25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46182,8 +46182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2084b8d0f5792da418b68ef8063773b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDialogueID: 15
-  currentDialogueID: 15
+  startDialogueID: 25
+  currentDialogueID: 25
   delay: 1
 --- !u!1 &1666345051
 GameObject:
@@ -48506,7 +48506,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1739106945
 RectTransform:
   m_ObjectHideFlags: 0

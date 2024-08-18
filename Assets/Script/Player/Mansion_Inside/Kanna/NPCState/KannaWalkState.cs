@@ -27,7 +27,7 @@ public class KannaWalkState : MonoBehaviour, IKannaState
         moveSpeed = _npcController.moveSpeed;
         waitTime = _npcController.waitTime;
 
-        if(pc.currentDialogueCounter < 25)
+        if(pc.currentDialogueCounter < 35)
         {
             StartCoroutine(Move());
         }
@@ -97,7 +97,7 @@ public class KannaWalkState : MonoBehaviour, IKannaState
                 _npcController.boxCollider.SetActive(true);
                 _npcController._layerController.enabled = true; //layer Controller 작동하도록 함
 
-                pc.maxDialogueCounter = 22;
+                pc.maxDialogueCounter = 32;
                 pc._dialogueManager.ShowDialogue(pc.currentDialogueCounter.ToString());
                 break;
             }
