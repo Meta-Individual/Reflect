@@ -26,7 +26,7 @@ public class LoadDialogue : MonoBehaviour
 
     private void LoadDialogues()
     {
-        TextAsset csvFile = Resources.Load<TextAsset>("CSV/CharacterDialogue"); //텍스트 파일 인덱스에 따라서 버그가 발생할 수 있음
+        TextAsset csvFile = Resources.Load<TextAsset>("CSV/Dialogue/CharacterDialogue"); //텍스트 파일 인덱스에 따라서 버그가 발생할 수 있음
         string[] lines = csvFile.text.Split('\n');
 
         for (int i = 1; i < lines.Length; i++) // Skip header
