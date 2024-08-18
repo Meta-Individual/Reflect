@@ -9,7 +9,7 @@ public class CameraShake : MonoBehaviour
     //씬이 로드될 때 카메라 암에 붙어있는 카메라의 위치를 저장하는 변수
     private Vector3 mCameraOriginPos;
     //카메라 흔들기의 흔들림 세기를 지정하는 변수. 기본값으로 지정하여 사용할 수 있도록 한다
-    [SerializeField][Range(0.01f, 0.1f)] private float mOriginShakeRange = .05f;
+    [SerializeField][Range(0.01f, 1f)] private float mOriginShakeRange = .05f;
     //카메라 흔들기 시간을 지정하는 변수. 기본값으로 지정하여 사용할 수 있도록 한다
     [SerializeField][Range(0.1f, 3.0f)] private float mOriginShakeDuration = .5f;
     //카메라를 흔드는 도중 해당 변수의 간격마다 초기 위치로 돌아가게 하는 변수. 사용하지 않으면 초기 위치로부터 크게 벗어날 수 있기에 사용해야 자연스러워짐.

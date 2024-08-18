@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7e6206f7c898cc648a9deb79e16a516d
+guid: 161de0d8043a75444992a3aa6070aedf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_0
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_0"
       rect:
         serializedVersion: 2
         x: 0
-        y: 2100
-        width: 350
-        height: 700
+        y: 6720
+        width: 1536
+        height: 2240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82a83f70a798e1847aa015740be32147
-      internalID: 44102329
+      spriteID: 96b627d6e5ff0f94a8dcb695e25ed1ae
+      internalID: 354796271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_1
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_1"
       rect:
         serializedVersion: 2
-        x: 350
-        y: 2100
-        width: 350
-        height: 700
+        x: 1536
+        y: 6720
+        width: 1536
+        height: 2240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2aa5822a8767f949b487328ac5126aa
-      internalID: -490422346
+      spriteID: ac42eae642805e744ba6d39d5d802226
+      internalID: -1214507257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_2
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_2"
       rect:
         serializedVersion: 2
-        x: 700
-        y: 2100
-        width: 350
-        height: 700
+        x: 3072
+        y: 6720
+        width: 1536
+        height: 2240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 420b739d616d6114c8ece07f05ffe2cb
-      internalID: 1825963790
+      spriteID: 3f96e1e7ed422c9498fd24864d1c13c5
+      internalID: 1448515736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_3
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_3"
       rect:
         serializedVersion: 2
-        x: 1050
-        y: 2100
-        width: 350
-        height: 700
+        x: 4608
+        y: 6720
+        width: 1536
+        height: 2240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fcb8e11c27d4a24ba406c3372d22198
-      internalID: -943586591
+      spriteID: 448fbf9a60d60ef4ead28cc9ba625efe
+      internalID: -949547329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_4
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_4"
       rect:
         serializedVersion: 2
-        x: 1400
-        y: 2100
-        width: 350
-        height: 700
+        x: 6144
+        y: 6720
+        width: 1536
+        height: 2240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,41 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff5130d734154864abc12d8ed287270c
-      internalID: -1259805585
+      spriteID: 80b4b8d9c69576f45abde7d0b6e66df8
+      internalID: 1871540662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_5
-      rect:
-        serializedVersion: 2
-        x: 1750
-        y: 2100
-        width: 350
-        height: 700
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0549b972a265a6a4aa0775ef62761831
-      internalID: 74007646
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_6
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_5"
       rect:
         serializedVersion: 2
         x: 0
-        y: 1400
-        width: 350
-        height: 700
+        y: 4480
+        width: 1536
+        height: 2240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 376a060a30a7a5e42b57dcfbc3b662cc
-      internalID: -1962245822
+      spriteID: 4bf025ecb9bcffb418bbce4148703608
+      internalID: 2008137102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_7
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_6"
       rect:
         serializedVersion: 2
-        x: 350
-        y: 1400
-        width: 350
-        height: 700
+        x: 1536
+        y: 4480
+        width: 1536
+        height: 2240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38e7d050d192676449a153fbfffda9bf
-      internalID: 1892676305
+      spriteID: a25145ae59aa0be4e84d454eac575952
+      internalID: 578868171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_8
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_7"
       rect:
         serializedVersion: 2
-        x: 700
-        y: 1400
-        width: 350
-        height: 700
+        x: 3072
+        y: 4480
+        width: 1536
+        height: 2240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2ee2f38f5f8a1e4baaeaef1e9d68657
-      internalID: -123689128
+      spriteID: d15898d53e1484d4a82a7fb3cb2b3276
+      internalID: 28044868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_9
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_8"
       rect:
         serializedVersion: 2
-        x: 1050
-        y: 1400
-        width: 350
-        height: 700
+        x: 4608
+        y: 4480
+        width: 1536
+        height: 2240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdda23009b60c71489e7b085ddad4c40
-      internalID: 1212570147
+      spriteID: 878a440b1376b8241919cb2dfb63e179
+      internalID: -1377749621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_10
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_9"
       rect:
         serializedVersion: 2
-        x: 1400
-        y: 1400
-        width: 350
-        height: 700
+        x: 6144
+        y: 4480
+        width: 1536
+        height: 2240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,41 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52484d3339e60f245905019318ad1651
-      internalID: 934090066
+      spriteID: eccf23a37b813084b8c22b898347fc79
+      internalID: -195224266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_11
-      rect:
-        serializedVersion: 2
-        x: 1750
-        y: 1400
-        width: 350
-        height: 700
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f25df43e26622604b94b2b5bcc7c8188
-      internalID: 603499602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_12
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_10"
       rect:
         serializedVersion: 2
         x: 0
-        y: 700
-        width: 350
-        height: 700
+        y: 2240
+        width: 1536
+        height: 2240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,20 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e652dc493e5fe314fa3cfdf583b20a7c
-      internalID: -694813826
+      spriteID: ea39c68b17db0e145adfc7a7c64e2990
+      internalID: 1906968490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_13
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_11"
       rect:
         serializedVersion: 2
-        x: 350
-        y: 700
-        width: 350
-        height: 700
+        x: 1536
+        y: 2240
+        width: 1536
+        height: 2240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,20 +368,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01f5c870beb48cc409da6f9d9f4a9705
-      internalID: 1856074842
+      spriteID: ff0a653a5df0a23488e73763286caedb
+      internalID: 1117377836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_14
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_12"
       rect:
         serializedVersion: 2
-        x: 700
-        y: 700
-        width: 350
-        height: 700
+        x: 3072
+        y: 2240
+        width: 1536
+        height: 2240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,20 +389,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcdaf38ea4115614191f1c4400e793e2
-      internalID: 1715295572
+      spriteID: a23333ca3dd69ff41bde74871eeaaf18
+      internalID: 1708904317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_15
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_13"
       rect:
         serializedVersion: 2
-        x: 1050
-        y: 700
-        width: 350
-        height: 700
+        x: 4608
+        y: 2240
+        width: 1536
+        height: 2240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -452,20 +410,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03e66c3d85da2b0478721103b38c172f
-      internalID: 134125048
+      spriteID: bd42f43f874ba0f479c3d9440dda47b9
+      internalID: -750134676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_16
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_14"
       rect:
         serializedVersion: 2
-        x: 1400
-        y: 700
-        width: 350
-        height: 700
+        x: 6144
+        y: 2240
+        width: 1536
+        height: 2240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -473,41 +431,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef8e74a24cc8ec540967cbb70c79ae82
-      internalID: -827443230
+      spriteID: 3b6326ebad7af294bbd24c4755d84a95
+      internalID: -1736585473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_17
-      rect:
-        serializedVersion: 2
-        x: 1750
-        y: 700
-        width: 350
-        height: 700
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 364f8dd87a4a74646b0c128cdb52b2bd
-      internalID: -2107341405
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yuji_Kid_Exclamation2_18
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_15"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 350
-        height: 700
+        width: 1536
+        height: 2240
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -515,8 +452,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4fad5f34d62a274c860a06b730fd3ee
-      internalID: -627181940
+      spriteID: 5c8ee8363d603af49ae9cb94c1d69ff5
+      internalID: 630794811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_16"
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 1536
+        height: 2240
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c1882da38da0f4ebeeddac1e9bcdf6
+      internalID: -808828058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_17"
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1536
+        height: 2240
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb05e95ec60517540b8bc2e5f9ab718a
+      internalID: 1195805828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uB180\uB780\uC8FC\uC778\uACF5_18"
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 0
+        width: 1536
+        height: 2240
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b84ec86d8b1fb241b99fdf85dbf0a5d
+      internalID: 760757708
       vertices: []
       indices: 
       edges: []
@@ -532,25 +532,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Yuji_Kid_Exclamation2_0: 44102329
-      Yuji_Kid_Exclamation2_1: -490422346
-      Yuji_Kid_Exclamation2_10: 934090066
-      Yuji_Kid_Exclamation2_11: 603499602
-      Yuji_Kid_Exclamation2_12: -694813826
-      Yuji_Kid_Exclamation2_13: 1856074842
-      Yuji_Kid_Exclamation2_14: 1715295572
-      Yuji_Kid_Exclamation2_15: 134125048
-      Yuji_Kid_Exclamation2_16: -827443230
-      Yuji_Kid_Exclamation2_17: -2107341405
-      Yuji_Kid_Exclamation2_18: -627181940
-      Yuji_Kid_Exclamation2_2: 1825963790
-      Yuji_Kid_Exclamation2_3: -943586591
-      Yuji_Kid_Exclamation2_4: -1259805585
-      Yuji_Kid_Exclamation2_5: 74007646
-      Yuji_Kid_Exclamation2_6: -1962245822
-      Yuji_Kid_Exclamation2_7: 1892676305
-      Yuji_Kid_Exclamation2_8: -123689128
-      Yuji_Kid_Exclamation2_9: 1212570147
+      "\uB180\uB780\uC8FC\uC778\uACF5_0": 354796271
+      "\uB180\uB780\uC8FC\uC778\uACF5_1": -1214507257
+      "\uB180\uB780\uC8FC\uC778\uACF5_10": 1906968490
+      "\uB180\uB780\uC8FC\uC778\uACF5_11": 1117377836
+      "\uB180\uB780\uC8FC\uC778\uACF5_12": 1708904317
+      "\uB180\uB780\uC8FC\uC778\uACF5_13": -750134676
+      "\uB180\uB780\uC8FC\uC778\uACF5_14": -1736585473
+      "\uB180\uB780\uC8FC\uC778\uACF5_15": 630794811
+      "\uB180\uB780\uC8FC\uC778\uACF5_16": -808828058
+      "\uB180\uB780\uC8FC\uC778\uACF5_17": 1195805828
+      "\uB180\uB780\uC8FC\uC778\uACF5_18": 760757708
+      "\uB180\uB780\uC8FC\uC778\uACF5_2": 1448515736
+      "\uB180\uB780\uC8FC\uC778\uACF5_3": -949547329
+      "\uB180\uB780\uC8FC\uC778\uACF5_4": 1871540662
+      "\uB180\uB780\uC8FC\uC778\uACF5_5": 2008137102
+      "\uB180\uB780\uC8FC\uC778\uACF5_6": 578868171
+      "\uB180\uB780\uC8FC\uC778\uACF5_7": 28044868
+      "\uB180\uB780\uC8FC\uC778\uACF5_8": -1377749621
+      "\uB180\uB780\uC8FC\uC778\uACF5_9": -195224266
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

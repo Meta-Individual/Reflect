@@ -27,7 +27,8 @@ public class FadeManager : MonoBehaviour
 
     void Start()
     {
-        fadeImage.gameObject.SetActive(false);
+        JustFade();
+        //fadeImage.gameObject.SetActive(false);
     }
 
     public void JustFade() //바로 Fade in 되는 효과

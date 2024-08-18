@@ -7660,7 +7660,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 15.36, y: 20.48}
+  m_Size: {x: 11.2, y: 22.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -7675,7 +7675,7 @@ Transform:
   m_GameObject: {fileID: 288599555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -273, y: -445, z: 0}
+  m_LocalPosition: {x: 1.9, y: -421.5, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7746,7 +7746,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
     oldSize: {x: 15.36, y: 20.48}
-    newSize: {x: 15.36, y: 20.48}
+    newSize: {x: 11.2, y: 22.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -14350,7 +14350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ebdc4ecbc94d5a4bb1073c229de46dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mOriginShakeRange: 0.1
+  mOriginShakeRange: 0.3
   mOriginShakeDuration: 2
   mOriginShakeInitSpacing: 5
 --- !u!1 &521531620
@@ -25936,7 +25936,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 27.692558, y: 6.2691574, z: 39.689472, w: 0.8449955}
+  m_margin: {x: -9.864159, y: -0.66419977, z: -15.20108, w: -14.754782}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -32920,8 +32920,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -32956,7 +32956,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -482.01913, w: -131.10458}
+  m_margin: {x: 0, y: 0, z: -848.44775, w: -131.10458}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -48506,7 +48506,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1739106945
 RectTransform:
   m_ObjectHideFlags: 0
