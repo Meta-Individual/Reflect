@@ -87,6 +87,20 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
                 _playerController._cameraManager.TransferToYuji();
                 _playerController.ChangeState(_playerController._waitState);
             }
+            else if (_playerController.currentDialogueCounter == 100) // 유우지가 집안에 들어와서 숨을 돌리는 부분
+            {
+                //유우지를 wait 상태로 전환 후 괴물이 천천히 집 안으로 들어온다.
+                //괴물이 숨을 쉬는 모션을 보여주고 100번 대사 진행
+                _playerController.ChangeState(_playerController._waitState);
+                _playerController.StartMonsterMoveCoroutine();
+            }
+            else if (_playerController.currentDialogueCounter == 101) // 유우지가 집안에 들어오는 괴물을 보고 경악하는 부분
+            {
+                //유우지를 wait 상태로 전환 후 괴물이 천천히 집 밖으로 나간다.
+                //괴물이 밖으로 나가면 101번 대사 진행
+                _playerController.ChangeState(_playerController._waitState);
+                _playerController.StartMonsterMoveBackCoroutine();
+            }
             else
             {
                 _playerController.ChangeState(_playerController._idleState);

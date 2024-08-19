@@ -48,9 +48,16 @@ public class PlayerController : MonoBehaviour
 
     [Header("Sound")]
     public AudioSource _audioSource;
+    public AudioSource stepAudioSource;
     public AudioClip exclamationSound;
     public AudioClip getKeySound;
     public AudioClip paperSound;
+    public AudioClip shakeSound;
+    public AudioClip heartbeatSound;
+    public AudioClip stepSound1;
+    public AudioClip stepSound2;
+    public AudioClip stepSound3;
+    public AudioClip stepSound4;
 
 
     [Header("Movement")]
@@ -73,6 +80,15 @@ public class PlayerController : MonoBehaviour
     public Camera _camera;
     public CameraShake _cameraShake;
     public CameraManager2 _cameraManager;
+    public AudioSource cameraAudioSource;
+
+    [Header("Monster")]
+    public GameObject monster;
+    public Transform monster_MovePoint;
+    public Transform monster_MoveBackPoint;
+
+    [Header("Flicker")]
+    public Flicker _flicker;
 
     public static PlayerController Instance { get; private set; } // Singleton 인스턴스
 
@@ -249,9 +265,13 @@ public class PlayerController : MonoBehaviour
     {
         ChangeState(_waitState);
         maxDialogueCounter = 93;
+        cameraAudioSource.clip = shakeSound;
+        cameraAudioSource.Play();
         yield return new WaitForSeconds(1.0f);
         _cameraShake.ShakeCamera();
+        _flicker.StartFlicker();
         yield return new WaitForSeconds(duration);
+        cameraAudioSource.Stop();
         _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
     }
 
@@ -284,6 +304,32 @@ public class PlayerController : MonoBehaviour
         _audioSource.Play();
     }
 
+    public void PlayWalkingSound()
+    {
+        // 1부터 4까지의 숫자를 무작위로 선택합니다.
+        int randomIndex = Random.Range(1, 5);
+
+        // 선택된 숫자에 따라 해당하는 오디오 클립을 재생합니다.
+        switch (randomIndex)
+        {
+            case 1:
+                stepAudioSource.clip = stepSound1;
+                break;
+            case 2:
+                stepAudioSource.clip = stepSound2;
+                break;
+            case 3:
+                stepAudioSource.clip = stepSound3;
+                break;
+            case 4:
+                stepAudioSource.clip = stepSound4;
+                break;
+        }
+
+        // 오디오를 재생합니다.
+        stepAudioSource.Play();
+    }
+
     public void RecoverTransparency()
     {
         Color color = GetComponent<SpriteRenderer>().color;
@@ -311,4 +357,47 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("MansionScene");
     }
+
+    /* ------------------------------------------------------ 저택 내부 2회 전용------------------------------------------------------ */
+
+    public void StartMonsterMoveCoroutine()
+    {
+        StartCoroutine(MonsterMove());
+    }
+
+    IEnumerator MonsterMove() //몬스터를 정해진 거실 위치까지 이동 후 대사 출력
+    {
+        while (monster.transform.position != monster_MovePoint.position)
+        {
+            monster.transform.position = Vector3.MoveTowards(monster.transform.position, monster_MovePoint.position, walkSpeed * Time.deltaTime);
+            yield return null; // 다음 프레임까지 대기
+        }
+
+        yield return new WaitForSeconds(1.0f);
+
+        maxDialogueCounter = 100;
+        _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
+    }
+
+    public void StartMonsterMoveBackCoroutine()
+    {
+        StartCoroutine(MonsterMoveBack());
+    }
+
+    IEnumerator MonsterMoveBack() //몬스터를 정해진 거실 위치까지 이동 후 대사 출력
+    {
+        yield return new WaitForSeconds(2.0f);
+
+        while (monster.transform.position != monster_MoveBackPoint.position)
+        {
+            monster.transform.position = Vector3.MoveTowards(monster.transform.position, monster_MoveBackPoint.position, walkSpeed * Time.deltaTime);
+            yield return null; // 다음 프레임까지 대기
+        }
+
+        yield return new WaitForSeconds(1.0f);
+
+        maxDialogueCounter = 101;
+        _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
+    }
+
 }

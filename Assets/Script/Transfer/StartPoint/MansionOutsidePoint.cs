@@ -14,5 +14,7 @@ public class MansionOutsidePoint : MonoBehaviour
         {
             player.transform.position = transform.position;
         }
+
+        player.ChangeState(player._waitState);
     }
 }
