@@ -48,11 +48,17 @@ public class PlayerController : MonoBehaviour
 
     [Header("Sound")]
     public AudioSource _audioSource;
+    public AudioSource stepAudioSource;
     public AudioClip exclamationSound;
     public AudioClip getKeySound;
     public AudioClip paperSound;
     public AudioClip shakeSound;
     public AudioClip heartbeatSound;
+    public AudioClip stepSound1;
+    public AudioClip stepSound2;
+    public AudioClip stepSound3;
+    public AudioClip stepSound4;
+
 
     [Header("Movement")]
     public float walkSpeed = 5f;
@@ -296,6 +302,32 @@ public class PlayerController : MonoBehaviour
     {
         _audioSource.clip = paperSound;
         _audioSource.Play();
+    }
+
+    public void PlayWalkingSound()
+    {
+        // 1부터 4까지의 숫자를 무작위로 선택합니다.
+        int randomIndex = Random.Range(1, 5);
+
+        // 선택된 숫자에 따라 해당하는 오디오 클립을 재생합니다.
+        switch (randomIndex)
+        {
+            case 1:
+                stepAudioSource.clip = stepSound1;
+                break;
+            case 2:
+                stepAudioSource.clip = stepSound2;
+                break;
+            case 3:
+                stepAudioSource.clip = stepSound3;
+                break;
+            case 4:
+                stepAudioSource.clip = stepSound4;
+                break;
+        }
+
+        // 오디오를 재생합니다.
+        stepAudioSource.Play();
     }
 
     public void RecoverTransparency()
