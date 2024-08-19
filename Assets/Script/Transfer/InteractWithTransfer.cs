@@ -14,7 +14,7 @@ public class InteractWithTransfer : MonoBehaviour, IInteractable
     }
     private Animator         anim;
     private GameObject       player;
-    public CameraManager     _cameraManager;
+    public  CameraManager     _cameraManager;
     private AudioSource      audioSource; // AudioSource 컴포넌트
     private PlayerInventory  playerInventory;
     private MonologueManager _monologueManager;
@@ -32,6 +32,7 @@ public class InteractWithTransfer : MonoBehaviour, IInteractable
     public bool stair = false;
     public Transform kanna;
     public bool isInteracted = false;
+    public InteractWithTransfer2 interactTransfer;
     [Header("Sound")]
     public AudioClip openDoorSound; // 방문 여는 사운드
     public AudioClip closeDoorSound; // 방문 닫는 사운드
@@ -91,6 +92,7 @@ public class InteractWithTransfer : MonoBehaviour, IInteractable
                     {
                         StartKannaDialogue(); // 칸나가 유우지에게 사과하는 대사 출력
                         isInteracted = true;
+                        interactTransfer.isInteracted = true;
                     }
                     else
                     {

@@ -6908,7 +6908,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -13.068878, y: -69.486496}
+  m_Offset: {x: -14.212524, y: -69.486496}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6919,7 +6919,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.9709473, y: 6.4388733}
+  m_Size: {x: 9.25824, y: 6.4388733}
   m_EdgeRadius: 0
 --- !u!114 &245706914
 MonoBehaviour:
@@ -7132,6 +7132,7 @@ MonoBehaviour:
   stair: 1
   kanna: {fileID: 776055007}
   isInteracted: 0
+  interactTransfer: {fileID: 2026652743}
   openDoorSound: {fileID: 0}
   closeDoorSound: {fileID: 0}
   doorClosedScript: 89
@@ -8992,7 +8993,7 @@ Transform:
   m_GameObject: {fileID: 288599555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3, y: -387.4, z: 0}
+  m_LocalPosition: {x: 7.3, y: -388.9, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9110,7 +9111,6 @@ MonoBehaviour:
   interactRange: 0
   _audioSource: {fileID: 288599565}
   stepAudioSource: {fileID: 1419343082}
-  bgmManager: {fileID: 672374349}
   exclamationSound: {fileID: 8300000, guid: 3a955759f090f71438510e937c4d1094, type: 3}
   getKeySound: {fileID: 8300000, guid: 09c1fe3f971a2f64ba9a41f031286420, type: 3}
   paperSound: {fileID: 8300000, guid: a19c95d0cdcf3684c9f599f1b48ce094, type: 3}
@@ -16816,7 +16816,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -14.524094, y: -65.45679}
+  m_Offset: {x: -16.225494, y: -65.45679}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -16827,7 +16827,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.463776, y: 14.493713}
+  m_Size: {x: 11.060974, y: 14.493713}
   m_EdgeRadius: 0
 --- !u!1 &499422599
 GameObject:
@@ -23915,6 +23915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 672374348}
+  mansionInside: {fileID: 0}
 --- !u!1 &672632323
 GameObject:
   m_ObjectHideFlags: 0
@@ -72511,6 +72512,7 @@ MonoBehaviour:
   stair: 1
   kanna: {fileID: 776055007}
   isInteracted: 0
+  interactTransfer: {fileID: 245974720}
   openDoorSound: {fileID: 0}
   closeDoorSound: {fileID: 0}
   doorClosedScript: 89

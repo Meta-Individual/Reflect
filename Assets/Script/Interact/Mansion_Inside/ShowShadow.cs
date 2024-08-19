@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShowShadow : MonoBehaviour
 {
+    private bool eventFlag = false;
     [SerializeField]
     private PlayerController _playerController; //이벤트가 발생할 때 플레이어가 못 움직이게 만들기위해 선언
     [SerializeField]
@@ -36,9 +37,12 @@ public class ShowShadow : MonoBehaviour
                 Debug.Log("방향 일치");
                 if (inventory.HasItem("LibraryDoorKey"))
                 {
-                    Debug.Log("플레이어 방향 일치 + 아이템 소지");
-                    StartCoroutine(ShowShadowWithSound());
-                    BGMManager.Instance.StartFadeIn(0.1f);
+                    if (!eventFlag)
+                    {
+                        Debug.Log("플레이어 방향 일치 + 아이템 소지");
+                        StartCoroutine(ShowShadowWithSound());
+                        BGMManager.Instance.StartFadeIn(0.1f);
+                    }
                 }
 
             }
@@ -47,6 +51,7 @@ public class ShowShadow : MonoBehaviour
 
     IEnumerator ShowShadowWithSound()
     {
+        eventFlag = true;
         shadow.SetActive(true);
         _playerController.ChangeState(_playerController._waitState);
         _playerController.OnExclamation(); //플레이어 느낌표 이모티콘 ON

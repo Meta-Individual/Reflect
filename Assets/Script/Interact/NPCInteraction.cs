@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +16,7 @@ public class NPCInteraction : MonoBehaviour, IInteractable
     public void Interact()
     {
         _npcMonologue.ShowNPCMonologue(objectID, npc);
-        if (DirectionUtils.CheckDirection(Direction.DOWN)) //ÇÃ·¹ÀÌ¾î°¡ ¸»À» °Ç ¹æÇâÀ» ÃÄ´Ùº¸µµ·Ï ±¸Çö
+        if (DirectionUtils.CheckDirection(Direction.DOWN)) //í”Œë ˆì´ì–´ê°€ ë§ì„ ê±´ ë°©í–¥ì„ ì³ë‹¤ë³´ë„ë¡ êµ¬í˜„
         {
             controller.anim.SetFloat("DirY", 1.0f);
             controller.anim.SetFloat("DirX", 0.0f);
