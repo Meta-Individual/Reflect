@@ -30,8 +30,10 @@ public class PlayerWaitState : MonoBehaviour, IPlayerState
 
     public IEnumerator GotoLivingRoom() //켄타를 찾고난 후 페이드인 페이드아웃 효과로 거실로 시점 변환
     {
+        BGMManager.Instance.StartFadeIn(1.0f);
         FadeManager.Instance.StartFade(); // 페이드 인 후 1초 대기 후 페이드 아웃
         yield return new WaitForSeconds(2.5f);
+        BGMManager.Instance.StartFadeOut(1.0f);
         _playerController.anim.SetFloat("DirX", 0.0f);
         _playerController.anim.SetFloat("DirY", -1.0f);
 

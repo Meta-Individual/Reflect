@@ -22,6 +22,7 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
                 if (_playerController.currentDialogueCounter == 3) // 숨바꼭질 시작할 때 눈 뜨는 연출
                 {
                     FadeManager.Instance.StartFadeOut();
+                    BGMManager.Instance.StartFadeOut(1.0f);
                 }
                 else if (_playerController.currentDialogueCounter == 4) // 칸나가 꾀부리지말라고 할 때 느낌표 액션 출력
                 {
@@ -76,6 +77,7 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
             else if(_playerController.currentDialogueCounter == 89)
             {
                 _playerController.StartCameraShake();
+                BGMManager.Instance.StartFadeIn(1.0f);
             }
             else if (_playerController.currentDialogueCounter == 95) //신야가 문을 두드리고 나서 대사 출력후 몬스터 등장
             {

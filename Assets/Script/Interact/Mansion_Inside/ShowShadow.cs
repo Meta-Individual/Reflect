@@ -38,6 +38,7 @@ public class ShowShadow : MonoBehaviour
                 {
                     Debug.Log("플레이어 방향 일치 + 아이템 소지");
                     StartCoroutine(ShowShadowWithSound());
+                    BGMManager.Instance.StartFadeIn(0.1f);
                 }
 
             }
@@ -63,6 +64,7 @@ public class ShowShadow : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
 
         _monologueManager.ShowMonologue("92"); //화원 대사
+        BGMManager.Instance.StartFadeOut(1.0f);
         yield return null;
     }
 }

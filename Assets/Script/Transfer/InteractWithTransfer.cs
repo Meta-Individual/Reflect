@@ -117,6 +117,7 @@ public class InteractWithTransfer : MonoBehaviour, IInteractable
 
     public void StartKannaDialogue() //카메라의 포커스를 칸나에게 맞추고, 대사 출력 후 유우지 2층으로 이동
     {
+        BGMManager.Instance.StartFadeIn(1.0f);
         _cameraManager.enabled = false;
         _playerController.ChangeState(_playerController._waitState);
         SetTransparency();

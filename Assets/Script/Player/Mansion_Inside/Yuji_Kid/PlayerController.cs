@@ -259,6 +259,7 @@ public class PlayerController : MonoBehaviour
         }
         _cameraManager1.enabled = true;
         _camera.transform.position = new Vector3(mansion2F_1.position.x, mansion2F_1.position.y, _camera.transform.position.z);
+        BGMManager.Instance.StartFadeOut(1.0f);
         yield return new WaitForSeconds(2.0f);
         ChangeState(_idleState);
     }
