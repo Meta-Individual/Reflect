@@ -46,9 +46,8 @@ public class MansionInsidePoint : MonoBehaviour
 
     IEnumerator StartFadeOutCoroutine() //FadeOut이 된지 2초 후에 다음 대사 출력
     {
-        FadeManager.Instance.StartFadeOut();
-
         yield return new WaitForSeconds(2.0f);
+        FadeManager.Instance.StartFadeOut();
 
         player.maxDialogueCounter = 99;
         player._dialogueManager.ShowDialogue(player.currentDialogueCounter.ToString());

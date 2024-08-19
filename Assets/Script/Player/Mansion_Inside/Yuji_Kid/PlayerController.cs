@@ -52,7 +52,6 @@ public class PlayerController : MonoBehaviour
     public AudioClip getKeySound;
     public AudioClip paperSound;
 
-
     [Header("Movement")]
     public float walkSpeed = 5f;
     public float runSpeed = 8f;
@@ -73,6 +72,11 @@ public class PlayerController : MonoBehaviour
     public Camera _camera;
     public CameraShake _cameraShake;
     public CameraManager2 _cameraManager;
+
+    [Header("Monster")]
+    public GameObject monster;
+    public Transform monster_MovePoint;
+    public Transform monster_MoveBackPoint;
 
     public static PlayerController Instance { get; private set; } // Singleton 인스턴스
 
@@ -311,4 +315,47 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("MansionScene");
     }
+
+    /* ------------------------------------------------------ 저택 내부 2회 전용------------------------------------------------------ */
+
+    public void StartMonsterMoveCoroutine()
+    {
+        StartCoroutine(MonsterMove());
+    }
+
+    IEnumerator MonsterMove() //몬스터를 정해진 거실 위치까지 이동 후 대사 출력
+    {
+        while (monster.transform.position != monster_MovePoint.position)
+        {
+            monster.transform.position = Vector3.MoveTowards(monster.transform.position, monster_MovePoint.position, walkSpeed * Time.deltaTime);
+            yield return null; // 다음 프레임까지 대기
+        }
+
+        yield return new WaitForSeconds(1.0f);
+
+        maxDialogueCounter = 100;
+        _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
+    }
+
+    public void StartMonsterMoveBackCoroutine()
+    {
+        StartCoroutine(MonsterMoveBack());
+    }
+
+    IEnumerator MonsterMoveBack() //몬스터를 정해진 거실 위치까지 이동 후 대사 출력
+    {
+        yield return new WaitForSeconds(2.0f);
+
+        while (monster.transform.position != monster_MoveBackPoint.position)
+        {
+            monster.transform.position = Vector3.MoveTowards(monster.transform.position, monster_MoveBackPoint.position, walkSpeed * Time.deltaTime);
+            yield return null; // 다음 프레임까지 대기
+        }
+
+        yield return new WaitForSeconds(1.0f);
+
+        maxDialogueCounter = 101;
+        _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
+    }
+
 }
