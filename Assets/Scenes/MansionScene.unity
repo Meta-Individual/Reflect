@@ -8889,7 +8889,7 @@ Transform:
   m_GameObject: {fileID: 288599555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -286.25, y: 906.61, z: 0}
+  m_LocalPosition: {x: 29.8, y: -307.8, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26555,7 +26555,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12, y: 20}
+    oldSize: {x: 12, y: 16}
     newSize: {x: 12, y: 16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -60167,7 +60167,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -363.918}
+  m_AnchoredPosition: {x: 0, y: -363.91797}
   m_SizeDelta: {x: 0, y: -727.837}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1753896903
@@ -62158,10 +62158,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 1816103282}
-  shadowWalkingSound1: {fileID: 8300000, guid: 3f3e77826b117fc4c8aa04690247129c, type: 3}
-  shadowWalkingSound2: {fileID: 8300000, guid: 82390bef64580e248a10b9a1fd3b79e3, type: 3}
-  shadowWalkingSound3: {fileID: 8300000, guid: 0aa5967170e55d840bf1e23ffd88bb29, type: 3}
-  shadowWalkingSound4: {fileID: 8300000, guid: 33601c702490bdd48882d7a18192415b, type: 3}
+  shadowWalkingSound1: {fileID: 8300000, guid: 50c75e2bef38b5b41b92faa6c8f26658, type: 3}
+  shadowWalkingSound2: {fileID: 8300000, guid: caf21fa1b7637ae449dabdf78271c0aa, type: 3}
+  shadowWalkingSound3: {fileID: 8300000, guid: 8b90e4eb7ed6d694f9e82e09447527ab, type: 3}
+  shadowWalkingSound4: {fileID: 8300000, guid: dfb1e935f9ee22941a5b18151cf502a7, type: 3}
 --- !u!82 &1816103282
 AudioSource:
   m_ObjectHideFlags: 0
@@ -64608,7 +64608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 29
-  image: {fileID: 21300000, guid: c6b78ee8219ae82458a92466f3284bdd, type: 3}
+  image: {fileID: 21300000, guid: 8dd78a879023a7e4dbe40540514f1213, type: 3}
 --- !u!1 &1891011393
 GameObject:
   m_ObjectHideFlags: 0
@@ -74392,8 +74392,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1.2020264, y: -0.010009766}
+  m_SizeDelta: {x: 26.444, y: 19.213}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138503964
 MonoBehaviour:
