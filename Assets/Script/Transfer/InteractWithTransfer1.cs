@@ -32,6 +32,7 @@ public class InteractWithTransfer2 : MonoBehaviour, IInteractable
     public bool stair = false;
     public Transform kanna;
     public bool isInteracted = false;
+    public InteractWithTransfer interactTransfer;
     [Header("Sound")]
     public AudioClip openDoorSound; // 방문 여는 사운드
     public AudioClip closeDoorSound; // 방문 닫는 사운드
@@ -91,6 +92,7 @@ public class InteractWithTransfer2 : MonoBehaviour, IInteractable
                     {
                         StartKannaDialogue(); // 칸나가 유우지에게 사과하는 대사 출력
                         isInteracted = true;
+                        interactTransfer.isInteracted = true;
                     }
                     else
                     {
@@ -117,6 +119,7 @@ public class InteractWithTransfer2 : MonoBehaviour, IInteractable
 
     public void StartKannaDialogue() //카메라의 포커스를 칸나에게 맞추고, 대사 출력 후 유우지 2층으로 이동
     {
+        BGMManager.Instance.StartFadeIn(1.0f);
         _cameraManager.enabled = false;
         _playerController.ChangeState(_playerController._waitState);
         SetTransparency();
@@ -124,12 +127,11 @@ public class InteractWithTransfer2 : MonoBehaviour, IInteractable
     }
     IEnumerator StartTransferKanna()
     {
-        kanna.position = new(kanna.position.x, kanna.position.y, -10f);
-
+        Vector3 targetPosition = new(kanna.position.x, kanna.position.y, -10f);
         yield return new WaitForSeconds(1.0f);
-        while (_camera.transform.position != kanna.position) //카메라가 김신 위치로 이동할 때까지 대기
+        while (_camera.transform.position != targetPosition) //카메라가 김신 위치로 이동할 때까지 대기
         {
-            _camera.transform.position = Vector3.MoveTowards(_camera.transform.position, kanna.position, 100f * Time.deltaTime);
+            _camera.transform.position = Vector3.MoveTowards(_camera.transform.position, targetPosition, 100f * Time.deltaTime);
             yield return null; // 다음 프레임까지 대기
         }
         _camera.transform.position = new Vector3(kanna.position.x, kanna.position.y, -10f);
@@ -138,7 +140,7 @@ public class InteractWithTransfer2 : MonoBehaviour, IInteractable
         _playerController.targetNum = 2;
         _playerController.maxDialogueCounter = 49;
         _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
-        
+
     }
 
     public void SetTransparency()
