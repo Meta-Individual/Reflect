@@ -38,6 +38,9 @@ public class MansionInsidePoint : MonoBehaviour
 
     public void StartInsideCoroutine()
     {
+        player._audioSource.clip = player.heartbeatSound;
+        player._audioSource.loop = true;
+        player._audioSource.Play();
         _doorAudioSource.clip = _doorClip;
         _doorAudioSource.Play();
         StartCoroutine(StartFadeOutCoroutine());

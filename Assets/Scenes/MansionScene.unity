@@ -9008,6 +9008,7 @@ MonoBehaviour:
   getKeySound: {fileID: 8300000, guid: 09c1fe3f971a2f64ba9a41f031286420, type: 3}
   paperSound: {fileID: 8300000, guid: a19c95d0cdcf3684c9f599f1b48ce094, type: 3}
   shakeSound: {fileID: 8300000, guid: e87ca41c503138b48a23bdbea0d7e66a, type: 3}
+  heartbeatSound: {fileID: 8300000, guid: b148e66f324f33e42b1cba3cad6279c9, type: 3}
   walkSpeed: 20
   runSpeed: 25
   gameObject1: {fileID: 603943874}

@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip getKeySound;
     public AudioClip paperSound;
     public AudioClip shakeSound;
+    public AudioClip heartbeatSound;
 
     [Header("Movement")]
     public float walkSpeed = 5f;
