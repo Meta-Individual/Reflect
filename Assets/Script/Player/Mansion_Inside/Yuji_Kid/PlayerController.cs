@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip exclamationSound;
     public AudioClip getKeySound;
     public AudioClip paperSound;
+    public AudioClip shakeSound;
 
     [Header("Movement")]
     public float walkSpeed = 5f;
@@ -72,11 +73,15 @@ public class PlayerController : MonoBehaviour
     public Camera _camera;
     public CameraShake _cameraShake;
     public CameraManager2 _cameraManager;
+    public AudioSource cameraAudioSource;
 
     [Header("Monster")]
     public GameObject monster;
     public Transform monster_MovePoint;
     public Transform monster_MoveBackPoint;
+
+    [Header("Flicker")]
+    public Flicker _flicker;
 
     public static PlayerController Instance { get; private set; } // Singleton 인스턴스
 
@@ -253,9 +258,13 @@ public class PlayerController : MonoBehaviour
     {
         ChangeState(_waitState);
         maxDialogueCounter = 93;
+        cameraAudioSource.clip = shakeSound;
+        cameraAudioSource.Play();
         yield return new WaitForSeconds(1.0f);
         _cameraShake.ShakeCamera();
+        _flicker.StartFlicker();
         yield return new WaitForSeconds(duration);
+        cameraAudioSource.Stop();
         _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
     }
 
