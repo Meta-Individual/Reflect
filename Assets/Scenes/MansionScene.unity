@@ -8891,7 +8891,7 @@ Transform:
   m_GameObject: {fileID: 288599555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 274.4, y: -429.6, z: 0}
+  m_LocalPosition: {x: -277.8, y: -444.6, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31698,7 +31698,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -14.082336, y: -5.8159637}
+  m_Offset: {x: -14.319435, y: -5.8159637}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -31709,7 +31709,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.741638, y: 12.6319275}
+  m_Size: {x: 12.215836, y: 12.6319275}
   m_EdgeRadius: 0
 --- !u!1 &926126347
 GameObject:
@@ -52858,7 +52858,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -14.082336, y: -5.8159637}
+  m_Offset: {x: -12.815598, y: -5.8159637}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -52869,7 +52869,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.741638, y: 12.6319275}
+  m_Size: {x: 14.275116, y: 12.6319275}
   m_EdgeRadius: 0
 --- !u!114 &1537776637
 MonoBehaviour:
@@ -59502,7 +59502,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -14.082336, y: -5.8159637}
+  m_Offset: {x: -11.711243, y: -5.8159637}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -69621,7 +69621,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -14.082336, y: -5.8159637}
+  m_Offset: {x: -13.331497, y: -5.8159637}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -69632,7 +69632,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.741638, y: 12.6319275}
+  m_Size: {x: 8.975372, y: 12.6319275}
   m_EdgeRadius: 0
 --- !u!1 &2025192683
 GameObject:
