@@ -11,6 +11,7 @@ public class KimsinController : MonoBehaviour
 
     [Header("Controller")]
     public PlayerController _playerController;
+    public KannaController _kannaController;
     public KentaController _kentaController;
 
     [SerializeField]
@@ -87,6 +88,7 @@ public class KimsinController : MonoBehaviour
             yield return null; // 다음 프레임까지 대기
         }
         _kentaController.anim.SetFloat("DirY", -1.0f);
+        _kannaController.anim.SetFloat("DirY", -1.0f);
 
         anim.SetBool("Walk", false);
         _playerController.anim.SetFloat("DirX", 0.0f);

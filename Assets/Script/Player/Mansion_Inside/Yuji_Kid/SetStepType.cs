@@ -33,6 +33,14 @@ public class SetStepType : MonoBehaviour
         {
             _kannaController.stepType = _stepType;
         }
+        else if (collision.CompareTag("Kenta"))
+        {
+            _kentaController.stepType = _stepType;
+        }
+        else if (collision.CompareTag("Kimsin"))
+        {
+            _kimsinController.stepType = _stepType;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -46,6 +54,14 @@ public class SetStepType : MonoBehaviour
             else if (collision.CompareTag("Kanna"))
             {
                 _kannaController.stepType = _afterStepType;
+            }
+            else if (collision.CompareTag("Kenta"))
+            {
+                _kentaController.stepType = _afterStepType;
+            }
+            else if (collision.CompareTag("Kimsin"))
+            {
+                _kimsinController.stepType = _afterStepType;
             }
         }
     }

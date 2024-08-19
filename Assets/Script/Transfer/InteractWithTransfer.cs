@@ -123,11 +123,11 @@ public class InteractWithTransfer : MonoBehaviour, IInteractable
     }
     IEnumerator StartTransferKanna()
     {
-        kanna.position = new(kanna.position.x, kanna.position.y, -10f);
+        Vector3 targetPosition = new(kanna.position.x, kanna.position.y, -10f);
         yield return new WaitForSeconds(1.0f);
-        while (_camera.transform.position != kanna.position) //카메라가 김신 위치로 이동할 때까지 대기
+        while (_camera.transform.position != targetPosition) //카메라가 김신 위치로 이동할 때까지 대기
         {
-            _camera.transform.position = Vector3.MoveTowards(_camera.transform.position, kanna.position, 100f * Time.deltaTime);
+            _camera.transform.position = Vector3.MoveTowards(_camera.transform.position, targetPosition, 100f * Time.deltaTime);
             yield return null; // 다음 프레임까지 대기
         }
         _camera.transform.position = new Vector3(kanna.position.x, kanna.position.y, -10f);
