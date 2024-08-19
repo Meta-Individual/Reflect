@@ -118,16 +118,17 @@ public class InteractWithTransfer : MonoBehaviour, IInteractable
     public void StartKannaDialogue() //카메라의 포커스를 칸나에게 맞추고, 대사 출력 후 유우지 2층으로 이동
     {
         _cameraManager.enabled = false;
+        _playerController.ChangeState(_playerController._waitState);
         SetTransparency();
         StartCoroutine(StartTransferKanna());
     }
     IEnumerator StartTransferKanna()
     {
-        kanna.position = new(kanna.position.x, kanna.position.y, -10f);
+        Vector3 targetPosition = new(kanna.position.x, kanna.position.y, -10f);
         yield return new WaitForSeconds(1.0f);
-        while (_camera.transform.position != kanna.position) //카메라가 김신 위치로 이동할 때까지 대기
+        while (_camera.transform.position != targetPosition) //카메라가 김신 위치로 이동할 때까지 대기
         {
-            _camera.transform.position = Vector3.MoveTowards(_camera.transform.position, kanna.position, 100f * Time.deltaTime);
+            _camera.transform.position = Vector3.MoveTowards(_camera.transform.position, targetPosition, 100f * Time.deltaTime);
             yield return null; // 다음 프레임까지 대기
         }
         _camera.transform.position = new Vector3(kanna.position.x, kanna.position.y, -10f);

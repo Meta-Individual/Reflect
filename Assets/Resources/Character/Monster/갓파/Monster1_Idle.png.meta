@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c7f854b1850da7d4c9c93ebe57071d3f
+guid: bde990cfd70f2ac4b967c6e0e6dd3989
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 5
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uAC13\uD30C_0"
+      name: Monster1_Idle_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 150
-        width: 100
-        height: 150
+        y: 4800
+        width: 3200
+        height: 4800
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ddbefb95b2c9254fbd064f9cf8be14e
-      internalID: -1158701569
+      spriteID: b92af78e15d4dc24b990d86d434986b3
+      internalID: 1534877437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uAC13\uD30C_1"
+      name: Monster1_Idle_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 150
-        width: 100
-        height: 150
+        x: 3200
+        y: 4800
+        width: 3200
+        height: 4800
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee7ad64ec43867f489767b7262839d7a
-      internalID: 1198226596
+      spriteID: 4372847cb590fa1429e10dd3c76a8924
+      internalID: 1888599441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uAC13\uD30C_2"
+      name: Monster1_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 4800
+        width: 3200
+        height: 4800
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc694afef850893488b1af31ae8ead12
+      internalID: -1379246631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster1_Idle_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 150
+        width: 3200
+        height: 4800
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 867d6c33425a07a46992466577ca27f3
-      internalID: -794503275
+      spriteID: 646e3f5417460034fb971abfeedd0d70
+      internalID: 566360498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uAC13\uD30C_3"
+      name: Monster1_Idle_4
       rect:
         serializedVersion: 2
-        x: 100
+        x: 3200
         y: 0
-        width: 100
-        height: 150
+        width: 3200
+        height: 4800
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0eaff40ea9d98d4a948441c3a425f3c
-      internalID: -651194136
+      spriteID: fd2701f31fb3d8946aa99c7b07af783c
+      internalID: 1571640092
       vertices: []
       indices: 
       edges: []
@@ -217,10 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\uAC13\uD30C_0": -1158701569
-      "\uAC13\uD30C_1": 1198226596
-      "\uAC13\uD30C_2": -794503275
-      "\uAC13\uD30C_3": -651194136
+      Monster1_Idle_0: 1534877437
+      Monster1_Idle_1: 1888599441
+      Monster1_Idle_2: -1379246631
+      Monster1_Idle_3: 566360498
+      Monster1_Idle_4: 1571640092
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

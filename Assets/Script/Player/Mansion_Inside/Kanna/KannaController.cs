@@ -29,8 +29,19 @@ public class KannaController : MonoBehaviour
 
     [Header("Movement")]
     public float walkSpeed = 5f;
+    public StepType stepType;
 
     [Header("Sound")]
+    public AudioSource _audioSource;
+    public AudioSource _stepAudioSource;
+    public AudioClip[] CarpetClips; // Carpet1, Carpet2, Carpet3, Carpet4
+    public AudioClip[] DirtClips;   // Dirt1, Dirt2, Dirt3, Dirt4
+    public AudioClip[] HallClips;   // Hall1, Hall2, Hall3, Hall4
+    public AudioClip[] ConcreteClips; // Concrete1, Concrete2, Concrete3, Concrete4
+    public AudioClip[] GrassClips;  // Grass1, Grass2, Grass3, Grass4
+    public AudioClip[] WoodClips;   // Wood1, Wood2, Wood3, Wood4
+    private System.Random random = new();
+    public AudioClip doorOpenSound;
     public AudioClip hideAndSeek; // 방문 여는 사운드
 
     public IKannaState CurrentState
@@ -83,6 +94,40 @@ public class KannaController : MonoBehaviour
         }
     }
 
+
+    public void PlayWalkingSound()
+    {
+        AudioClip[] selectedClips = null;
+
+        switch (stepType)
+        {
+            case StepType.Carpet:
+                selectedClips = CarpetClips;
+                break;
+            case StepType.Dirt:
+                selectedClips = DirtClips;
+                break;
+            case StepType.Hall:
+                selectedClips = HallClips;
+                break;
+            case StepType.Concrete:
+                selectedClips = ConcreteClips;
+                break;
+            case StepType.Grass:
+                selectedClips = GrassClips;
+                break;
+            case StepType.Wood:
+                selectedClips = WoodClips;
+                break;
+        }
+
+        if (selectedClips != null && selectedClips.Length > 0)
+        {
+            int randomIndex = random.Next(0, selectedClips.Length);
+            _stepAudioSource.clip = selectedClips[randomIndex];
+            _stepAudioSource.Play();
+        }
+    }
     public void SetTransparency()
     {
         Color color = _spriteRenderer.color;

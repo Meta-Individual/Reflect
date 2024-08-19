@@ -54,15 +54,20 @@ public class PlayerController : MonoBehaviour
     public AudioClip paperSound;
     public AudioClip shakeSound;
     public AudioClip heartbeatSound;
-    public AudioClip stepSound1;
-    public AudioClip stepSound2;
-    public AudioClip stepSound3;
-    public AudioClip stepSound4;
+    public AudioClip[] CarpetClips; // Carpet1, Carpet2, Carpet3, Carpet4
+    public AudioClip[] DirtClips;   // Dirt1, Dirt2, Dirt3, Dirt4
+    public AudioClip[] HallClips;   // Hall1, Hall2, Hall3, Hall4
+    public AudioClip[] ConcreteClips; // Concrete1, Concrete2, Concrete3, Concrete4
+    public AudioClip[] GrassClips;  // Grass1, Grass2, Grass3, Grass4
+    public AudioClip[] WoodClips;   // Wood1, Wood2, Wood3, Wood4
+    private System.Random random = new System.Random();
+
 
 
     [Header("Movement")]
     public float walkSpeed = 5f;
     public float runSpeed = 8f;
+    public StepType stepType = StepType.Concrete;
 
     [Header("BoxCollider")]
     public GameObject gameObject1;
@@ -78,6 +83,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Camera")]
     public Camera _camera;
+    public CameraManager _cameraManager1;
     public CameraShake _cameraShake;
     public CameraManager2 _cameraManager;
     public AudioSource cameraAudioSource;
@@ -251,6 +257,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = mansion2F_2.position;
         }
+        _cameraManager1.enabled = true;
         _camera.transform.position = new Vector3(mansion2F_1.position.x, mansion2F_1.position.y, _camera.transform.position.z);
         yield return new WaitForSeconds(2.0f);
         ChangeState(_idleState);
@@ -271,6 +278,9 @@ public class PlayerController : MonoBehaviour
         _cameraShake.ShakeCamera();
         _flicker.StartFlicker();
         yield return new WaitForSeconds(duration);
+
+        yield return new WaitForSeconds(1.0f);
+
         cameraAudioSource.Stop();
         _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
     }
@@ -306,28 +316,36 @@ public class PlayerController : MonoBehaviour
 
     public void PlayWalkingSound()
     {
-        // 1부터 4까지의 숫자를 무작위로 선택합니다.
-        int randomIndex = Random.Range(1, 5);
+        AudioClip[] selectedClips = null;
 
-        // 선택된 숫자에 따라 해당하는 오디오 클립을 재생합니다.
-        switch (randomIndex)
+        switch (stepType)
         {
-            case 1:
-                stepAudioSource.clip = stepSound1;
+            case StepType.Carpet:
+                selectedClips = CarpetClips;
                 break;
-            case 2:
-                stepAudioSource.clip = stepSound2;
+            case StepType.Dirt:
+                selectedClips = DirtClips;
                 break;
-            case 3:
-                stepAudioSource.clip = stepSound3;
+            case StepType.Hall:
+                selectedClips = HallClips;
                 break;
-            case 4:
-                stepAudioSource.clip = stepSound4;
+            case StepType.Concrete:
+                selectedClips = ConcreteClips;
+                break;
+            case StepType.Grass:
+                selectedClips = GrassClips;
+                break;
+            case StepType.Wood:
+                selectedClips = WoodClips;
                 break;
         }
 
-        // 오디오를 재생합니다.
-        stepAudioSource.Play();
+        if (selectedClips != null && selectedClips.Length > 0)
+        {
+            int randomIndex = random.Next(0, selectedClips.Length);
+            stepAudioSource.clip = selectedClips[randomIndex];
+            stepAudioSource.Play();
+        }
     }
 
     public void RecoverTransparency()
@@ -367,11 +385,13 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator MonsterMove() //몬스터를 정해진 거실 위치까지 이동 후 대사 출력
     {
+        monster.GetComponent<Animator>().SetBool("Walk", true);
         while (monster.transform.position != monster_MovePoint.position)
         {
             monster.transform.position = Vector3.MoveTowards(monster.transform.position, monster_MovePoint.position, walkSpeed * Time.deltaTime);
             yield return null; // 다음 프레임까지 대기
         }
+        monster.GetComponent<Animator>().SetBool("Walk", false);
 
         yield return new WaitForSeconds(1.0f);
 
@@ -381,7 +401,7 @@ public class PlayerController : MonoBehaviour
 
     public void StartMonsterMoveBackCoroutine()
     {
-        StartCoroutine(MonsterMoveBack());
+        StartCoroutine(YujiStun());
     }
 
     IEnumerator MonsterMoveBack() //몬스터를 정해진 거실 위치까지 이동 후 대사 출력
@@ -395,6 +415,14 @@ public class PlayerController : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1.0f);
+
+        maxDialogueCounter = 101;
+        _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
+    }
+
+    IEnumerator YujiStun()
+    {
+        yield return new WaitForSeconds(2.0f);
 
         maxDialogueCounter = 101;
         _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());

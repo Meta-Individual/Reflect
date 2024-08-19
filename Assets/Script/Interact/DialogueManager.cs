@@ -6,6 +6,7 @@ using UnityEngine;
 public class DialogueManager : MonoBehaviour
 {
     public PlayerController _playerController;
+    public GameObject arrow;
     public static DialogueManager Instance { get; private set; } // Singleton 인스턴스
 
 
@@ -35,6 +36,8 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     private IEnumerator ActiveDialogue(string objectID)
     {
+        arrow.SetActive(false);
+
         (string characterName, string sprite, string dialogue) = LoadDialogue.Instance.GetDialogue(objectID);
 
         _playerController.isDialogue = true;
@@ -56,7 +59,7 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
 
         }
-
+        arrow.SetActive(true);
         _playerController.isDialogue = false;
     }
 
