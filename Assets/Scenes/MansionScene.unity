@@ -3297,7 +3297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &142885200
 Transform:
   m_ObjectHideFlags: 0
@@ -11490,7 +11490,7 @@ MonoBehaviour:
   arrow_UI: {fileID: 1312499606}
   direction: 1
   targetLocation: {fileID: 2128512991}
-  isLocked: 0
+  isLocked: 1
   keyItemName: LibraryDoorKey
   stair: 0
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
@@ -65637,6 +65637,7 @@ GameObject:
   - component: {fileID: 1834419075}
   - component: {fileID: 1834419074}
   - component: {fileID: 1834419076}
+  - component: {fileID: 1834419077}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -65693,7 +65694,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 30}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1834419075
@@ -65726,6 +65727,27 @@ MonoBehaviour:
   controller: {fileID: 0}
   movePoint: {fileID: 1211054341}
   moveBackPoint: {fileID: 1966995231}
+--- !u!95 &1834419077
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834419073}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a43a440055a5ea644bc84b898aa34445, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1838926926
 GameObject:
   m_ObjectHideFlags: 0
@@ -70262,7 +70284,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -26.313957, y: 0}
+  m_Offset: {x: -32.314144, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -70273,7 +70295,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.031059, y: 3}
+  m_Size: {x: 21.03144, y: 3}
   m_EdgeRadius: 0
 --- !u!1 &1979908854
 GameObject:

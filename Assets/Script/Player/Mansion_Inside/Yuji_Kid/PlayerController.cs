@@ -278,6 +278,9 @@ public class PlayerController : MonoBehaviour
         _cameraShake.ShakeCamera();
         _flicker.StartFlicker();
         yield return new WaitForSeconds(duration);
+
+        yield return new WaitForSeconds(1.0f);
+
         cameraAudioSource.Stop();
         _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
     }
@@ -382,11 +385,13 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator MonsterMove() //몬스터를 정해진 거실 위치까지 이동 후 대사 출력
     {
+        monster.GetComponent<Animator>().SetBool("Walk", true);
         while (monster.transform.position != monster_MovePoint.position)
         {
             monster.transform.position = Vector3.MoveTowards(monster.transform.position, monster_MovePoint.position, walkSpeed * Time.deltaTime);
             yield return null; // 다음 프레임까지 대기
         }
+        monster.GetComponent<Animator>().SetBool("Walk", false);
 
         yield return new WaitForSeconds(1.0f);
 
@@ -396,7 +401,7 @@ public class PlayerController : MonoBehaviour
 
     public void StartMonsterMoveBackCoroutine()
     {
-        StartCoroutine(MonsterMoveBack());
+        StartCoroutine(YujiStun());
     }
 
     IEnumerator MonsterMoveBack() //몬스터를 정해진 거실 위치까지 이동 후 대사 출력
@@ -410,6 +415,14 @@ public class PlayerController : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1.0f);
+
+        maxDialogueCounter = 101;
+        _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
+    }
+
+    IEnumerator YujiStun()
+    {
+        yield return new WaitForSeconds(2.0f);
 
         maxDialogueCounter = 101;
         _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());

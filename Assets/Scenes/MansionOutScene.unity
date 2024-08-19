@@ -1620,6 +1620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerController: {fileID: 1428279914}
+  arrow: {fileID: 0}
 --- !u!114 &523631793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3863,11 +3864,21 @@ MonoBehaviour:
   interactionAreaSize: {x: 2, y: 1}
   interactRange: 0
   _audioSource: {fileID: 1428279906}
+  stepAudioSource: {fileID: 0}
   exclamationSound: {fileID: 0}
   getKeySound: {fileID: 0}
   paperSound: {fileID: 0}
+  shakeSound: {fileID: 0}
+  heartbeatSound: {fileID: 0}
+  CarpetClips: []
+  DirtClips: []
+  HallClips: []
+  ConcreteClips: []
+  GrassClips: []
+  WoodClips: []
   walkSpeed: 5
   runSpeed: 8
+  stepType: 3
   gameObject1: {fileID: 0}
   gameObject2: {fileID: 0}
   gameObject3: {fileID: 0}
@@ -3877,8 +3888,14 @@ MonoBehaviour:
   mansion2F_2: {fileID: 0}
   targetNum: 0
   _camera: {fileID: 1506449880}
+  _cameraManager1: {fileID: 0}
   _cameraShake: {fileID: 0}
   _cameraManager: {fileID: 1506449882}
+  cameraAudioSource: {fileID: 0}
+  monster: {fileID: 0}
+  monster_MovePoint: {fileID: 0}
+  monster_MoveBackPoint: {fileID: 0}
+  _flicker: {fileID: 0}
 --- !u!1 &1439578282
 GameObject:
   m_ObjectHideFlags: 0
@@ -5164,6 +5181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2011142914}
   - component: {fileID: 2011142913}
+  - component: {fileID: 2011142915}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -5212,12 +5230,12 @@ SpriteRenderer:
   m_SortingLayerID: 1039838431
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1158701569, guid: c7f854b1850da7d4c9c93ebe57071d3f, type: 3}
+  m_Sprite: {fileID: 1534877437, guid: bde990cfd70f2ac4b967c6e0e6dd3989, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1.5}
+  m_Size: {x: 640, y: 959.99994}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5239,6 +5257,27 @@ Transform:
   - {fileID: 683254589}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2011142915
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011142912}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a43a440055a5ea644bc84b898aa34445, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2037290946
 GameObject:
   m_ObjectHideFlags: 0

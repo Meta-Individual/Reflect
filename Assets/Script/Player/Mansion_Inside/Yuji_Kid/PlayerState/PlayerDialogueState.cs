@@ -101,6 +101,11 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
                 _playerController.ChangeState(_playerController._waitState);
                 _playerController.StartMonsterMoveBackCoroutine();
             }
+            else if (_playerController.currentDialogueCounter == 102) // 유우지가 아빠를 부르는 부분
+            {
+                _playerController.ChangeState(_playerController._waitState);
+                FadeManager.Instance.StartFadeIn();
+            }
             else
             {
                 _playerController.ChangeState(_playerController._idleState);
