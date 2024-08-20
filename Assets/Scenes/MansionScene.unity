@@ -9060,8 +9060,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1c7c0f0241ab0514492208928cabfa91, type: 3}
   - {fileID: 8300000, guid: fbc00c2684d03e14fb8db6f88a2cb6d7, type: 3}
   - {fileID: 8300000, guid: 34a8788d92947314194450bdb16d98a3, type: 3}
-  walkSpeed: 20
-  runSpeed: 25
+  walkSpeed: 18
+  runSpeed: 28
   stepType: 3
   gameObject1: {fileID: 603943874}
   gameObject2: {fileID: 266865742}
@@ -17404,7 +17404,7 @@ Transform:
   m_GameObject: {fileID: 514519326}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1039.7, y: 730.5, z: 0}
+  m_LocalPosition: {x: 1039.7, y: 727.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
