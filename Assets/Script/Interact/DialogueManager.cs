@@ -7,6 +7,19 @@ public class DialogueManager : MonoBehaviour
 {
     public PlayerController _playerController;
     public GameObject arrow;
+
+    private enum SoundType
+    {
+        SKIP,
+        Default
+    }
+
+    [Header("Sound")]
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip typingSound;
+    [SerializeField] private AudioClip skipSound;
+    [SerializeField] private float fadeDuration = 0.1f; // 페이드 아웃 시간
+
     public static DialogueManager Instance { get; private set; } // Singleton 인스턴스
 
 
@@ -48,19 +61,61 @@ public class DialogueManager : MonoBehaviour
         _playerController.dialoguePanel.SetActive(true);
         _playerController.currentDialogueCounter++;
 
+        PlaySound(SoundType.Default);
+
         for (int i = 0; i < dialogue.Length; i++) //대사 나오는 도중 Space바를 누르면 대사 스킵
         {
             if (Input.GetKey(KeyCode.Space))
             {
                 _playerController.dialogue.text = dialogue;
+                PlaySound(SoundType.SKIP);
                 break;
             }
             _playerController.dialogue.text += dialogue[i];
             yield return new WaitForSeconds(0.05f);
 
         }
+
+        _audioSource.Stop();
         arrow.SetActive(true);
         _playerController.isDialogue = false;
+    }
+
+    private void PlaySound(SoundType _soundType)
+    {
+        switch (_soundType)
+        {
+            case SoundType.SKIP:
+                _audioSource.clip = skipSound;
+                _audioSource.loop = false;
+                _audioSource.Play();
+                break;
+            case SoundType.Default:
+                _audioSource.clip = typingSound;
+                _audioSource.loop = true;
+                _audioSource.Play();
+                break;
+        }
+    }
+
+    public void StopAudioWithFadeOut()
+    {
+        StartCoroutine(FadeOutCoroutine());
+    }
+
+    private IEnumerator FadeOutCoroutine()
+    {
+        float startVolume = _audioSource.volume;
+
+        while (_audioSource.volume > 0)
+        {
+            _audioSource.volume -= startVolume * Time.deltaTime / fadeDuration;
+            yield return null;
+        }
+
+        _audioSource.loop = false;
+        _audioSource.Stop();
+        _audioSource.volume = startVolume; // 원래 볼륨으로 되돌림
     }
 
     public Sprite LoadSprite(string folderName, string spriteName)
