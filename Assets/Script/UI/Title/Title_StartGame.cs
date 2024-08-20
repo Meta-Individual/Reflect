@@ -8,6 +8,11 @@ public class Title_StartGame : MonoBehaviour
 
     public void StartBtn() 
     {
+        
+        Invoke("LoadScene", 1.5f);
+    }
+    public void LoadScene()
+    {
         SceneManager.LoadScene(sceneName);
-    } 
+    }
 }
