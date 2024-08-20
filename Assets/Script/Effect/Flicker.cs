@@ -27,19 +27,19 @@ public class Flicker : MonoBehaviour
     {
         PlayFlickerSound();
         yield return new WaitForSeconds(0.5f);
-        SetTransparency(230);
+        SetTransparency(240);
         yield return new WaitForSeconds(0.1f);
         SetTransparency(0);
         yield return new WaitForSeconds(0.2f);
-        SetTransparency(230);
+        SetTransparency(240);
         yield return new WaitForSeconds(0.1f);
         SetTransparency(0);
         yield return new WaitForSeconds(0.15f);
-        SetTransparency(230);
+        SetTransparency(240);
         yield return new WaitForSeconds(0.1f);
         SetTransparency(0);
         yield return new WaitForSeconds(0.5f);
-        SetTransparency(230);
+        SetTransparency(240);
         yield return new WaitForSeconds(0.1f);
         SetTransparency(0);
     }
