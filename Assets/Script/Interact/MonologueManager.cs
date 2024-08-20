@@ -52,6 +52,11 @@ public class MonologueManager: MonoBehaviour
 
         foreach (char letter in dialogue)
         {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                _playerController.monologuePanel.GetComponentInChildren<TMP_Text>().text = dialogue;
+                break;
+            }
             _playerController.monologuePanel.GetComponentInChildren<TMP_Text>().text += letter;
             yield return typingTime;
         }

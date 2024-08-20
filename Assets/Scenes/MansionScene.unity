@@ -603,7 +603,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1263645729
   m_SortingLayer: 1
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b5413d7b05decb240a4d1f94384d84e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1092,6 +1092,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -1643,6 +1645,8 @@ MonoBehaviour:
   isLocked: 1
   keyItemName: Kenta
   stair: 1
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: 174
@@ -6710,6 +6714,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -8253,6 +8259,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -10870,6 +10878,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -11296,6 +11306,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1312499607}
+  - {fileID: 826859823}
   m_Father: {fileID: 40061725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &346756671
@@ -11412,6 +11423,8 @@ MonoBehaviour:
   isLocked: 1
   keyItemName: LibraryDoorKey
   stair: 0
+  _audioSource: {fileID: 826859824}
+  unlockSound: {fileID: 8300000, guid: 09c1fe3f971a2f64ba9a41f031286420, type: 3}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: 87
@@ -13201,6 +13214,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -15652,6 +15667,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -17407,7 +17424,7 @@ Transform:
   m_GameObject: {fileID: 514519326}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1039.7, y: 727.3, z: 0}
+  m_LocalPosition: {x: 1039.7, y: 720.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21480,6 +21497,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -28496,6 +28515,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -29617,6 +29638,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -29763,6 +29786,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &826859822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 826859823}
+  - component: {fileID: 826859824}
+  m_Layer: 8
+  m_Name: GetKeyAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &826859823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826859822}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 346756670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &826859824
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826859822}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -8811309475978793581, guid: 33a1713bddbf1c84baa54c968c7d2cff, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &827889025
 GameObject:
   m_ObjectHideFlags: 0
@@ -32728,8 +32879,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -35546,8 +35697,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1263645729
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 303fd1f57dc60204fbf900cd62f5950c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -36489,6 +36640,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -46254,6 +46407,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -46793,6 +46948,8 @@ MonoBehaviour:
   isLocked: 1
   keyItemName: Kenta
   stair: 1
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: 174
@@ -49644,6 +49801,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -56486,6 +56645,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -56684,6 +56845,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -58564,6 +58727,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -58762,6 +58927,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -59625,6 +59792,8 @@ MonoBehaviour:
   isLocked: 1
   keyItemName: Kenta
   stair: 1
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: 174
@@ -63298,6 +63467,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -65348,6 +65519,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -65458,7 +65631,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1263645729
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1158701569, guid: c7f854b1850da7d4c9c93ebe57071d3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -67994,6 +68167,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -68394,6 +68569,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -69974,6 +70151,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -70451,6 +70630,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -71037,6 +71218,8 @@ MonoBehaviour:
   isLocked: 1
   keyItemName: Kenta
   stair: 1
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: 174
@@ -72277,6 +72460,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -74942,6 +75127,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -75585,6 +75772,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -76985,6 +77174,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
@@ -77525,6 +77716,8 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
+  _audioSource: {fileID: 0}
+  unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."

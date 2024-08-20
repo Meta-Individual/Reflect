@@ -6,7 +6,6 @@ public class PlayerRunningState : MonoBehaviour, IPlayerState
 {
     private PlayerController _playerController;
     private Vector2 firstInputDirection;
-    private bool firstInputSet;
 
     public void OnStateEnter(PlayerController playerController)
     {
@@ -17,7 +16,6 @@ public class PlayerRunningState : MonoBehaviour, IPlayerState
 
         _playerController.movement = Vector2.zero;
         firstInputDirection = Vector2.zero;
-        firstInputSet = false;
     }
 
 
@@ -112,8 +110,6 @@ public class PlayerRunningState : MonoBehaviour, IPlayerState
     public void OnStateExit()
     {
         _playerController.anim.SetBool("Run", false);
-        _playerController.movement = Vector2.zero;
-
     }
 
 }

@@ -7,8 +7,6 @@ public class PlayerWalkState : MonoBehaviour, IPlayerState
 {
     private PlayerController _playerController;
     private Vector2 firstInputDirection;
-    private bool firstInputSet;
-
 
     public void OnStateEnter(PlayerController playerController)
     {
@@ -19,7 +17,6 @@ public class PlayerWalkState : MonoBehaviour, IPlayerState
         _playerController.movement.x = 0;
         _playerController.movement.y = 0;
         firstInputDirection = Vector2.zero;
-        firstInputSet = false;
     }
 
 
@@ -111,8 +108,6 @@ public class PlayerWalkState : MonoBehaviour, IPlayerState
     }
     public void OnStateExit()
     {
-        _playerController.movement.x = 0;
-        _playerController.movement.y = 0;
         _playerController.anim.SetBool("Walk", false);
     }
 

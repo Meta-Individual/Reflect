@@ -12,15 +12,14 @@ public class TransferMap : MonoBehaviour, IInteractable
         UP,
         DOWN
     }
-    private Animator         anim;
-    private GameObject       player;
-    private AudioSource      audioSource; // AudioSource 컴포넌트
-    private PlayerInventory  playerInventory;
+    private Animator anim;
+    private GameObject player;
+    private AudioSource audioSource; // AudioSource 컴포넌트
+    private PlayerInventory playerInventory;
     private MonologueManager _monologueManager;
     private PlayerController _playerController;
-    private Camera           _camera;
-    private bool             playerInRange = false; // 플레이어가 포탈 위에 있는지 여부
-    private bool             isMonologue = false;
+    private Camera _camera;
+    private bool playerInRange = false; // 플레이어가 포탈 위에 있는지 여부
 
     public GameObject arrow_UI;
 
@@ -31,6 +30,8 @@ public class TransferMap : MonoBehaviour, IInteractable
     public string keyItemName = "Key";
     public bool stair = false;
     [Header("Sound")]
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip unlockSound;
     public AudioClip openDoorSound; // 방문 여는 사운드
     public AudioClip closeDoorSound; // 방문 닫는 사운드
     [Header("Script")]
@@ -53,10 +54,13 @@ public class TransferMap : MonoBehaviour, IInteractable
     {
         if (playerInRange)
         {
-            if (CheckDirection())
+
+            if (DirectionUtils.CheckDirection((global::Direction)direction))
             {
                 ShowUI();
             }
+
+
             else
             {
                 HideUI();
@@ -66,9 +70,9 @@ public class TransferMap : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (Input.GetKeyDown((KeyCode)CustomKey.Interact) && (_playerController.CurrentState == _playerController._idleState || _playerController.CurrentState == _playerController._walkState))
+        if (DirectionUtils.CheckDirection((global::Direction)direction))
         {
-            if (!isMonologue)
+            if ((_playerController.CurrentState == _playerController._idleState || _playerController.CurrentState == _playerController._walkState))
             {
                 if (isLocked)
                 {
@@ -79,25 +83,21 @@ public class TransferMap : MonoBehaviour, IInteractable
                     else
                     {
                         _monologueManager.ShowMonologue(doorClosedScript);
-                        isMonologue = true;
                     }
                 }
                 else
                 {
                     TransformWithSound(); // 방문 사운드 재생
                 }
-            }
-            else
-            {
-                isMonologue = false;
 
             }
         }
     }
     public void UnlockDoor()
     {
+        _audioSource.clip = unlockSound;
+        _audioSource.Play();
         isLocked = false;
-        isMonologue = true;
         _monologueManager.ShowMonologue(doorOpendScript);
     }
 
@@ -143,40 +143,7 @@ public class TransferMap : MonoBehaviour, IInteractable
             }
         }
         player.transform.position = targetLocation.position;
-        _camera.transform.position = new (targetLocation.position.x, targetLocation.position.y, _camera.transform.position.z);
-    }
-
-    private bool CheckDirection()
-    {
-        if (direction == Direction.RIGHT)
-        {
-            if (anim.GetFloat("DirX") == 1)
-            {
-                return true;
-            }
-        }
-        else if (direction == Direction.LEFT)
-        {
-            if (anim.GetFloat("DirX") == -1)
-            {
-                return true;
-            }
-        }
-        else if (direction == Direction.UP)
-        {
-            if (anim.GetFloat("DirY") == 1)
-            {
-                return true;
-            }
-        }
-        else if (direction == Direction.DOWN)
-        {
-            if (anim.GetFloat("DirY") == -1)
-            {
-                return true;
-            }
-        }
-        return false;
+        _camera.transform.position = new(targetLocation.position.x, targetLocation.position.y, _camera.transform.position.z);
     }
 
 
@@ -195,10 +162,9 @@ public class TransferMap : MonoBehaviour, IInteractable
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-            if (CheckDirection())
-            {
-                GetInteractScript();
-            }
+
+            GetInteractScript();
+
         }
     }
 

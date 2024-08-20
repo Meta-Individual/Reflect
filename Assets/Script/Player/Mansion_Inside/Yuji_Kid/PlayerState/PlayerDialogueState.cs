@@ -32,6 +32,10 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
                 {
                     _playerController.OffExclamation();
                 }
+                else if (_playerController.currentDialogueCounter == 41) // 켄타가 꾀꼬리 부르라고 하는 대사
+                {
+                    _playerController._cameraShake.ShakeCamera(2.0f, 0.5f);
+                }
                 else if (_playerController.currentDialogueCounter == 78) //켄타가 현관으로 나가는 대사
                 {
                     Debug.Log("켄타 나가자");

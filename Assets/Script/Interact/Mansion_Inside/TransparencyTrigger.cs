@@ -9,9 +9,11 @@ public class TransparencyTrigger : MonoBehaviour
     public float fadeDuration = 1.0f; // 투명도 변화에 걸리는 시간
     private Renderer targetRenderer;
     private Renderer targetRenderer2;
+    private PlayerController playerController;
 
     private void Start()
     {
+        playerController = FindFirstObjectByType<PlayerController>();
         if (targetObject != null)
         {
             targetRenderer = targetObject.GetComponent<Renderer>();
@@ -23,14 +25,14 @@ public class TransparencyTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player") && targetRenderer != null) // 플레이어가 트리거에 진입했을 때
         {
-            if (DirectionUtils.CheckYAxisDirection(Direction.DOWN))
+            if (playerController.movement.y < 0)
             {
                 //플레이어가 아래 방향으로 이동 중이면
                 StopAllCoroutines();
                 StartCoroutine(FadeTo(targetRenderer, 1f, fadeDuration));
                 StartCoroutine(FadeTo(targetRenderer2, 1f, fadeDuration));
             }
-            else if (DirectionUtils.CheckYAxisDirection(Direction.UP))
+            else if (playerController.movement.y > 0)
             {
                 //플레이어가 위 방향으로 이동 중이면
                 StopAllCoroutines();
@@ -44,14 +46,14 @@ public class TransparencyTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player") && targetRenderer != null) // 플레이어가 트리거에 진입했을 때
         {
-            if (DirectionUtils.CheckYAxisDirection(Direction.DOWN))
+            if (playerController.movement.y < 0)
             {
                 //플레이어가 아래 방향으로 이동 중이면
                 StopAllCoroutines();
                 StartCoroutine(FadeTo(targetRenderer, 1f, fadeDuration));
                 StartCoroutine(FadeTo(targetRenderer2, 1f, fadeDuration));
             }
-            else if (DirectionUtils.CheckYAxisDirection(Direction.UP))
+            else if (playerController.movement.y > 0)
             {
                 //플레이어가 위 방향으로 이동 중이면
                 StopAllCoroutines();

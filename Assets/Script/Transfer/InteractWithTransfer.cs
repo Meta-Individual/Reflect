@@ -12,21 +12,20 @@ public class InteractWithTransfer : MonoBehaviour, IInteractable
         UP,
         DOWN
     }
-    private Animator         anim;
-    private GameObject       player;
-    public  CameraManager     _cameraManager;
-    private AudioSource      audioSource; // AudioSource 컴포넌트
-    private PlayerInventory  playerInventory;
+    private Animator anim;
+    private GameObject player;
+    public CameraManager _cameraManager;
+    private AudioSource audioSource; // AudioSource 컴포넌트
+    private PlayerInventory playerInventory;
     private MonologueManager _monologueManager;
     private PlayerController _playerController;
-    private Camera           _camera;
-    private bool             playerInRange = false; // 플레이어가 포탈 위에 있는지 여부
-    private bool             isMonologue = false;
+    private Camera _camera;
+    private bool playerInRange = false; // 플레이어가 포탈 위에 있는지 여부
 
     public GameObject arrow_UI;
 
     [Header("Target")]
-    public Direction direction;
+    public Direction direction = Direction.UP;
     public bool isLocked = false;
     public string keyItemName = "Key";
     public bool stair = false;
@@ -57,7 +56,7 @@ public class InteractWithTransfer : MonoBehaviour, IInteractable
     {
         if (playerInRange)
         {
-            if (CheckDirection())
+            if (DirectionUtils.CheckDirection((global::Direction)direction))
             {
                 ShowUI();
             }
@@ -66,56 +65,54 @@ public class InteractWithTransfer : MonoBehaviour, IInteractable
                 HideUI();
             }
         }
+        else
+        {
+            HideUI();
+        }
     }
 
     public void Interact()
     {
-        if (Input.GetKeyDown((KeyCode)CustomKey.Interact) && (_playerController.CurrentState == _playerController._idleState || _playerController.CurrentState == _playerController._walkState))
+        if (DirectionUtils.CheckDirection((global::Direction)direction))
         {
-            if (!isMonologue)
+            if ((_playerController.CurrentState == _playerController._idleState || _playerController.CurrentState == _playerController._walkState))
             {
-                if (isLocked)
-                {
-                    if (playerInventory.HasItem(keyItemName))
-                    {
-                        UnlockDoor();
-                    }
-                    else
-                    {
-                        _monologueManager.ShowMonologue(doorClosedScript);
-                        isMonologue = true;
-                    }
-                }
-                else
-                {
-                    if (!isInteracted)
-                    {
-                        StartKannaDialogue(); // 칸나가 유우지에게 사과하는 대사 출력
-                        isInteracted = true;
-                        interactTransfer.isInteracted = true;
-                    }
-                    else
-                    {
-                        _monologueManager.ShowMonologue(disabledScript);
-                        isMonologue = true;
-                    }
-                }
-            }
-            else
-            {
-                isMonologue = false;
 
+                    if (isLocked)
+                    {
+                        if (playerInventory.HasItem(keyItemName))
+                        {
+                            UnlockDoor();
+                        }
+                        else
+                        {
+                            _monologueManager.ShowMonologue(doorClosedScript);
+                        }
+                    }
+                    else
+                    {
+                        if (!isInteracted)
+                        {
+                            StartKannaDialogue(); // 칸나가 유우지에게 사과하는 대사 출력
+                            isInteracted = true;
+                            interactTransfer.isInteracted = true;
+                        }
+                        else
+                        {
+                            _monologueManager.ShowMonologue(disabledScript);
+                        }
+                    }
+               
+                }
             }
-        }
     }
     public void UnlockDoor()
     {
         isLocked = false;
-        isMonologue = true;
         _monologueManager.ShowMonologue(doorOpendScript);
     }
 
-   
+
 
     public void StartKannaDialogue() //카메라의 포커스를 칸나에게 맞추고, 대사 출력 후 유우지 2층으로 이동
     {
@@ -123,6 +120,15 @@ public class InteractWithTransfer : MonoBehaviour, IInteractable
         _cameraManager.enabled = false;
         _playerController.ChangeState(_playerController._waitState);
         SetTransparency();
+        _playerController.targetNum = 1;
+        if (_playerController.targetNum == 1)
+        {
+            _playerController.transform.position = _playerController.mansion2F_1.position;
+        }
+        else if (_playerController.targetNum == 2)
+        {
+            _playerController.transform.position = _playerController.mansion2F_2.position;
+        }
         StartCoroutine(StartTransferKanna());
     }
     IEnumerator StartTransferKanna()
@@ -137,10 +143,9 @@ public class InteractWithTransfer : MonoBehaviour, IInteractable
         _camera.transform.position = new Vector3(kanna.position.x, kanna.position.y, -10f);
 
         yield return new WaitForSeconds(1.0f);
-        _playerController.targetNum = 1;
         _playerController.maxDialogueCounter = 49;
         _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
-        
+
     }
 
     public void SetTransparency()
@@ -151,39 +156,6 @@ public class InteractWithTransfer : MonoBehaviour, IInteractable
 
         player.GetComponent<SpriteRenderer>().color = color;
     }
-    private bool CheckDirection()
-    {
-        if (direction == Direction.RIGHT)
-        {
-            if (anim.GetFloat("DirX") == 1)
-            {
-                return true;
-            }
-        }
-        else if (direction == Direction.LEFT)
-        {
-            if (anim.GetFloat("DirX") == -1)
-            {
-                return true;
-            }
-        }
-        else if (direction == Direction.UP)
-        {
-            if (anim.GetFloat("DirY") == 1)
-            {
-                return true;
-            }
-        }
-        else if (direction == Direction.DOWN)
-        {
-            if (anim.GetFloat("DirY") == -1)
-            {
-                return true;
-            }
-        }
-        return false;
-    }
-
 
     private void ShowUI()
     {
@@ -200,10 +172,9 @@ public class InteractWithTransfer : MonoBehaviour, IInteractable
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-            if (CheckDirection())
-            {
-                GetInteractScript();
-            }
+
+            GetInteractScript();
+
         }
     }
 
