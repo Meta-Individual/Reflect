@@ -12,6 +12,8 @@ public class MonologueManager: MonoBehaviour
 
     public static MonologueManager Instance { get; private set; } // Singleton 인스턴스
 
+    private WaitForSeconds typingTime = new WaitForSeconds(0.05f);
+
 
     private void Awake()
     {
@@ -51,7 +53,7 @@ public class MonologueManager: MonoBehaviour
         foreach (char letter in dialogue)
         {
             _playerController.monologuePanel.GetComponentInChildren<TMP_Text>().text += letter;
-            yield return new WaitForSeconds(0.05f); // 지연 시간 대기
+            yield return typingTime;
         }
         _playerController.ChangeState(_playerController._monoState);
     }
