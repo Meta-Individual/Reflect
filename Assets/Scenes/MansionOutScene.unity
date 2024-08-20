@@ -1553,7 +1553,7 @@ MonoBehaviour:
   moveBack: {fileID: 85489401}
   _audioSource: {fileID: 507509948}
   _doorAudioSource: {fileID: 1177017532}
-  doorSound: {fileID: 8300000, guid: 4436dc61312febc4f948110056727fc0, type: 3}
+  doorSound: {fileID: 8300000, guid: d063f085c67e2184586261c7e9fc9d21, type: 3}
   doorOpendSound: {fileID: 8300000, guid: 58e368d55b918fe4798005cb2e8d14c1, type: 3}
   _cameraManager: {fileID: 1506449882}
   monster: {fileID: 2011142912}
