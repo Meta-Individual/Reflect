@@ -22,6 +22,8 @@ public class DialogueManager : MonoBehaviour
 
     public static DialogueManager Instance { get; private set; } // Singleton 인스턴스
 
+    private WaitForSeconds typingTime = new WaitForSeconds(0.05f);
+
 
     private void Awake()
     {
@@ -72,7 +74,7 @@ public class DialogueManager : MonoBehaviour
                 break;
             }
             _playerController.dialogue.text += dialogue[i];
-            yield return new WaitForSeconds(0.05f);
+            yield return typingTime;
 
         }
 
