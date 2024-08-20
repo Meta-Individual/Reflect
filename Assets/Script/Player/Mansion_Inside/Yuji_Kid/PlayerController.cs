@@ -251,14 +251,6 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("DirX", 0.0f);
         anim.SetFloat("DirY", -1.0f);
         RecoverTransparency();
-        if(targetNum == 1)
-        {
-            transform.position = mansion2F_1.position;
-        }
-        else if(targetNum == 2)
-        {
-            transform.position = mansion2F_2.position;
-        }
         _cameraManager1.enabled = true;
         _camera.transform.position = new Vector3(transform.position.x, transform.position.y, _camera.transform.position.z);
         BGMManager.Instance.StartFadeOut(1.0f);
@@ -283,8 +275,8 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(duration);
 
         yield return new WaitForSeconds(1.0f);
-
-        cameraAudioSource.Stop();
+        StartCoroutine(FadeOutSound(cameraAudioSource));
+        //cameraAudioSource.Stop();
         _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
     }
 
@@ -360,7 +352,22 @@ public class PlayerController : MonoBehaviour
         GetComponent<SpriteRenderer>().color = color;
     }
 
+    private IEnumerator FadeOutSound(AudioSource audioSource)
+    {
+        float startVolume = audioSource.volume;
 
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= startVolume * Time.deltaTime / 1.0f;
+
+            // 모든 업데이트 후에 프레임을 넘어가도록 대기
+            yield return null;
+        }
+
+        // 오디오를 0으로 설정하고 멈춤
+        audioSource.volume = 0;
+        audioSource.Stop();
+    }
 
     /* ------------------------------------------------------ 저택 외부 전용------------------------------------------------------ */
 

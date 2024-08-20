@@ -49,7 +49,7 @@ public class TransferScene : MonoBehaviour, IInteractable
     {
         if (playerInRange)
         {
-            if (CheckDirection())
+            if (DirectionUtils.CheckDirection((global::Direction)direction))
             {
                 ShowUI();
             }

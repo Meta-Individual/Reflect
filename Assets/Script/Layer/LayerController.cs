@@ -7,7 +7,7 @@ public class LayerController : MonoBehaviour
     private SpriteRenderer targetRenderer; // 타겟 오브젝트의 SpriteRenderer
     private SpriteRenderer playerRenderer; // 플레이어 오브젝트의 SpriteRenderer
     private GameObject player;
-
+    private PlayerController playerController;
     void Start()
     {
         // 타겟 오브젝트의 SpriteRenderer 컴포넌트를 가져옵니다.
@@ -15,6 +15,7 @@ public class LayerController : MonoBehaviour
 
         // "Player" 태그를 가진 오브젝트의 SpriteRenderer와 Rigidbody2D 컴포넌트를 가져옵니다.
         player = GameObject.FindGameObjectWithTag("Player");
+        playerController = player.GetComponent<PlayerController>();
         if (player != null)
         {
             playerRenderer = player.GetComponent<SpriteRenderer>();
@@ -31,19 +32,15 @@ public class LayerController : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            //Debug.Log("바운드 진입");
-            //Debug.Log(playerAnim.GetFloat("DirY"));
             // 플레이어의 이동 방향이 아래쪽인지 위쪽인지 확인합니다.
-            if (DirectionUtils.CheckYAxisDirection(Direction.DOWN))
+            if (playerController.movement.y < 0)
             {
                 //플레이어가 아래 방향으로 이동 중이면
-                //Debug.Log("아래 방향");
                 targetRenderer.sortingOrder = playerRenderer.sortingOrder - 1;
             }
-            else if (DirectionUtils.CheckYAxisDirection(Direction.UP))
+            else if (playerController.movement.y > 0)
             {
                 //플레이어가 위 방향으로 이동 중이면
-                //Debug.Log("위 방향");
                 targetRenderer.sortingOrder = playerRenderer.sortingOrder + 1;
             }
         }
@@ -55,19 +52,15 @@ public class LayerController : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            //Debug.Log("바운드 아웃");
-            //Debug.Log(playerAnim.GetFloat("DirY"));
             // 플레이어의 이동 방향이 아래쪽인지 위쪽인지 확인합니다.
-            if (DirectionUtils.CheckYAxisDirection(Direction.DOWN))
+            if (playerController.movement.y < 0)
             {
                 //플레이어가 아래 방향으로 이동 중이면
-                //Debug.Log("아래 방향");
                 targetRenderer.sortingOrder = playerRenderer.sortingOrder - 1;
             }
-            else if (DirectionUtils.CheckYAxisDirection(Direction.UP))
+            else if (playerController.movement.y > 0)
             {
                 //플레이어가 위 방향으로 이동 중이면
-                //Debug.Log("위 방향");
                 targetRenderer.sortingOrder = playerRenderer.sortingOrder + 1;
             }
         }

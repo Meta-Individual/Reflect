@@ -38,7 +38,7 @@ public class KentaAnimation : MonoBehaviour, IInteractable
     {
         Debug.Log("Kenta 애니메이션 상호작용");
 
-        if (DirectionUtils.CheckYAxisDirection(currentDirection))
+        if (DirectionUtils.CheckDirection(currentDirection))
         {
             if (!isSearched)
             {
