@@ -23,14 +23,14 @@ public class TransparencyTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player") && targetRenderer != null) // 플레이어가 트리거에 진입했을 때
         {
-            if (DirectionUtils.CheckDirection(Direction.DOWN))
+            if (DirectionUtils.CheckYAxisDirection(Direction.DOWN))
             {
                 //플레이어가 아래 방향으로 이동 중이면
                 StopAllCoroutines();
                 StartCoroutine(FadeTo(targetRenderer, 1f, fadeDuration));
                 StartCoroutine(FadeTo(targetRenderer2, 1f, fadeDuration));
             }
-            else if (DirectionUtils.CheckDirection(Direction.UP))
+            else if (DirectionUtils.CheckYAxisDirection(Direction.UP))
             {
                 //플레이어가 위 방향으로 이동 중이면
                 StopAllCoroutines();
@@ -44,14 +44,14 @@ public class TransparencyTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player") && targetRenderer != null) // 플레이어가 트리거에 진입했을 때
         {
-            if (DirectionUtils.CheckDirection(Direction.DOWN))
+            if (DirectionUtils.CheckYAxisDirection(Direction.DOWN))
             {
                 //플레이어가 아래 방향으로 이동 중이면
                 StopAllCoroutines();
                 StartCoroutine(FadeTo(targetRenderer, 1f, fadeDuration));
                 StartCoroutine(FadeTo(targetRenderer2, 1f, fadeDuration));
             }
-            else if (DirectionUtils.CheckDirection(Direction.UP))
+            else if (DirectionUtils.CheckYAxisDirection(Direction.UP))
             {
                 //플레이어가 위 방향으로 이동 중이면
                 StopAllCoroutines();
