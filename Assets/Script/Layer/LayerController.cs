@@ -34,13 +34,13 @@ public class LayerController : MonoBehaviour
             //Debug.Log("바운드 진입");
             //Debug.Log(playerAnim.GetFloat("DirY"));
             // 플레이어의 이동 방향이 아래쪽인지 위쪽인지 확인합니다.
-            if (DirectionUtils.CheckDirection(Direction.DOWN))
+            if (DirectionUtils.CheckYAxisDirection(Direction.DOWN))
             {
                 //플레이어가 아래 방향으로 이동 중이면
                 //Debug.Log("아래 방향");
                 targetRenderer.sortingOrder = playerRenderer.sortingOrder - 1;
             }
-            else if (DirectionUtils.CheckDirection(Direction.UP))
+            else if (DirectionUtils.CheckYAxisDirection(Direction.UP))
             {
                 //플레이어가 위 방향으로 이동 중이면
                 //Debug.Log("위 방향");
@@ -58,13 +58,13 @@ public class LayerController : MonoBehaviour
             //Debug.Log("바운드 아웃");
             //Debug.Log(playerAnim.GetFloat("DirY"));
             // 플레이어의 이동 방향이 아래쪽인지 위쪽인지 확인합니다.
-            if (DirectionUtils.CheckDirection(Direction.DOWN))
+            if (DirectionUtils.CheckYAxisDirection(Direction.DOWN))
             {
                 //플레이어가 아래 방향으로 이동 중이면
                 //Debug.Log("아래 방향");
                 targetRenderer.sortingOrder = playerRenderer.sortingOrder - 1;
             }
-            else if (DirectionUtils.CheckDirection(Direction.UP))
+            else if (DirectionUtils.CheckYAxisDirection(Direction.UP))
             {
                 //플레이어가 위 방향으로 이동 중이면
                 //Debug.Log("위 방향");

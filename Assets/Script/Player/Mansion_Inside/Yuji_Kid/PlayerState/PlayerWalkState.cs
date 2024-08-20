@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class PlayerWalkState : MonoBehaviour, IPlayerState
 {
     private PlayerController _playerController;
-    private Vector2 movement;
     private Vector2 firstInputDirection;
     private bool firstInputSet;
 
@@ -17,8 +16,8 @@ public class PlayerWalkState : MonoBehaviour, IPlayerState
             _playerController = playerController;
 
         _playerController.anim.SetBool("Walk", true);
-        movement.x = 0;
-        movement.y = 0;
+        _playerController.movement.x = 0;
+        _playerController.movement.y = 0;
         firstInputDirection = Vector2.zero;
         firstInputSet = false;
     }
@@ -28,24 +27,24 @@ public class PlayerWalkState : MonoBehaviour, IPlayerState
     {
         if (_playerController)
         {
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.y = Input.GetAxisRaw("Vertical");
+            _playerController.movement.x = Input.GetAxisRaw("Horizontal");
+            _playerController.movement.y = Input.GetAxisRaw("Vertical");
 
             // 첫 입력 방향 설정 (선입력 방향이 여전히 활성화되어 있지 않을 때만 업데이트)
             if (firstInputDirection == Vector2.zero)
             {
-                if (movement.x != 0)
+                if (_playerController.movement.x != 0)
                 {
-                    firstInputDirection = new Vector2(movement.x, 0);
+                    firstInputDirection = new Vector2(_playerController.movement.x, 0);
                 }
-                else if (movement.y != 0)
+                else if (_playerController.movement.y != 0)
                 {
-                    firstInputDirection = new Vector2(0, movement.y);
+                    firstInputDirection = new Vector2(0, _playerController.movement.y);
                 }
             }
 
             // 입력이 없는 경우 방향 초기화
-            if (movement == Vector2.zero)
+            if (_playerController.movement == Vector2.zero)
             {
                 firstInputDirection = Vector2.zero;
             }
@@ -73,23 +72,23 @@ public class PlayerWalkState : MonoBehaviour, IPlayerState
             }
 
             // 선입력된 방향의 키가 떼어지면 새 방향 설정
-            if (firstInputDirection.x != 0 && movement.x == 0)
+            if (firstInputDirection.x != 0 && _playerController.movement.x == 0)
             {
                 firstInputDirection = Vector2.zero;
             }
-            else if (firstInputDirection.y != 0 && movement.y == 0)
+            else if (firstInputDirection.y != 0 && _playerController.movement.y == 0)
             {
                 firstInputDirection = Vector2.zero;
             }
            
 
-            if (movement.x != 0 || movement.y != 0)
+            if (_playerController.movement.x != 0 || _playerController.movement.y != 0)
             {
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
                     _playerController.ChangeState(_playerController._runState);
                 }
-                _playerController._rigidbody.MovePosition(_playerController._rigidbody.position + movement.normalized * _playerController.walkSpeed * Time.fixedDeltaTime);
+                _playerController._rigidbody.MovePosition(_playerController._rigidbody.position + _playerController.movement.normalized * _playerController.walkSpeed * Time.fixedDeltaTime);
                 
             }
             else
@@ -112,8 +111,8 @@ public class PlayerWalkState : MonoBehaviour, IPlayerState
     }
     public void OnStateExit()
     {
-        movement.x = 0;
-        movement.y = 0;
+        _playerController.movement.x = 0;
+        _playerController.movement.y = 0;
         _playerController.anim.SetBool("Walk", false);
     }
 

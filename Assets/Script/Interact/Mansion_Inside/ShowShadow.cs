@@ -32,7 +32,7 @@ public class ShowShadow : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Debug.Log("플레이어 ShowShadow 진입");
-            if (DirectionUtils.CheckDirection(direction) ) //플레이어의 방향이 스크립트에서 설정한 값과 일치하고 해당 아이템을 가지고 있다면 코루틴 실행
+            if (DirectionUtils.CheckYAxisDirection(direction) ) //플레이어의 방향이 스크립트에서 설정한 값과 일치하고 해당 아이템을 가지고 있다면 코루틴 실행
             {
                 Debug.Log("방향 일치");
                 if (inventory.HasItem("LibraryDoorKey"))

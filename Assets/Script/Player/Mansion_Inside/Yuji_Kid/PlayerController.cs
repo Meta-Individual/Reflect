@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Sound")]
     public AudioSource _audioSource;
+    public AudioSource sfxSource;
     public AudioSource stepAudioSource;
     public AudioClip exclamationSound;
     public AudioClip getKeySound;
@@ -65,6 +66,7 @@ public class PlayerController : MonoBehaviour
 
 
     [Header("Movement")]
+    public Vector2 movement;
     public float walkSpeed = 5f;
     public float runSpeed = 8f;
     public StepType stepType = StepType.Concrete;
@@ -299,20 +301,20 @@ public class PlayerController : MonoBehaviour
 
     public void PlayExclamationSound() //느낌표 소리 재생
     {
-        _audioSource.clip = exclamationSound;
-        _audioSource.Play();
+        sfxSource.clip = exclamationSound;
+        sfxSource.Play();
     }
 
     public void GetKeySound()
     {
-        _audioSource.clip = getKeySound;
-        _audioSource.Play();
+        sfxSource.clip = getKeySound;
+        sfxSource.Play();
     }
 
     public void PaperSound()
     {
-        _audioSource.clip = paperSound;
-        _audioSource.Play();
+        sfxSource.clip = paperSound;
+        sfxSource.Play();
     }
 
     public void PlayWalkingSound()

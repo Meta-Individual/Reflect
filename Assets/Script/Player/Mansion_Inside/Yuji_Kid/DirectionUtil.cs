@@ -12,18 +12,27 @@ public static class DirectionUtils
         _playerController = playerController;
     }
     // 플레이어의 현재 방향을 체크해주는 함수
-    public static bool CheckDirection(Direction direction)
+    public static bool CheckYAxisDirection(Direction direction)
+    {
+        switch (direction)
+        {
+            case Direction.UP:
+                return _playerController.movement.y == 1;
+            case Direction.DOWN:
+                return _playerController.movement.y == -1;
+            default:
+                return false;
+        }
+    }
+
+    public static bool CheckXAxisDirection(Direction direction)
     {
         switch (direction)
         {
             case Direction.RIGHT:
-                return _playerController.anim.GetFloat("DirX") == 1;
+                return _playerController.movement.x == 1;
             case Direction.LEFT:
-                return _playerController.anim.GetFloat("DirX") == -1;
-            case Direction.UP:
-                return _playerController.anim.GetFloat("DirY") == 1;
-            case Direction.DOWN:
-                return _playerController.anim.GetFloat("DirY") == -1;
+                return _playerController.movement.x == -1;
             default:
                 return false;
         }
