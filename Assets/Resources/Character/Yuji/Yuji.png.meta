@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d66d126208d845245beef0dd4b8befab
+guid: 17033707ac890d14e88df6715f257c4f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 8
+  spritePixelsToUnits: 4
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,6 +93,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -101,18 +114,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 899
-        width: 96
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        y: 448
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 858f3ca3942835a4f89a1d5c4889488c
-      internalID: -831032242
+      spriteID: 4cd69b45135785046aed5ec45fc4e491
+      internalID: 419036302
       vertices: []
       indices: 
       edges: []
@@ -121,19 +134,19 @@ TextureImporter:
       name: Yuji_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 898.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 48
+        y: 448
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebdd5d2202f7e8043960031225fb788c
-      internalID: -1899996565
+      spriteID: 6e180abf8dc4dbf4db3e09da7cf7625c
+      internalID: 1577344032
       vertices: []
       indices: 
       edges: []
@@ -142,19 +155,19 @@ TextureImporter:
       name: Yuji_2
       rect:
         serializedVersion: 2
-        x: 192
-        y: 898.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 96
+        y: 448
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2af81da19ceb41f4f8ebc992ad102a06
-      internalID: -22440030
+      spriteID: 16090513facf9034ea8df308712a7c70
+      internalID: 1091404787
       vertices: []
       indices: 
       edges: []
@@ -163,19 +176,19 @@ TextureImporter:
       name: Yuji_3
       rect:
         serializedVersion: 2
-        x: 288
-        y: 898.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 144
+        y: 448
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd4cd746b86d31d4b8301fa4e20268fe
-      internalID: -522949730
+      spriteID: c9123e953ac4c0648a388271341c7e48
+      internalID: 1766948076
       vertices: []
       indices: 
       edges: []
@@ -184,19 +197,19 @@ TextureImporter:
       name: Yuji_4
       rect:
         serializedVersion: 2
-        x: 384
-        y: 899
-        width: 96
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 192
+        y: 448
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf228de8187b9504f8ec10d52c8d5760
-      internalID: 972265580
+      spriteID: 132f9911acc168b44a9a001123f24376
+      internalID: -442706287
       vertices: []
       indices: 
       edges: []
@@ -205,19 +218,19 @@ TextureImporter:
       name: Yuji_5
       rect:
         serializedVersion: 2
-        x: 480
-        y: 898.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 240
+        y: 448
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e10288c29e801d44b3f3518a024a8d1
-      internalID: -1265785262
+      spriteID: fc2f0accf2a3fee4e861bfc21da6f190
+      internalID: -899476005
       vertices: []
       indices: 
       edges: []
@@ -226,19 +239,19 @@ TextureImporter:
       name: Yuji_6
       rect:
         serializedVersion: 2
-        x: 576
-        y: 898.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 288
+        y: 448
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a091f0a3ddbf6e94c9397d044e5c3582
-      internalID: 860923879
+      spriteID: 8984aa500685c8147a69366db9fe2d8a
+      internalID: 886558152
       vertices: []
       indices: 
       edges: []
@@ -247,19 +260,19 @@ TextureImporter:
       name: Yuji_7
       rect:
         serializedVersion: 2
-        x: 672
-        y: 899
-        width: 96
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 336
+        y: 448
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09ad1b02c40407c4cb6b55f68dcce192
-      internalID: -958331832
+      spriteID: 0c355241f42d48b4fbed9729c0b5d18d
+      internalID: 1727921728
       vertices: []
       indices: 
       edges: []
@@ -269,18 +282,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 770.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        y: 384
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80eec4a97f058d74b932ceb46d6fbecb
-      internalID: -1705122370
+      spriteID: f791b3881feb22b4887b5936229265d4
+      internalID: 473509448
       vertices: []
       indices: 
       edges: []
@@ -289,19 +302,19 @@ TextureImporter:
       name: Yuji_9
       rect:
         serializedVersion: 2
-        x: 96
-        y: 770.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 48
+        y: 384
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d818d846db82164694517bebd41522e
-      internalID: -2036515523
+      spriteID: bf1cd886d1156144cbbc8b1c8c9a9eb5
+      internalID: -569839482
       vertices: []
       indices: 
       edges: []
@@ -310,19 +323,19 @@ TextureImporter:
       name: Yuji_10
       rect:
         serializedVersion: 2
-        x: 192
-        y: 770.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 96
+        y: 384
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71925940fb0c21b429b180c5aec36f80
-      internalID: -767092620
+      spriteID: 4d2d5e805a47a684f8efe82250586c57
+      internalID: -289557121
       vertices: []
       indices: 
       edges: []
@@ -331,19 +344,19 @@ TextureImporter:
       name: Yuji_11
       rect:
         serializedVersion: 2
-        x: 288
-        y: 770.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 144
+        y: 384
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce5359b4fc587554296ebe290156e1e2
-      internalID: -2100915375
+      spriteID: de69219c67b562544958296c66ac1006
+      internalID: 1610819677
       vertices: []
       indices: 
       edges: []
@@ -352,19 +365,19 @@ TextureImporter:
       name: Yuji_12
       rect:
         serializedVersion: 2
-        x: 384
-        y: 770.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 192
+        y: 384
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02f1b76c917c6924ea015e9aae12b444
-      internalID: 1094935717
+      spriteID: 371fe2b912ded9c4299e6bb00d33444c
+      internalID: 930660268
       vertices: []
       indices: 
       edges: []
@@ -373,19 +386,19 @@ TextureImporter:
       name: Yuji_13
       rect:
         serializedVersion: 2
-        x: 480
-        y: 770.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 240
+        y: 384
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a8c6d93e2d77f4408b2277fc36d4061
-      internalID: -924740472
+      spriteID: baaf69515debc9049ba7706bd89f078d
+      internalID: -1550266750
       vertices: []
       indices: 
       edges: []
@@ -394,19 +407,19 @@ TextureImporter:
       name: Yuji_14
       rect:
         serializedVersion: 2
-        x: 576
-        y: 770.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 288
+        y: 384
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31343f529726a3e489c4bf603564e42d
-      internalID: -769274875
+      spriteID: 9ea87df9881019645baeb2ceec273e66
+      internalID: 862539346
       vertices: []
       indices: 
       edges: []
@@ -415,19 +428,19 @@ TextureImporter:
       name: Yuji_15
       rect:
         serializedVersion: 2
-        x: 672
-        y: 771
-        width: 96
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 336
+        y: 384
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e5401b6f097e394c821dddfad09a0b1
-      internalID: -1554453304
+      spriteID: 044a5db1870931c45a77fb8cc05b0cfe
+      internalID: -2077386027
       vertices: []
       indices: 
       edges: []
@@ -437,18 +450,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 642
-        width: 96
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        y: 320
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aae12639b6639d4fa2e1fd5b1922d50
-      internalID: -446356235
+      spriteID: 1081eb84be479c945beba7eb0993caa7
+      internalID: -1303647025
       vertices: []
       indices: 
       edges: []
@@ -457,19 +470,19 @@ TextureImporter:
       name: Yuji_17
       rect:
         serializedVersion: 2
-        x: 96
-        y: 642
-        width: 96
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 48
+        y: 320
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe2c5d6355cd4cc409ba8d5386b5f631
-      internalID: 974505086
+      spriteID: 77e35b4f04b3ddd48acdd3f9f103c9d6
+      internalID: 2125908644
       vertices: []
       indices: 
       edges: []
@@ -478,19 +491,19 @@ TextureImporter:
       name: Yuji_18
       rect:
         serializedVersion: 2
-        x: 192
-        y: 642.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 96
+        y: 320
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5069bece2b167b04ca13296c2af346c7
-      internalID: 862031773
+      spriteID: d95f94374131a4340854decbf9f46568
+      internalID: -1602494742
       vertices: []
       indices: 
       edges: []
@@ -499,19 +512,19 @@ TextureImporter:
       name: Yuji_19
       rect:
         serializedVersion: 2
-        x: 288
-        y: 642.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 144
+        y: 320
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72d8480d74c5a074aa34eae769479a77
-      internalID: 1500707576
+      spriteID: e56af93725f90164e822ac000ce3d952
+      internalID: -670010302
       vertices: []
       indices: 
       edges: []
@@ -520,19 +533,19 @@ TextureImporter:
       name: Yuji_20
       rect:
         serializedVersion: 2
-        x: 384
-        y: 642.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 192
+        y: 320
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 468f830799624e745bb9438490ab5198
-      internalID: -29367963
+      spriteID: 9b1a719c092bb7f4a86f36c83e4f48e7
+      internalID: 687715804
       vertices: []
       indices: 
       edges: []
@@ -541,19 +554,19 @@ TextureImporter:
       name: Yuji_21
       rect:
         serializedVersion: 2
-        x: 480
-        y: 642.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 240
+        y: 320
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7fcccc4399aa1c42a11dcd4113bd38d
-      internalID: -1872564058
+      spriteID: f3eb42347fdc30249a48c40131bbb2dd
+      internalID: 1223197354
       vertices: []
       indices: 
       edges: []
@@ -562,19 +575,19 @@ TextureImporter:
       name: Yuji_22
       rect:
         serializedVersion: 2
-        x: 576
-        y: 642.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 288
+        y: 320
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bc43fa33febd9f4993480b1cdb8bc70
-      internalID: -1480349305
+      spriteID: 17d6d9c6ae87ff74b965a95ee5b089ca
+      internalID: 1919719534
       vertices: []
       indices: 
       edges: []
@@ -583,19 +596,19 @@ TextureImporter:
       name: Yuji_23
       rect:
         serializedVersion: 2
-        x: 672
-        y: 642.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 336
+        y: 320
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4061a3290ee915e40b29b00667bbe7fb
-      internalID: 1252851858
+      spriteID: 63bcf97b28612994e8daa20fb22eb552
+      internalID: -231905359
       vertices: []
       indices: 
       edges: []
@@ -605,18 +618,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 514.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        y: 256
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff458c7dd239f3245b0ea01e0c26c54f
-      internalID: 809503127
+      spriteID: 09d7cbe44f70da44699597aad48aa623
+      internalID: 683531415
       vertices: []
       indices: 
       edges: []
@@ -625,19 +638,19 @@ TextureImporter:
       name: Yuji_25
       rect:
         serializedVersion: 2
-        x: 96
-        y: 514.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 48
+        y: 256
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 331edbba915498d4899b64ef44e68edf
-      internalID: 1856274450
+      spriteID: 8c10496314b76d749b03e33cb3bba8aa
+      internalID: 1647989319
       vertices: []
       indices: 
       edges: []
@@ -646,19 +659,19 @@ TextureImporter:
       name: Yuji_26
       rect:
         serializedVersion: 2
-        x: 192
-        y: 514.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 96
+        y: 256
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e430792ad011df748a44b34613f2cf47
-      internalID: 2109272602
+      spriteID: 31fa82523d32a4347bae0de6e8b94524
+      internalID: -1599285111
       vertices: []
       indices: 
       edges: []
@@ -667,19 +680,19 @@ TextureImporter:
       name: Yuji_27
       rect:
         serializedVersion: 2
-        x: 288
-        y: 515
-        width: 96
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 144
+        y: 256
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 705c065c15021f744b26fc0ea18f8714
-      internalID: 1576611108
+      spriteID: 5bd15314bd8b6bf4b88c40c0aa03f79f
+      internalID: 1803327231
       vertices: []
       indices: 
       edges: []
@@ -688,19 +701,19 @@ TextureImporter:
       name: Yuji_28
       rect:
         serializedVersion: 2
-        x: 384
-        y: 514.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 192
+        y: 256
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf76243bbaf3be4448e922a155677bc5
-      internalID: -327092139
+      spriteID: e01eeba60adfa9546aae07d6f649f9a8
+      internalID: 1853457463
       vertices: []
       indices: 
       edges: []
@@ -709,19 +722,19 @@ TextureImporter:
       name: Yuji_29
       rect:
         serializedVersion: 2
-        x: 480
-        y: 514.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 240
+        y: 256
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e772257bd27711469e0e46fa9052521
-      internalID: -1953278303
+      spriteID: a03703538c2fb7e428d2701b9ba09652
+      internalID: 1957955833
       vertices: []
       indices: 
       edges: []
@@ -730,19 +743,19 @@ TextureImporter:
       name: Yuji_30
       rect:
         serializedVersion: 2
-        x: 576
-        y: 514.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 288
+        y: 256
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ed75559c7d54c34583bfdaabe569926
-      internalID: -1911258360
+      spriteID: 218974898ae464b48876204319cb253e
+      internalID: -230088389
       vertices: []
       indices: 
       edges: []
@@ -751,19 +764,19 @@ TextureImporter:
       name: Yuji_31
       rect:
         serializedVersion: 2
-        x: 672
-        y: 514.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 336
+        y: 256
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1db61d12394c80c45ad944f30f240010
-      internalID: 1297176327
+      spriteID: 4669e05405de0a5459776e528d161301
+      internalID: 770674485
       vertices: []
       indices: 
       edges: []
@@ -773,18 +786,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 387
-        width: 96
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        y: 192
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3efd314f5e71c4d4495ba823f52e3be0
-      internalID: 1429220937
+      spriteID: 85553fcba0521e544b74d85737c08ecb
+      internalID: -1849831915
       vertices: []
       indices: 
       edges: []
@@ -793,19 +806,19 @@ TextureImporter:
       name: Yuji_33
       rect:
         serializedVersion: 2
-        x: 96
-        y: 386.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 48
+        y: 192
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5921f2edd52a90f41a57f6798e874db9
-      internalID: -609821135
+      spriteID: 0d14611062e68874fa6f90a1e55b8011
+      internalID: -1230329725
       vertices: []
       indices: 
       edges: []
@@ -814,19 +827,19 @@ TextureImporter:
       name: Yuji_34
       rect:
         serializedVersion: 2
-        x: 192
-        y: 386.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 96
+        y: 192
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 340e328ee16f7ac4ea1474fdf4bbc639
-      internalID: 586761920
+      spriteID: dfa04c4fea2e96346b767c37e9472bc3
+      internalID: 677294471
       vertices: []
       indices: 
       edges: []
@@ -835,19 +848,19 @@ TextureImporter:
       name: Yuji_35
       rect:
         serializedVersion: 2
-        x: 288
-        y: 386.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 144
+        y: 192
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41c4a76d2b657b648b551f3ce5fb6b96
-      internalID: -937020784
+      spriteID: d02e99f508acaf443ab4c2fb959de936
+      internalID: -1347760537
       vertices: []
       indices: 
       edges: []
@@ -856,19 +869,19 @@ TextureImporter:
       name: Yuji_36
       rect:
         serializedVersion: 2
-        x: 384
-        y: 387
-        width: 96
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 192
+        y: 192
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e877061ceb516940a3d6c67e2078105
-      internalID: 802892296
+      spriteID: 502332b22eb95164897738108e546d46
+      internalID: 1224939835
       vertices: []
       indices: 
       edges: []
@@ -877,19 +890,19 @@ TextureImporter:
       name: Yuji_37
       rect:
         serializedVersion: 2
-        x: 480
-        y: 386.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 240
+        y: 192
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a01e3484424f21c469741cebb2dd4ffd
-      internalID: -775746637
+      spriteID: 04a2c89a68d2d024ca227bf0182e8bac
+      internalID: 1888527035
       vertices: []
       indices: 
       edges: []
@@ -898,19 +911,19 @@ TextureImporter:
       name: Yuji_38
       rect:
         serializedVersion: 2
-        x: 576
-        y: 386.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 288
+        y: 192
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c455cf5a904e3f443bc53ce76d409dfa
-      internalID: -1282846036
+      spriteID: 2d0262450b4b71340b10ac983d07fbba
+      internalID: 1744052905
       vertices: []
       indices: 
       edges: []
@@ -919,19 +932,19 @@ TextureImporter:
       name: Yuji_39
       rect:
         serializedVersion: 2
-        x: 672
-        y: 386.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 336
+        y: 192
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1d4e71ebafd8994a9e06bd6ddb1058f
-      internalID: 1649391291
+      spriteID: 02b0b2f7453ac2640809773d92f59dfd
+      internalID: 233103805
       vertices: []
       indices: 
       edges: []
@@ -941,18 +954,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 259
-        width: 96
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        y: 128
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e378975efcfe9b4393a5720c524b2e4
-      internalID: -838621598
+      spriteID: 28c99456a668c344f92bcea8cd9395d6
+      internalID: -1399239233
       vertices: []
       indices: 
       edges: []
@@ -961,19 +974,19 @@ TextureImporter:
       name: Yuji_41
       rect:
         serializedVersion: 2
-        x: 96
-        y: 259
-        width: 96
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 48
+        y: 128
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3922277bbfff4b647be76f5bfdaccc49
-      internalID: -406665616
+      spriteID: 5c16250c646dde34c89052fc02af3e1e
+      internalID: -916681077
       vertices: []
       indices: 
       edges: []
@@ -982,19 +995,19 @@ TextureImporter:
       name: Yuji_42
       rect:
         serializedVersion: 2
-        x: 192
-        y: 258.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 96
+        y: 128
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c558dcadf5d0ed4792473841a9d96cd
-      internalID: -143170281
+      spriteID: 05e97a32c5e434d42a5e5bc779981d2b
+      internalID: -173084943
       vertices: []
       indices: 
       edges: []
@@ -1003,19 +1016,19 @@ TextureImporter:
       name: Yuji_43
       rect:
         serializedVersion: 2
-        x: 288
-        y: 258.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 144
+        y: 128
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d247f2792d6955438db04fd960c92c4
-      internalID: 1216356844
+      spriteID: 980a12ac776691e4abca0a094799c111
+      internalID: 1245633620
       vertices: []
       indices: 
       edges: []
@@ -1024,19 +1037,19 @@ TextureImporter:
       name: Yuji_44
       rect:
         serializedVersion: 2
-        x: 384
-        y: 258.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 192
+        y: 128
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1d8519fde9ea4745ad7005655926971
-      internalID: -1553142602
+      spriteID: c3c25ed5be55a94449ced633ede8cd73
+      internalID: 366865341
       vertices: []
       indices: 
       edges: []
@@ -1045,19 +1058,19 @@ TextureImporter:
       name: Yuji_45
       rect:
         serializedVersion: 2
-        x: 480
-        y: 258.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 240
+        y: 128
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acbe18dcf4210fb479cf1160b50e86a6
-      internalID: 1807595773
+      spriteID: 726b8207d7f252e4fb2fd954e276fdce
+      internalID: 1803098771
       vertices: []
       indices: 
       edges: []
@@ -1066,19 +1079,19 @@ TextureImporter:
       name: Yuji_46
       rect:
         serializedVersion: 2
-        x: 576
-        y: 258.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 288
+        y: 128
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdd4cb7c70dda1141abdb56e2d170ddc
-      internalID: -1987494889
+      spriteID: c999bbaa6b30d3d4f847c5ca4099482e
+      internalID: -463942147
       vertices: []
       indices: 
       edges: []
@@ -1087,19 +1100,19 @@ TextureImporter:
       name: Yuji_47
       rect:
         serializedVersion: 2
-        x: 672
-        y: 258.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 336
+        y: 128
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3cb351d8911df14aba5aebcf1cb96e5
-      internalID: 606328974
+      spriteID: d88c496756b79114d9bb2d16a8ccc41c
+      internalID: -1876135481
       vertices: []
       indices: 
       edges: []
@@ -1109,18 +1122,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 130.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        y: 64
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44ffb2b649e959b49a13098cb6c0aaf5
-      internalID: 1895163870
+      spriteID: dde6d34cebefc2c4da33d20b3782ad3d
+      internalID: 2112977293
       vertices: []
       indices: 
       edges: []
@@ -1129,19 +1142,19 @@ TextureImporter:
       name: Yuji_49
       rect:
         serializedVersion: 2
-        x: 96
-        y: 130.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 48
+        y: 64
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 378cbeee2b715fb42b39a0fbf6d4380a
-      internalID: 517536664
+      spriteID: 660202f146301cb4885f8c0b0eba4717
+      internalID: -1318784222
       vertices: []
       indices: 
       edges: []
@@ -1150,19 +1163,19 @@ TextureImporter:
       name: Yuji_50
       rect:
         serializedVersion: 2
-        x: 192
-        y: 130.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 96
+        y: 64
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30615ae1c9844d34bb8750c92cf660cb
-      internalID: 2075320118
+      spriteID: 93c30a54108c88543b9bb084b23cd430
+      internalID: -1020208176
       vertices: []
       indices: 
       edges: []
@@ -1171,19 +1184,19 @@ TextureImporter:
       name: Yuji_51
       rect:
         serializedVersion: 2
-        x: 288
-        y: 130.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 144
+        y: 64
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb56f5661f84e824ab6cf319a3bf38fe
-      internalID: -1545601830
+      spriteID: 28698725528eac34da4c86dd6ca04d21
+      internalID: 119460544
       vertices: []
       indices: 
       edges: []
@@ -1192,19 +1205,19 @@ TextureImporter:
       name: Yuji_52
       rect:
         serializedVersion: 2
-        x: 384
-        y: 130.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 192
+        y: 64
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7e7ce4a3de29fa43b78afce485cc039
-      internalID: 221729523
+      spriteID: 4709cd6397bddd643866a92ae70874dc
+      internalID: -1440895796
       vertices: []
       indices: 
       edges: []
@@ -1213,19 +1226,19 @@ TextureImporter:
       name: Yuji_53
       rect:
         serializedVersion: 2
-        x: 480
-        y: 130.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 240
+        y: 64
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fbe058193a37704c9a071b874a3a082
-      internalID: 2136750937
+      spriteID: 8444b0099fb0eb8489eccc9ac67474ca
+      internalID: -1391537747
       vertices: []
       indices: 
       edges: []
@@ -1234,19 +1247,19 @@ TextureImporter:
       name: Yuji_54
       rect:
         serializedVersion: 2
-        x: 576
-        y: 130.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 288
+        y: 64
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fcae70832fd97f458066fa89d6b984b
-      internalID: 1265324656
+      spriteID: a1f70497ba32f2540a291ff0dfb27635
+      internalID: -1851597380
       vertices: []
       indices: 
       edges: []
@@ -1255,19 +1268,19 @@ TextureImporter:
       name: Yuji_55
       rect:
         serializedVersion: 2
-        x: 672
-        y: 130
-        width: 96
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 336
+        y: 64
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 958a5f0a9b4c85e49ba953a3c2ce4707
-      internalID: 981097757
+      spriteID: 773731bb9b9f7f24683b226ea536224d
+      internalID: 1553746374
       vertices: []
       indices: 
       edges: []
@@ -1277,18 +1290,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        y: 0
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fdb78ed4df4ee941b9c2ae705a1aed7
-      internalID: -2064560227
+      spriteID: 16cd9af2d21bfdc458fc775b9da0a809
+      internalID: 959490136
       vertices: []
       indices: 
       edges: []
@@ -1297,19 +1310,19 @@ TextureImporter:
       name: Yuji_57
       rect:
         serializedVersion: 2
-        x: 96
-        y: 2.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 48
+        y: 0
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbd10b45c21ffeb42a473a29f68d247c
-      internalID: 1000745112
+      spriteID: dc28630481f29904399e925da51ac4e9
+      internalID: -1634502132
       vertices: []
       indices: 
       edges: []
@@ -1318,19 +1331,19 @@ TextureImporter:
       name: Yuji_58
       rect:
         serializedVersion: 2
-        x: 192
-        y: 2.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 96
+        y: 0
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56ff2e18aea8ef34a8e1b2734c61f304
-      internalID: -1739819451
+      spriteID: e465d40ef8bc4f345b6e686663302ad2
+      internalID: -385465882
       vertices: []
       indices: 
       edges: []
@@ -1339,19 +1352,19 @@ TextureImporter:
       name: Yuji_59
       rect:
         serializedVersion: 2
-        x: 288
-        y: 2.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 144
+        y: 0
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79f2bae55fa8f2448bffac3e5a1bfd2f
-      internalID: 603264067
+      spriteID: 6cf5b702a5c581048b652231147ff928
+      internalID: -1446340723
       vertices: []
       indices: 
       edges: []
@@ -1360,19 +1373,19 @@ TextureImporter:
       name: Yuji_60
       rect:
         serializedVersion: 2
-        x: 384
-        y: 2.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 192
+        y: 0
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0be381820b111b4479f53e009e48b2ca
-      internalID: -688923006
+      spriteID: e19ad238a24c5374a9c9aed221ebe512
+      internalID: 440852988
       vertices: []
       indices: 
       edges: []
@@ -1381,19 +1394,19 @@ TextureImporter:
       name: Yuji_61
       rect:
         serializedVersion: 2
-        x: 480
-        y: 2.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 240
+        y: 0
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93fdbeb1668bb434c985b2b645f77c40
-      internalID: -1331929813
+      spriteID: e23b340e4adc0ea469164db33010f855
+      internalID: 757733679
       vertices: []
       indices: 
       edges: []
@@ -1402,19 +1415,19 @@ TextureImporter:
       name: Yuji_62
       rect:
         serializedVersion: 2
-        x: 576
-        y: 2.625
-        width: 96.25
-        height: 128.375
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 288
+        y: 0
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26a5f6d11ae8cb84d999cc64118079b4
-      internalID: 1288580747
+      spriteID: 9ac8454b3a5eaa64e819dcb989794695
+      internalID: -1294437528
       vertices: []
       indices: 
       edges: []
@@ -1423,19 +1436,19 @@ TextureImporter:
       name: Yuji_63
       rect:
         serializedVersion: 2
-        x: 672
-        y: 3
-        width: 96
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 336
+        y: 0
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bc143dce42ba38488f5ed544ce8d586
-      internalID: -1626381587
+      spriteID: a96be404e6fc34d41b2013908583d60a
+      internalID: 450715329
       vertices: []
       indices: 
       edges: []
@@ -1451,70 +1464,70 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Yuji_0: -831032242
-      Yuji_1: -1899996565
-      Yuji_10: -767092620
-      Yuji_11: -2100915375
-      Yuji_12: 1094935717
-      Yuji_13: -924740472
-      Yuji_14: -769274875
-      Yuji_15: -1554453304
-      Yuji_16: -446356235
-      Yuji_17: 974505086
-      Yuji_18: 862031773
-      Yuji_19: 1500707576
-      Yuji_2: -22440030
-      Yuji_20: -29367963
-      Yuji_21: -1872564058
-      Yuji_22: -1480349305
-      Yuji_23: 1252851858
-      Yuji_24: 809503127
-      Yuji_25: 1856274450
-      Yuji_26: 2109272602
-      Yuji_27: 1576611108
-      Yuji_28: -327092139
-      Yuji_29: -1953278303
-      Yuji_3: -522949730
-      Yuji_30: -1911258360
-      Yuji_31: 1297176327
-      Yuji_32: 1429220937
-      Yuji_33: -609821135
-      Yuji_34: 586761920
-      Yuji_35: -937020784
-      Yuji_36: 802892296
-      Yuji_37: -775746637
-      Yuji_38: -1282846036
-      Yuji_39: 1649391291
-      Yuji_4: 972265580
-      Yuji_40: -838621598
-      Yuji_41: -406665616
-      Yuji_42: -143170281
-      Yuji_43: 1216356844
-      Yuji_44: -1553142602
-      Yuji_45: 1807595773
-      Yuji_46: -1987494889
-      Yuji_47: 606328974
-      Yuji_48: 1895163870
-      Yuji_49: 517536664
-      Yuji_5: -1265785262
-      Yuji_50: 2075320118
-      Yuji_51: -1545601830
-      Yuji_52: 221729523
-      Yuji_53: 2136750937
-      Yuji_54: 1265324656
-      Yuji_55: 981097757
-      Yuji_56: -2064560227
-      Yuji_57: 1000745112
-      Yuji_58: -1739819451
-      Yuji_59: 603264067
-      Yuji_6: 860923879
-      Yuji_60: -688923006
-      Yuji_61: -1331929813
-      Yuji_62: 1288580747
-      Yuji_63: -1626381587
-      Yuji_7: -958331832
-      Yuji_8: -1705122370
-      Yuji_9: -2036515523
+      Yuji_0: 419036302
+      Yuji_1: 1577344032
+      Yuji_10: -289557121
+      Yuji_11: 1610819677
+      Yuji_12: 930660268
+      Yuji_13: -1550266750
+      Yuji_14: 862539346
+      Yuji_15: -2077386027
+      Yuji_16: -1303647025
+      Yuji_17: 2125908644
+      Yuji_18: -1602494742
+      Yuji_19: -670010302
+      Yuji_2: 1091404787
+      Yuji_20: 687715804
+      Yuji_21: 1223197354
+      Yuji_22: 1919719534
+      Yuji_23: -231905359
+      Yuji_24: 683531415
+      Yuji_25: 1647989319
+      Yuji_26: -1599285111
+      Yuji_27: 1803327231
+      Yuji_28: 1853457463
+      Yuji_29: 1957955833
+      Yuji_3: 1766948076
+      Yuji_30: -230088389
+      Yuji_31: 770674485
+      Yuji_32: -1849831915
+      Yuji_33: -1230329725
+      Yuji_34: 677294471
+      Yuji_35: -1347760537
+      Yuji_36: 1224939835
+      Yuji_37: 1888527035
+      Yuji_38: 1744052905
+      Yuji_39: 233103805
+      Yuji_4: -442706287
+      Yuji_40: -1399239233
+      Yuji_41: -916681077
+      Yuji_42: -173084943
+      Yuji_43: 1245633620
+      Yuji_44: 366865341
+      Yuji_45: 1803098771
+      Yuji_46: -463942147
+      Yuji_47: -1876135481
+      Yuji_48: 2112977293
+      Yuji_49: -1318784222
+      Yuji_5: -899476005
+      Yuji_50: -1020208176
+      Yuji_51: 119460544
+      Yuji_52: -1440895796
+      Yuji_53: -1391537747
+      Yuji_54: -1851597380
+      Yuji_55: 1553746374
+      Yuji_56: 959490136
+      Yuji_57: -1634502132
+      Yuji_58: -385465882
+      Yuji_59: -1446340723
+      Yuji_6: 886558152
+      Yuji_60: 440852988
+      Yuji_61: 757733679
+      Yuji_62: -1294437528
+      Yuji_63: 450715329
+      Yuji_7: 1727921728
+      Yuji_8: 473509448
+      Yuji_9: -569839482
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,15 +1,15 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class IconMover : MonoBehaviour
 {
-    public RectTransform iconTransform; // ÀÌµ¿ÇÒ ¾ÆÀÌÄÜÀÇ RectTransform
-    public float speed = 5.0f; // ¾ÆÀÌÄÜÀÌ ÀÌµ¿ÇÏ´Â ¼Óµµ
-    public float height = 50.0f; // ¾ÆÀÌÄÜÀÌ ÀÌµ¿ÇÒ ³ôÀÌ
+    public RectTransform iconTransform; // ì´ë™í•  ì•„ì´ì½˜ì˜ RectTransform
+    public float speed = 5.0f; // ì•„ì´ì½˜ì´ ì´ë™í•˜ëŠ” ì†ë„
+    public float height = 50.0f; // ì•„ì´ì½˜ì´ ì´ë™í•  ë†’ì´
 
-    private Vector2 originalPosition; // ¾ÆÀÌÄÜÀÇ ¿ø·¡ À§Ä¡
-    private bool movingUp = true; // ¾ÆÀÌÄÜÀÌ À§·Î ÀÌµ¿ ÁßÀÎÁö ¿©ºÎ
+    private Vector2 originalPosition; // ì•„ì´ì½˜ì˜ ì›ë˜ ìœ„ì¹˜
+    private bool movingUp = true; // ì•„ì´ì½˜ì´ ìœ„ë¡œ ì´ë™ ì¤‘ì¸ì§€ ì—¬ë¶€
 
     void Start()
     {

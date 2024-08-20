@@ -8,6 +8,11 @@ TagManager:
   - CloseDoor
   - Camera
   - Object
+  - Monologue
+  - Kanna
+  - Dialogue
+  - Kimsin
+  - Kenta
   layers:
   - Default
   - TransparentFX

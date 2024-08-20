@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,22 +19,14 @@ public class CameraManager : MonoBehaviour
     private float halfHeight;
 
     private Camera theCamera;
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            DontDestroyOnLoad(this.gameObject);
-            instance = this;
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-    }
+   
 
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player");
+
+        target.GetComponent<PlayerController>().cameraAudioSource = this.GetComponent<AudioSource>();
+
         theCamera = GetComponent<Camera>();
         minBound = currentBound.bounds.min;
         maxBound = currentBound.bounds.max;
