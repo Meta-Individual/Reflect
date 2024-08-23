@@ -8,17 +8,12 @@ public class FirstDialogue : MonoBehaviour
     public int currentDialogueID;
     public PlayerController _playerController;
 
-    void Start()
+    public void ShowDialogue()
     {
-        _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-
-        if (_playerController.mansionInside == 0)
-        {
-            StartCoroutine(ShowDialogue());
-        }
+        StartCoroutine(ShowDialogueCoroutine());
     }
 
-    IEnumerator ShowDialogue()
+    IEnumerator ShowDialogueCoroutine()
     {
         yield return new WaitForSeconds(2.0f);
         _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
