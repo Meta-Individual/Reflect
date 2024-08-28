@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TransferMap : MonoBehaviour, IInteractable
 {
@@ -19,6 +20,7 @@ public class TransferMap : MonoBehaviour, IInteractable
     private MonologueManager _monologueManager;
     private PlayerController _playerController;
     private Camera _camera;
+    private ShowRegionName _showRegionName;
     private bool playerInRange = false; // 플레이어가 포탈 위에 있는지 여부
 
     public GameObject arrow_UI;
@@ -29,6 +31,7 @@ public class TransferMap : MonoBehaviour, IInteractable
     public bool isLocked = false;
     public string keyItemName = "Key";
     public bool stair = false;
+    [SerializeField] private string regionName;
     [Header("Sound")]
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip unlockSound;
@@ -40,6 +43,7 @@ public class TransferMap : MonoBehaviour, IInteractable
 
     void Start()
     {
+        _showRegionName = FindObjectOfType<ShowRegionName>();
         _camera = FindObjectOfType<Camera>();
         _monologueManager = FindObjectOfType<MonologueManager>();
         playerInventory = FindObjectOfType<PlayerInventory>();
@@ -88,11 +92,14 @@ public class TransferMap : MonoBehaviour, IInteractable
                 else
                 {
                     TransformWithSound(); // 방문 사운드 재생
+                    _showRegionName.ShowRegion(regionName);
                 }
 
             }
         }
     }
+
+    
     public void UnlockDoor()
     {
         _audioSource.clip = unlockSound;

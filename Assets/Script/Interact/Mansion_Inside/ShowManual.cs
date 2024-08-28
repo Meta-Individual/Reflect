@@ -27,7 +27,7 @@ public class ShowManual : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         manualPanel.SetActive(true);
-        StartCoroutine(FadeInAndOut());
+        StartCoroutine(FadeIn());
     }
 
     private IEnumerator FadeIn()
@@ -35,16 +35,24 @@ public class ShowManual : MonoBehaviour
         // 페이드 인 로직
         manual.gameObject.SetActive(true);
         yield return StartCoroutine(Fade(0, 1, false)); // 페이드 인 완료 대기
+
+        while (true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                break;
+            }
+            yield return null;
+        }
+
+        StartCoroutine(FadeOut());
     }
 
     private IEnumerator FadeOut()
     {
-        // 페이드 아웃 로직
-        manual.gameObject.SetActive(true);
         yield return StartCoroutine(Fade(1, 0, true)); // 페이드 아웃 완료 대기
         manual.gameObject.SetActive(false);
-
-        yield return new WaitForSeconds(1.0f);
+         yield return new WaitForSeconds(1.0f);
         firstDialogue.ShowDialogue();
     }
 
@@ -71,13 +79,5 @@ public class ShowManual : MonoBehaviour
             manual.gameObject.SetActive(false); // 투명해지면 비활성화
         }
 
-    }
-
-    private IEnumerator FadeInAndOut()
-    {
-        yield return new WaitForSeconds(1.0f); // 1초 대기
-        yield return StartCoroutine(FadeIn()); // 페이드 인 효과 시작 및 완료 대기
-        yield return new WaitForSeconds(3.0f); // 추가 대기 시간
-        yield return StartCoroutine(FadeOut()); // 페이드 아웃 효과 시작 및 완료 대기
     }
 }
