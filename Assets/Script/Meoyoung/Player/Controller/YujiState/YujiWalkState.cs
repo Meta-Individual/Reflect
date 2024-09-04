@@ -14,8 +14,7 @@ public class YujiWalkState : MonoBehaviour, IYujiState
             _playerController = playerController;
 
         _playerController.anim.SetBool("Walk", true);
-        _playerController.movement.x = 0;
-        _playerController.movement.y = 0;
+        _playerController.movement = Vector2.zero;
         firstInputDirection = Vector2.zero;
     }
 
@@ -101,6 +100,8 @@ public class YujiWalkState : MonoBehaviour, IYujiState
     }
     public void OnStateExit()
     {
+        _playerController.movement = Vector2.zero;
+        firstInputDirection = Vector2.zero;
         _playerController.anim.SetBool("Walk", false);
     }
 
