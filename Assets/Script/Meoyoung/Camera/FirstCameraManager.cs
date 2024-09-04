@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraManager : MonoBehaviour
+public class FirstCameraManager : MonoBehaviour
 {
     static public FirstCameraManager instance;
 
-    [SerializeField] GameObject target;
-    [SerializeField] float moveSpeed;
-    [SerializeField] Camera theCamera;
-    [SerializeField] BoxCollider2D currentBound;
+    public GameObject target;
+    public float moveSpeed;
+    private Vector3 targetPosition;
+
+    public BoxCollider2D currentBound;
 
     private Vector3 minBound;
     private Vector3 maxBound;
@@ -17,22 +18,16 @@ public class CameraManager : MonoBehaviour
     private float halfWidth;
     private float halfHeight;
 
-    private Vector3 targetPosition;
+    private Camera theCamera;
+   
 
     void Start()
     {
-        if(target == null)
-        {
-            target = GameObject.FindGameObjectWithTag("Player");
-        }
-        if(theCamera == null)
-        {
-            theCamera = GetComponent<Camera>();
-        }
-        if(currentBound == null)
-        {
-            UpdateCurrentBound();
-        }
+        target = GameObject.FindGameObjectWithTag("Player");
+
+        target.GetComponent<PlayerController>().cameraAudioSource = this.GetComponent<AudioSource>();
+
+        theCamera = GetComponent<Camera>();
         minBound = currentBound.bounds.min;
         maxBound = currentBound.bounds.max;
         halfHeight = theCamera.orthographicSize;
