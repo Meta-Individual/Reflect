@@ -11,14 +11,14 @@ public class YujiController : MonoBehaviour
 
     [Header("Interact")]
     [SerializeField] LayerMask interactableLayer; // 상호작용 가능한 레이어 설정
-    [SerializeField] Vector2 interactionAreaSize = new Vector2(2f, 1f); // 상호작용 영역의 크기
+    [SerializeField] Vector2 interactionAreaSize = new(2f, 1f); // 상호작용 영역의 크기
     [SerializeField] IInteractable interactable; //상호작용이 가능한 스크립트를 적용하기 위한 변수
-    [SerializeField] bool interactRange = false;
 
     [Header("Movement")]
-    public Vector2 movement;
-    public float walkSpeed = 5f;
-    public float runSpeed = 8f;
+    [HideInInspector]
+    public Vector2 movement; //플레이어가 바라보는 방향
+    public float walkSpeed = 5f; //플레이어가 걷는 속도
+    public float runSpeed = 8f; //플레이어가 뛰는 속도
 
 
     public static YujiController Instance { get; private set; } // Singleton 인스턴스
@@ -63,7 +63,7 @@ public class YujiController : MonoBehaviour
 
         _rigidbody = GetComponent<Rigidbody2D>();
 
-        ChangeState(_waitState);
+        ChangeState(_idleState);
     }
 
     private void Update()

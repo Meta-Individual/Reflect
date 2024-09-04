@@ -14,7 +14,7 @@ public class InteractWithTransfer : MonoBehaviour, IInteractable
     }
     private Animator anim;
     private GameObject player;
-    public CameraManager _cameraManager;
+    public FirstCameraManager _cameraManager;
     private AudioSource audioSource; // AudioSource 컴포넌트
     private PlayerInventory playerInventory;
     private MonologueManager _monologueManager;

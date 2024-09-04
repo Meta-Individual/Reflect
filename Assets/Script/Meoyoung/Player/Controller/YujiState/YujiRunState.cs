@@ -102,6 +102,8 @@ public class YujiRunState : MonoBehaviour, IYujiState
     }
     public void OnStateExit()
     {
+        _playerController.movement = Vector2.zero;
+        firstInputDirection = Vector2.zero;
         _playerController.anim.SetBool("Run", false);
     }
 

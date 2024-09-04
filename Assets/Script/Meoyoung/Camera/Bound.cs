@@ -5,12 +5,12 @@ using UnityEngine;
 public class Bound : MonoBehaviour
 {
     private BoxCollider2D bound;
-    private CameraManager theCamera;
+    private FirstCameraManager theCamera;
 
     void Start()
     {
         bound = GetComponent<BoxCollider2D>();
-        theCamera = FindObjectOfType<CameraManager>();
+        theCamera = FindObjectOfType<FirstCameraManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

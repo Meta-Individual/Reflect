@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Camera")]
     public Camera _camera;
-    public CameraManager _cameraManager1;
+    public FirstCameraManager _cameraManager1;
     public CameraShake _cameraShake;
     public CameraManager2 _cameraManager;
     public AudioSource cameraAudioSource;
