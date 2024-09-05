@@ -158,7 +158,7 @@ public class KannaController : MonoBehaviour
         StartCoroutine(MoveOutKanna());
     }
 
-    IEnumerator MoveOutKanna() // 김신을 거실까지 이동시키고 플레이어의 방향을 아래로 변환 후 대사 출력
+    IEnumerator MoveOutKanna() // 칸나를 거실밖으로 이동시킴
     {
         anim.SetBool("Walk", true);
         anim.SetFloat("DirX", 0.0f);
@@ -168,6 +168,7 @@ public class KannaController : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, moveOut.position, walkSpeed * Time.deltaTime);
             yield return null; // 다음 프레임까지 대기
         }
+        
         this.gameObject.SetActive(false);
     }
 }

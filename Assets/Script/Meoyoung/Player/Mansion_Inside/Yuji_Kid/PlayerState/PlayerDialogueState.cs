@@ -16,8 +16,8 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
     public void OnStateUpdate()
     {
         if (Input.GetKeyDown(KeyCode.E) && !_playerController.isDialogue) //대화중이 아닐 때 E키를 누르면 다음 대사로 넘어감
-        {   
-            if(_playerController.currentDialogueCounter <= _playerController.maxDialogueCounter) //정해진 대화까지 Counter 증가하면서 대사 실행
+        {
+            if (_playerController.currentDialogueCounter <= _playerController.maxDialogueCounter) //정해진 대화까지 Counter 증가하면서 대사 실행
             {
                 if (_playerController.currentDialogueCounter == 3) // 숨바꼭질 시작할 때 눈 뜨는 연출
                 {
@@ -46,13 +46,19 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
                     Debug.Log("칸나 나가자");
                     _playerController._kannaController.MoveKanna();
                 }
-                else if(_playerController.currentDialogueCounter == 92)
+                else if (_playerController.currentDialogueCounter == 89)
+                {
+                    _playerController._kimsinController.GoToLibraryKimsin();
+                    _playerController.StartCameraShake();
+
+                }
+                else if (_playerController.currentDialogueCounter == 92)
                 {
                     _playerController._kimsinController.RunMoveOutCoroutine();
                 }
                 _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
             }
-            else if(_playerController.currentDialogueCounter == 31) //칸나가 걸어서 거실로 나가는 부분
+            else if (_playerController.currentDialogueCounter == 31) //칸나가 걸어서 거실로 나가는 부분
             {
                 _playerController._kannaController.goToLivingRoom = true;
                 _playerController.ChangeState(_playerController._waitState);
@@ -63,13 +69,13 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
                 //유우지를 2층으로 이동시켜야함
                 StartCoroutine(_playerController.TransferTo2F());
             }
-            else if(_playerController.currentDialogueCounter == 59) //켄타를 찾아서 옷장에서 나오는 부분
+            else if (_playerController.currentDialogueCounter == 59) //켄타를 찾아서 옷장에서 나오는 부분
             {
                 _playerController.ChangeState(_playerController._waitState);
                 //대사가 다 끝난 경우, wait 상태에서 2초 정도 대기한 후, Fade in Fade out 연출로 거실에서 시작.
                 //fade out 후에도 2초 정도 대기 시간이 있도록 ! 이후에는 바로 다음 대사 진행
             }
-            else if(_playerController.currentDialogueCounter == 61)
+            else if (_playerController.currentDialogueCounter == 61)
             {
                 _playerController.ChangeState(_playerController._waitState);
                 _playerController._kimsinController.RunShowKimsinCoroutine();
@@ -78,12 +84,16 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
                 // 켄타가 정해진 위치까지 이동한 경우 80번 대사부터 출력 82번 대사가 출력되는 타이밍에 칸나도 거실 밖으로 이동시킴
                 // 이후 89번까지 대사 출력
             }
-            else if(_playerController.currentDialogueCounter == 89)
+            else if (_playerController.currentDialogueCounter == 93)
+            {
+                _playerController.ChangeState(_playerController._waitState);
+            }
+            /*else if (_playerController.currentDialogueCounter == 90)
             {
                 _playerController.StartCameraShake();
                 BGMManager.Instance.StartFadeIn(1.0f);
-            }
-            else if (_playerController.currentDialogueCounter == 95) //신야가 문을 두드리고 나서 대사 출력후 몬스터 등장
+            }*/
+            /*else if (_playerController.currentDialogueCounter == 95) //신야가 문을 두드리고 나서 대사 출력후 몬스터 등장
             {
                 _playerController._cameraManager.ShowMonster();
                 _playerController.ChangeState(_playerController._waitState);
@@ -111,7 +121,7 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
             {
                 _playerController.ChangeState(_playerController._waitState);
                 FadeManager.Instance.StartFadeIn();
-            }
+            }*/
             else
             {
                 _playerController.ChangeState(_playerController._idleState);

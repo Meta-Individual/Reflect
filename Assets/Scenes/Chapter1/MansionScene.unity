@@ -8759,7 +8759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &278722961
 Transform:
   m_ObjectHideFlags: 0
@@ -9179,7 +9179,7 @@ Transform:
   m_GameObject: {fileID: 288599555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.3, y: -388.9, z: 0}
+  m_LocalPosition: {x: -289, y: 906, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9287,7 +9287,7 @@ MonoBehaviour:
   _rigidbody: {fileID: 0}
   kannaAnim: 0
   maxDialogueCounter: 1
-  currentDialogueCounter: 1
+  currentDialogueCounter: 48
   _kannaController: {fileID: 776055009}
   _kimsinController: {fileID: 1081813563}
   _kentaController: {fileID: 2065122716}
@@ -29729,8 +29729,8 @@ MonoBehaviour:
   startDialogueID: 7
   currentDialogueID: 24
   firstDelay: 1
-  secondDelay: 3
-  lockDoorSound: {fileID: 8300000, guid: df52e6fa14e29a2459b42e6f28edb1b7, type: 3}
+  secondDelay: 1
+  lockDoorSound: {fileID: 8300000, guid: 0e16fbacfe71c7443bca2f3d375300f9, type: 3}
 --- !u!1 &814472252
 GameObject:
   m_ObjectHideFlags: 0
@@ -30513,6 +30513,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &827316110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 827316111}
+  m_Layer: 0
+  m_Name: Kimsin_transform_Library 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &827316111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827316110}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -54.1, y: -375.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &827889025
 GameObject:
   m_ObjectHideFlags: 0
@@ -40198,6 +40229,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveIntoLivingRoom: {fileID: 43725776}
   moveOut: {fileID: 577319802}
+  moveToLibray:
+  - {fileID: 827316111}
+  - {fileID: 1545475179}
+  - {fileID: 1442896340}
+  currentWaypointIndex: 0
   moveSpeed: 20
   anim: {fileID: 1081813560}
   _playerController: {fileID: 288599563}
@@ -40236,6 +40272,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1c7c0f0241ab0514492208928cabfa91, type: 3}
   - {fileID: 8300000, guid: fbc00c2684d03e14fb8db6f88a2cb6d7, type: 3}
   - {fileID: 8300000, guid: 34a8788d92947314194450bdb16d98a3, type: 3}
+  doorLockSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
 --- !u!50 &1081813564
 Rigidbody2D:
   serializedVersion: 4
@@ -52672,6 +52709,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1442896339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1442896340}
+  m_Layer: 0
+  m_Name: Kimsin_transform_Library 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1442896340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442896339}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -69.2, y: -350.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1443755885
 GameObject:
   m_ObjectHideFlags: 0
@@ -56233,6 +56301,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1545475178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1545475179}
+  m_Layer: 0
+  m_Name: Kimsin_transform_Library 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1545475179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545475178}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -54.1, y: -350.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1548582717
 GameObject:
   m_ObjectHideFlags: 0
@@ -80563,6 +80662,9 @@ SceneRoots:
   - {fileID: 810774787}
   - {fileID: 1081813562}
   - {fileID: 43725776}
+  - {fileID: 827316111}
+  - {fileID: 1545475179}
+  - {fileID: 1442896340}
   - {fileID: 577319802}
   - {fileID: 1816103279}
   - {fileID: 1913166596}
