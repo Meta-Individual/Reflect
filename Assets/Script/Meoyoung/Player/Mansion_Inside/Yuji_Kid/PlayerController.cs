@@ -265,8 +265,11 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator WaitForDuration(float duration) //1초 후 카메라 흔들림 연출
     {
+        yield return new WaitForSeconds(0.1f);
         ChangeState(_waitState);
-        maxDialogueCounter = 93;
+        yield return new WaitForSeconds(9.0f);
+        BGMManager.Instance.StartFadeIn(1.0f);
+        maxDialogueCounter = 92;
         cameraAudioSource.clip = shakeSound;
         cameraAudioSource.Play();
         yield return new WaitForSeconds(1.0f);
@@ -277,6 +280,21 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         StartCoroutine(FadeOutSound(cameraAudioSource));
         //cameraAudioSource.Stop();
+        _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
+        anim.SetFloat("DirX", -1.0f);
+        anim.SetFloat("DirY", 0.0f);
+
+        _kimsinController.gameObject.SetActive(true);
+        _kimsinController.anim.SetFloat("DirX", 1.0f);
+    }
+    public void FollowFather()
+    {
+        StartCoroutine(FollowFatherCoroutine());
+    }
+    public IEnumerator FollowFatherCoroutine()
+    {
+        yield return new WaitForSeconds(5.0f);
+        maxDialogueCounter = 94;
         _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
     }
 
