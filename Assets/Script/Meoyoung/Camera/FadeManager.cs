@@ -17,12 +17,12 @@ public class FadeManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // 씬이 전환되어도 파괴되지 않음
+            //DontDestroyOnLoad(gameObject); // 씬이 전환되어도 파괴되지 않음
         }
-        else
+       /* else
         {
             Destroy(gameObject); // 이미 인스턴스가 있다면 새로 생성된 것을 파괴
-        }
+        }*/
     }
 
     void Start()

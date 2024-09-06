@@ -90,29 +90,14 @@ public class PlayerController : MonoBehaviour
     public CameraManager2 _cameraManager;
     public AudioSource cameraAudioSource;
 
-    [Header("Monster")]
-    public GameObject monster;
-    public Transform monster_MovePoint;
-    public Transform monster_MoveBackPoint;
-
     [Header("Flicker")]
     public Flicker _flicker;
 
+    [SerializeField] Transform spawnPoint;
+    [SerializeField] PlayerInventory inventory;
+
     public static PlayerController Instance { get; private set; } // Singleton 인스턴스
 
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject); // 씬이 전환되어도 파괴되지 않음
-        }
-        else
-        {
-            Destroy(gameObject); // 이미 인스턴스가 있다면 새로 생성된 것을 파괴
-        }
-    }
 
     public IPlayerState CurrentState
     {
@@ -129,6 +114,15 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        if(spawnPoint != null)
+            this.transform.position = spawnPoint.position;
+
+        inventory.ClearInventory();
+
+        currentDialogueCounter = 1;
+        maxDialogueCounter = 1;
+        kannaAnim = false;
+        isDialogue = false;
         FadeManager.Instance.JustFade(); //화면 fade In
 
         monologuePanel.SetActive(false);
@@ -403,57 +397,4 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("MansionScene");
     }
-
-    /* ------------------------------------------------------ 저택 내부 2회 전용------------------------------------------------------ */
-
-    public void StartMonsterMoveCoroutine()
-    {
-        StartCoroutine(MonsterMove());
-    }
-
-    IEnumerator MonsterMove() //몬스터를 정해진 거실 위치까지 이동 후 대사 출력
-    {
-        monster.GetComponent<Animator>().SetBool("Walk", true);
-        while (monster.transform.position != monster_MovePoint.position)
-        {
-            monster.transform.position = Vector3.MoveTowards(monster.transform.position, monster_MovePoint.position, walkSpeed * Time.deltaTime);
-            yield return null; // 다음 프레임까지 대기
-        }
-        monster.GetComponent<Animator>().SetBool("Walk", false);
-
-        yield return new WaitForSeconds(1.0f);
-
-        maxDialogueCounter = 100;
-        _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
-    }
-
-    public void StartMonsterMoveBackCoroutine()
-    {
-        StartCoroutine(YujiStun());
-    }
-
-    IEnumerator MonsterMoveBack() //몬스터를 정해진 거실 위치까지 이동 후 대사 출력
-    {
-        yield return new WaitForSeconds(2.0f);
-
-        while (monster.transform.position != monster_MoveBackPoint.position)
-        {
-            monster.transform.position = Vector3.MoveTowards(monster.transform.position, monster_MoveBackPoint.position, walkSpeed * Time.deltaTime);
-            yield return null; // 다음 프레임까지 대기
-        }
-
-        yield return new WaitForSeconds(1.0f);
-
-        maxDialogueCounter = 101;
-        _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
-    }
-
-    IEnumerator YujiStun()
-    {
-        yield return new WaitForSeconds(2.0f);
-
-        maxDialogueCounter = 101;
-        _dialogueManager.ShowDialogue(currentDialogueCounter.ToString());
-    }
-
 }

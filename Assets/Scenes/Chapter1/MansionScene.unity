@@ -9692,10 +9692,9 @@ MonoBehaviour:
   _cameraShake: {fileID: 519420036}
   _cameraManager: {fileID: 0}
   cameraAudioSource: {fileID: 519420035}
-  monster: {fileID: 1834419073}
-  monster_MovePoint: {fileID: 1211054341}
-  monster_MoveBackPoint: {fileID: 0}
   _flicker: {fileID: 0}
+  spawnPoint: {fileID: 278722961}
+  inventory: {fileID: 288599564}
 --- !u!114 &288599564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9811,7 +9810,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288599555}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1783a232bfeb1142a8d15ab0109e0d1, type: 3}
   m_Name: 
@@ -26854,6 +26853,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 110.93964, y: 38.986572}
   m_EdgeRadius: 0
+--- !u!1 &702645291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 702645292}
+  m_Layer: 0
+  m_Name: Kenta SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &702645292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702645291}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.200012, y: -359.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &706776185
 GameObject:
   m_ObjectHideFlags: 0
@@ -29408,6 +29438,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c6e5d7b95e7674d44bcf81e1c01e0f8e, type: 3}
   doorOpenSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   hideAndSeek: {fileID: 8300000, guid: c673b6dd3e5f1f44f8e8a7528abafa8a, type: 3}
+  spawnPoint: {fileID: 900510531}
 --- !u!114 &776055011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34114,6 +34145,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 70, y: 37}
   m_EdgeRadius: 0
+--- !u!1 &900510530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 900510531}
+  m_Layer: 8
+  m_Name: Kanna_kid_SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &900510531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900510530}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -295.35, y: -425.54, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &904030938
 GameObject:
   m_ObjectHideFlags: 0
@@ -42521,7 +42583,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103877399}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2e0efc23cfb1364bb34b0e51d9418c6, type: 3}
   m_Name: 
@@ -42801,6 +42863,37 @@ Transform:
   - {fileID: 2133522175}
   - {fileID: 1693997344}
   m_Father: {fileID: 1320526256}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1119694080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1119694081}
+  m_Layer: 0
+  m_Name: Shadow Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1119694081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119694080}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 59.4, y: -93.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1120617110
 GameObject:
@@ -45574,15 +45667,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1201f3bea95962544b680cb44d8d9240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionPanel: {fileID: 0}
-  audioMixer: {fileID: 0}
-  m_MusicMasterSlider: {fileID: 0}
+  optionPanel: {fileID: 1254127024}
+  audioMixer: {fileID: 24100000, guid: 33a1713bddbf1c84baa54c968c7d2cff, type: 2}
+  m_MusicMasterSlider: {fileID: 472604097}
   currentVolumeSFX: 0
   currentVolumeBGM: 0
-  onButtonTextSFX: {fileID: 0}
-  offButtonTextSFX: {fileID: 0}
-  onButtonTextBGM: {fileID: 0}
-  offButtonTextBGM: {fileID: 0}
+  onButtonTextSFX: {fileID: 1729612033}
+  offButtonTextSFX: {fileID: 1772452768}
+  onButtonTextBGM: {fileID: 303859589}
+  offButtonTextBGM: {fileID: 1663848738}
 --- !u!1 &1194982753
 GameObject:
   m_ObjectHideFlags: 0
@@ -68946,10 +69039,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 1816103282}
-  shadowWalkingSound1: {fileID: 8300000, guid: 50c75e2bef38b5b41b92faa6c8f26658, type: 3}
-  shadowWalkingSound2: {fileID: 8300000, guid: caf21fa1b7637ae449dabdf78271c0aa, type: 3}
-  shadowWalkingSound3: {fileID: 8300000, guid: 8b90e4eb7ed6d694f9e82e09447527ab, type: 3}
-  shadowWalkingSound4: {fileID: 8300000, guid: dfb1e935f9ee22941a5b18151cf502a7, type: 3}
+  shadowWalkingSound1: {fileID: 8300000, guid: 4fb92248af537424ab91d7cf84f00093, type: 3}
+  shadowWalkingSound2: {fileID: 8300000, guid: 4e01394bb6617dd4b8916816d0f2f575, type: 3}
+  shadowWalkingSound3: {fileID: 8300000, guid: 8196f2b8eeff4c143aaaf143387b25af, type: 3}
+  shadowWalkingSound4: {fileID: 8300000, guid: 3e7cbc493e32dc745adb3c2a0fc6d812, type: 3}
+  spawnPoint: {fileID: 1119694081}
 --- !u!82 &1816103282
 AudioSource:
   m_ObjectHideFlags: 0
@@ -79055,6 +79149,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 15701b7e46888c0489553a23a9b30645, type: 3}
   - {fileID: 8300000, guid: f99a7a64250e72b488e91ef9919a78a8, type: 3}
   - {fileID: 8300000, guid: c6e5d7b95e7674d44bcf81e1c01e0f8e, type: 3}
+  spawnPoint: {fileID: 702645292}
 --- !u!50 &2065122717
 Rigidbody2D:
   serializedVersion: 4
@@ -83374,7 +83469,9 @@ SceneRoots:
   - {fileID: 1153098518}
   - {fileID: 2054776207}
   - {fileID: 777676404}
+  - {fileID: 900510531}
   - {fileID: 776055007}
+  - {fileID: 702645292}
   - {fileID: 2065122714}
   - {fileID: 470032565}
   - {fileID: 787747914}
@@ -83392,6 +83489,7 @@ SceneRoots:
   - {fileID: 1260483491}
   - {fileID: 428920632}
   - {fileID: 577319802}
+  - {fileID: 1119694081}
   - {fileID: 1816103279}
   - {fileID: 1913166596}
   - {fileID: 278722961}

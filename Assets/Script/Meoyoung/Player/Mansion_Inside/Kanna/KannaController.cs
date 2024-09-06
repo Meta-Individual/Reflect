@@ -44,6 +44,7 @@ public class KannaController : MonoBehaviour
     public AudioClip doorOpenSound;
     public AudioClip hideAndSeek; // 방문 여는 사운드
 
+    [SerializeField] Transform spawnPoint;
     public IKannaState CurrentState
     {
         get; set;
@@ -52,8 +53,12 @@ public class KannaController : MonoBehaviour
     public IKannaState _idleState, _walkState, _hideState, _outState;
 
 
+
     private void Start()
     {
+        this.transform.position = spawnPoint.position;
+        goToLivingRoom = false;
+
         _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 
         _idleState = gameObject.AddComponent<KannaIdleState>();

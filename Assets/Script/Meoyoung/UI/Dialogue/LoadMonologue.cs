@@ -14,7 +14,10 @@ public class LoadMonologue : MonoBehaviour
 
     private void Awake()
     {
-        if (_instance != null && _instance != this)
+        _instance = this;
+        LoadMonologues();
+
+        /*if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
         }
@@ -23,7 +26,7 @@ public class LoadMonologue : MonoBehaviour
             _instance = this;
             DontDestroyOnLoad(this.gameObject);
             LoadMonologues();
-        }
+        }*/
     }
 
     private void LoadMonologues()

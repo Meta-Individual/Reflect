@@ -36,6 +36,12 @@ public class OptionManager : MonoBehaviour
 
     public void LoadTitle()
     {
+        // 게임 재개
+        Time.timeScale = 1f;
+        AudioListener.pause = false; // 모든 오디오 재개
+
+        // 환경설정 창 비활성화
+        optionPanel.SetActive(false);
         SceneManager.LoadScene("TitleScene");
     }
 

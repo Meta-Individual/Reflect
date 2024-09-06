@@ -12,7 +12,9 @@ public class LoadDialogue : MonoBehaviour
 
     private void Awake()
     {
-        if (_instance != null && _instance != this)
+        _instance = this;
+        LoadDialogues();
+        /*if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
         }
@@ -21,7 +23,7 @@ public class LoadDialogue : MonoBehaviour
             _instance = this;
             DontDestroyOnLoad(this.gameObject);
             LoadDialogues();
-        }
+        }*/
     }
 
     private void LoadDialogues()

@@ -25,9 +25,11 @@ public class KentaController : MonoBehaviour
     public AudioClip[] WoodClips;   // Wood1, Wood2, Wood3, Wood4
     private System.Random random = new();
 
+    [SerializeField] Transform spawnPoint;
     private void Start()
     {
         _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        this.transform.position = spawnPoint.position;
     }
 
     public void MoveKenta()
