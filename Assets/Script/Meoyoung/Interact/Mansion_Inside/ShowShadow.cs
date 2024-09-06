@@ -22,6 +22,7 @@ public class ShowShadow : MonoBehaviour
     public Direction direction; //사용자의 현재 방향
     void Start() // 게임시작후 그림자 오브젝트는 비활성화
     {
+        eventFlag = false;
         inventory = FindObjectOfType<PlayerInventory>();
         _monologueManager = FindObjectOfType<MonologueManager>();
         shadow.SetActive(false);

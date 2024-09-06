@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Title/TitleScene.unity
     guid: ee2c55dbfb0964af89cb7eb116b280d5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter1/MansionOutScene_Opening.unity
     guid: 05bfdcb48664c4e939342ba368eff614
   - enabled: 1
@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter1/MansionOutScene.unity
     guid: 7eadce60dd0290c4cabe8ec92024b574
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter2/SchoolScene.unity
     guid: 414b93a567e10462ca1750f40fc364df
   m_configObjects: {}

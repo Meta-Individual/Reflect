@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,19 +8,25 @@ public class PlayerInventory : MonoBehaviour
 
     public void AddItem(string itemName)
     {
-        Debug.Log(itemName + "ÀÌ(°¡) ÀÎº¥Åä¸®¿¡ Ãß°¡µÇ¾ú½À´Ï´Ù.");
+        Debug.Log(itemName + "ì´(ê°€) ì¸ë²¤í† ë¦¬ì— ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤.");
         inventory.Add(itemName);
     }
 
     public void RemoveItem(string itemName)
     {
-        Debug.Log(itemName + "ÀÌ(°¡) ÀÎº¥Åä¸®¿¡ Á¦°ÅµÇ¾ú½À´Ï´Ù.");
+        Debug.Log(itemName + "ì´(ê°€) ì¸ë²¤í† ë¦¬ì— ì œê±°ë˜ì—ˆìŠµë‹ˆë‹¤.");
         inventory.Remove(itemName);
     }
 
     public bool HasItem(string itemName)
     {
-        Debug.Log(itemName + "À»(¸¦) ¼ÒÁöÇÏ°í ÀÖ´ÂÁö È®ÀÎÇÕ´Ï´Ù.");
+        Debug.Log(itemName + "ì„(ë¥¼) ì†Œì§€í•˜ê³  ìˆëŠ”ì§€ í™•ì¸í•©ë‹ˆë‹¤.");
         return inventory.Contains(itemName);
+    }
+
+    public void ClearInventory()
+    {
+        Debug.Log("ì¸ë²¤í† ë¦¬ì˜ ëª¨ë“  ì•„ì´í…œì´ ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.");
+        inventory.Clear();
     }
 }

@@ -11,6 +11,13 @@ public class ShadowController : MonoBehaviour
     public AudioClip shadowWalkingSound3;
     public AudioClip shadowWalkingSound4;
 
+    [SerializeField] Transform spawnPoint;
+
+    private void Start()
+    {
+        this.transform.position = spawnPoint.position;
+    }
+
     public void PlayWalkingSound()
     {
         // 1부터 4까지의 숫자를 무작위로 선택합니다.
