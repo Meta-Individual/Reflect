@@ -13,12 +13,18 @@ public class KannaAnimation : MonoBehaviour, IInteractable
     private PlayerController _playerController;
     private PlayerInventory playerInventory;
 
+    [SerializeField] GameObject particle;
+
 
     void Start()
     {
         _illustManager = FindObjectOfType<IllustManager>();
         _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         playerInventory = FindObjectOfType<PlayerInventory>();
+        if (!particle.activeSelf)
+        {
+            particle.SetActive(true);
+        }
     }
     public void Interact()
     {
@@ -29,6 +35,7 @@ public class KannaAnimation : MonoBehaviour, IInteractable
             _illustManager.ShowIllust(image, objectID);
             _playerController.kannaAnim = true;
             playerInventory.AddItem(itemName);
+            particle.SetActive(false);
         }
         else
         {

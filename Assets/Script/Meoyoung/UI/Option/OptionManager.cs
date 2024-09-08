@@ -29,6 +29,9 @@ public class OptionManager : MonoBehaviour
     [SerializeField] TMP_Text onButtonTextBGM;
     [SerializeField] TMP_Text offButtonTextBGM;
 
+    [SerializeField] TMP_Text fullResolutionText;
+    [SerializeField] TMP_Text windowResolutionText;
+
     private void Awake()
     {
         m_MusicMasterSlider.onValueChanged.AddListener(SetMasterVolume);
@@ -114,5 +117,20 @@ public class OptionManager : MonoBehaviour
 
         // 환경설정 창 비활성화
         optionPanel.SetActive(false);
+    }
+
+    public void OnChangeWindowResolutionButtonClick()
+    {
+        // 창모드로 설정
+        Screen.SetResolution(Screen.width, Screen.height, FullScreenMode.Windowed);
+        SetTextAlpha(windowResolutionText, 1.0f);
+        SetTextAlpha(fullResolutionText, 0.5f);
+    }
+
+    public void OnChangeFullResolutionButtonClick()
+    {
+        Screen.SetResolution(Screen.width, Screen.height, FullScreenMode.FullScreenWindow);
+        SetTextAlpha(fullResolutionText, 1.0f);
+        SetTextAlpha(windowResolutionText, 0.5f);
     }
 }
