@@ -14,12 +14,19 @@ public class LibraryKey : MonoBehaviour, IInteractable
     private MonologueManager _monologueManager;
     private PlayerController _playerController;
 
+    [SerializeField] GameObject particle;
+
     void Start()
     {
         _monologueManager = FindObjectOfType<MonologueManager>();
         playerInventory = FindObjectOfType<PlayerInventory>();
         _illustManager = FindObjectOfType<IllustManager>();
         _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
+        if (!particle.activeSelf)
+        {
+            particle.SetActive(true);
+        }
     }
 
     public void Interact()
@@ -30,6 +37,7 @@ public class LibraryKey : MonoBehaviour, IInteractable
             playerInventory.AddItem(keyItemName);
             _playerController.GetKeySound();
             _illustManager.ShowIllust(image, afterObjectID);
+            particle.SetActive(false);
         }
         else
         {
