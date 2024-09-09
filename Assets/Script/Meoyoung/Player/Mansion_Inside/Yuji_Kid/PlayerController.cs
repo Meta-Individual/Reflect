@@ -351,7 +351,7 @@ public class PlayerController : MonoBehaviour
         {
             int randomIndex = random.Next(0, selectedClips.Length);
             stepAudioSource.clip = selectedClips[randomIndex];
-            stepAudioSource.Play();
+            stepAudioSource.PlayOneShot(stepAudioSource.clip);
         }
     }
 
