@@ -8724,8 +8724,8 @@ MonoBehaviour:
   sfxSource: {fileID: 1743555416}
   stepAudioSource: {fileID: 1419343082}
   exclamationSound: {fileID: 8300000, guid: eb6db1f709f17d2438fd0785ec89e4a4, type: 3}
-  getKeySound: {fileID: 8300000, guid: 6fc6606020972c345a00ae258d7981bf, type: 3}
-  paperSound: {fileID: 8300000, guid: a19c95d0cdcf3684c9f599f1b48ce094, type: 3}
+  getKeySound: {fileID: 8300000, guid: cec5d9944d380744b993de06968032ba, type: 3}
+  paperSound: {fileID: 8300000, guid: 6fc6606020972c345a00ae258d7981bf, type: 3}
   shakeSound: {fileID: 8300000, guid: e87ca41c503138b48a23bdbea0d7e66a, type: 3}
   heartbeatSound: {fileID: 8300000, guid: b148e66f324f33e42b1cba3cad6279c9, type: 3}
   CarpetClips:
