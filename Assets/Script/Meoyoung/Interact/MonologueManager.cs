@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class MonologueManager: MonoBehaviour
+public class MonologueManager : MonoBehaviour
 {
     public GameObject player; // 플레이어
     private Transform _playerTransform; //말풍선의 상대적인 위치를 위한 플레이어의 위치

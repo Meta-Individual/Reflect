@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEditor.Rendering;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SimpleInteractable : MonoBehaviour, IInteractable
 {
