@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class ShowManual : MonoBehaviour
     [SerializeField] private Image manual;
     [SerializeField] private float fadeDuration = 1f; // 페이드 인/아웃 지속 시간
     [SerializeField] private FirstDialogue firstDialogue;
+    [SerializeField] private TMP_Text continueText;
     private PlayerController _playerController;
 
 
@@ -20,6 +22,11 @@ public class ShowManual : MonoBehaviour
         if (_playerController.mansionInside == 0)
         {
             StartCoroutine(ShowManualCoroutine());
+        }
+
+        if (continueText.gameObject.activeSelf)
+        {
+            continueText.gameObject.SetActive(false);
         }
     }
 
@@ -35,11 +42,12 @@ public class ShowManual : MonoBehaviour
         // 페이드 인 로직
         manual.gameObject.SetActive(true);
         yield return StartCoroutine(Fade(0, 1, false)); // 페이드 인 완료 대기
-
+        continueText.gameObject.SetActive(true);
         while (true)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                continueText.gameObject.SetActive(false);
                 break;
             }
             yield return null;
