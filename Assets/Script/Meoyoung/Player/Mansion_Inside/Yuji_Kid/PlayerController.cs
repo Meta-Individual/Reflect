@@ -114,8 +114,8 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        if(spawnPoint != null)
-            this.transform.position = spawnPoint.position;
+        /*if(spawnPoint != null)
+            this.transform.position = spawnPoint.position;*/
 
         inventory.ClearInventory();
 

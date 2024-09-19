@@ -10,7 +10,7 @@ public class FadeManager : MonoBehaviour
     public Image fadeImage; // 페이드 효과를 위한 Image
     public float fadeDuration = 1f; // 페이드 인/아웃 지속 시간
     public float delayBeforeFadeOut = 1f; // 페이드 인 후 페이드 아웃까지의 대기 시간
-    private WaitForSeconds oneSecondWait = new WaitForSeconds(1.0f);
+    private WaitForSeconds oneSecondWait = new(1.0f);
 
     private void Awake()
     {
