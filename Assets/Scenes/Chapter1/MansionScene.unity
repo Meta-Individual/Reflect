@@ -10350,35 +10350,35 @@ MonoBehaviour:
   shakeSound: {fileID: 8300000, guid: e87ca41c503138b48a23bdbea0d7e66a, type: 3}
   heartbeatSound: {fileID: 8300000, guid: b148e66f324f33e42b1cba3cad6279c9, type: 3}
   CarpetClips:
-  - {fileID: 8300000, guid: 95903088d252d7344b62fb5d481c3c7d, type: 3}
-  - {fileID: 8300000, guid: 37a0d72920e842a4787d116c8a284e46, type: 3}
-  - {fileID: 8300000, guid: c4c60b420bc2c244cbb4270b76235094, type: 3}
-  - {fileID: 8300000, guid: 7075b6381cda4cc4eaf6c72fa0ddd910, type: 3}
+  - {fileID: 8300000, guid: 0402f29cf534f194eb4b8ba37a6c2efb, type: 3}
+  - {fileID: 8300000, guid: 4d7f2234905bfce4b938da6286eb6cf1, type: 3}
+  - {fileID: 8300000, guid: 85f5ceb0c61a7bb43b9912ae8acb2984, type: 3}
+  - {fileID: 8300000, guid: 144589ef29ffc6d49b9e0273a8b09ace, type: 3}
   DirtClips:
-  - {fileID: 8300000, guid: f60fb3754a896e243b60a5c26645dc62, type: 3}
-  - {fileID: 8300000, guid: 8f231899b37bbd94689a695dd03135a7, type: 3}
-  - {fileID: 8300000, guid: f95c20e33a447f24b948ce086757bdaf, type: 3}
-  - {fileID: 8300000, guid: 980be8e54fb2fd54a873472c74232eff, type: 3}
+  - {fileID: 8300000, guid: 88120f8eb2211964bb98d68ca7ab40b0, type: 3}
+  - {fileID: 8300000, guid: f9329b1387c79d941a160aa18114eefc, type: 3}
+  - {fileID: 8300000, guid: 8f5eba6414b085642bc1b1f4be84c037, type: 3}
+  - {fileID: 8300000, guid: 5f0ff27ee1787174a80ba59986c38017, type: 3}
   HallClips:
-  - {fileID: 8300000, guid: 348b5e7c28e2d8343a200a7dc33cee56, type: 3}
-  - {fileID: 8300000, guid: df2a6b38bf266ca4aa0eb8ba91cc3b1d, type: 3}
-  - {fileID: 8300000, guid: 03381797fb79e9a43a3914265c3708a3, type: 3}
-  - {fileID: 8300000, guid: 6e7ff465835641e459913a41dce8dae0, type: 3}
+  - {fileID: 8300000, guid: 42ba3c8b54c00e84aad503db9ea28217, type: 3}
+  - {fileID: 8300000, guid: e432dc556574b414296aa1d7fd8be8dd, type: 3}
+  - {fileID: 8300000, guid: 620e57a0c1388904cb183317a3c0f12e, type: 3}
+  - {fileID: 8300000, guid: 524c6fb70c883f64594a679c4e5ea751, type: 3}
   ConcreteClips:
-  - {fileID: 8300000, guid: bba3cd02d34e0d3448ff9f236ca351a1, type: 3}
-  - {fileID: 8300000, guid: 469e018e8345c7b4eb5b664e3cb848be, type: 3}
-  - {fileID: 8300000, guid: e0cf8fac3a7713340a531edb8ab7f8af, type: 3}
-  - {fileID: 8300000, guid: da873b833eb33214abec436da6a63e70, type: 3}
+  - {fileID: 8300000, guid: 44db9d1cc60296d4b9da70941cb9824f, type: 3}
+  - {fileID: 8300000, guid: 50822152630cef84f80b228c7811330a, type: 3}
+  - {fileID: 8300000, guid: 49bff7be9443317479a86fe731d1d9ff, type: 3}
+  - {fileID: 8300000, guid: 24745d4bcb4db5944aa135460e368216, type: 3}
   GrassClips:
-  - {fileID: 8300000, guid: 45b13a0a05bfc0c4a8aed3a4639bc882, type: 3}
-  - {fileID: 8300000, guid: 94cb7487ded2d5643b35529f1185e624, type: 3}
-  - {fileID: 8300000, guid: c927ac39e3c701b48a27e161947011e8, type: 3}
-  - {fileID: 8300000, guid: 55b487660d31b5148936dc784739ac0d, type: 3}
+  - {fileID: 8300000, guid: 1ca86f7bc0c33af4a80d94e88192473d, type: 3}
+  - {fileID: 8300000, guid: de4db0ac53d74fc42a5f789bb503af40, type: 3}
+  - {fileID: 8300000, guid: 8672939092a21ba49b622edf219c83fc, type: 3}
+  - {fileID: 8300000, guid: 29997c24399e6da45a6c08a2c09e4bfa, type: 3}
   WoodClips:
-  - {fileID: 8300000, guid: 2b19c757443009f4a99001c5600b6f97, type: 3}
-  - {fileID: 8300000, guid: 60798184fac43e64c8d5dfb4cbadb969, type: 3}
-  - {fileID: 8300000, guid: 1f08055d934576949b00e463345b5239, type: 3}
-  - {fileID: 8300000, guid: 2d62e277728f10541a060ed96f810ec1, type: 3}
+  - {fileID: 8300000, guid: bf3dc017ac3509c45a54439b64249f1f, type: 3}
+  - {fileID: 8300000, guid: bb77e74168641a44f9b95aab5fd071d1, type: 3}
+  - {fileID: 8300000, guid: b1038c43dcd3f2d4186b806f10a22dc0, type: 3}
+  - {fileID: 8300000, guid: aea99c46680fbd1469d0daa60b6973bf, type: 3}
   movement: {x: 0, y: 0}
   walkSpeed: 18
   runSpeed: 28
@@ -29244,35 +29244,35 @@ MonoBehaviour:
   _audioSource: {fileID: 776055014}
   _stepAudioSource: {fileID: 1363251739}
   CarpetClips:
-  - {fileID: 8300000, guid: d8c6c94a3149d88499216cd6686a3bba, type: 3}
-  - {fileID: 8300000, guid: 076d38965cc64c64a838d42e565d5461, type: 3}
-  - {fileID: 8300000, guid: 21980114c69c6cc4ea197635b495b6ac, type: 3}
-  - {fileID: 8300000, guid: f1280a44671370a4ea4e1a98292a85e8, type: 3}
+  - {fileID: 8300000, guid: 9acaf6c0989eb0c4ea14c831c03f1de2, type: 3}
+  - {fileID: 8300000, guid: 1db68efd6ecb38944b958cddbf743490, type: 3}
+  - {fileID: 8300000, guid: 40827b3696f4d864aa44d3919c0424b0, type: 3}
+  - {fileID: 8300000, guid: 40dc2cc1bb477b341a71e184b9624e1f, type: 3}
   DirtClips:
-  - {fileID: 8300000, guid: bae8ba46cf559044a9a3a76f91b3e07a, type: 3}
-  - {fileID: 8300000, guid: e6488c0a814381045a3f3a167e702d6f, type: 3}
-  - {fileID: 8300000, guid: 3a7f2993f58439e4cb037e0a3c4c57ef, type: 3}
-  - {fileID: 8300000, guid: ca604dc107bc6e84fb3fbec75566d6ca, type: 3}
+  - {fileID: 8300000, guid: a32610326cf647a439ba8dff900c2e1f, type: 3}
+  - {fileID: 8300000, guid: b8cff554f8a144e49b9c9d4693b4af75, type: 3}
+  - {fileID: 8300000, guid: dd609dacbfa8a9d48b8269de8c77b9b1, type: 3}
+  - {fileID: 8300000, guid: 67328f0cf3bbf9e4ca1869a8df648346, type: 3}
   HallClips:
-  - {fileID: 8300000, guid: 6e0b60fc7fc979c478da4bcc7c232464, type: 3}
-  - {fileID: 8300000, guid: e809aac5977192e4e9e12632c6913d24, type: 3}
-  - {fileID: 8300000, guid: 465d4cdc22454ae46b63d60eeabc80a9, type: 3}
-  - {fileID: 8300000, guid: 0edaa87b48fe4dc49bba548cba38639d, type: 3}
+  - {fileID: 8300000, guid: e909bbcb723dd8c40acbf0c0aeed1eb2, type: 3}
+  - {fileID: 8300000, guid: b7174d47a954f0f459e6b0271cee86cc, type: 3}
+  - {fileID: 8300000, guid: 7a071f4a73825fc4ea87f205ee0a5791, type: 3}
+  - {fileID: 8300000, guid: d9b3f73ac5942c042a8475e6ae1f4524, type: 3}
   ConcreteClips:
-  - {fileID: 8300000, guid: 5fe9a26c9afb0144b878c1854c889959, type: 3}
-  - {fileID: 8300000, guid: a68967312a86af941a0994e1cf4721fb, type: 3}
-  - {fileID: 8300000, guid: 01f40a03b6bc7e644aa022dcfa384203, type: 3}
-  - {fileID: 8300000, guid: dc757b16ac4e499499a3c2fd4f143751, type: 3}
+  - {fileID: 8300000, guid: 17e7a45fe976dff4bb7bf6c762422a3d, type: 3}
+  - {fileID: 8300000, guid: 6b580429bcbd2434db8f4ec8b8e92ac8, type: 3}
+  - {fileID: 8300000, guid: fee36c34233025a4b99c794ad6d0f593, type: 3}
+  - {fileID: 8300000, guid: 468336a49faf4f94ba1113156b904789, type: 3}
   GrassClips:
-  - {fileID: 8300000, guid: 4fb92248af537424ab91d7cf84f00093, type: 3}
-  - {fileID: 8300000, guid: 4e01394bb6617dd4b8916816d0f2f575, type: 3}
-  - {fileID: 8300000, guid: 8196f2b8eeff4c143aaaf143387b25af, type: 3}
-  - {fileID: 8300000, guid: 3e7cbc493e32dc745adb3c2a0fc6d812, type: 3}
+  - {fileID: 8300000, guid: 68f5e8848ef77c545a630a1093cda3fd, type: 3}
+  - {fileID: 8300000, guid: c9b1352e9c563f74d83c8afe374a9e03, type: 3}
+  - {fileID: 8300000, guid: 39f7b9e2d3573cb41947134fc36834a3, type: 3}
+  - {fileID: 8300000, guid: ef0ca98ec1381f8499dd9e04093936a2, type: 3}
   WoodClips:
-  - {fileID: 8300000, guid: ffe1d74f0ce8bae4b871a3e4f18dafed, type: 3}
-  - {fileID: 8300000, guid: 15701b7e46888c0489553a23a9b30645, type: 3}
-  - {fileID: 8300000, guid: f99a7a64250e72b488e91ef9919a78a8, type: 3}
-  - {fileID: 8300000, guid: c6e5d7b95e7674d44bcf81e1c01e0f8e, type: 3}
+  - {fileID: 8300000, guid: 6dbd4bcf710a84849aa6869a9b2a58c3, type: 3}
+  - {fileID: 8300000, guid: 92732e11a2950af4399b27a2b7983e6f, type: 3}
+  - {fileID: 8300000, guid: a5ce5c779556be14494b4bff289c52b8, type: 3}
+  - {fileID: 8300000, guid: e90f21f643c12444f9739d04ee88d317, type: 3}
   doorOpenSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   hideAndSeek: {fileID: 8300000, guid: c673b6dd3e5f1f44f8e8a7528abafa8a, type: 3}
   spawnPoint: {fileID: 900510531}
@@ -41008,35 +41008,35 @@ MonoBehaviour:
   _doorAudioSource: {fileID: 826859824}
   _outdoorAudioSource: {fileID: 2142160401}
   CarpetClips:
-  - {fileID: 8300000, guid: d8c6c94a3149d88499216cd6686a3bba, type: 3}
-  - {fileID: 8300000, guid: 076d38965cc64c64a838d42e565d5461, type: 3}
-  - {fileID: 8300000, guid: 21980114c69c6cc4ea197635b495b6ac, type: 3}
-  - {fileID: 8300000, guid: f1280a44671370a4ea4e1a98292a85e8, type: 3}
+  - {fileID: 8300000, guid: 9acaf6c0989eb0c4ea14c831c03f1de2, type: 3}
+  - {fileID: 8300000, guid: 1db68efd6ecb38944b958cddbf743490, type: 3}
+  - {fileID: 8300000, guid: 40827b3696f4d864aa44d3919c0424b0, type: 3}
+  - {fileID: 8300000, guid: 40dc2cc1bb477b341a71e184b9624e1f, type: 3}
   DirtClips:
-  - {fileID: 8300000, guid: bae8ba46cf559044a9a3a76f91b3e07a, type: 3}
-  - {fileID: 8300000, guid: e6488c0a814381045a3f3a167e702d6f, type: 3}
-  - {fileID: 8300000, guid: 3a7f2993f58439e4cb037e0a3c4c57ef, type: 3}
-  - {fileID: 8300000, guid: ca604dc107bc6e84fb3fbec75566d6ca, type: 3}
+  - {fileID: 8300000, guid: a32610326cf647a439ba8dff900c2e1f, type: 3}
+  - {fileID: 8300000, guid: b8cff554f8a144e49b9c9d4693b4af75, type: 3}
+  - {fileID: 8300000, guid: dd609dacbfa8a9d48b8269de8c77b9b1, type: 3}
+  - {fileID: 8300000, guid: 67328f0cf3bbf9e4ca1869a8df648346, type: 3}
   HallClips:
-  - {fileID: 8300000, guid: 6e0b60fc7fc979c478da4bcc7c232464, type: 3}
-  - {fileID: 8300000, guid: e809aac5977192e4e9e12632c6913d24, type: 3}
-  - {fileID: 8300000, guid: 465d4cdc22454ae46b63d60eeabc80a9, type: 3}
-  - {fileID: 8300000, guid: 0edaa87b48fe4dc49bba548cba38639d, type: 3}
+  - {fileID: 8300000, guid: e909bbcb723dd8c40acbf0c0aeed1eb2, type: 3}
+  - {fileID: 8300000, guid: b7174d47a954f0f459e6b0271cee86cc, type: 3}
+  - {fileID: 8300000, guid: 7a071f4a73825fc4ea87f205ee0a5791, type: 3}
+  - {fileID: 8300000, guid: d9b3f73ac5942c042a8475e6ae1f4524, type: 3}
   ConcreteClips:
-  - {fileID: 8300000, guid: 5fe9a26c9afb0144b878c1854c889959, type: 3}
-  - {fileID: 8300000, guid: a68967312a86af941a0994e1cf4721fb, type: 3}
-  - {fileID: 8300000, guid: 01f40a03b6bc7e644aa022dcfa384203, type: 3}
-  - {fileID: 8300000, guid: dc757b16ac4e499499a3c2fd4f143751, type: 3}
+  - {fileID: 8300000, guid: 17e7a45fe976dff4bb7bf6c762422a3d, type: 3}
+  - {fileID: 8300000, guid: 6b580429bcbd2434db8f4ec8b8e92ac8, type: 3}
+  - {fileID: 8300000, guid: fee36c34233025a4b99c794ad6d0f593, type: 3}
+  - {fileID: 8300000, guid: 468336a49faf4f94ba1113156b904789, type: 3}
   GrassClips:
-  - {fileID: 8300000, guid: 4fb92248af537424ab91d7cf84f00093, type: 3}
-  - {fileID: 8300000, guid: 4e01394bb6617dd4b8916816d0f2f575, type: 3}
-  - {fileID: 8300000, guid: 8196f2b8eeff4c143aaaf143387b25af, type: 3}
-  - {fileID: 8300000, guid: 3e7cbc493e32dc745adb3c2a0fc6d812, type: 3}
+  - {fileID: 8300000, guid: 68f5e8848ef77c545a630a1093cda3fd, type: 3}
+  - {fileID: 8300000, guid: c9b1352e9c563f74d83c8afe374a9e03, type: 3}
+  - {fileID: 8300000, guid: 39f7b9e2d3573cb41947134fc36834a3, type: 3}
+  - {fileID: 8300000, guid: ef0ca98ec1381f8499dd9e04093936a2, type: 3}
   WoodClips:
-  - {fileID: 8300000, guid: ffe1d74f0ce8bae4b871a3e4f18dafed, type: 3}
-  - {fileID: 8300000, guid: 15701b7e46888c0489553a23a9b30645, type: 3}
-  - {fileID: 8300000, guid: f99a7a64250e72b488e91ef9919a78a8, type: 3}
-  - {fileID: 8300000, guid: c6e5d7b95e7674d44bcf81e1c01e0f8e, type: 3}
+  - {fileID: 8300000, guid: 6dbd4bcf710a84849aa6869a9b2a58c3, type: 3}
+  - {fileID: 8300000, guid: 92732e11a2950af4399b27a2b7983e6f, type: 3}
+  - {fileID: 8300000, guid: a5ce5c779556be14494b4bff289c52b8, type: 3}
+  - {fileID: 8300000, guid: e90f21f643c12444f9739d04ee88d317, type: 3}
   doorOpenSound1: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   doorOpenSound2: {fileID: 8300000, guid: 972c583a0688028478ae88a6bb297998, type: 3}
 --- !u!50 &1081813564
@@ -64854,7 +64854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -363.918}
+  m_AnchoredPosition: {x: 0, y: -363.91797}
   m_SizeDelta: {x: 0, y: -727.837}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1753896903
@@ -76654,35 +76654,35 @@ MonoBehaviour:
   stepType: 0
   _stepAudioSource: {fileID: 1791425109}
   CarpetClips:
-  - {fileID: 8300000, guid: d8c6c94a3149d88499216cd6686a3bba, type: 3}
-  - {fileID: 8300000, guid: 076d38965cc64c64a838d42e565d5461, type: 3}
-  - {fileID: 8300000, guid: 21980114c69c6cc4ea197635b495b6ac, type: 3}
-  - {fileID: 8300000, guid: f1280a44671370a4ea4e1a98292a85e8, type: 3}
+  - {fileID: 8300000, guid: 9acaf6c0989eb0c4ea14c831c03f1de2, type: 3}
+  - {fileID: 8300000, guid: 1db68efd6ecb38944b958cddbf743490, type: 3}
+  - {fileID: 8300000, guid: 40827b3696f4d864aa44d3919c0424b0, type: 3}
+  - {fileID: 8300000, guid: 40dc2cc1bb477b341a71e184b9624e1f, type: 3}
   DirtClips:
-  - {fileID: 8300000, guid: bae8ba46cf559044a9a3a76f91b3e07a, type: 3}
-  - {fileID: 8300000, guid: e6488c0a814381045a3f3a167e702d6f, type: 3}
-  - {fileID: 8300000, guid: 3a7f2993f58439e4cb037e0a3c4c57ef, type: 3}
-  - {fileID: 8300000, guid: ca604dc107bc6e84fb3fbec75566d6ca, type: 3}
+  - {fileID: 8300000, guid: a32610326cf647a439ba8dff900c2e1f, type: 3}
+  - {fileID: 8300000, guid: b8cff554f8a144e49b9c9d4693b4af75, type: 3}
+  - {fileID: 8300000, guid: dd609dacbfa8a9d48b8269de8c77b9b1, type: 3}
+  - {fileID: 8300000, guid: 67328f0cf3bbf9e4ca1869a8df648346, type: 3}
   HallClips:
-  - {fileID: 8300000, guid: 6e0b60fc7fc979c478da4bcc7c232464, type: 3}
-  - {fileID: 8300000, guid: e809aac5977192e4e9e12632c6913d24, type: 3}
-  - {fileID: 8300000, guid: 465d4cdc22454ae46b63d60eeabc80a9, type: 3}
-  - {fileID: 8300000, guid: 0edaa87b48fe4dc49bba548cba38639d, type: 3}
+  - {fileID: 8300000, guid: e909bbcb723dd8c40acbf0c0aeed1eb2, type: 3}
+  - {fileID: 8300000, guid: b7174d47a954f0f459e6b0271cee86cc, type: 3}
+  - {fileID: 8300000, guid: 7a071f4a73825fc4ea87f205ee0a5791, type: 3}
+  - {fileID: 8300000, guid: d9b3f73ac5942c042a8475e6ae1f4524, type: 3}
   ConcreteClips:
-  - {fileID: 8300000, guid: 5fe9a26c9afb0144b878c1854c889959, type: 3}
-  - {fileID: 8300000, guid: a68967312a86af941a0994e1cf4721fb, type: 3}
-  - {fileID: 8300000, guid: 01f40a03b6bc7e644aa022dcfa384203, type: 3}
-  - {fileID: 8300000, guid: dc757b16ac4e499499a3c2fd4f143751, type: 3}
+  - {fileID: 8300000, guid: 17e7a45fe976dff4bb7bf6c762422a3d, type: 3}
+  - {fileID: 8300000, guid: 6b580429bcbd2434db8f4ec8b8e92ac8, type: 3}
+  - {fileID: 8300000, guid: fee36c34233025a4b99c794ad6d0f593, type: 3}
+  - {fileID: 8300000, guid: 468336a49faf4f94ba1113156b904789, type: 3}
   GrassClips:
-  - {fileID: 8300000, guid: 4fb92248af537424ab91d7cf84f00093, type: 3}
-  - {fileID: 8300000, guid: 4e01394bb6617dd4b8916816d0f2f575, type: 3}
-  - {fileID: 8300000, guid: 8196f2b8eeff4c143aaaf143387b25af, type: 3}
-  - {fileID: 8300000, guid: 3e7cbc493e32dc745adb3c2a0fc6d812, type: 3}
+  - {fileID: 8300000, guid: 68f5e8848ef77c545a630a1093cda3fd, type: 3}
+  - {fileID: 8300000, guid: c9b1352e9c563f74d83c8afe374a9e03, type: 3}
+  - {fileID: 8300000, guid: 39f7b9e2d3573cb41947134fc36834a3, type: 3}
+  - {fileID: 8300000, guid: ef0ca98ec1381f8499dd9e04093936a2, type: 3}
   WoodClips:
-  - {fileID: 8300000, guid: ffe1d74f0ce8bae4b871a3e4f18dafed, type: 3}
-  - {fileID: 8300000, guid: 15701b7e46888c0489553a23a9b30645, type: 3}
-  - {fileID: 8300000, guid: f99a7a64250e72b488e91ef9919a78a8, type: 3}
-  - {fileID: 8300000, guid: c6e5d7b95e7674d44bcf81e1c01e0f8e, type: 3}
+  - {fileID: 8300000, guid: 6dbd4bcf710a84849aa6869a9b2a58c3, type: 3}
+  - {fileID: 8300000, guid: 92732e11a2950af4399b27a2b7983e6f, type: 3}
+  - {fileID: 8300000, guid: a5ce5c779556be14494b4bff289c52b8, type: 3}
+  - {fileID: 8300000, guid: e90f21f643c12444f9739d04ee88d317, type: 3}
   spawnPoint: {fileID: 702645292}
 --- !u!50 &2065122717
 Rigidbody2D:
