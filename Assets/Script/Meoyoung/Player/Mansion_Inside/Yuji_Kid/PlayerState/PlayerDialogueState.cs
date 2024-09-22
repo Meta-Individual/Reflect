@@ -88,6 +88,11 @@ public class PlayerDialogueState : MonoBehaviour, IPlayerState
             {
                 _playerController.ChangeState(_playerController._waitState);
             }
+            else if (_playerController.currentDialogueCounter == 98)
+            {
+                _playerController.ChangeState(_playerController._waitState);
+                _playerController.StartShudder();
+            }
             /*else if (_playerController.currentDialogueCounter == 90)
             {
                 _playerController.StartCameraShake();

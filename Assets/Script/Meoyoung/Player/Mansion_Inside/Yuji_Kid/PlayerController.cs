@@ -119,8 +119,8 @@ public class PlayerController : MonoBehaviour
 
         inventory.ClearInventory();
 
-        currentDialogueCounter = 1;
-        maxDialogueCounter = 1;
+        /*currentDialogueCounter = 1;
+        maxDialogueCounter = 1;*/
         kannaAnim = false;
         isDialogue = false;
         FadeManager.Instance.JustFade(); //화면 fade In
@@ -396,5 +396,18 @@ public class PlayerController : MonoBehaviour
         FadeManager.Instance.StartFadeIn();
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("MansionScene");
+    }
+
+    public void StartShudder()
+    {
+        StartCoroutine(Shudder());
+    }
+
+    IEnumerator Shudder()
+    {
+        yield return new WaitForSeconds(1.0f);
+        anim.Play("Shudder");
+        yield return new WaitForSeconds(5.0f);
+        SceneManager.LoadScene("ToBeContinue");
     }
 }
