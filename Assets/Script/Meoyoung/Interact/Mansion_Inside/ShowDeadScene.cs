@@ -11,6 +11,7 @@ public class ShowDeadScene : MonoBehaviour, IInteractable
     [SerializeField] AudioSource _audioSource;
     [SerializeField] AudioClip deadSceneSound;
     [SerializeField] PlayerController playerController;
+    [SerializeField] GameObject rainObject;
 
     private void Start()
     {
@@ -41,6 +42,8 @@ public class ShowDeadScene : MonoBehaviour, IInteractable
         FadeManager.Instance.JustFade();
         yield return new WaitForSeconds(1.5f);
         FadeManager.Instance.StartFadeOut();
+
+        rainObject.SetActive(true);
 
         yield return new WaitForSeconds(1.0f);
         _playerController.maxDialogueCounter = 97;
