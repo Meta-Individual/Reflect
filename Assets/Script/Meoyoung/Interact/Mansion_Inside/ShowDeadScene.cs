@@ -8,6 +8,9 @@ public class ShowDeadScene : MonoBehaviour, IInteractable
     [SerializeField] Image deadScene;
     [SerializeField] PlayerController _playerController;
     [SerializeField] float fadeDuration = 1f;  // 페이드 아웃 시간 (초)
+    [SerializeField] AudioSource _audioSource;
+    [SerializeField] AudioClip deadSceneSound;
+    [SerializeField] PlayerController playerController;
 
     private void Start()
     {
@@ -25,19 +28,33 @@ public class ShowDeadScene : MonoBehaviour, IInteractable
     {
         _playerController.ChangeState(_playerController._waitState);
         FadeManager.Instance.StartFadeIn();
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(2.0f);
+        PlayDeadSceneSound();
+        yield return new WaitForSeconds(1.0f);
         FadeInImage();
         yield return new WaitForSeconds(1.5f);
         FadeManager.Instance.StartFadeOut();
+
+
         yield return new WaitForSeconds(6.0f);
         FadeOutImage();
         FadeManager.Instance.JustFade();
         yield return new WaitForSeconds(1.5f);
         FadeManager.Instance.StartFadeOut();
-        _playerController.anim.Play("Shudder");
+
+        yield return new WaitForSeconds(1.0f);
+        _playerController.maxDialogueCounter = 97;
+        _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
+        /*_playerController.anim.Play("Shudder");
 
         yield return new WaitForSeconds(5.0f);
-        SceneManager.LoadScene("ToBeContinue");
+        SceneManager.LoadScene("ToBeContinue");*/
+    }
+
+    void PlayDeadSceneSound()
+    {
+        _audioSource.clip = deadSceneSound;
+        _audioSource.Play();
     }
 
     public void FadeInImage()
