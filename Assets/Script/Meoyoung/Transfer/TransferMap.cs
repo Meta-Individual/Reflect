@@ -41,6 +41,8 @@ public class TransferMap : MonoBehaviour, IInteractable
     public string doorClosedScript = "문이 잠겨있어.";
     public string doorOpendScript = "문이 열렸어";
 
+    public bool printFlag = false;
+
     void Start()
     {
         _showRegionName = FindObjectOfType<ShowRegionName>();
@@ -82,7 +84,15 @@ public class TransferMap : MonoBehaviour, IInteractable
                 {
                     if (playerInventory.HasItem(keyItemName))
                     {
-                        UnlockDoor();
+                        if (printFlag)
+                        {
+                            TransformWithSound(); // 방문 사운드 재생
+                            _showRegionName.ShowRegion(regionName);
+                        }
+                        else
+                        {
+                            UnlockDoor();
+                        }
                     }
                     else
                     {

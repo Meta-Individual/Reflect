@@ -2,10 +2,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class ShowDeadScene : MonoBehaviour, IInteractable
 {
-    [SerializeField] Image deadScene;
+    [SerializeField] VideoPlayer videoPlayer; // VideoPlayer를 연결할 변수
+    [SerializeField] RawImage deadScene;
     [SerializeField] PlayerController _playerController;
     [SerializeField] float fadeDuration = 1f;  // 페이드 아웃 시간 (초)
     [SerializeField] AudioSource _audioSource;
@@ -30,6 +32,7 @@ public class ShowDeadScene : MonoBehaviour, IInteractable
         _playerController.ChangeState(_playerController._waitState);
         FadeManager.Instance.StartFadeIn();
         yield return new WaitForSeconds(2.0f);
+        videoPlayer.Play();
         PlayDeadSceneSound();
         yield return new WaitForSeconds(1.0f);
         FadeInImage();
@@ -37,7 +40,7 @@ public class ShowDeadScene : MonoBehaviour, IInteractable
         FadeManager.Instance.StartFadeOut();
 
 
-        yield return new WaitForSeconds(6.0f);
+        yield return new WaitForSeconds(17.0f);
         FadeOutImage();
         FadeManager.Instance.JustFade();
         yield return new WaitForSeconds(1.5f);
@@ -46,7 +49,7 @@ public class ShowDeadScene : MonoBehaviour, IInteractable
         rainObject.SetActive(true);
 
         yield return new WaitForSeconds(1.0f);
-        _playerController.maxDialogueCounter = 97;
+        _playerController.maxDialogueCounter = 96;
         _playerController._dialogueManager.ShowDialogue(_playerController.currentDialogueCounter.ToString());
         /*_playerController.anim.Play("Shudder");
 
@@ -81,7 +84,7 @@ public class ShowDeadScene : MonoBehaviour, IInteractable
     }
 
     // Image의 투명도를 천천히 줄이는 코루틴
-    private IEnumerator FadeOutImageCoroutine(Image image)
+    private IEnumerator FadeOutImageCoroutine(RawImage image)
     {
         Color color = image.color;
         float startAlpha = color.a;
@@ -102,7 +105,7 @@ public class ShowDeadScene : MonoBehaviour, IInteractable
         image.color = color;
     }
 
-    private IEnumerator FadeInImageCoroutine(Image image)
+    private IEnumerator FadeInImageCoroutine(RawImage image)
     {
         deadScene.gameObject.SetActive(true);
 

@@ -1172,13 +1172,14 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
-  regionName: 
+  regionName: "\uBCF5\uB3C4"
   _audioSource: {fileID: 0}
   unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &61843780
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7844,13 +7845,14 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
-  regionName: 
+  regionName: "\uC11C\uC7AC"
   _audioSource: {fileID: 0}
   unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &240114009
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9340,12 +9342,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e652af80850a7d4e98c3faf7289b2f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadScene: {fileID: 696871644}
+  videoPlayer: {fileID: 1361244621}
+  deadScene: {fileID: 476605064}
   _playerController: {fileID: 288599563}
   fadeDuration: 1
   _audioSource: {fileID: 267429562}
   deadSceneSound: {fileID: 8300000, guid: 82ad8310ebe27a44988ab2c06fb47f18, type: 3}
-  playerController: {fileID: 0}
+  playerController: {fileID: 288599563}
   rainObject: {fileID: 1438606724}
 --- !u!82 &267429562
 AudioSource:
@@ -9592,13 +9595,14 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
-  regionName: 
+  regionName: "\uC548\uBC29"
   _audioSource: {fileID: 0}
   unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &268071429
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12710,6 +12714,7 @@ MonoBehaviour:
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: 87
   doorOpendScript: 88
+  printFlag: 0
 --- !u!61 &346756673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14706,6 +14711,7 @@ MonoBehaviour:
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &391354359
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17432,6 +17438,94 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &476605061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 476605062}
+  - component: {fileID: 476605065}
+  - component: {fileID: 476605064}
+  - component: {fileID: 476605063}
+  m_Layer: 5
+  m_Name: DeadScene Video
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &476605062
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476605061}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1228168676}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 2550, y: 1100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &476605063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476605061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dab285e168aa954d8f8d7c835793bea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageTransform: {fileID: 476605062}
+  imageWidth: 2500
+  screenWidth: 1920
+--- !u!114 &476605064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476605061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 8400000, guid: 6306255a0f6ec1042ac2b5f7c290bb62, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &476605065
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476605061}
+  m_CullTransparentMesh: 1
 --- !u!1 &477839836
 GameObject:
   m_ObjectHideFlags: 0
@@ -19434,9 +19528,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ebdc4ecbc94d5a4bb1073c229de46dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mCamera: {fileID: 519420031}
   mOriginShakeRange: 0.2
   mOriginShakeDuration: 5
   mOriginShakeInitSpacing: 5
+  camManager: {fileID: 519420033}
 --- !u!1 &521531620
 GameObject:
   m_ObjectHideFlags: 0
@@ -23323,13 +23419,14 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
-  regionName: 
+  regionName: "\uC11C\uC7AC"
   _audioSource: {fileID: 0}
   unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &621053447
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25185,7 +25282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &672374347
 Transform:
   m_ObjectHideFlags: 0
@@ -26494,14 +26591,13 @@ GameObject:
   - component: {fileID: 696871642}
   - component: {fileID: 696871645}
   - component: {fileID: 696871644}
-  - component: {fileID: 696871643}
   m_Layer: 5
   m_Name: DeadScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &696871642
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26521,21 +26617,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2500, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &696871643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696871641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dab285e168aa954d8f8d7c835793bea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  imageTransform: {fileID: 696871642}
-  imageWidth: 2500
-  screenWidth: 1920
 --- !u!114 &696871644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30229,13 +30310,14 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
-  regionName: 
+  regionName: "\uC720\uC6B0\uC9C0 \uBC29"
   _audioSource: {fileID: 0}
   unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &795624197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31300,13 +31382,14 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
-  regionName: 
+  regionName: "\uD654\uC7A5\uC2E4"
   _audioSource: {fileID: 0}
   unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &821477345
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38114,6 +38197,7 @@ MonoBehaviour:
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &1016323867
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46103,6 +46187,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 696871642}
+  - {fileID: 476605062}
   m_Father: {fileID: 1103877403}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -48862,13 +48947,14 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
-  regionName: 
+  regionName: "\uBCF5\uB3C4"
   _audioSource: {fileID: 0}
   unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &1278588307
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49063,13 +49149,14 @@ MonoBehaviour:
   isLocked: 1
   keyItemName: Outside
   stair: 0
-  regionName: 
-  _audioSource: {fileID: 0}
-  unlockSound: {fileID: 0}
+  regionName: "\uC800\uD0DD \uC678\uBD80"
+  _audioSource: {fileID: 1280671704}
+  unlockSound: {fileID: 8300000, guid: 1680c5a446a98fb4abcbf6b549ab6efa, type: 3}
   openDoorSound: {fileID: 8300000, guid: 972c583a0688028478ae88a6bb297998, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 1680c5a446a98fb4abcbf6b549ab6efa, type: 3}
   doorClosedScript: 183
-  doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  doorOpendScript: 183
+  printFlag: 1
 --- !u!61 &1280671706
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51469,6 +51556,72 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 1
+--- !u!1 &1361244620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1361244622}
+  - component: {fileID: 1361244621}
+  m_Layer: 0
+  m_Name: Video Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!328 &1361244621
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361244620}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: e0c27effc09d72e418c7cd8260e7f6d5, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 6306255a0f6ec1042ac2b5f7c290bb62, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
+  m_Url: 
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!4 &1361244622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361244620}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 840.6343, y: -302.3336, z: 16.2876}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1362973676
 GameObject:
   m_ObjectHideFlags: 0
@@ -52383,13 +52536,14 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
-  regionName: 
+  regionName: "\uBCF5\uB3C4"
   _audioSource: {fileID: 0}
   unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &1381495544
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -64155,6 +64309,7 @@ MonoBehaviour:
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &1605857631
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -66158,13 +66313,14 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
-  regionName: 
+  regionName: "\uBCF5\uB3C4"
   _audioSource: {fileID: 0}
   unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &1658319196
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -67392,13 +67548,14 @@ MonoBehaviour:
   isLocked: 1
   keyItemName: Kenta
   stair: 1
-  regionName: 
+  regionName: "\uAC70\uC2E4"
   _audioSource: {fileID: 0}
   unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: 174
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &1697135894
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -70884,6 +71041,7 @@ MonoBehaviour:
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &1787653825
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -72125,10 +72283,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 1816103282}
-  shadowWalkingSound1: {fileID: 8300000, guid: 4fb92248af537424ab91d7cf84f00093, type: 3}
-  shadowWalkingSound2: {fileID: 8300000, guid: 4e01394bb6617dd4b8916816d0f2f575, type: 3}
-  shadowWalkingSound3: {fileID: 8300000, guid: 8196f2b8eeff4c143aaaf143387b25af, type: 3}
-  shadowWalkingSound4: {fileID: 8300000, guid: 3e7cbc493e32dc745adb3c2a0fc6d812, type: 3}
+  shadowWalkingSound1: {fileID: 8300000, guid: 68f5e8848ef77c545a630a1093cda3fd, type: 3}
+  shadowWalkingSound2: {fileID: 8300000, guid: c9b1352e9c563f74d83c8afe374a9e03, type: 3}
+  shadowWalkingSound3: {fileID: 8300000, guid: 39f7b9e2d3573cb41947134fc36834a3, type: 3}
+  shadowWalkingSound4: {fileID: 8300000, guid: ef0ca98ec1381f8499dd9e04093936a2, type: 3}
   spawnPoint: {fileID: 1119694081}
 --- !u!82 &1816103282
 AudioSource:
@@ -76082,13 +76240,14 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
-  regionName: 
+  regionName: "\uBCF5\uB3C4"
   _audioSource: {fileID: 0}
   unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &1928084105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -76451,13 +76610,14 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
-  regionName: 
+  regionName: "\uC791\uC5C5\uC2E4"
   _audioSource: {fileID: 0}
   unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &1935297813
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -78003,6 +78163,7 @@ MonoBehaviour:
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &1975759351
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -78365,6 +78526,7 @@ MonoBehaviour:
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &1988528486
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -78870,13 +79032,14 @@ MonoBehaviour:
   isLocked: 1
   keyItemName: Kenta
   stair: 1
-  regionName: 
+  regionName: "\uAC70\uC2E4"
   _audioSource: {fileID: 0}
   unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: 174
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &2009388050
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -80033,13 +80196,14 @@ MonoBehaviour:
   isLocked: 0
   keyItemName: Key
   stair: 0
-  regionName: 
+  regionName: "\uBCF5\uB3C4"
   _audioSource: {fileID: 0}
   unlockSound: {fileID: 0}
   openDoorSound: {fileID: 8300000, guid: 90c176b4197759b4ba8ef738577c139a, type: 3}
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &2028449366
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -82786,6 +82950,7 @@ MonoBehaviour:
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &2089778298
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83262,6 +83427,7 @@ MonoBehaviour:
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &2097333925
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -84970,6 +85136,7 @@ MonoBehaviour:
   closeDoorSound: {fileID: 8300000, guid: 604a58b9735363046ac46fea07651cce, type: 3}
   doorClosedScript: "\uBB38\uC774 \uC7A0\uACA8\uC788\uC5B4."
   doorOpendScript: "\uBB38\uC774 \uC5F4\uB838\uC5B4"
+  printFlag: 0
 --- !u!61 &2128512994
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -85407,7 +85574,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.2020264, y: -0.010009766}
+  m_AnchoredPosition: {x: 1.2019043, y: -0.010009766}
   m_SizeDelta: {x: 26.444, y: 19.213}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138503964
@@ -85847,3 +86014,4 @@ SceneRoots:
   - {fileID: 1548582718}
   - {fileID: 605977646}
   - {fileID: 1438606727}
+  - {fileID: 1361244622}
