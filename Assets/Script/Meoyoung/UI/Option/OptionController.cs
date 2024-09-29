@@ -29,7 +29,7 @@ public class OptionController : MonoBehaviour
             }
         }
     }
-    void PauseGame()
+    public void PauseGame()
     {
         // 게임 일시 정지
         Time.timeScale = 0f;
@@ -40,7 +40,7 @@ public class OptionController : MonoBehaviour
         onFlag = true;
     }
 
-    void ResumeGame()
+    public void ResumeGame()
     {
         // 게임 재개
         Time.timeScale = 1f;

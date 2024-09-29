@@ -114,13 +114,12 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        /*if(spawnPoint != null)
-            this.transform.position = spawnPoint.position;*/
+        if(spawnPoint != null)
+            this.transform.position = spawnPoint.position;
 
         inventory.ClearInventory();
-
-        /*currentDialogueCounter = 1;
-        maxDialogueCounter = 1;*/
+        currentDialogueCounter = 1;
+        maxDialogueCounter = 1;
         kannaAnim = false;
         isDialogue = false;
         FadeManager.Instance.JustFade(); //화면 fade In
