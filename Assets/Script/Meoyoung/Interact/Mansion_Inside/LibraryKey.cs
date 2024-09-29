@@ -13,6 +13,10 @@ public class LibraryKey : MonoBehaviour, IInteractable
     private PlayerInventory playerInventory;
     private MonologueManager _monologueManager;
     private PlayerController _playerController;
+    private InventoryManager inventoryManager;
+
+    [Tooltip("서재 열쇠 아이템")]
+    [SerializeField] ItemInfo libraryKey;
 
     [SerializeField] GameObject particle;
 
@@ -21,6 +25,7 @@ public class LibraryKey : MonoBehaviour, IInteractable
         _monologueManager = FindObjectOfType<MonologueManager>();
         playerInventory = FindObjectOfType<PlayerInventory>();
         _illustManager = FindObjectOfType<IllustManager>();
+        inventoryManager = FindObjectOfType<InventoryManager>();
         _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 
         if (!particle.activeSelf)
@@ -35,6 +40,7 @@ public class LibraryKey : MonoBehaviour, IInteractable
         {
             isSearched = true;
             playerInventory.AddItem(keyItemName);
+            inventoryManager.AddItem(libraryKey);
             _playerController.GetKeySound();
             _illustManager.ShowIllust(image, afterObjectID);
             particle.SetActive(false);
