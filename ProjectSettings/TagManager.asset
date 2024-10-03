@@ -63,3 +63,6 @@ TagManager:
   - name: Above Object
     uniqueID: 1039838431
     locked: 0
+  - name: CameraSortingLayer
+    uniqueID: 2995130651
+    locked: 0
