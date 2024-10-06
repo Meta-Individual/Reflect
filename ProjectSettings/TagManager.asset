@@ -51,6 +51,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: CameraSortingLayer
+    uniqueID: 2995130651
+    locked: 0
   - name: Background
     uniqueID: 1263645729
     locked: 0
@@ -62,7 +65,4 @@ TagManager:
     locked: 0
   - name: Above Object
     uniqueID: 1039838431
-    locked: 0
-  - name: CameraSortingLayer
-    uniqueID: 2995130651
     locked: 0
